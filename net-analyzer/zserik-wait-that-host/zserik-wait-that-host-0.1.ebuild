@@ -4,7 +4,7 @@
 
 EAPI=5
 
-inherit zserik-base
+inherit zserik-minimal
 
 DESCRIPTION="Wait that Host is alive"
 

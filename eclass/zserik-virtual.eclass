@@ -4,7 +4,7 @@
 
 # for virtual packages
 
-inherit zserik-base
+inherit zserik-minimal
 
 SRC_URI=""
 LICENSE=""

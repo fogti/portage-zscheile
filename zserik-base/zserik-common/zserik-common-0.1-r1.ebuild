@@ -4,7 +4,7 @@
 
 EAPI=5
 
-inherit zserik-base base
+inherit zserik-base
 
 DESCRIPTION="ZSerik Common - useful scripts"
 

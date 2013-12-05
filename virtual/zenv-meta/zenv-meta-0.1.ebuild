@@ -7,7 +7,6 @@ inherit zserik-virtual
 
 DESCRIPTION="Erik Zscheile: meta environment package"
 
-KEYWORDS="x86"
 IUSE="flash media"
 
 RDEPEND="flash? ( virtual/zimpl-flash )

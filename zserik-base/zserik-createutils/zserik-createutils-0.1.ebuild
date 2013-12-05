@@ -4,7 +4,7 @@
 
 EAPI=5
 
-inherit zserik-base
+inherit zserik-minimal
 
 DESCRIPTION="ZSerik CreateUtils - create Directorys and Files"
 
