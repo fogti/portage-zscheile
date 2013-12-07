@@ -4,6 +4,6 @@
 
 EAPI=5
 
-inherit zserik-base zbbuild
+inherit zserik-minimal zbbuild
 
 DESCRIPTION="ZS Collection of Useful cxX libraries - library base"
