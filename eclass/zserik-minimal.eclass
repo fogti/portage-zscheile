@@ -2,14 +2,12 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-HOMEPAGE="http://ezscheile.bplaced.net/index.html"
+if [[ ${___ECLASS_ONCE_ZSERIK_MINIMAL} != "recur -_+^+_- spank" ]] ; then
+___ECLASS_ONCE_ZSERIK_MINIMAL="recur -_+^+_- spank"
+
+inherit zserik-virtual
+
 SRC_URI="mirror://ezscheile/${P}.tar.gz"
 LICENSE="GPL-3+"
 
-IUSE=""
-SLOT="0"
-KEYWORDS="x86"
-
-COMMON_DEPEND="${COMMON_DEPEND}"
-DEPEND="${COMMON_DEPEND} ${DEPEND}"
-RDEPEND="${COMMON_DEPEND} ${RDEPEND}"
+fi

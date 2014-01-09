@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-inherit base flag-o-matic
+inherit base flag-o-matic zenv-compiler
 
 case ${EAPI:-0} in
 	1|2|3) die "EAPI ${EAPI} unsupported (too old)." ;;
@@ -10,11 +10,8 @@ case ${EAPI:-0} in
 	*) die "EAPI ${EAPI} unsupported (unknown)."
 esac
 
-IUSE="${IUSE} static_libs compiler_gcc compiler_clang single_compiler_gcc single_compiler_clang"
-
 DEPEND="${DEPEND}
-dev-util/boost-build
-virtual/zenv-compiler[compiler_gcc?,compiler_clang?,single_compiler_gcc?,single_compiler_clang?]"
+dev-util/boost-build"
 
 EXPORT_FUNCTIONS pkg_setup src_compile src_install
 EJAM_OPTIONS="release -d+2"

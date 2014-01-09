@@ -4,7 +4,18 @@
 
 # for virtual packages
 
-inherit zserik-minimal
+if [[ ${___ECLASS_ONCE_ZSERIK_MINIMAL} != "recur -_+^+_- spank" ]] ; then
+___ECLASS_ONCE_ZSERIK_MINIMAL="recur -_+^+_- spank"
 
+HOMEPAGE="http://ezscheile.bplaced.net/index.html"
 SRC_URI=""
 LICENSE=""
+
+IUSE="${IUSE}"
+SLOT="0"
+KEYWORDS="x86"
+
+DEPEND="${DEPEND}"
+RDEPEND="${RDEPEND}"
+
+fi
