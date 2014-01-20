@@ -1,5 +1,0 @@
-# Erik Zscheile <erikabc_apk@kabelmail.de> (29 Nov 2013)
-# Masked during runtime errors.
-# see patch file:
-# 0.1-r1-shebang_and_include.patch
-=zserik-base/zserik-common-0.1
