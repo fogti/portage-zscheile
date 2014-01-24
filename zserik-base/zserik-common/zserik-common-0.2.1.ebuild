@@ -8,21 +8,22 @@ inherit zserik-base
 
 DESCRIPTION="ZSerik Common - useful scripts"
 
-IUSE="color linguas_de"
+IUSE="linguas_de"
 
 RDEPEND="app-shells/bash
 sys-apps/coreutils
-sys-apps/openrc
-color? ( sys-libs/ncurses )"
-
-PATCHES="${FILESDIR}/0.1-r1-shebang_and_include.patch"
+sys-libs/ncurses"
 
 src_install() {
 	insinto /usr/share/zserik-common
-
-	for file in base.sh misc.sh ; do
+	for file in base.sh color.sh efunctions.sh misc.sh utils.sh ; do
 		doins ${file}
 	done
-	use color && doins color.sh
-	use linguas_de && doins umlauts.sh
+
+	if use linguas_de ; then
+		insinto /usr/share/zserik-common/i18n/de
+		for file in index.sh umlauts.sh ; do
+			doins ${file}
+		done
+	fi
 }
