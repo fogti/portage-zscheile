@@ -8,6 +8,7 @@ inherit zserik-base
 
 DESCRIPTION="ZSerik Common - useful scripts"
 
+KEYWORDS="x86"
 IUSE="linguas_de"
 
 RDEPEND="app-shells/bash

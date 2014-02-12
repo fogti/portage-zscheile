@@ -7,6 +7,7 @@ inherit zserik-virtual
 
 DESCRIPTION="Erik Zscheile: meta environment package"
 
+KEYWORDS="x86"
 IUSE="X alsa gnome gtk qt zs_modules_media zs_modules_zserik linguas_de"
 
 REQUIRED_USE="gnome? ( gtk )

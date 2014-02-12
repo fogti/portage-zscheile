@@ -8,6 +8,7 @@ inherit zserik-minimal
 
 DESCRIPTION="ZSerik CreateUtils - create Directorys and Files"
 
+KEYWORDS="x86"
 RDEPEND=">=zserik-base/zserik-common-0.2.3"
 
 src_install() {

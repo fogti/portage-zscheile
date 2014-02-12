@@ -7,6 +7,7 @@ inherit zserik-virtual
 
 DESCRIPTION="Erik Zscheile: media environment"
 
+KEYWORDS="x86"
 IUSE="alsa ffmpeg gnome gstreamer jack kde pulseaudio qt zs_apps_flash"
 
 REQUIRED_USE="gnome? ( pulseaudio )"

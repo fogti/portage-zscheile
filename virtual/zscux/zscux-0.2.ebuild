@@ -7,4 +7,5 @@ inherit zserik-virtual
 
 DESCRIPTION="Erik Zscheile: ZS Collection of Useful cxX libraries"
 
+KEYWORDS="x86"
 RDEPEND="dev-cpp/zscuxbase"

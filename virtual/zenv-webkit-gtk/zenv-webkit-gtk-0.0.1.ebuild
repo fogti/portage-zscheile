@@ -8,6 +8,7 @@ inherit zserik-virtual
 DESCRIPTION="Erik Zscheile: webkit-gtk environment package"
 
 SLOT="0/3"
+KEYWORDS="x86"
 IUSE="+geoloc +introspection"
 
 REQUIRED_USE="geoloc? ( introspection )"

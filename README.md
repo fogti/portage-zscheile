@@ -1,4 +1,4 @@
-zscheile-overlay
+zscheile
 ================
 
-zscheile. a Portage overlay
+a Paludis repository
