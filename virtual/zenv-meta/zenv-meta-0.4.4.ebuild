@@ -19,6 +19,9 @@ RDEPEND="virtual/zenv-compiler[compiler_gcc]
 	X? ( x11-base/xorg-server )
 	gtk? ( x11-libs/gtk+[X?,introspection?] )
 	mutter? ( x11-wm/mutter[introspection?] )
-	systemd? ( sys-apps/systemd[introspection?,pam?,python?] )
+	systemd? (
+		sys-apps/systemd[introspection?,pam?,python?]
+		sys-apps/gentoo-systemd-integration
+	)
 	zs_modules_media? ( >=virtual/zenv-media-0.5[alsa?,gnome?,jack?,kde?,pulseaudio?,qt?] )
 	zs_modules_zserik? ( zserik-base/zserik-common[linguas_de?] )"
