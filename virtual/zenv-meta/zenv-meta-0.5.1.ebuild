@@ -8,7 +8,7 @@ inherit zserik-virtual
 DESCRIPTION="Erik Zscheile: meta environment package"
 
 KEYWORDS="x86"
-IUSE="X alsa gnome gtk introspection jack kde linguas_de mutter pam pulseaudio python qt systemd thunar xfce zs_modules_media zs_modules_zserik"
+IUSE="X alsa build gnome gtk introspection ipv6 jack kde linguas_de mutter nls pam perl pulseaudio python qt systemd thunar xfce zs_modules_media zs_modules_zserik"
 
 REQUIRED_USE="gnome? ( gtk mutter )
 	kde? ( qt )
@@ -17,8 +17,14 @@ REQUIRED_USE="gnome? ( gtk mutter )
 	qt? ( X )
 	xfce? ( X )"
 
-RDEPEND="virtual/zenv-compiler[compiler_gcc]
-	X? ( x11-base/xorg-server )
+RDEPEND="X? (
+		x11-base/xorg-server[ipv6?]
+		x11-base/xorg-drivers
+	)
+	build? (
+		virtual/zenv-compiler[compiler_gcc]
+		perl? ( virtual/perl-Module-Build )
+	)
 	gtk? ( x11-libs/gtk+[X?,introspection?] )
 	mutter? ( x11-wm/mutter[introspection?] )
 	systemd? (
@@ -27,7 +33,7 @@ RDEPEND="virtual/zenv-compiler[compiler_gcc]
 		sys-apps/gentoo-systemd-integration
 	)
 	xfce? (
-		xfce-base/xfce4-session[systemd?]
+		xfce-base/xfce4-session[nls?,systemd?]
 		xfce-base/xfdesktop[thunar?]
 		xfce-base/xfwm4
 	)
