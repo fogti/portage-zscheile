@@ -1,4 +1,6 @@
 dev-cpp
+dev-lang
+gnome-base
 gnome-extra
 net-analyzer
 net-libs
