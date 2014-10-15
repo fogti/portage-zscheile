@@ -8,22 +8,19 @@ inherit zserik-virtual
 DESCRIPTION="Erik Zscheile: media environment"
 
 KEYWORDS="x86"
-IUSE="alsa ffmpeg gnome gstreamer jack kde pulseaudio qt zs_apps_flash"
-
-REQUIRED_USE="gnome? ( pulseaudio )"
+IUSE="alsa ffmpeg gstreamer jack kde pulseaudio qt zs_apps_flash"
 
 RDEPEND="alsa? (
 		media-libs/alsa-lib
 		media-sound/alsa-utils
 	)
 	ffmpeg? ( virtual/ffmpeg )
-	gnome? ( gnome-extra/gnome-media )
 	gstreamer? (
 		media-libs/gstreamer
 		media-plugins/gst-plugins-meta[alsa?,jack?,pulseaudio?]
 		qt? ( media-libs/qt-gstreamer )
 		kde? ( media-libs/phonon-gstreamer )
 	)
-	jack? ( media-sound/jack-audio-connection-kit )
-	pulseaudio? ( media-sound/pulseaudio )
+	jack? ( media-sound/jack-audio-connection-kit[alsa?] )
+	pulseaudio? ( media-sound/pulseaudio[jack?] )
 	zs_apps_flash? ( virtual/zimpl-flash[gstreamer?] )"

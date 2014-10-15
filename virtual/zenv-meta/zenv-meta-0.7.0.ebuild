@@ -37,5 +37,5 @@ RDEPEND="X? (
 		xfce-base/xfdesktop[thunar?]
 		xfce-base/xfwm4
 	)
-	zs_modules_media? ( >=virtual/zenv-media-0.5[alsa?,gnome?,jack?,kde?,pulseaudio?,qt?] )
+	zs_modules_media? ( >=virtual/zenv-media-0.5[alsa?,jack?,kde?,pulseaudio?,qt?] )
 	zs_modules_zserik? ( zserik-base/zserik-common[linguas_de?] )"
