@@ -1,9 +1,6 @@
 dev-cpp
 dev-lang
-gnome-base
-gnome-extra
 net-analyzer
 net-libs
 virtual
-x11-libs
 zserik-base
