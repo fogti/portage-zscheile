@@ -8,7 +8,7 @@ inherit zserik-base
 
 DESCRIPTION="ZSerik Simple Formula Variable Substitution Language - simple replace variables"
 
-KEYWORDS="x86"
+KEYWORDS="amd64 x86"
 
 RDEPEND="sys-apps/coreutils
 sys-apps/sed"

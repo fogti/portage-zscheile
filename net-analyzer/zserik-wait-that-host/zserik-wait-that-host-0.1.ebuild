@@ -8,7 +8,7 @@ inherit zserik-minimal
 
 DESCRIPTION="Wait that Host is alive"
 
-KEYWORDS="x86"
+KEYWORDS="amd64 x86"
 RDEPEND="net-analyzer/fping
 zserik-base/zserik-common"
 

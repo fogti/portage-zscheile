@@ -8,7 +8,7 @@ inherit git-2 zserik-minimal
 
 DESCRIPTION="Signal MM - a header-only signal slot system written in C++11"
 
-KEYWORDS="x86"
+KEYWORDS="~amd64 x86"
 SRC_URI=""
 EGIT_REPO_URI="git://github.com/zserik/signalmm.git"
 

@@ -7,7 +7,7 @@ inherit zserik-virtual
 
 DESCRIPTION="Erik Zscheile: media environment"
 
-KEYWORDS="x86"
+KEYWORDS="amd64 x86"
 IUSE="alsa ffmpeg gstreamer jack kde pulseaudio qt zs_apps_flash"
 
 RDEPEND="alsa? (

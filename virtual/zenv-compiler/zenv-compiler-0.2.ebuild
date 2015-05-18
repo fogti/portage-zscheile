@@ -5,4 +5,4 @@ EAPI=5
 
 inherit zenv-compiler
 
-KEYWORDS="x86"
+KEYWORDS="amd64 x86"

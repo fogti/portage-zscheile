@@ -7,7 +7,7 @@ inherit zserik-virtual
 
 DESCRIPTION="Erik Zscheile: flash implementations"
 
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="gstreamer swfdec_only"
 
 RDEPEND="|| (
