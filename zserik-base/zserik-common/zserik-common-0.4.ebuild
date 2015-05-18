@@ -23,9 +23,9 @@ src_install() {
 	done
 
 	if use linguas_de ; then
-		insinto /usr/share/zserik-common/i18n/de
+		insinto /usr/share/zserik-common/locales/de
 		for file in index.sh umlauts.sh ; do
-			doins i18n/de/${file}
+			doins locales/de/${file}
 		done
 	fi
 }
