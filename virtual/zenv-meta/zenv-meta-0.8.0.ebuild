@@ -7,8 +7,8 @@ inherit zserik-virtual
 
 DESCRIPTION="Erik Zscheile: meta environment package"
 
-KEYWORDS="amd64 x86"
-IUSE="X alsa build gnome gtk introspection ipv6 jack kde linguas_de mutter nls pam perl pulseaudio python qt systemd thunar xfce zs_modules_media zs_modules_zserik"
+KEYWORDS="arm amd64 x86"
+IUSE="X alsa build gnome gtk introspection ipv6 jack kde linguas_de mutter nls pam perl pulseaudio python qt systemd thunar xfce zs_modules_media zs_modules_zserik zs_modules_utils"
 
 REQUIRED_USE="gnome? ( gtk mutter )
 	kde? ( qt )
@@ -38,4 +38,9 @@ RDEPEND="X? (
 		xfce-base/xfwm4
 	)
 	zs_modules_media? ( >=virtual/zenv-media-0.5[alsa?,jack?,kde?,pulseaudio?,qt?] )
-	zs_modules_zserik? ( zserik-base/zserik-common[linguas_de?] )"
+	zs_modules_zserik? ( zserik-base/zserik-common[linguas_de?] )
+	zs_modules_utils? (
+		app-misc/zsoutils
+		app-misc/zsgcfgfpath
+		app-misc/zsrecursil
+	)"
