@@ -3,6 +3,7 @@ dev-cpp
 dev-embedded
 dev-lang
 net-analyzer
+net-dns
 net-libs
 virtual
 zserik-base
