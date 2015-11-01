@@ -8,7 +8,7 @@ inherit zserik-cmake
 
 DESCRIPTION="ZCoPD - Zscheile Configuration Protocol Daemon"
 
-KEYWORDS="amd64 x86"
+KEYWORDS="amd64 arm x86"
 
 COMMON_DEPEND="$COMMON_DEPEND
 sys-libs/glibc"
