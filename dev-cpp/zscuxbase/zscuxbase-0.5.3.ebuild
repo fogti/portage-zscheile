@@ -8,4 +8,4 @@ inherit zserik-cmake
 
 DESCRIPTION="ZS Collection of Useful cxX libraries - library base"
 
-KEYWORDS="amd64 x86"
+KEYWORDS="amd64 arm x86"
