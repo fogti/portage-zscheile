@@ -4,13 +4,13 @@
 
 EAPI=5
 
-inherit zserik-base
+inherit zserik-minimal
 
 DESCRIPTION="ZModulesCtl - Zscheile Modules Control"
 
 KEYWORDS="arm amd64 x86"
 
-RDEPEND="$RDEPEND
+RDEPEND="app-misc/zsoutils
 app-shells/bash
 sys-apps/coreutils"
 
