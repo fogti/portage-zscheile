@@ -6,6 +6,5 @@ net-analyzer
 net-dns
 net-libs
 net-misc
-sys-cluster
 virtual
 zserik-base
