@@ -1,10 +1,10 @@
 DEFINED_PHASES=-
 DESCRIPTION=Erik Zscheile: media environment
 EAPI=5
-HOMEPAGE=http://ezscheile.bplaced.net/index.html
+HOMEPAGE=http://ezscheile.bplaced.net/index.php
 IUSE=alsa ffmpeg gstreamer jack kde pulseaudio qt zs_apps_flash
 KEYWORDS=amd64 x86
 RDEPEND=alsa? ( media-libs/alsa-lib media-sound/alsa-utils ) ffmpeg? ( virtual/ffmpeg ) gstreamer? ( media-libs/gstreamer media-plugins/gst-plugins-meta[alsa?,jack?,pulseaudio?] qt? ( media-libs/qt-gstreamer ) kde? ( media-libs/phonon-gstreamer ) ) jack? ( media-sound/jack-audio-connection-kit[alsa?] ) pulseaudio? ( media-sound/pulseaudio[jack?] ) zs_apps_flash? ( virtual/zimpl-flash[gstreamer?] )
 SLOT=0
-_eclasses_=zserik-virtual	de0dc44378028843e6010ce0c31077a2
+_eclasses_=zserik-virtual	0770200d15bbab9aa10fb229d115a771
 _md5_=a4446edc89afd6ee245de4d433f16734
