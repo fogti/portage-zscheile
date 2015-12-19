@@ -2,6 +2,8 @@ app-misc
 dev-cpp
 dev-embedded
 dev-lang
+dev-scheme
+games-board
 net-analyzer
 net-dns
 net-libs
