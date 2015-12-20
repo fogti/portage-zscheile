@@ -7,7 +7,7 @@ inherit zserik-virtual
 DESCRIPTION="Zscheile Standard Environment for Clients"
 
 KEYWORDS="arm amd64 x86"
-IUSE="emacs geosci flash xfce"
+IUSE="+emacs flash games geosci wine +xfce"
 
 RDEPEND="app-admin/sudo
 	app-admin/sysklogd
@@ -16,11 +16,11 @@ RDEPEND="app-admin/sudo
 	app-editors/gedit
 	app-editors/nano
 	app-editors/nedit
-	app-emulation/wine
 	app-misc/mc
 	app-office/libreoffice
 	app-portage/eix
 	app-portage/gentoolkit
+	app-text/evince
 	dev-util/geany
 	dev-util/strace
 	dev-vcs/git
@@ -29,13 +29,14 @@ RDEPEND="app-admin/sudo
 	media-gfx/gqview
 	media-sound/alsa-utils
 	media-sound/lmms
+	media-sound/rhythmbox
 	media-sound/timidity++
 	net-analyzer/traceroute
 	net-analyzer/wireshark
 	net-dns/bind-tools
 	net-fs/nfs-utils
 	net-fs/openafs
-	net-ftp/gftp
+	net-ftp/gftp[gtk]
 	net-misc/iputils[-caps,-filecaps]
 	net-misc/openvpn
 	net-misc/zadist
@@ -48,6 +49,7 @@ RDEPEND="app-admin/sudo
 	sys-libs/glibc[nscd]
 	sys-libs/gpm
 	sys-process/cronie
+	sys-process/lsof
 	www-client/firefox
 	www-client/links
 	x11-apps/xedit
@@ -65,9 +67,15 @@ RDEPEND="app-admin/sudo
 	flash? (
 		virtual/zimpl-flash
 	)
+	games? (
+		games-board/aisleriot
+	)
 	geosci? (
 		sci-geosciences/gpsbabel
 		sci-geosciences/josm
+	)
+	wine? (
+		app-emulation/wine
 	)
 	xfce? (
 		xfce-base/xfce4-meta
