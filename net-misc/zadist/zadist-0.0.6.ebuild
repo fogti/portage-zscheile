@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=5
+EAPI=4
 
 inherit zserik-minimal
 
@@ -17,6 +17,9 @@ virtual/cron"
 src_install() {
 	echo "install zadist"
 	dobin zadist
+	echo "install skeleton zadist.conf"
+	insinto /etc
+	doins zadist.conf
 	echo "install cron.d/zadist"
 	insinto /etc/cron.d
 	newins zadist.cron zadist
