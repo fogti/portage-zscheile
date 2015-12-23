@@ -7,7 +7,7 @@ inherit zserik-virtual
 DESCRIPTION="Zscheile Standard Environment for Clients"
 
 KEYWORDS="arm amd64 x86"
-IUSE="+emacs flash geosci wine +xfce"
+IUSE="+emacs flash games geosci wine +xfce"
 
 RDEPEND="app-admin/sudo
 	app-admin/sysklogd
@@ -20,6 +20,7 @@ RDEPEND="app-admin/sudo
 	app-office/libreoffice
 	app-portage/eix
 	app-portage/gentoolkit
+	app-text/evince
 	dev-util/geany
 	dev-util/strace
 	dev-vcs/git
@@ -28,7 +29,14 @@ RDEPEND="app-admin/sudo
 	media-gfx/gqview
 	media-sound/alsa-utils
 	media-sound/lmms
+	media-sound/rhythmbox
 	media-sound/timidity++
+	media-video/mplayer
+	|| (
+		net-analyzer/netcat
+		net-analyzer/netcat6
+	)
+	net-analyzer/nmap
 	net-analyzer/traceroute
 	net-analyzer/wireshark
 	net-dns/bind-tools
@@ -47,9 +55,11 @@ RDEPEND="app-admin/sudo
 	sys-libs/glibc[nscd]
 	sys-libs/gpm
 	sys-process/cronie
+	sys-process/lsof
 	www-client/firefox
 	www-client/links
 	x11-apps/xedit
+	x11-apps/xhost
 	x11-apps/xinit
 	x11-apps/xload
 	x11-base/xorg-server
@@ -63,6 +73,9 @@ RDEPEND="app-admin/sudo
 	)
 	flash? (
 		virtual/zimpl-flash
+	)
+	games? (
+		games-board/aisleriot
 	)
 	geosci? (
 		sci-geosciences/gpsbabel
