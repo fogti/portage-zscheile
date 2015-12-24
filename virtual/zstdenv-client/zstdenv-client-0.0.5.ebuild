@@ -31,6 +31,12 @@ RDEPEND="app-admin/sudo
 	media-sound/lmms
 	media-sound/rhythmbox
 	media-sound/timidity++
+	media-video/mplayer
+	|| (
+		net-analyzer/netcat
+		net-analyzer/netcat6
+	)
+	net-analyzer/nmap
 	net-analyzer/traceroute
 	net-analyzer/wireshark
 	net-dns/bind-tools
@@ -38,6 +44,7 @@ RDEPEND="app-admin/sudo
 	net-fs/openafs
 	net-ftp/gftp[gtk]
 	net-misc/iputils[-caps,-filecaps]
+	net-misc/ntp
 	net-misc/openvpn
 	net-misc/zadist
 	net-print/cups
@@ -53,6 +60,7 @@ RDEPEND="app-admin/sudo
 	www-client/firefox
 	www-client/links
 	x11-apps/xedit
+	x11-apps/xhost
 	x11-apps/xinit
 	x11-apps/xload
 	x11-base/xorg-server
