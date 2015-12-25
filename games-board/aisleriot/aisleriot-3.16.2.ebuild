@@ -12,7 +12,7 @@ HOMEPAGE="https://wiki.gnome.org/action/show/Apps/Aisleriot"
 LICENSE="GPL-3 LGPL-3 FDL-1.1"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="gnome qt4"
+IUSE="qt4"
 
 # FIXME: quartz support?
 # Does not build with guile-2.0.0 or 2.0.1
@@ -23,7 +23,7 @@ COMMON_DEPEND="
 	>=media-libs/libcanberra-0.26[gtk3]
 	>=x11-libs/cairo-1.10
 	>=x11-libs/gtk+-3.4:3
-	gnome? ( >=gnome-base/gconf-2.0:2 )
+	>=gnome-base/gconf-2.0:2
 	qt4? ( >=dev-qt/qtsvg-4.4:4 )
 "
 DEPEND="${COMMON_DEPEND}
@@ -34,7 +34,7 @@ DEPEND="${COMMON_DEPEND}
 	sys-apps/lsb-release
 	>=sys-devel/gettext-0.12
 	virtual/pkgconfig
-	gnome? ( app-text/docbook-xml-dtd:4.3 )
+	app-text/docbook-xml-dtd:4.3
 "
 # dev-util/itstool really needed for help file generation
 # >=app-text/yelp-tools-3.1.1
@@ -50,18 +50,6 @@ src_prepare() {
 src_configure() {
 	local myconf=()
 
-	if use gnome; then
-		myconf+=(
-			--with-platform=gnome
-			--with-help-method=ghelp
-		)
-	else
-		myconf+=(
-			--with-platform=gtk-only
-			--with-help-method=library
-		)
-	fi
-
 	if use qt4 ; then
 		myconf+=(
 			--with-card-theme-formats=all
@@ -76,6 +64,8 @@ src_configure() {
 		--with-guile=2.0 \
 		--enable-sound \
 		--with-pysol-card-theme-path="${EPREFIX}${GAMES_DATADIR}"/pysolfc \
+		--with-platform=gnome \
+		--with-help-method=ghelp \
 		GUILE=$(type -P guile-2.0) \
 		${myconf[@]}
 }

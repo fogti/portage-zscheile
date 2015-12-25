@@ -2,6 +2,7 @@ app-misc
 dev-cpp
 dev-embedded
 dev-lang
+dev-misc
 dev-scheme
 games-board
 net-analyzer
@@ -9,4 +10,3 @@ net-dns
 net-libs
 net-misc
 virtual
-zserik-base
