@@ -7,12 +7,13 @@ inherit zserik-virtual
 DESCRIPTION="Zscheile Standard Environment for Clients"
 
 KEYWORDS="arm amd64 x86"
-IUSE="+emacs flash games geosci wine +xfce"
+IUSE="+emacs +flash games +geosci wine +xfce"
 
 RDEPEND="app-admin/sudo
 	app-admin/sysklogd
 	app-arch/xarchiver
 	app-crypt/easy-rsa
+	app-crypt/pinentry[gtk]
 	app-editors/gedit
 	app-editors/nano
 	app-editors/nedit
@@ -20,23 +21,28 @@ RDEPEND="app-admin/sudo
 	app-office/libreoffice
 	app-portage/eix
 	app-portage/gentoolkit
+	app-text/dos2unix
 	app-text/evince
+	app-text/poppler[cairo]
+	dev-libs/libxml2[python]
 	dev-util/geany
 	dev-util/strace
 	dev-vcs/git
 	mail-client/thunderbird
 	media-fonts/font-misc-misc
 	media-gfx/gqview
+	media-libs/harfbuzz[icu]
+	media-libs/libpng[apng]
 	media-sound/alsa-utils
 	media-sound/lmms
-	media-sound/rhythmbox
+	media-sound/rhythmbox[-libsecret]
 	media-sound/timidity++
 	media-video/mplayer
 	|| (
 		net-analyzer/netcat
 		net-analyzer/netcat6
 	)
-	net-analyzer/nmap
+	net-analyzer/nmap[zenmap]
 	net-analyzer/traceroute
 	net-analyzer/wireshark
 	net-dns/bind-tools
@@ -44,6 +50,7 @@ RDEPEND="app-admin/sudo
 	net-fs/openafs
 	net-ftp/gftp[gtk]
 	net-misc/iputils[-caps,-filecaps]
+	net-misc/ntp
 	net-misc/openvpn
 	net-misc/zadist
 	net-print/cups
@@ -87,5 +94,6 @@ RDEPEND="app-admin/sudo
 	xfce? (
 		xfce-base/xfce4-meta
 		xfce-extra/xfce4-cpugraph-plugin
+		xfce-extra/xfce4-notes-plugin
 	)
 	"
