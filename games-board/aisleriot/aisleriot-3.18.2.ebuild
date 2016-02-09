@@ -60,12 +60,9 @@ src_configure() {
 	fi
 
 	gnome2_src_configure \
-		--with-gtk=3.0 \
-		--with-guile=2.0 \
-		--enable-sound \
+		--with-gtk=3.0 --with-guile=2.0 --enable-sound \
 		--with-pysol-card-theme-path="${EPREFIX}${GAMES_DATADIR}"/pysolfc \
-		--with-platform=gnome \
-		--with-help-method=ghelp \
+		--with-platform=gnome --with-help-method=ghelp \
 		GUILE=$(type -P guile-2.0) \
 		${myconf[@]}
 }
