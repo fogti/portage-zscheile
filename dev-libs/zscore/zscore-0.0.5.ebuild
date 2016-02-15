@@ -9,3 +9,6 @@ inherit zserik-cmake
 DESCRIPTION="ZS Core library - C function collection"
 
 KEYWORDS="amd64 arm x86"
+
+RDEPEND="dev-libs/glib
+net-analyzer/fping"
