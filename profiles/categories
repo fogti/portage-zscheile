@@ -1,3 +1,4 @@
+app-admin
 app-misc
 dev-cpp
 dev-embedded
@@ -5,6 +6,7 @@ dev-lang
 dev-libs
 dev-misc
 dev-scheme
+dev-util
 games-board
 net-analyzer
 net-dns
