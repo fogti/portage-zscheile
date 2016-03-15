@@ -14,18 +14,25 @@ RDEPEND="app-shells/bash
 sys-apps/coreutils"
 
 src_install() {
-    echo "install zdbc"
-    dobin zdbc
+    for file in zdbc; do
+        echo "install $file"
+        dobin "$file"
+    done
 
     insinto /usr/share/zdbc
-    echo "install zdbc.help"
-    doins zdbc.help
-    echo "install lib.sh"
-    doins lib.sh
+    for file in lib.sh zdbc.help; do
+        echo "install $file"
+        doins "$file"
+    done
 
     exeinto /usr/libexec/zdbc
     for file in entry search; do
         echo "install $file"
         doexe "$file"
     done
+}
+
+pkg_postinst() {
+    ewarn "Zscheile DataBases directory structure changed"
+    ewarn "ZDB's created with zdbc-0.0.3 will be incompatible"
 }
