@@ -31,3 +31,10 @@ src_install() {
         doexe "$file"
     done
 }
+
+pkg_preinst() {
+    if has_version "<app-misc/zdbc-0.0.6"; then
+        ewarn "Zscheile DataBases directory structure changed (M -> key)"
+        ewarn "ZDB's created with zdbc-0.0.5 will be incompatible"
+    fi
+}

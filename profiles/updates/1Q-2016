@@ -1,1 +1,2 @@
 move dev-misc/zscore dev-libs/zscore
+move app-misc/zdbc dev-db/zdbc
