@@ -11,7 +11,8 @@ DESCRIPTION="ZDBC - Zscheile DataBase Utils"
 KEYWORDS="arm amd64 x86"
 
 RDEPEND="app-shells/bash
-sys-apps/coreutils"
+sys-apps/coreutils
+sys-apps/grep"
 
 src_install() {
     for file in zdbc; do
