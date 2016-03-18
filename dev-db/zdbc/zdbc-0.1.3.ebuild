@@ -10,35 +10,32 @@ DESCRIPTION="ZDBC - Zscheile DataBase Utils"
 
 KEYWORDS="arm amd64 x86"
 
-RDEPEND="app-shells/bash
-sys-apps/coreutils
-sys-apps/grep"
+RDEPEND="sys-apps/coreutils
+sys-apps/grep
+sys-apps/man-db"
 
 DOCS="README"
 
 src_install() {
     default
 
-    for file in zdbc; do
-        echo "install $file"
-        dobin "$file"
-    done
-
-    insinto /usr/share/zdbc
-    for file in lib.sh zdbc.help; do
-        echo "install $file"
-        doins "$file"
-    done
+    echo install zdbc
+    dobin zdbc || die
 
     exeinto /usr/libexec/zdbc
-    for file in dump entry search; do
+    for file in lib.sh search; do
         echo "install $file"
-        doexe "$file"
+        doexe "$file" || die
+    done
+
+    for file in zdbc*.1; do
+        echo "install manual page $file"
+        doman "$file" || die
     done
 }
 
 pkg_preinst() {
-    if has_version "<dev-db/zdbc-0.0.9"; then
+    if has_version "<dev-db/zdbc-0.1.2"; then
         ewarn "zdbc commandline interface changed"
     fi
 }
