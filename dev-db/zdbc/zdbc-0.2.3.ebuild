@@ -14,6 +14,9 @@ KEYWORDS="arm amd64 x86"
 
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
+DEPEND="${DEPEND}
+dev-python/setuptools"
+
 RDEPEND="${RDEPEND}
 sys-apps/man-db"
 
