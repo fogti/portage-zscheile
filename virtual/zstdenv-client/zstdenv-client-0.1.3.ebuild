@@ -7,66 +7,83 @@ inherit zserik-virtual
 DESCRIPTION="Zscheile Standard Environment for Clients"
 
 KEYWORDS="arm amd64 x86"
-IUSE="+emacs experimental +flash games +geosci +kerberos mp3 +vala wine +xdm +xfce"
+IUSE="+emacs experimental +flash games +geosci +kerberos minimal mp3 +vala +vnc wine +xdm +xfce +zadist"
 
+# sys-libs/glibc[nscd] entfernt, weil nscd + dbus
+# in Kombination Startprobleme (-> openrc, Abhängigkeiten) haben
 RDEPEND="app-admin/sudo
 	app-admin/sysklogd
-	app-arch/xarchiver
-	app-crypt/easy-rsa
-	app-editors/gedit
 	app-editors/nano
 	app-misc/mc
-	app-office/libreoffice
 	app-portage/eix
 	app-portage/gentoolkit
 	app-text/dos2unix
-	app-text/evince
 	app-text/poppler[cairo]
 	app-text/tree
+	!minimal? (
+		app-arch/xarchiver
+		app-editors/gedit
+		app-office/libreoffice
+		app-shells/dash
+		app-text/evince
+	)
 
-	dev-libs/libxml2[python]
 	dev-perl/Module-Build
-	dev-util/geany
 	dev-util/strace
 	dev-vcs/git
-	dev-vcs/subversion
-
-	mail-client/thunderbird
+	!minimal? (
+		dev-db/zdbc
+		dev-lang/ruby
+		dev-util/geany
+		dev-vcs/subversion
+		mail-client/thunderbird
+	)
 
 	media-fonts/font-misc-misc
 	media-gfx/gqview
 	media-libs/harfbuzz[icu]
 	media-libs/libpng[apng]
 	media-plugins/gst-plugins-meta[mp3?]
+	media-plugins/gst-plugins-openh264
 	media-sound/alsa-utils
-	media-sound/lmms
-	media-sound/rhythmbox[-libsecret]
-	media-sound/timidity++
 	media-video/mplayer
+	media-video/parole
+	!minimal? (
+		media-gfx/gimp
+		media-gfx/imagemagick
+		media-sound/lmms
+	)
 
 	net-analyzer/nmap[zenmap]
+	net-analyzer/tcpdump
 	net-analyzer/traceroute
-	net-analyzer/wireshark
 	net-dns/bind-tools
 	net-fs/nfs-utils
 	net-ftp/gftp[gtk]
 	net-misc/ntp
-	net-misc/openvpn
-	net-misc/zadist
 	net-print/cups
+	!minimal? (
+		net-analyzer/wireshark
+		sci-visualization/gnuplot
+	)
 
 	sys-apps/mlocate
+	sys-block/gparted
 	sys-boot/grub
 	sys-boot/os-prober
 	sys-fs/dosfstools
 	sys-kernel/gentoo-sources
-	sys-libs/glibc[nscd]
 	sys-libs/gpm
 	sys-process/cronie
 	sys-process/lsof
+	!minimal? (
+		sys-fs/cryptsetup
+	)
 
-	www-client/firefox
 	www-client/links
+	!minimal? (
+		www-client/firefox
+	)
 
 	x11-apps/xedit
 	x11-apps/xhost
@@ -104,6 +121,9 @@ RDEPEND="app-admin/sudo
 		app-admin/eselect-vala
 		dev-lang/vala
 	)
+	vnc? (
+		net-misc/tightvnc
+	)
 	wine? (
 		app-emulation/wine
 	)
@@ -114,5 +134,8 @@ RDEPEND="app-admin/sudo
 		xfce-base/xfce4-meta
 		xfce-extra/xfce4-cpugraph-plugin
 		xfce-extra/xfce4-notes-plugin
+	)
+	zadist? (
+		net-misc/zadist
 	)
 	"
