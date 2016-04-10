@@ -4,7 +4,7 @@
 
 EAPI=5
 
-PYTHON_COMPAT=( python3_2 python3_3 python3_4 )
+PYTHON_COMPAT=( python3_{2,3,4,5} )
 
 inherit distutils-r1 zserik-minimal
 
