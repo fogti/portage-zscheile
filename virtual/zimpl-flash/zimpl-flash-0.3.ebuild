@@ -7,15 +7,11 @@ inherit zserik-virtual
 
 DESCRIPTION="Erik Zscheile: flash implementations"
 
-KEYWORDS="~amd64 ~x86"
-IUSE="gstreamer swfdec_only"
+KEYWORDS="amd64 ~arm x86"
+IUSE="gstreamer"
 
 RDEPEND="|| (
 	www-plugins/adobe-flash
 	www-plugins/gnash
 	www-plugins/lightspark
-	swfdec_only? (
-		media-libs/swfdec[gstreamer?]
-		|| ( www-plugins/swfdec-mozilla gnome-extra/swfdec-gnome )
-		)
 	)"
