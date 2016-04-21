@@ -17,6 +17,7 @@ src_install() {
     insinto /usr/share/help/C
     newins zmodulesctl.help zmodulesctl.txt
 
-    echo "install lib/zmodules modules folder"
+    echo "install folders"
+    dodir /etc/zmodules
     dodir /usr/lib/zmodules
 }
