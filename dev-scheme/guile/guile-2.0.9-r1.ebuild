@@ -1,5 +1,7 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+
+# from lisp overlay
 
 EAPI=5
 inherit flag-o-matic
@@ -11,12 +13,13 @@ HOMEPAGE="http://www.gnu.org/software/guile/"
 SRC_URI="mirror://gnu/guile/${P}.tar.gz"
 
 LICENSE="LGPL-3"
-KEYWORDS="~amd64 ~x86"
-IUSE="debug debug-malloc +deprecated +networking nls +regex +threads"
+KEYWORDS="amd64 x86"
+# threads useflag removed because only works with threads support
+IUSE="debug debug-malloc +deprecated +networking nls +regex"
 
 RDEPEND="
 	app-admin/eselect-guile
-	>=dev-libs/boehm-gc-7.0[threads?]
+	>=dev-libs/boehm-gc-7.0[threads]
 	dev-libs/gmp
 	dev-libs/libffi
 	>=dev-libs/libunistring-0.9.3
@@ -46,7 +49,7 @@ src_configure() {
 		--disable-rpath \
 		$(use_enable debug-malloc) \
 		$(use_enable debug guile-debug) \
-		$(use_with threads) \
+		--with-threads \
 		--with-modules
 }
 
