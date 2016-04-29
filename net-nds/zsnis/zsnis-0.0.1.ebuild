@@ -10,6 +10,10 @@ DESCRIPTION="ZSNIS - Zscheile Secure Network Information Service"
 KEYWORDS="arm amd64 x86"
 
 RDEPEND="app-shells/bash
+|| (
+    net-analyzer/netcat
+    net-analyzer/netcat6
+)
 sys-apps/coreutils
 sys-process/procps"
 
