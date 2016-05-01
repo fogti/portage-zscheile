@@ -9,12 +9,15 @@ DESCRIPTION="ZSNIS - Zscheile Secure Network Information Service"
 
 KEYWORDS="arm amd64 x86"
 
+IUSE="server"
+
 RDEPEND="app-shells/bash
 net-analyzer/cryptcat
-sys-apps/coreutils
-sys-process/procps"
-
-IUSE="server"
+server? (
+	>dev-misc/zsrc-0.0.1.2
+	sys-apps/coreutils
+	sys-process/procps
+)"
 
 src_install() {
     echo install zsniclient
