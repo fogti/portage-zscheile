@@ -15,6 +15,7 @@ RDEPEND="app-shells/bash
 net-analyzer/cryptcat
 server? (
 	>dev-misc/zsrc-0.0.1.2
+	<dev-misc/zsrc-0.0.2
 	sys-apps/coreutils
 	sys-process/procps
 )"
