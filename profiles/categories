@@ -14,5 +14,7 @@ net-dns
 net-libs
 net-misc
 net-nds
+sys-apps
+sys-cluster
 virtual
 www-client
