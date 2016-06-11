@@ -6,4 +6,4 @@ KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-a
 LICENSE=GPL-2
 RDEPEND=>=app-admin/eselect-1.2.6 !<dev-scheme/guile-1.8.8-r3
 SLOT=0
-_md5_=582ef57339cd3b96dfe92162eeb35902
+_md5_=fe1ad2fbd26163062aaf0076e6df47b9
