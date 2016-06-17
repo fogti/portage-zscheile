@@ -7,49 +7,35 @@ inherit zserik-virtual
 DESCRIPTION="Zscheile Standard Environment for Clients"
 
 KEYWORDS="arm amd64 x86"
-IUSE="+emacs experimental +flash games +geosci +kerberos minimal mp3 +vala wine +xdm +xfce +zadist"
+IUSE="chromium +emacs experimental +flash games +geosci +kerberos minimal mp3 +vala wine +xdm +xfce +zadist"
 
+# block >=glibc-2.22-r4 because hesiod is broken
+#                       bugfix in glibc-2.24
 RDEPEND="app-admin/sudo
 	app-admin/sysklogd
 	app-editors/nano
 	app-misc/mc
 	app-portage/eix
+	app-portage/genlop
 	app-portage/gentoolkit
 	app-text/dos2unix
 	app-text/tree
-	!minimal? (
-		app-arch/xarchiver
-		app-editors/gedit
-		app-office/libreoffice
-		app-shells/dash
-		app-text/evince
-	)
 
-	dev-perl/Module-Build
 	dev-util/strace
+	dev-util/zsgenheader
 	dev-vcs/git
-	!minimal? (
-		dev-db/zdbc
-		dev-lang/ruby
-		dev-util/geany
-		dev-vcs/subversion
-		mail-client/thunderbird
-	)
 
 	media-fonts/font-misc-misc
 	media-gfx/gqview
-	media-libs/harfbuzz[icu]
-	media-plugins/gst-plugins-meta[mp3?]
+	media-plugins/gst-plugins-ffmpeg
+	media-plugins/gst-plugins-jpeg
+	media-plugins/gst-plugins-meta[mp3?,mpeg]
 	media-plugins/gst-plugins-openh264
-	media-sound/alsa-utils
+	media-plugins/gst-plugins-xvid
 	media-video/mplayer
 	media-video/parole
-	!minimal? (
-		media-gfx/gimp
-		media-gfx/imagemagick
-		media-sound/lmms
-	)
 
+	net-analyzer/fping
 	net-analyzer/nmap[zenmap]
 	net-analyzer/tcpdump
 	net-analyzer/traceroute
@@ -57,47 +43,45 @@ RDEPEND="app-admin/sudo
 	net-fs/nfs-utils
 	net-ftp/gftp[gtk]
 	net-misc/ntp
-	net-print/cups
-	!minimal? (
-		net-analyzer/wireshark
-		sci-visualization/gnuplot
-	)
 
 	sys-apps/mlocate
+	sys-apps/pciutils
 	sys-block/gparted
 	sys-boot/grub
 	sys-boot/os-prober
 	sys-fs/dosfstools
+	sys-fs/xfsprogs
 	sys-kernel/gentoo-sources
-	!=sys-libs/glibc-2.22-r4
 	sys-libs/gpm
-	sys-process/cronie
 	sys-process/lsof
-	!minimal? (
-		sys-fs/cryptsetup
-	)
 
 	www-client/links
-	!minimal? (
-		www-client/firefox
-	)
 
 	x11-apps/xedit
 	x11-apps/xhost
-	x11-apps/xinit
 	x11-apps/xload
 	x11-base/xorg-server
 	x11-terms/rxvt-unicode
 	x11-terms/xterm
 
-	virtual/zenv-media[flash?]
+	virtual/cron
+	virtual/zenv-media[alsa,flash?]
+
+	|| (
+		<sys-libs/glibc-2.22-r4
+		>sys-libs/glibc-2.23-r2
+	)
 
 	|| (
 		net-analyzer/netcat
 		net-analyzer/netcat6
 	)
+
+	chromium? (
+		www-client/chromium
+	)
+
 	emacs? (
-		app-editors/emacs
 		app-emacs/auctex
 		app-text/aspell
 	)
@@ -105,18 +89,49 @@ RDEPEND="app-admin/sudo
 		gnome-extra/gnome-builder[vala?]
 	)
 	games? (
+		games-arcade/alienwave
 		games-board/aisleriot
 	)
+
 	geosci? (
 		sci-geosciences/gpsbabel
 		sci-geosciences/josm
 	)
+
 	kerberos? (
 		sys-auth/pambase[pam_krb5]
 	)
+
+	!minimal? (
+		app-arch/xarchiver
+		app-editors/gedit
+		app-office/libreoffice
+		app-shells/dash
+		app-text/evince
+
+		dev-java/icedtea
+		dev-lang/ruby
+		dev-util/geany
+		dev-vcs/subversion
+
+		mail-client/thunderbird
+		media-gfx/gimp
+		media-sound/lmms
+		media-video/kino
+
+		net-analyzer/wireshark
+		net-nds/zsnis
+
+		sci-visualization/gnuplot
+		sys-cluster/glusterfs
+		sys-fs/cryptsetup
+
+		www-client/firefox
+		x11-themes/tango-icon-theme
+	)
+
 	vala? (
 		app-admin/eselect-vala
-		dev-lang/vala
 	)
 	wine? (
 		app-emulation/wine
