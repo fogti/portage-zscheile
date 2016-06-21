@@ -18,5 +18,6 @@ net-nds
 sys-apps
 sys-cluster
 sys-devel
+sys-libs
 virtual
 www-client
