@@ -17,5 +17,6 @@ net-misc
 net-nds
 sys-apps
 sys-cluster
+sys-devel
 virtual
 www-client
