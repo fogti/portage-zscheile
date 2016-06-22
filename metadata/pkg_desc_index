@@ -1,0 +1,66 @@
+app-admin/eselect-guile 1.2-r1: Manage multiple Guile versions on one system
+app-admin/eselect-vala 0.1.2: Eselect module to maintain vala compiler symlink
+app-misc/c_rehash 1.0.2g_p8 1.7-r1: c_rehash script from OpenSSL
+app-misc/ca-certificates 20151214.3.21 20160104.3.21 20160104.3.23: Common CA Certificates PEM files
+app-misc/zcmdrepo 0.0.3 0.0.4: ZCMDRepo - Zscheile Command Repository Utils
+app-misc/zconfctl 0.0.1: ZConfCtl - Zscheile Configurations Control
+app-misc/zlock 0.0.1 0.0.2: zlock - Zscheile LOCKing manager
+app-misc/zmodulesctl 0.0.3 0.0.3.1 0.0.3.2.1 0.0.3.3: ZModulesCtl - Zscheile Modules Control
+app-misc/zsgcfgfpath 0.0.1: ZS gcfgfpath - get config file path - gentoo cfg-filename determine application
+app-misc/zsoutils 0.0.4 0.0.5: ZS Outils - output utilitys - multi call binary
+app-misc/zsrecursil 0.0.3: ZS Recursil - directory recursion tool
+dev-cpp/signalmm 9999: Signal MM - a header-only signal slot system written in C++11
+dev-db/zdbc 0.2.3 0.2.4 0.2.5: ZDBC - Zscheile DataBase Utils
+dev-embedded/arduino 1.5.8: An open-source AVR electronics prototyping platform
+dev-lang/zeiksh 0.0.6 0.0.7 0.0.8 0.0.9 0.0.10 0.0.11: Zscheile EIK (EICK# dialect) shell and script interpreter
+dev-lang/zpavinl 0.1.1: Zscheile ZPAVINL to C compiler
+dev-lang/zserik-sfvsl 0.2: ZSerik Simple Formula Variable Substitution Language - simple replace variables
+dev-libs/gdl 9999: GNOME docking library
+dev-libs/glib 2.46.2-r2 2.46.2-r3 2.48.0 2.48.0-r1: The GLib library of C routines
+dev-libs/libaio 0.3.110: Asynchronous input/output library that uses the kernels native interface
+dev-libs/libgudev 230: GObject bindings for libudev
+dev-libs/nspr 4.10.8 4.10.10 4.10.10-r1 4.11 4.12: Netscape Portable Runtime
+dev-libs/nss 3.20 3.22.2 3.23 3.24: Mozilla's Network Security Services library that implements PKI support
+dev-libs/openssl 0.9.8z_p8 1.0.2g-r2 1.0.2h 1.0.2h-r1: full-strength general purpose cryptography library (including SSL and TLS)
+dev-libs/zscore 0.0.3 0.0.5: ZS Core library - C function collection
+dev-misc/zs-common 0.7 0.8: ZSerik Common - useful scripts
+dev-misc/zs-shlib-events 0.0.3 0.0.4 0.0.4.2: Zscheile Shell Library - Events
+dev-misc/zsrc 0.0.1.1 0.0.1.3 0.0.2: zsrc - Zscheile Resource Control framework
+dev-scheme/guile 2.0.9-r1: GNU Ubiquitous Intelligent Language for Extensions
+dev-util/gdbus-codegen 2.44.1 2.46.2 2.48.0: GDBus code and documentation generator
+dev-util/valadoc 9999: A documentation generator for generating API documentation from Vala source code
+dev-util/zsgenheader 0.0.1: ZsGenHeader - generate header from c source file
+games-board/aisleriot 3.16.2 3.18.2: A collection of solitaire card games for GNOME
+games-misc/wyel 0.0.1: Zscheile WYEL Game
+gnome-base/gvfs 1.24.2-r1 1.26.2-r1 1.26.3 1.28.0: Virtual filesystem implementation for gio
+net-analyzer/zs-wait4host 0.2 0.3 0.3.2: Wait for a host to come up/go done
+net-dns/resolvconfctl 0.0.1: resolvconfctl - another /etc/resolv.conf manager
+net-libs/libgrss 0.5.0: LibGRSS is a library for easy management of RSS/Atom/Pie feeds
+net-misc/netifrc 0.2.2 0.2.3 0.2.4 0.3.0 0.3.1 9999: Gentoo Network Interface Management Scripts
+net-misc/zadist 0.0.6 0.0.7.1 0.0.8: ZADist - Zscheile Automatic Distributor Client
+net-nds/zsnis 0.1.4 0.1.5.2 0.1.6: ZSNIS - Zscheile Secure Network Information Service
+sys-apps/openrc 0.17 0.18.4 0.19.1 0.20.4 0.20.5 0.21 9999: OpenRC manages the services, startup and shutdown of a host
+sys-apps/portage 2.2.8-r2 2.2.28: Portage is the package management and distribution system for Gentoo
+sys-apps/sysvinit 2.88-r7 2.88-r9: /sbin/init - parent of all processes
+sys-apps/util-linux 2.26.2 2.27.1 2.28: Various useful Linux utilities
+sys-cluster/glusterfs 3.1.2 3.6.5: GlusterFS is a powerful network/cluster filesystem
+sys-devel/autoconf 2.13 2.59-r7 2.61-r2 2.62-r1 2.63-r1 2.64 2.65-r1 2.67 2.68 2.69 2.69-r1 2.69-r2 9999: Used to create autoconfiguration files
+sys-devel/autoconf-archive 2015.02.04 2015.02.24 2015.09.25 2016.03.20-r1: GNU Autoconf Macro Archive
+sys-devel/autoconf-wrapper 13: wrapper for autoconf to manage multiple autoconf versions
+sys-devel/automake 1.4_p6-r2 1.5-r2 1.6.3-r2 1.7.9-r3 1.8.5-r5 1.9.6-r4 1.10.3-r1 1.10.3-r2 1.11.6-r1 1.11.6-r2 1.12.6 1.12.6-r1 1.13.4 1.13.4-r1 1.14.1 1.14.1-r1 1.15 1.15-r1 1.15-r2 9999: Used to generate Makefile.in from Makefile.am
+sys-devel/automake-wrapper 10: wrapper for automake to manage multiple automake versions
+sys-fs/eudev 1.9-r2 1.10-r2 3.1.2 3.1.5 3.2 9999: Linux dynamic and persistent device naming support (aka userspace devfs)
+sys-fs/udev-init-scripts 27 29 30 31 9999: udev startup scripts for openrc
+sys-fs/udisks 1.0.5-r1 2.1.4 2.1.6 2.1.7: Daemon providing interfaces to work with storage devices
+sys-libs/glibc 2.17 2.18-r1 2.19-r1 2.20-r2 2.21-r2: GNU libc6 (also called glibc2) C library
+sys-libs/ncurses 5.9-r3 5.9-r4 5.9-r5 5.9-r99 5.9-r101 6.0 6.0-r1: console display library
+sys-process/procps 3.3.9-r2 3.3.10-r1 3.3.11-r3: standard informational utilities and process-handling tools
+virtual/libgudev 215-r3 230: Virtual for libgudev providers
+virtual/libudev 215-r1: Virtual for libudev providers
+virtual/udev 215 217: Virtual to select between different udev daemon providers
+virtual/zenv-media 0.7.1: Erik Zscheile: media environment
+virtual/zimpl-flash 0.3 0.4: Erik Zscheile: flash implementations
+virtual/zstdenv-client 0.1.8 0.1.9 0.2.0 0.2.1: Zscheile Standard Environment for Clients
+www-client/firefox 10.0.11 17.0.9 38.1.0: Firefox Web Browser
+www-plugins/adobe-flash 11.2.202.626: Adobe Flash Player
+xfce-base/thunar 1.6.3: File manager for the Xfce desktop environment
