@@ -7,7 +7,7 @@ inherit zserik-virtual
 DESCRIPTION="Zscheile Standard Environment for Clients"
 
 KEYWORDS="arm amd64 x86"
-IUSE="+emacs experimental +flash games +geosci +kerberos minimal mp3 +vala wine +xdm +xfce +zadist"
+IUSE="+emacs +flash games +geosci +kerberos minimal mp3 openbox +vala +xdm +xfce"
 
 # block >=glibc-2.22-r4 because hesiod is broken
 #                       bugfix in glibc-2.24
@@ -45,6 +45,7 @@ RDEPEND="app-admin/sudo
 	net-misc/ntp
 
 	sys-apps/mlocate
+	sys-apps/pciutils
 	sys-block/gparted
 	sys-boot/grub
 	sys-boot/os-prober
@@ -77,12 +78,9 @@ RDEPEND="app-admin/sudo
 	)
 
 	emacs? (
-		app-emacs/auctex
 		app-text/aspell
 	)
-	experimental? (
-		gnome-extra/gnome-builder[vala?]
-	)
+
 	games? (
 		games-arcade/alienwave
 		games-board/aisleriot
@@ -105,42 +103,39 @@ RDEPEND="app-admin/sudo
 		app-text/evince
 
 		dev-java/icedtea
-		dev-lang/ruby
 		dev-util/geany
-		dev-vcs/subversion
 
 		mail-client/thunderbird
 		media-gfx/gimp
 		media-sound/lmms
-		media-video/kino
-
 		net-analyzer/wireshark
-		net-nds/zsnis
-
 		sci-visualization/gnuplot
+
+		sys-cluster/glusterfs
 		sys-fs/cryptsetup
 
-		www-client/chromium
 		www-client/firefox
-
 		x11-themes/tango-icon-theme
+	)
+
+	openbox? (
+		x11-apps/xsetroot
+		x11-misc/obconf
+		x11-misc/menumaker
+		x11-wm/openbox
 	)
 
 	vala? (
 		app-admin/eselect-vala
 	)
-	wine? (
-		app-emulation/wine
-	)
+
 	xdm? (
 		x11-misc/slim
 	)
+
 	xfce? (
 		xfce-base/xfce4-meta
 		xfce-extra/xfce4-cpugraph-plugin
 		xfce-extra/xfce4-notes-plugin
-	)
-	zadist? (
-		net-misc/zadist
 	)
 	"
