@@ -18,10 +18,12 @@ dev-lang/zserik-sfvsl 0.2: ZSerik Simple Formula Variable Substitution Language 
 dev-libs/libaio 0.3.110: Asynchronous input/output library that uses the kernels native interface
 dev-libs/zscore 0.0.3 0.0.5: ZS Core library - C function collection
 dev-misc/zs-common 0.7 0.8: ZSerik Common - useful scripts
-dev-misc/zs-shlib-echo 0.0.1: Zscheile Shell Library - Echo
-dev-misc/zs-shlib-events 0.0.3 0.0.4 0.0.4.2: Zscheile Shell Library - Events
-dev-misc/zs-shlib-load 0.0.1: Zscheile Shell Library - Load
-dev-misc/zs-shlib-optimize 0.0.1 0.0.2: Zscheile Shell Library - Optimize
+dev-misc/zs-shlib-core 0.0.1: Zscheile Shell Library - core
+dev-misc/zs-shlib-echo 0.0.1 0.0.2: transitional package
+dev-misc/zs-shlib-env 0.0.1 0.0.2: transitional package
+dev-misc/zs-shlib-events 0.0.3 0.0.4 0.0.4.2: Zscheile Shell Library - events
+dev-misc/zs-shlib-load 0.0.1 0.0.2: transitional package
+dev-misc/zs-shlib-optimize 0.0.1 0.0.2: Zscheile Shell Library - optimize
 dev-misc/zsrc 0.0.1.1 0.0.1.3 0.0.2: zsrc - Zscheile Resource Control framework
 dev-scheme/guile 2.0.9-r1: GNU Ubiquitous Intelligent Language for Extensions
 dev-util/valadoc 9999: A documentation generator for generating API documentation from Vala source code

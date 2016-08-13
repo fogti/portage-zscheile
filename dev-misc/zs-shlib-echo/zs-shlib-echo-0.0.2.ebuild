@@ -2,9 +2,8 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=5
-inherit zs-shlib
+inherit zserik-virtual
 
-RDEPEND="!dev-libs/zscore
-sys-apps/coreutils
-sys-fs/inotify-tools
-sys-process/procps"
+KEYWORDS="amd64 arm x86"
+DESCRIPTION="transitional package"
+RDEPEND="dev-misc/zs-shlib-core"
