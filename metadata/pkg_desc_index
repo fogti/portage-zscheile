@@ -18,6 +18,7 @@ dev-lang/zserik-sfvsl 0.2: ZSerik Simple Formula Variable Substitution Language 
 dev-libs/libaio 0.3.110: Asynchronous input/output library that uses the kernels native interface
 dev-libs/zscore 0.0.3 0.0.5: ZS Core library - C function collection
 dev-misc/zs-common 0.7 0.8: ZSerik Common - useful scripts
+dev-misc/zs-shlib-config 0.0.1: Zscheile Shell Library - config
 dev-misc/zs-shlib-core 0.0.1 0.0.2: Zscheile Shell Library - core
 dev-misc/zs-shlib-events 0.0.3 0.0.4 0.0.4.2: Zscheile Shell Library - events
 dev-misc/zs-shlib-optimize 0.0.1 0.0.2: Zscheile Shell Library - optimize
