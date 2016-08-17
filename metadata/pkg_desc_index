@@ -8,7 +8,6 @@ app-misc/zout-ng 0.0.1 0.0.2: Zscheile (Action) Output Formatting Tool - Next Ge
 app-misc/zsgcfgfpath 0.0.1: ZS gcfgfpath - get config file path - gentoo cfg-filename determine application
 app-misc/zsoutils 0.0.4 0.0.5: ZS Outils - output utilitys - multi call binary
 app-misc/zsrecursil 0.0.3: ZS Recursil - directory recursion tool
-dev-cpp/signalmm 9999: Signal MM - a header-only signal slot system written in C++11
 dev-db/zdbc 0.2.3 0.2.4 0.2.5: ZDBC - Zscheile DataBase Utils
 dev-db/zstab 0.0.1 0.0.2 0.0.3: zstab - Zscheile Table Management
 dev-embedded/arduino 1.5.8: An open-source AVR electronics prototyping platform
