@@ -11,6 +11,8 @@ if [[ "${___ECLASS_ONCE_ZS_SHLIB}" != "recur -_+^+_- spank" ]] ; then
 
   KEYWORDS="amd64 arm x86"
   DESCRIPTION="Zscheile Shell Library Core"
+  DEPEND="sys-apps/sed
+sys-devel/make"
 
   EXPORT_FUNCTIONS src_configure
 

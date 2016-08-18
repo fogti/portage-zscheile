@@ -3,3 +3,5 @@
 
 EAPI=5
 inherit zs-shlib-core
+
+RDEPEND="sys-process/procps"
