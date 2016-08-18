@@ -4,22 +4,21 @@
 
 EAPI=4
 
-inherit zserik-minimal
+inherit eutils zserik-minimal
 
 DESCRIPTION="ZADist - Zscheile Automatic Distributor Client"
 KEYWORDS="arm amd64 x86"
 
-RDEPEND="app-shells/bash
+RDEPEND="$RDEPEND
+app-shells/bash
 sys-apps/coreutils
+sys-apps/sed
 net-misc/rsync
 virtual/cron"
 
 src_install() {
 	echo "install zadist"
 	dobin zadist
-	echo "install skeleton zadist.conf"
-	insinto /etc
-	doins zadist.conf
 	echo "install cron.d/zadist"
 	insinto /etc/cron.d
 	newins zadist.cron zadist
