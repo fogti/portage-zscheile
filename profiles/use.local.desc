@@ -2,52 +2,12 @@
 # your descriptions to your package's metadata.xml ONLY.
 # * generated automatically using egencache *
 
-app-misc/ca-certificates:cacert - Include root certs from CAcert (http://www.cacert.org/) and Software in the Public Interest (http://www.spi-inc.org/)
-dev-libs/glib:dbus - Enable dependencies required by glib libraries using dbus service to manage settings saving
-dev-libs/glib:mime - Pull in shared MIME database that many glib-based applications require at runtime to detect or open files. Warning: do not disable this flag unless installing on a headless server.
-dev-libs/glib:systemtap - Build support for profiling and tracing using dev-util/systemtap
-dev-libs/glib:utils - Install gtester-report utility to generate test report files for your software; build gresource utility with ELF support.
-dev-libs/nss:cacert - Include root/class3 certs from CAcert (http://http://www.cacert.org/) and Software in the Public Interest (http://www.spi-inc.org/)
-dev-libs/nss:nss-pem - Add support for libnsspem
-dev-libs/nss:utils - Install utilities included with the library
-dev-libs/openssl:asm - Support assembly hand optimized crypto functions (i.e. faster run time)
-dev-libs/openssl:bindist - Disable EC algorithms (as they seem to be patented) -- note: changes the ABI
-dev-libs/openssl:rfc3779 - Enable support for RFC 3779 (X.509 Extensions for IP Addresses and AS Identifiers)
-dev-libs/openssl:sctp - Support for Stream Control Transmission Protocol
-dev-libs/openssl:sslv2 - Support for the old/insecure SSLv2 protocol -- note: not required for TLS/https
-dev-libs/openssl:sslv3 - Support for the old/insecure SSLv3 protocol -- note: not required for TLS/https
-dev-libs/openssl:tls-heartbeat - Enable the Heartbeat Extension in TLS and DTLS
 dev-scheme/guile:debug-freelist - Include garbage collector freelist debugging code
 dev-scheme/guile:debug-malloc - Include malloc debugging code
 dev-scheme/guile:deprecated - Enable deprecated features
 dev-scheme/guile:discouraged - (implied by deprecated) enable merely discouraged features
 dev-scheme/guile:networking - Include networking interfaces
 dev-scheme/guile:regex - Include regular expression interfaces
-gnome-base/gvfs:afp - Enables support for accessing AFP (Apple Filing Protocol) network shares
-gnome-base/gvfs:archive - Enables support for accessing files in archives transparently via app-arch/libarchive
-gnome-base/gvfs:bluray - Enable playback of Blu-ray filesystems using media-libs/libbluray
-gnome-base/gvfs:fuse - Enables fuse mount points in $HOME/.gvfs for legacy application access
-gnome-base/gvfs:gnome-online-accounts - Enable configuration panel for net-libs/gnome-online-accounts accounts
-gnome-base/gvfs:google - Enables support for accessing Google accounts via dev-libs/libgdata
-gnome-base/gvfs:http - Enable the HTTP/DAV backend using net-libs/libsoup-gnome
-gnome-base/gvfs:nfs - Enable NFS client support via net-fs/libnfs.
-gnome-base/gvfs:udev - Enable udev base replacement code for cdda feature
-sys-apps/openrc:netifrc - enable Gentoo's network stack (net.* scripts)
-sys-apps/openrc:newnet - enable the new network stack (experimental)
-sys-apps/openrc:tools - build optional tools
-sys-apps/portage:epydoc - Build html API documentation with epydoc.
-sys-apps/portage:ipc - Use inter-process communication between portage and running ebuilds.
-sys-apps/portage:pypy2_0 - Use pypy-c2.0 as Python interpreter.
-sys-apps/portage:python2 - Use python2 as Python interpreter.
-sys-apps/portage:python3 - Use python3 as Python interpreter.
-sys-apps/portage:xattr - Preserve extended attributes (filesystem-stored metadata) when installing files. Usually only required for hardened systems.
-sys-apps/util-linux:caps - build setpriv helper (run programs with diff capabilities)
-sys-apps/util-linux:cramfs - build mkfs/fsck helpers for cramfs filesystems
-sys-apps/util-linux:fdformat - build fdformat (floppy disk format)
-sys-apps/util-linux:kill - build the kill program
-sys-apps/util-linux:pam - build runuser helper
-sys-apps/util-linux:suid - install mount/umount as setuid so non-root users may mount/umount devices, and wall/write as setgid so non-root users can notify other users
-sys-apps/util-linux:tty-helpers - install the mesg/wall/write tools for talking to local users
 sys-cluster/glusterfs:bd-xlator - Enable the blockdevice translator (requires sys-fs/lvm2)
 sys-cluster/glusterfs:crypt-xlator - Enable the encryption translator
 sys-cluster/glusterfs:extras - Install extra helper scripts
@@ -59,40 +19,3 @@ sys-cluster/glusterfs:qemu-block - Transparently create files as QCow2/QED image
 sys-cluster/glusterfs:rsyslog - Install configuration snippet for app-admin/rsyslog
 sys-cluster/glusterfs:systemtap - Enable support for dev-util/systemtap
 sys-cluster/glusterfs:tiering - Enable support for data classification/tiering (requires dev-db/sqlite SLOT 3)
-sys-fs/eudev:gudev - enable libudev gobject interface
-sys-fs/eudev:hwdb - read vendor/device string database and add it to udev database
-sys-fs/eudev:keymap - map custom hardware's multimedia keys
-sys-fs/eudev:kmod - enable module loading through libkmod
-sys-fs/eudev:modutils - enable module loading support - use modutils calls if kmod not enabled
-sys-fs/eudev:openrc - install the OpenRC init scripts
-sys-fs/eudev:rule-generator - install legacy rule generator rules and support scripts - note that the functionality within was dropped from sys-fs/udev as it is not stable in all cases; use at your own risk
-sys-fs/udisks:cryptsetup - Enable sys-fs/cryptsetup support
-sys-fs/udisks:gptfdisk - Pull in sys-apps/gptfdisk for sgdisk command as used by partitioning functionality
-sys-fs/udisks:remote-access - Control whether connections from other clients over LAN are allowed
-sys-fs/udisks:systemd - Support sys-apps/systemd's logind
-sys-libs/glibc:debug - When USE=hardened, allow fortify/stack violations to dump core (SIGABRT) and not kill self (SIGKILL)
-sys-libs/glibc:gd - build memusage and memusagestat tools
-sys-libs/glibc:nscd - Build, and enable support for, the Name Service Cache Daemon
-sys-libs/glibc:rpc - Enable obsolete RPC/NIS layers (disabling is experimental -- see bug 381391)
-sys-libs/glibc:suid - Make internal pt_chown helper setuid -- not needed if using Linux and have /dev/pts mounted with gid=5
-sys-libs/glibc:systemtap - enable systemtap static probe points
-sys-libs/ncurses:ada - Add bindings for the ADA programming language
-sys-libs/ncurses:tinfo - Build curses library (libncurses) sep from the low-level terminfo library (libtinfo) -- usually needed only for binary packages -- but it is binary compatible in either mode
-sys-libs/ncurses:trace - Enable test trace() support in ncurses calls
-sys-process/procps:kill - Build the kill program
-sys-process/procps:modern-top - Enables new startup defaults of top. Keeps old defaults if disabled
-sys-process/procps:ncurses - Build programs that use ncurses: top, slabtop, watch
-www-client/firefox:bindist - Disable official Firefox branding (icons, name) which are not binary-redistributable according to upstream.
-www-client/firefox:custom-optimization - Fine-tune custom compiler optimizations (-Os, -O0, -O1, -O2, -O3)
-www-client/firefox:egl - Enable EGL provider
-www-client/firefox:gmp-autoupdate - Allow Gecko Media Plugins (binary blobs) to be automatically downloaded and kept up-to-date in user profiles
-www-client/firefox:gstreamer-0 - Use gstreamer:0.10 instead of gstreamer:1 for media support
-www-client/firefox:jemalloc3 - Enable or disable jemalloc3 (forced-on when supported prior to 38.0)
-www-client/firefox:minimal - Prevent sdk and headers from being installed
-www-client/firefox:pgo - Add support for profile-guided optimization using gcc-4.5, for faster binaries. This option will double the compile time.
-www-client/firefox:system-cairo - Use the system-wide x11-libs/cairo instead of bundled.
-www-client/firefox:system-icu - Use the system-wide dev-libs/icu instead of bundled.
-www-client/firefox:system-jpeg - Use the system-wide media-libs/libjpeg-turbo instead of bundled.
-www-client/firefox:system-libvpx - Use the system-wide media-libs/libvpx instead of bundled.
-www-client/firefox:system-sqlite - Use the system-wide dev-db/sqlite installation with secure-delete enabled
-www-plugins/adobe-flash:kde - Install a KCM plugin for configuring flash player preferences
