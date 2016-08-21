@@ -4,7 +4,8 @@
 EAPI=5
 inherit zs-shlib
 
-DEPEND="dev-misc/zsppr"
+DEPEND="<dev-misc/zsppr-0.0.2
+sys-devel/make"
 
 src_compile() {
   emake
