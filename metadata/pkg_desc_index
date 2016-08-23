@@ -3,7 +3,7 @@ app-admin/eselect-vala 0.1.2: Eselect module to maintain vala compiler symlink
 app-misc/zcmdrepo 0.0.3 0.0.4: ZCMDRepo - Zscheile Command Repository Utils
 app-misc/zconfctl 0.0.1: ZConfCtl - Zscheile Configurations Control
 app-misc/zlock 0.0.1 0.0.2: zlock - Zscheile LOCKing manager
-app-misc/zmodulesctl 0.0.3 0.0.3.1 0.0.3.2.1 0.0.3.3: ZModulesCtl - Zscheile Modules Control
+app-misc/zmodulesctl 0.0.3.1 0.0.3.2.1 0.0.3.3 0.0.3.4: ZModulesCtl - Zscheile Modules Control
 app-misc/zout-ng 0.0.1 0.0.2: Zscheile (Action) Output Formatting Tool - Next Generation
 app-misc/zsgcfgfpath 0.0.1: ZS gcfgfpath - get config file path - gentoo cfg-filename determine application
 app-misc/zsoutils 0.0.4 0.0.5: ZS Outils - output utilitys - multi call binary
