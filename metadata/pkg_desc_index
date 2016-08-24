@@ -22,7 +22,7 @@ dev-misc/zs-shlib-core 0.0.3 0.0.4 0.0.5: Zscheile Shell Library Core
 dev-misc/zs-shlib-events 0.0.3 0.0.4 0.0.4.2: Zscheile Shell Library - events
 dev-misc/zs-shlib-extra 0.0.1 0.0.2 0.0.3: Zscheile Shell additional libraries
 dev-misc/zs-shlib-optimize 0.0.1 0.0.2: Zscheile Shell Library - optimize
-dev-misc/zsppr 0.0.1 0.0.2 0.0.3 0.0.4 0.0.5: Zscheile simple universal Preprocessor
+dev-misc/zsppr 0.0.1 0.0.2 0.0.3 0.0.4 0.0.5 0.0.6: Zscheile simple universal Preprocessor
 dev-misc/zsrc 0.0.1.1 0.0.1.3 0.0.2: zsrc - Zscheile Resource Control framework
 dev-scheme/guile 2.0.9-r1: GNU Ubiquitous Intelligent Language for Extensions
 dev-util/valadoc 9999: A documentation generator for generating API documentation from Vala source code
