@@ -7,7 +7,7 @@ inherit zserik-virtual
 DESCRIPTION="Zscheile Standard Environment for Clients"
 
 KEYWORDS="arm amd64 x86"
-IUSE="chromium +emacs experimental +flash games +geosci +kerberos minimal mp3 openbox +vala wine +xdm +xfce +zadist"
+IUSE="+emacs +flash games +geosci +grub +kerberos minimal mp3 openbox +vala +xdm +xfce"
 
 # block >=glibc-2.22-r4 because hesiod is broken
 #                       bugfix in glibc-2.24
@@ -47,8 +47,6 @@ RDEPEND="app-admin/sudo
 	sys-apps/mlocate
 	sys-apps/pciutils
 	sys-block/gparted
-	sys-boot/grub
-	sys-boot/os-prober
 	sys-fs/dosfstools
 	sys-fs/xfsprogs
 	sys-kernel/gentoo-sources
@@ -77,17 +75,10 @@ RDEPEND="app-admin/sudo
 		net-analyzer/netcat6
 	)
 
-	chromium? (
-		www-client/chromium
-	)
-
 	emacs? (
-		app-emacs/auctex
 		app-text/aspell
 	)
-	experimental? (
-		gnome-extra/gnome-builder[vala?]
-	)
+
 	games? (
 		games-arcade/alienwave
 		games-board/aisleriot
@@ -96,6 +87,11 @@ RDEPEND="app-admin/sudo
 	geosci? (
 		sci-geosciences/gpsbabel
 		sci-geosciences/josm
+	)
+
+	grub? (
+		sys-boot/grub
+		sys-boot/os-prober
 	)
 
 	kerberos? (
@@ -110,19 +106,14 @@ RDEPEND="app-admin/sudo
 		app-text/evince
 
 		dev-java/icedtea
-		dev-lang/ruby
 		dev-util/geany
-		dev-vcs/subversion
 
 		mail-client/thunderbird
 		media-gfx/gimp
 		media-sound/lmms
-		media-video/kino
-
 		net-analyzer/wireshark
-		net-nds/zsnis
-
 		sci-visualization/gnuplot
+
 		sys-cluster/glusterfs
 		sys-fs/cryptsetup
 
@@ -136,21 +127,18 @@ RDEPEND="app-admin/sudo
 		x11-misc/menumaker
 		x11-wm/openbox
 	)
+
 	vala? (
 		app-admin/eselect-vala
 	)
-	wine? (
-		app-emulation/wine
-	)
+
 	xdm? (
 		x11-misc/slim
 	)
+
 	xfce? (
 		xfce-base/xfce4-meta
 		xfce-extra/xfce4-cpugraph-plugin
 		xfce-extra/xfce4-notes-plugin
-	)
-	zadist? (
-		net-misc/zadist
 	)
 	"
