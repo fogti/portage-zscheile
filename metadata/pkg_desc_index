@@ -33,6 +33,7 @@ games-misc/wyel 0.0.1: Zscheile WYEL Game
 net-analyzer/zs-wait4host 0.2 0.3 0.3.2: Wait for a host to come up/go done
 net-dns/resolvconfctl 0.0.1: resolvconfctl - another /etc/resolv.conf manager
 net-misc/zadist 0.0.7.1 0.0.8 0.1.1: ZADist - Zscheile Automatic Distributor Client
+net-misc/zisnet 0.0.1: Zscheile Information System - with simple blockchain implementation
 net-nds/zsnis 0.1.4 0.1.5.2 0.1.6: ZSNIS - Zscheile Secure Network Information Service
 sys-cluster/glusterfs 3.1.2 3.6.5: GlusterFS is a powerful network/cluster filesystem
 virtual/zenv-latex 0.0.1: Zscheile LaTeX Environment
