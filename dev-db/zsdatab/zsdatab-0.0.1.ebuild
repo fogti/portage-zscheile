@@ -5,7 +5,7 @@ EAPI=5
 
 inherit zserik-minimal
 
-DESCRIPTION="zstab - Zscheile Table Management"
+DESCRIPTION="Zscheile data text table Management"
 LICENSE="MIT"
 KEYWORDS="arm amd64 x86"
 
