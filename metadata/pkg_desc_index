@@ -9,6 +9,7 @@ app-misc/zsgcfgfpath 0.0.1: ZS gcfgfpath - get config file path - gentoo cfg-fil
 app-misc/zsoutils 0.0.4 0.0.5: ZS Outils - output utilitys - multi call binary
 app-misc/zsrecursil 0.0.3: ZS Recursil - directory recursion tool
 dev-db/zdbc 0.2.3 0.2.4 0.2.5: ZDBC - Zscheile DataBase Utils
+dev-db/zsdatab 0.0.1: zstab - Zscheile Table Management
 dev-db/zstab 0.0.1 0.0.2 0.0.3: zstab - Zscheile Table Management
 dev-embedded/arduino 1.5.8: An open-source AVR electronics prototyping platform
 dev-lang/zeiksh 0.0.9 0.0.10 0.0.11: Zscheile EIK (EICK# dialect) shell and script interpreter

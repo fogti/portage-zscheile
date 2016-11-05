@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
 
 if [[ ${___ECLASS_ONCE_ZSERIK_PYTHON} != "recur -_+^+_- spank" ]] ; then
 ___ECLASS_ONCE_ZSERIK_PYTHON="recur -_+^+_- spank"
@@ -17,7 +16,7 @@ DOCS="${DOCS} README.rst"
 EXPORT_FUNCTIONS src_install
 
 zserik-python-0_src_install() {
-    distutils-r1_src_install
+  distutils-r1_src_install
 }
 
 fi
