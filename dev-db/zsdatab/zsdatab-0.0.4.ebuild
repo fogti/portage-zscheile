@@ -8,6 +8,10 @@ DESCRIPTION="Zscheile data text table Management"
 LICENSE="MIT"
 KEYWORDS="arm amd64 x86"
 
+RDEPEND="$RDEPEND
+app-shells/bash
+sys-apps/coreutils"
+
 src_prepare() {
   eautoreconf
 }
