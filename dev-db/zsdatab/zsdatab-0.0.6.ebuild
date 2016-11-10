@@ -2,20 +2,16 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=5
-
-inherit zserik-minimal
+inherit zserik-base autotools
 
 DESCRIPTION="Zscheile data text table Management"
 LICENSE="MIT"
 KEYWORDS="arm amd64 x86"
 
-RDEPEND="app-shells/bash
-sys-apps/coreutils
-sys-apps/grep
-sys-apps/sed
-virtual/awk"
+RDEPEND="$RDEPEND
+app-shells/bash
+sys-apps/coreutils"
 
-src_install() {
-  dobin zsdatab-entry
-  dobin zsdatable
+src_prepare() {
+  eautoreconf
 }
