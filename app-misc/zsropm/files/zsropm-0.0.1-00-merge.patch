@@ -1,0 +1,28 @@
+diff -upr zsropm-0.0.1/zsropm-merge zsropm-0.0.1a/zsropm-merge
+--- zsropm-0.0.1/zsropm-merge	2016-11-15 20:07:02.000000000 +0100
++++ zsropm-0.0.1a/zsropm-merge	2016-11-15 20:50:24.565643595 +0100
+@@ -23,11 +23,11 @@ setup_db() {
+   fi
+ }
+ 
+-[ -n "$ZSROPM_ENV" ] || export ZSROPM_ENV="$ROOT/etc/zsropm/env"
+-[ -f "$ZSROPM_ENV" ] && . "$ZSROPM_ENV"
+-[ -n "$ZSROPM_RUNDIR" ] || export ZSROPM_RUNDIR="$ROOT/var/lib/zsropm"
+-[ -n "$ZSROPM_DISTDIR" ] || ZSROPM_DISTDIR="$ROOT/usr/zsropm/distfiles"
+-[ -n "$ZSROPM_DISTHOST" ] || ZSROPM_DISTDIR="ezscheile.bplaced.net/zsropm"
++[ -n "$ZSROPM_ENV" ]      || export ZSROPM_ENV="$ROOT/etc/zsropm/env"
++[ -f "$ZSROPM_ENV" ]      && . "$ZSROPM_ENV"
++[ -n "$ZSROPM_RUNDIR" ]   || export ZSROPM_RUNDIR="$ROOT/var/lib/zsropm"
++[ -n "$ZSROPM_DISTDIR" ]  || ZSROPM_DISTDIR="$ROOT/usr/zsropm/distfiles"
++[ -n "$ZSROPM_DISTHOST" ] || ZSROPM_DISTHOST="ezscheile.bplaced.net/zsropm"
+ 
+ if ! [ "$1" ]; then
+   zerror "no package name given"
+@@ -45,6 +45,6 @@ zsropm-dwl "$ZSROPM_DISTHOST" "$1" "$ZSR
+ echo
+ zout-ng i "rolling out package"
+ echo
+-zsropm-rollout "$ZSROPM_DISTDIR/$1" || exit 4
++zsropm-rollout "$ZSROPM_DISTDIR/$1.tar.gz" || exit 4
+ echo
+ zout-ng i "package installed"

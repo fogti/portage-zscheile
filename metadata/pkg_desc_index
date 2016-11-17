@@ -5,9 +5,10 @@ app-misc/zconfctl 0.0.1: ZConfCtl - Zscheile Configurations Control
 app-misc/zlock 0.0.1 0.0.2: zlock - Zscheile LOCKing manager
 app-misc/zmodulesctl 0.0.3.1 0.0.3.2.1 0.0.3.3 0.0.3.4 0.0.4: ZModulesCtl - Zscheile Modules Control
 app-misc/zout-ng 0.0.1 0.0.2: Zscheile (Action) Output Formatting Tool - Next Generation
-app-misc/zsgcfgfpath 0.0.1: ZS gcfgfpath - get config file path - gentoo cfg-filename determine application
+app-misc/zsgcfgfpath 0.0.1 0.0.2: ZS gcfgfpath - get config file path - gentoo cfg-filename determine application
 app-misc/zsoutils 0.0.4 0.0.5: ZS Outils - output utilitys - multi call binary
 app-misc/zsrecursil 0.0.3: ZS Recursil - directory recursion tool
+app-misc/zsropm 0.0.1: Zscheile Rollout Package Manager
 dev-db/zdbc 0.2.3 0.2.4 0.2.5: ZDBC - Zscheile DataBase Utils
 dev-db/zsdatab 0.0.2 0.0.4 0.0.5 0.0.6 0.0.7: Zscheile data text table Management
 dev-db/zstab 0.0.1 0.0.2 0.0.3: zstab - Zscheile Table Management
