@@ -7,7 +7,8 @@ inherit zserik-minimal eutils
 
 DESCRIPTION="Zscheile Rollout Package Manager"
 KEYWORDS="arm amd64 x86"
-RDEPEND="app-arch/tar
+RDEPEND="app-arch/gzip
+app-arch/tar
 app-misc/zout-ng
 >=app-misc/zsgcfgfpath-0.0.2
 app-shells/bash
@@ -21,8 +22,15 @@ sys-apps/sed
 sys-apps/util-linux"
 
 src_install() {
-  for i in db dwl merge mkpkg mkpkg2 query rollout; do
+  dodir /etc/zsropm
+  dodir /usr/zsropm
+  dodir /var/lib/zsropm
+
+  for i in db depend merge meta mkpkg mkpkg2 pkginfo query rollout update; do
     echo "install zsropm-$i"
     dobin "zsropm-$i"
   done
+
+  insinto /usr/share/zsropm
+  doins lib.sh
 }
