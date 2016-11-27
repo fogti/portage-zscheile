@@ -43,4 +43,4 @@ sys-cluster/glusterfs 3.6.5 3.7.4: GlusterFS is a powerful network/cluster files
 virtual/zenv-latex 0.0.1: Zscheile LaTeX Environment
 virtual/zenv-media 0.7.1 0.7.2: Erik Zscheile: media environment
 virtual/zimpl-flash 0.3 0.4 0.5: Erik Zscheile: flash implementations
-virtual/zstdenv-client 0.2.3 0.2.3.1 0.2.3.2 0.2.3.3 0.2.3.4: Zscheile Standard Environment for Clients
+virtual/zstdenv-client 0.2.3 0.2.3.1 0.2.3.2 0.2.3.3 0.2.3.4 0.2.3.5: Zscheile Standard Environment for Clients
