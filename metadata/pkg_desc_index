@@ -38,9 +38,10 @@ net-analyzer/zs-wait4host 0.2 0.3 0.3.2: Wait for a host to come up/go done
 net-dns/resolvconfctl 0.0.1: resolvconfctl - another /etc/resolv.conf manager
 net-misc/zadist 0.0.7.1 0.0.8 0.1.1 0.1.2: ZADist - Zscheile Automatic Distributor Client
 net-misc/zisnet 0.0.1 0.0.2: Zscheile Information System - with simple blockchain implementation
+net-misc/zsnetlaunch 0.0.1: Zscheile Network Launcher
 net-nds/zsnis 0.1.4 0.1.5.2 0.1.6: ZSNIS - Zscheile Secure Network Information Service
 sys-cluster/glusterfs 3.6.5 3.7.4: GlusterFS is a powerful network/cluster filesystem
 virtual/zenv-latex 0.0.1: Zscheile LaTeX Environment
 virtual/zenv-media 0.7.1 0.7.2: Erik Zscheile: media environment
 virtual/zimpl-flash 0.3 0.4 0.5: Erik Zscheile: flash implementations
-virtual/zstdenv-client 0.2.3 0.2.3.1 0.2.3.2 0.2.3.3 0.2.3.4 0.2.3.5: Zscheile Standard Environment for Clients
+virtual/zstdenv-client 0.2.3.2 0.2.3.3 0.2.3.4 0.2.3.5 0.2.3.6: Zscheile Standard Environment for Clients
