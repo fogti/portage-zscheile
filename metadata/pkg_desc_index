@@ -17,7 +17,7 @@ dev-lang/zeiksh 0.0.9 0.0.10 0.0.11: Zscheile EIK (EICK# dialect) shell and scri
 dev-lang/zpavinl 0.1.1: Zscheile ZPAVINL to C compiler
 dev-lang/zserik-sfvsl 0.2 0.3: ZSerik Simple Formula Variable Substitution Language - simple replace variables
 dev-libs/libaio 0.3.110: Asynchronous input/output library that uses the kernels native interface
-dev-libs/zsadv 0.0.1 0.0.2 0.0.3: Zscheile Advanced C++ Library
+dev-libs/zsadv 0.0.1 0.0.2 0.0.3 0.0.4: Zscheile Advanced C++ Library
 dev-libs/zscore 0.0.3 0.0.5: ZS Core library - C function collection
 dev-misc/zs-common 0.7 0.8: ZSerik Common - useful scripts
 dev-misc/zs-shlib-config 0.0.1 0.0.3 0.0.4: Zscheile Shell Library - config
