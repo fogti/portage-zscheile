@@ -3,7 +3,7 @@
 
 EAPI=5
 
-inherit zserik-minimal eutils
+inherit zserik-cmake eutils
 
 DESCRIPTION="Zscheile Rollout Package Manager"
 KEYWORDS="arm amd64 x86"
@@ -12,7 +12,7 @@ app-arch/tar
 app-misc/zout-ng
 >=app-misc/zsgcfgfpath-0.0.2
 app-shells/bash
->=dev-db/zsdatab-0.0.7
+>=dev-libs/zsadv-0.0.5
 net-misc/wget
 sys-apps/coreutils
 sys-apps/diffutils
@@ -25,12 +25,14 @@ src_install() {
   dodir /etc/zsropm
   dodir /usr/zsropm
   dodir /var/lib/zsropm
+  cmake-utils_src_install
+}
 
-  for i in db merge meta mkpkg2 pkginfo rollout update; do
-    echo "install zsropm-$i"
-    dobin "zsropm-$i"
-  done
-
-  insinto /usr/share/zsropm
-  doins lib.sh
+pkg_postinst() {
+  local ret
+  einfo "migrating database"
+  zsropm-migrate-db
+  ret=$?
+  ebegin "migration done"
+  eend $ret
 }
