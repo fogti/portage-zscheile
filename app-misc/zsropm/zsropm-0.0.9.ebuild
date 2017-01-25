@@ -12,13 +12,12 @@ app-arch/tar
 app-misc/zout-ng
 >=app-misc/zsgcfgfpath-0.0.2
 app-shells/bash
+>=dev-libs/zsadv-0.0.5
 net-misc/wget
 sys-apps/coreutils
 sys-apps/diffutils
 sys-apps/findutils
-sys-apps/portage
-sys-apps/sed
-sys-apps/util-linux"
+sys-apps/portage"
 
 src_install() {
   dodir /etc/zsropm
