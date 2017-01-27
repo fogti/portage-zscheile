@@ -32,8 +32,8 @@ dev-misc/zsretry 0.0.1 0.0.2: zsretry - Zscheile Retry (wait for successfulness)
 dev-scheme/guile 2.0.9-r1: GNU Ubiquitous Intelligent Language for Extensions
 dev-util/valadoc 9999: A documentation generator for generating API documentation from Vala source code
 dev-util/zs-sedscr-utils 0.0.1 0.0.2: Zscheile SedScripts Utilities
-dev-util/zsgenheader 0.0.1: ZsGenHeader - generate header from c source file
-dev-util/zsgtrp 0.0.1: Zscheile GTR Parser - C++ class getter generator
+dev-util/zsgenheader 0.0.1 0.0.2 0.0.3: ZsGenHeader - generate header from c source file
+dev-util/zsgtrp 0.0.1 0.0.2: Zscheile GTR Parser - C++ class getter generator
 games-board/aisleriot 3.16.2 3.18.2: A collection of solitaire card games for GNOME
 games-misc/wyel 0.0.1: Zscheile WYEL Game
 net-analyzer/zs-wait4host 0.2 0.3 0.3.2: Wait for a host to come up/go done
