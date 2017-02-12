@@ -5,7 +5,7 @@ EAPI=5
 
 inherit zserik-cmake
 
-DESCRIPTION="Zscheile EIK (EICK# dialect) shell and script interpreter"
+DESCRIPTION="Zscheile EIK shell and script interpreter"
 KEYWORDS="amd64 arm x86"
 
 COMMON_DEPEND="$COMMON_DEPEND

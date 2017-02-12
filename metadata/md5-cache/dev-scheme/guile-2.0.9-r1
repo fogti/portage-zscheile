@@ -9,5 +9,5 @@ LICENSE=LGPL-3
 RDEPEND=app-admin/eselect-guile >=dev-libs/boehm-gc-7.0[threads] dev-libs/gmp dev-libs/libffi >=dev-libs/libunistring-0.9.3 sys-devel/gettext >=sys-devel/libtool-1.5.6
 SLOT=2
 SRC_URI=mirror://gnu/guile/guile-2.0.9.tar.gz
-_eclasses_=eutils	ea170b525f6a38a006be05c9d9429f13	flag-o-matic	7366202dd55cb8f018f5d450d54e7749	multilib	d062ae4ba2fc40a19c11de2ad89b6616	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
+_eclasses_=eutils	ea170b525f6a38a006be05c9d9429f13	flag-o-matic	e0ef2bf8bb6a54693e146ab4085a5ec8	multilib	d062ae4ba2fc40a19c11de2ad89b6616	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
 _md5_=f97e185c009ddf202eeb3d25c11f80e0

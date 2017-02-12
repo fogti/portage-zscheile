@@ -18,8 +18,3 @@ $COMMON_DEPEND
 RDEPEND="$RDEPEND
 $COMMON_DEPEND
 "
-
-pkg_postinst() {
-  einfo "In this version of zeiksh, there are many incompatible syntax changes"
-  einfo "for more information, look at the DISTFILE $(basename "$SRC_URI")"
-}
