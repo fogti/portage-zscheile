@@ -1,6 +1,6 @@
 app-admin/eselect-guile 1.2-r1: Manage multiple Guile versions on one system
 app-admin/eselect-vala 0.1.2: Eselect module to maintain vala compiler symlink
-app-misc/zcmdrepo 0.0.3 0.0.4: ZCMDRepo - Zscheile Command Repository Utils
+app-misc/zcmdrepo 0.0.3 0.0.4 0.0.5: ZCMDRepo - Zscheile Command Repository Utils
 app-misc/zconfctl 0.0.1: ZConfCtl - Zscheile Configurations Control
 app-misc/zlock 0.0.1 0.0.2: zlock - Zscheile LOCKing manager
 app-misc/zmodulesctl 0.0.3.1 0.0.3.2.1 0.0.3.3 0.0.3.4 0.0.4: ZModulesCtl - Zscheile Modules Control
