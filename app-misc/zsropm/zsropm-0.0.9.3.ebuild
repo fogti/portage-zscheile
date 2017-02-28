@@ -12,26 +12,18 @@ app-arch/tar
 app-misc/zout-ng
 >=app-misc/zsgcfgfpath-0.0.2
 app-shells/bash
-net-misc/wget
+>=dev-libs/zsadv-0.0.5
+>=dev-util/zsgenheader-0.0.3
+>=dev-util/zsgtrp-0.0.4
+net-misc/curl
 sys-apps/coreutils
 sys-apps/diffutils
 sys-apps/findutils
-sys-apps/portage
-sys-apps/sed
-sys-apps/util-linux"
+sys-apps/portage"
 
 src_install() {
   dodir /etc/zsropm
   dodir /usr/zsropm
   dodir /var/lib/zsropm
   cmake-utils_src_install
-}
-
-pkg_postinst() {
-  local ret
-  einfo "migrating database"
-  zsropm-migrate-db
-  ret=$?
-  ebegin "migration done"
-  eend $ret
 }
