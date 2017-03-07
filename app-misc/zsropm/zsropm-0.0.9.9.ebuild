@@ -1,4 +1,4 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=5
@@ -13,7 +13,9 @@ app-misc/zout-ng
 >=app-misc/zsgcfgfpath-0.0.2
 app-shells/bash
 >=dev-libs/zsadv-0.0.5
-net-misc/wget
+>=dev-util/zsgenheader-0.0.3
+>=dev-util/zsgtrp-0.0.4
+net-misc/curl
 sys-apps/coreutils
 sys-apps/diffutils
 sys-apps/findutils
@@ -24,13 +26,4 @@ src_install() {
   dodir /usr/zsropm
   dodir /var/lib/zsropm
   cmake-utils_src_install
-}
-
-pkg_postinst() {
-  local ret
-  einfo "migrating database"
-  zsropm-migrate-db
-  ret=$?
-  ebegin "migration done"
-  eend $ret
 }
