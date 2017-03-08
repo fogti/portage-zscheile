@@ -7,14 +7,13 @@ inherit zserik-cmake eutils
 
 DESCRIPTION="Zscheile Rollout Package Manager"
 KEYWORDS="arm amd64 x86"
-RDEPEND="app-arch/gzip
+
+RDEPEND="$RDEPEND
+app-arch/gzip
 app-arch/tar
 app-misc/zout-ng
 >=app-misc/zsgcfgfpath-0.0.2
 app-shells/bash
->=dev-libs/zsadv-0.0.5
->=dev-util/zsgenheader-0.0.3
->=dev-util/zsgtrp-0.0.4
 net-misc/curl
 sys-apps/coreutils
 sys-apps/diffutils
