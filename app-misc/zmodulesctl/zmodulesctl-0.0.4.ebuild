@@ -9,7 +9,7 @@ KEYWORDS="arm amd64 x86"
 RDEPEND="sys-apps/coreutils"
 
 src_install() {
-  dodir /etc/zmodules
-  dodir /usr/lib/zmodules
-  dobin zmodulesctl
+	dodir /etc/zmodules
+	dodir /usr/lib/zmodules
+	dobin zmodulesctl
 }

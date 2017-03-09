@@ -13,5 +13,5 @@ app-shells/bash
 sys-apps/coreutils"
 
 src_prepare() {
-  eautoreconf
+	eautoreconf
 }

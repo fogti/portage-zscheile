@@ -6,9 +6,7 @@ EAPI=1
 inherit zserik-minimal
 
 DESCRIPTION="ZSNIS - Zscheile Secure Network Information Service"
-
 KEYWORDS="arm amd64 x86"
-
 IUSE="server"
 
 RDEPEND="net-analyzer/cryptcat
@@ -19,27 +17,27 @@ server? (
 )"
 
 src_install() {
-    echo install zsniclient
-    dobin zsniclient
+	echo install zsniclient
+	dobin zsniclient
 
-    if use server; then
-        dodir /etc/zsnis
+	if use server; then
+		dodir /etc/zsnis
 
-        echo install zsniserver/run
-        exeinto /etc/zsniserver
-        doexe run
+		echo install zsniserver/run
+		exeinto /etc/zsniserver
+		doexe run
 
-        echo install zsniserver/log/run
-        exeinto /etc/zsniserver/log
-        newexe logrun run
-    fi
+		echo install zsniserver/log/run
+		exeinto /etc/zsniserver/log
+		newexe logrun run
+	fi
 }
 
 pkg_postinst() {
-    if use server; then
-        einfo "To activate the server:"
-        einfo " 1. ln -s -t /service /etc/zsniserver"
-        einfo " 2. rc-update add svscan"
-        einfo " 3. /etc/init.d/svscan restart"
-    fi
+	if use server; then
+		einfo "To activate the server:"
+		einfo " 1. ln -s -t /service /etc/zsniserver"
+		einfo " 2. rc-update add svscan"
+		einfo " 3. /etc/init.d/svscan restart"
+	fi
 }

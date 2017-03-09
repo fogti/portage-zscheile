@@ -6,7 +6,6 @@ EAPI=5
 inherit games zserik-cmake
 
 DESCRIPTION="Zscheile WYEL Game"
-
 KEYWORDS="amd64 arm x86"
 
 CMDEPEND="sys-libs/glibc

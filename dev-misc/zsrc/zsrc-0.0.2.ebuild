@@ -13,5 +13,5 @@ sys-apps/grep
 sys-process/procps"
 
 src_install() {
-    dobin zsrc
+	dobin zsrc
 }

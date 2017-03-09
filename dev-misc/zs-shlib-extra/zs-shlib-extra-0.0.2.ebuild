@@ -5,7 +5,6 @@ EAPI=5
 inherit zserik-base
 
 DESCRIPTION="Zscheile Shell additional libraries"
-
 KEYWORDS="amd64 arm x86"
 DEPEND="<dev-misc/zsppr-0.0.2
 sys-devel/make"

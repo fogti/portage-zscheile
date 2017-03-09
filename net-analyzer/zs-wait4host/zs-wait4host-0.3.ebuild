@@ -6,7 +6,6 @@ EAPI=4
 inherit zserik-base
 
 DESCRIPTION="Wait for a host to come up/go done"
-
 KEYWORDS="arm amd64 x86"
 COMMON_DEPEND="sys-apps/coreutils
 sys-devel/gettext"

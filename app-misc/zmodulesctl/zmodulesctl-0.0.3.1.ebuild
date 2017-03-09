@@ -6,17 +6,15 @@ EAPI=5
 inherit zserik-minimal
 
 DESCRIPTION="ZModulesCtl - Zscheile Modules Control"
-
 KEYWORDS="arm amd64 x86"
-
 RDEPEND="app-misc/zsoutils
 app-shells/bash
 sys-apps/coreutils"
 
 src_install() {
-    echo "install zmodulesctl"
-    dobin zmodulesctl
-    echo "install zmodulesctl.help"
-    insinto /usr/share/help/C
-    newins zmodulesctl.help zmodulesctl.txt
+	echo "install zmodulesctl"
+	dobin zmodulesctl
+	echo "install zmodulesctl.help"
+	insinto /usr/share/help/C
+	newins zmodulesctl.help zmodulesctl.txt
 }

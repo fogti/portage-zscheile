@@ -8,5 +8,5 @@ DESCRIPTION="zstab - Zscheile Table Management"
 KEYWORDS="amd64 arm x86"
 
 src_prepare() {
-  eautoreconf
+	eautoreconf
 }

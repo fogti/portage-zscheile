@@ -17,10 +17,10 @@ $COMMON_DEPEND
 sys-apps/xinetd"
 
 src_install() {
-  autotools-utils_src_install
-  dodir /etc/zisnet
+	autotools-utils_src_install
+	dodir /etc/zisnet
 }
 
 pkg_postinst() {
-  enewuser zisnet -1 -1 /srv/zisnet
+	enewuser zisnet -1 -1 /srv/zisnet
 }

@@ -9,13 +9,13 @@ KEYWORDS="arm amd64 x86"
 RDEPEND="sys-apps/coreutils"
 
 src_install() {
-  dodir /etc/zmodules
-  dodir /usr/lib/zmodules
+	dodir /etc/zmodules
+	dodir /usr/lib/zmodules
 
-  echo "install zmodulesctl"
-  dobin zmodulesctl
+	echo "install zmodulesctl"
+	dobin zmodulesctl
 
-  echo "install zmodulesctl.help"
-  insinto /usr/share/help/C
-  newins zmodulesctl.help zmodulesctl.txt
+	echo "install zmodulesctl.help"
+	insinto /usr/share/help/C
+	newins zmodulesctl.help zmodulesctl.txt
 }

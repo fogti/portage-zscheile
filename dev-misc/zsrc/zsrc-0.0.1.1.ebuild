@@ -11,5 +11,5 @@ RDEPEND="sys-apps/coreutils
 sys-process/procps"
 
 src_install() {
-    dobin zsrc-run
+	dobin zsrc-run
 }

@@ -6,7 +6,6 @@ EAPI=4
 inherit zserik-minimal
 
 DESCRIPTION="Wait for a host to come up/go done"
-
 KEYWORDS="arm amd64 x86"
 RDEPEND="app-shells/bash
 net-analyzer/fping

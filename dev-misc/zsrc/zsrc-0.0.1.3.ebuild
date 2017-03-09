@@ -11,14 +11,14 @@ RDEPEND="sys-apps/coreutils
 sys-process/procps"
 
 src_install() {
-    for file in run daemon-ard; do
-        echo "install zsrc-$file"
-        dobin "zsrc-$file"
-    done
+	for file in run daemon-ard; do
+		echo "install zsrc-$file"
+		dobin "zsrc-$file"
+	done
 
-    insinto /usr/share/zsrc
-    for file in daemonfuncs.sh functions.sh; do
-        echo "install $file"
-        doins "$file"
-    done
+	insinto /usr/share/zsrc
+	for file in daemonfuncs.sh functions.sh; do
+		echo "install $file"
+		doins "$file"
+	done
 }

@@ -12,13 +12,13 @@ sys-apps/coreutils
 sys-process/procps"
 
 src_install() {
-  dobin zsretry
-  dobin zsretryd
+	dobin zsretry
+	dobin zsretryd
 
-  exeinto /usr/libexec/zsretry
-  doexe in
-  doexe sw
+	exeinto /usr/libexec/zsretry
+	doexe in
+	doexe sw
 
-  insinto /usr/share/zsretry
-  doins lib.sh
+	insinto /usr/share/zsretry
+	doins lib.sh
 }

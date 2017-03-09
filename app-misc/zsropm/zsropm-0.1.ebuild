@@ -20,8 +20,8 @@ sys-apps/findutils
 sys-apps/portage"
 
 src_install() {
-  dodir /etc/zsropm
-  dodir /usr/zsropm
-  dodir /var/lib/zsropm
-  cmake-utils_src_install
+	dodir /etc/zsropm
+	dodir /usr/zsropm
+	dodir /var/lib/zsropm
+	cmake-utils_src_install
 }

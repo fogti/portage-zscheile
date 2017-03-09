@@ -6,7 +6,7 @@
 if [[ "${___ECLASS_ONCE_ZS_SHLIB}" != "recur -_+^+_- spank" ]] ; then
 ___ECLASS_ONCE_ZS_SHLIB="recur -_+^+_- spank"
 
-inherit zserik-minimal base
+inherit zserik-base
 
 KEYWORDS="amd64 arm x86"
 DESCRIPTION="Zscheile Shell Library Core"
@@ -16,6 +16,6 @@ sys-devel/make"
 EXPORT_FUNCTIONS src_configure
 
 zs-shlib-core_src_configure() {
-  ./configure
+	./configure
 }
 fi

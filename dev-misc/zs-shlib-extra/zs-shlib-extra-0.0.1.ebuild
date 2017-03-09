@@ -7,6 +7,6 @@ inherit zs-shlib
 DEPEND="<dev-misc/zsppr-0.0.2
 sys-devel/make"
 
-src_compile() {
-  emake
-}
+#src_compile() {
+#	emake
+#}
