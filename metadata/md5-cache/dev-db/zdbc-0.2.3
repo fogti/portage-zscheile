@@ -1,14 +1,14 @@
 DEFINED_PHASES=compile configure install prepare test
-DEPEND=python_targets_python3_3? ( >=dev-lang/python-3.3.2-r2:3.3 ) python_targets_python3_4? ( dev-lang/python:3.4 ) python_targets_python3_5? ( dev-lang/python:3.5 ) >=dev-lang/python-exec-2:=[python_targets_python3_3(-)?,python_targets_python3_4(-)?,python_targets_python3_5(-)?,-python_single_target_python3_3(-),-python_single_target_python3_4(-),-python_single_target_python3_5(-)] dev-python/setuptools[python_targets_python3_3(-)?,python_targets_python3_4(-)?,python_targets_python3_5(-)?,-python_single_target_python3_3(-),-python_single_target_python3_4(-),-python_single_target_python3_5(-)]
+DEPEND=python_targets_python3_4? ( dev-lang/python:3.4 ) python_targets_python3_5? ( dev-lang/python:3.5 ) >=dev-lang/python-exec-2:=[python_targets_python3_4(-)?,python_targets_python3_5(-)?,-python_single_target_python3_4(-),-python_single_target_python3_5(-)] dev-python/setuptools[python_targets_python3_4(-)?,python_targets_python3_5(-)?,-python_single_target_python3_4(-),-python_single_target_python3_5(-)]
 DESCRIPTION=ZDBC - Zscheile DataBase Utils
 EAPI=5
 HOMEPAGE=http://ezscheile.bplaced.net/index.php
-IUSE=python_targets_python3_3 python_targets_python3_4 python_targets_python3_5
+IUSE=python_targets_python3_4 python_targets_python3_5
 KEYWORDS=arm amd64 x86
 LICENSE=GPL-3+
-RDEPEND=sys-apps/man-db python_targets_python3_3? ( >=dev-lang/python-3.3.2-r2:3.3 ) python_targets_python3_4? ( dev-lang/python:3.4 ) python_targets_python3_5? ( dev-lang/python:3.5 ) >=dev-lang/python-exec-2:=[python_targets_python3_3(-)?,python_targets_python3_4(-)?,python_targets_python3_5(-)?,-python_single_target_python3_3(-),-python_single_target_python3_4(-),-python_single_target_python3_5(-)]
-REQUIRED_USE=|| ( python_targets_python3_3 python_targets_python3_4 python_targets_python3_5 ) || ( python_targets_python3_3 python_targets_python3_4 python_targets_python3_5 )
+RDEPEND=sys-apps/man-db python_targets_python3_4? ( dev-lang/python:3.4 ) python_targets_python3_5? ( dev-lang/python:3.5 ) >=dev-lang/python-exec-2:=[python_targets_python3_4(-)?,python_targets_python3_5(-)?,-python_single_target_python3_4(-),-python_single_target_python3_5(-)]
+REQUIRED_USE=|| ( python_targets_python3_4 python_targets_python3_5 ) || ( python_targets_python3_4 python_targets_python3_5 )
 SLOT=0
 SRC_URI=mirror://pypi/z/zdbc/zdbc-0.2.3.tar.gz
-_eclasses_=distutils-r1	3a17743abcc9335483329f33c87b472d	eutils	3c847a0129fed780bd709b98e426f89c	multibuild	742139c87a9fa3766f0c2b155e5522bf	multilib	d062ae4ba2fc40a19c11de2ad89b6616	multiprocessing	284a473719153462f3e974d86c8cb81c	python-r1	0f6937650a475d673baa5d0c8c0b37b3	python-utils-r1	c0ed2a2f233d3af6dd556048695dc5cb	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee	zserik-minimal	31bc8c5934e40b5aea64acd34a1cba9b	zserik-python-0	189f35c344227905ab00fc20993d6199	zserik-virtual	edf7b0bb9a41c5de1e3d74beb49cee73
+_eclasses_=distutils-r1	039ba10839816478cfb070fdeb053906	eutils	3c847a0129fed780bd709b98e426f89c	multibuild	72647e255187a1fadc81097b3657e5c3	multilib	0236be304ee52e7f179ed2f337075515	multiprocessing	284a473719153462f3e974d86c8cb81c	python-r1	0c067f080a047742ffac024b16895b45	python-utils-r1	4f8aa7196c2c9a5630e66c2113ae46c3	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee	xdg-utils	178a84136f416b8ea1a857717eacd21c	zserik-minimal	a24151a4d65df85cd1a847a4c13cce94	zserik-python-0	f22003d90e1dea551adabe86d535db34	zserik-virtual	2f0a52cafc77287ca8fabf2c1a498e04
 _md5_=4a708fc644e66f23dce804eee795ee30

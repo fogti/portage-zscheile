@@ -1,25 +1,24 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 if [[ "${___ECLASS_ONCE_ZS_SHLIB}" != "recur -_+^+_- spank" ]] ; then
+___ECLASS_ONCE_ZS_SHLIB="recur -_+^+_- spank"
 
-  ___ECLASS_ONCE_ZS_SHLIB="recur -_+^+_- spank"
+inherit zserik-base
 
-  inherit zserik-base
+KEYWORDS="amd64 arm x86"
+DESCRIPTION="Zscheile Shell Library - "
 
-  KEYWORDS="amd64 arm x86"
-  DESCRIPTION="Zscheile Shell Library - "
+if [ "${ZS_SHLIB_FULLNAME}" ]; then
+  DESCRIPTION+="${ZS_SHLIB_FULLNAME}"
+else
+  # we can uppercase first letter with tr,
+  # but we shouldn't use external programs in global namespace,
+  # because they can be missing
+  DESCRIPTION+="${PN#zs-shlib-}"
+fi
 
-  if [ "${ZS_SHLIB_FULLNAME}" ]; then
-    DESCRIPTION+="${ZS_SHLIB_FULLNAME}"
-  else
-    # we can uppercase first letter with tr,
-    # but we shouldn't use external programs in global namespace,
-    # because they can be missing
-    DESCRIPTION+="${PN#zs-shlib-}"
-  fi
-
-  EXPORT_FUNCTIONS src_install
+EXPORT_FUNCTIONS src_install
 
 zs-shlib_src_install() {
   insinto /usr/share/zs-shlib
@@ -28,5 +27,4 @@ zs-shlib_src_install() {
     doins "$i"
   done
 }
-
 fi

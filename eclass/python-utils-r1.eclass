@@ -1,6 +1,5 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 # @ECLASS: python-utils-r1.eclass
 # @MAINTAINER:
@@ -44,7 +43,7 @@ _PYTHON_ALL_IMPLS=(
 	jython2_7
 	pypy pypy3
 	python2_7
-	python3_3 python3_4 python3_5
+	python3_4 python3_5 python3_6
 )
 readonly _PYTHON_ALL_IMPLS
 
@@ -68,10 +67,10 @@ _python_impl_supported() {
 	# keep in sync with _PYTHON_ALL_IMPLS!
 	# (not using that list because inline patterns shall be faster)
 	case "${impl}" in
-		python2_7|python3_[345]|jython2_7)
+		python2_7|python3_[456]|jython2_7)
 			return 0
 			;;
-		pypy1_[89]|pypy2_0|python2_[56]|python3_[12])
+		pypy1_[89]|pypy2_0|python2_[56]|python3_[123])
 			return 1
 			;;
 		pypy|pypy3)
@@ -115,22 +114,39 @@ _python_set_impls() {
 		_python_impl_supported "${i}"
 	done
 
-	_PYTHON_SUPPORTED_IMPLS=()
-	_PYTHON_UNSUPPORTED_IMPLS=()
+	local supp=() unsupp=()
 
 	for i in "${_PYTHON_ALL_IMPLS[@]}"; do
 		if has "${i}" "${PYTHON_COMPAT[@]}"; then
-			_PYTHON_SUPPORTED_IMPLS+=( "${i}" )
+			supp+=( "${i}" )
 		else
-			_PYTHON_UNSUPPORTED_IMPLS+=( "${i}" )
+			unsupp+=( "${i}" )
 		fi
 	done
 
-	if [[ ${#_PYTHON_SUPPORTED_IMPLS[@]} -eq 0 ]]; then
+	if [[ ! ${supp[@]} ]]; then
 		die "No supported implementation in PYTHON_COMPAT."
 	fi
 
-	readonly _PYTHON_SUPPORTED_IMPLS _PYTHON_UNSUPPORTED_IMPLS
+	if [[ ${_PYTHON_SUPPORTED_IMPLS[@]} ]]; then
+		# set once already, verify integrity
+		if [[ ${_PYTHON_SUPPORTED_IMPLS[@]} != ${supp[@]} ]]; then
+			eerror "Supported impls (PYTHON_COMPAT) changed between inherits!"
+			eerror "Before: ${_PYTHON_SUPPORTED_IMPLS[*]}"
+			eerror "Now   : ${supp[*]}"
+			die "_PYTHON_SUPPORTED_IMPLS integrity check failed"
+		fi
+		if [[ ${_PYTHON_UNSUPPORTED_IMPLS[@]} != ${unsupp[@]} ]]; then
+			eerror "Unsupported impls changed between inherits!"
+			eerror "Before: ${_PYTHON_UNSUPPORTED_IMPLS[*]}"
+			eerror "Now   : ${unsupp[*]}"
+			die "_PYTHON_UNSUPPORTED_IMPLS integrity check failed"
+		fi
+	else
+		_PYTHON_SUPPORTED_IMPLS=( "${supp[@]}" )
+		_PYTHON_UNSUPPORTED_IMPLS=( "${unsupp[@]}" )
+		readonly _PYTHON_SUPPORTED_IMPLS _PYTHON_UNSUPPORTED_IMPLS
+	fi
 }
 
 # @ECLASS-VARIABLE: PYTHON
@@ -415,9 +431,9 @@ python_export() {
 					python*)
 						PYTHON_PKG_DEP="dev-lang/python:${impl#python}";;
 					pypy)
-						PYTHON_PKG_DEP='virtual/pypy:0=';;
+						PYTHON_PKG_DEP='>=virtual/pypy-5:0=';;
 					pypy3)
-						PYTHON_PKG_DEP='virtual/pypy3:0=';;
+						PYTHON_PKG_DEP='>=virtual/pypy3-5:0=';;
 					jython2.7)
 						PYTHON_PKG_DEP='dev-java/jython:2.7';;
 					*)
@@ -985,18 +1001,18 @@ python_wrapper_setup() {
 			_EOF_
 			chmod +x "${workdir}"/bin/${x} || die
 		done
-
-		# Now, set the environment.
-		# But note that ${workdir} may be shared with something else,
-		# and thus already on top of PATH.
-		if [[ ${PATH##:*} != ${workdir}/bin ]]; then
-			PATH=${workdir}/bin${PATH:+:${PATH}}
-		fi
-		if [[ ${PKG_CONFIG_PATH##:*} != ${workdir}/pkgconfig ]]; then
-			PKG_CONFIG_PATH=${workdir}/pkgconfig${PKG_CONFIG_PATH:+:${PKG_CONFIG_PATH}}
-		fi
-		export PATH PKG_CONFIG_PATH
 	fi
+
+	# Now, set the environment.
+	# But note that ${workdir} may be shared with something else,
+	# and thus already on top of PATH.
+	if [[ ${PATH##:*} != ${workdir}/bin ]]; then
+		PATH=${workdir}/bin${PATH:+:${PATH}}
+	fi
+	if [[ ${PKG_CONFIG_PATH##:*} != ${workdir}/pkgconfig ]]; then
+		PKG_CONFIG_PATH=${workdir}/pkgconfig${PKG_CONFIG_PATH:+:${PKG_CONFIG_PATH}}
+	fi
+	export PATH PKG_CONFIG_PATH
 }
 
 # @FUNCTION: python_is_python3
@@ -1207,7 +1223,7 @@ python_fix_shebang() {
 # Check whether the specified locale sanely maps between lowercase
 # and uppercase ASCII characters.
 _python_check_locale_sanity() {
-	local -x LC_CTYPE=${1}
+	local -x LC_ALL=${1}
 	local IFS=
 
 	local lc=( {a..z} )
@@ -1232,7 +1248,7 @@ python_export_utf8_locale() {
 
 	if [[ $(locale charmap) != UTF-8 ]]; then
 		# Try English first, then everything else.
-		local lang locales="en_US.UTF-8 $(locale -a)"
+		local lang locales="C.UTF-8 en_US.UTF-8 en_GB.UTF-8 $(locale -a)"
 
 		for lang in ${locales}; do
 			if [[ $(LC_ALL=${lang} locale charmap 2>/dev/null) == UTF-8 ]]; then

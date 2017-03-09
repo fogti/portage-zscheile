@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 # @ECLASS: distutils-r1.eclass
 # @MAINTAINER:
@@ -44,10 +43,10 @@
 # https://wiki.gentoo.org/wiki/Project:Python/distutils-r1
 
 case "${EAPI:-0}" in
-	0|1|2|3)
+	0|1|2|3|4)
 		die "Unsupported EAPI=${EAPI:-0} (too old) for ${ECLASS}"
 		;;
-	4|5|6)
+	5|6)
 		;;
 	*)
 		die "Unsupported EAPI=${EAPI} (unknown) for ${ECLASS}"
@@ -80,7 +79,7 @@ esac
 if [[ ! ${_DISTUTILS_R1} ]]; then
 
 [[ ${EAPI} == [45] ]] && inherit eutils
-inherit toolchain-funcs
+inherit toolchain-funcs xdg-utils
 
 if [[ ! ${DISTUTILS_SINGLE_IMPL} ]]; then
 	inherit multiprocessing python-r1
@@ -391,9 +390,6 @@ _distutils-r1_create_setup_cfg() {
 
 		# make the ebuild writer lives easier
 		build-scripts = %(build-base)s/scripts
-
-		[egg_info]
-		egg-base = ${BUILD_DIR}
 
 		# this is needed by distutils_install_for_testing since
 		# setuptools like to create .egg files for install --home.
@@ -749,6 +745,7 @@ distutils-r1_src_prepare() {
 
 distutils-r1_src_configure() {
 	python_export_utf8_locale
+	xdg_environment_reset # Bug 577704
 
 	if declare -f python_configure >/dev/null; then
 		_distutils-r1_run_foreach_impl python_configure
