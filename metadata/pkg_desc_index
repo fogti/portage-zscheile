@@ -14,10 +14,11 @@ dev-db/zdbc 0.2.3 0.2.4 0.2.5: ZDBC - Zscheile DataBase Utils
 dev-db/zsdatab 0.0.5 0.0.6 0.0.7: Zscheile data text table Management
 dev-db/zstab 0.0.1 0.0.2 0.0.3: zstab - Zscheile Table Management
 dev-embedded/arduino 1.5.8: An open-source AVR electronics prototyping platform
-dev-lang/zeiksh 0.1.9 0.1.9.01 0.1.9.02 0.1.9.03 0.2.1 0.2.2 0.2.3: Zscheile EIK shell and script interpreter
+dev-lang/zeiksh 0.1.9 0.1.9.01 0.1.9.02 0.1.9.03 0.2.1 0.2.2 0.2.3 0.2.4: Zscheile EIK shell and script interpreter
 dev-lang/zpavinl 0.1.1: Zscheile ZPAVINL to C compiler
 dev-lang/zserik-sfvsl 0.2 0.3: ZSerik Simple Formula Variable Substitution Language - simple replace variables
 dev-libs/libaio 0.3.110: Asynchronous input/output library that uses the kernels native interface
+dev-libs/zeik-handles 0.0.1: Zscheile EIK Handles library
 dev-libs/zsadv 0.0.4 0.0.5 0.0.6 0.0.7 0.0.8: Zscheile Advanced C++ Library
 dev-libs/zscore 0.0.3 0.0.5: ZS Core library - C function collection
 dev-misc/zs-common 0.7 0.8: ZSerik Common - useful scripts
@@ -45,9 +46,10 @@ net-misc/zsnetlaunch 0.0.1.2: Zscheile Network Launcher
 net-misc/zsroute-utils 0.0.1: Zscheile Routing Utilities
 net-nds/zsnis 0.1.4 0.1.5.2 0.1.6: ZSNIS - Zscheile Secure Network Information Service
 sys-cluster/glusterfs 3.6.5 3.7.4: GlusterFS is a powerful network/cluster filesystem
+virtual/zcmake-libfindmacros 0.1: Zscheile CMake virtual: LibFindMacros
 virtual/zenv-latex 0.0.1: Zscheile LaTeX Environment
 virtual/zenv-media 0.7.1 0.7.2 0.7.3: Erik Zscheile: media environment
 virtual/zenv-shotcut 0.1: Erik Zscheile: Environment for Shotcut
 virtual/zimpl-flash 0.3 0.4 0.5 0.6: Erik Zscheile: flash implementations
 virtual/zimpl-pulseaudio 0.1: Erik Zscheile: pulseaudio implementations
-virtual/zstdenv-client 0.2.3.6 0.2.3.7 0.2.3.8 0.2.4: Zscheile Standard Environment for Clients
+virtual/zstdenv-client 0.2.3.6 0.2.3.7 0.2.3.8 0.2.4 0.2.4.1: Zscheile Standard Environment for Clients
