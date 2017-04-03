@@ -9,7 +9,8 @@ DESCRIPTION="Zscheile EIK shell and script interpreter"
 KEYWORDS="amd64 arm x86"
 
 COMMON_DEPEND="$COMMON_DEPEND
-dev-libs/boost"
+dev-libs/boost
+>=dev-libs/zeik-handles-0.0.2"
 
 DEPEND="$DEPEND
 $COMMON_DEPEND
