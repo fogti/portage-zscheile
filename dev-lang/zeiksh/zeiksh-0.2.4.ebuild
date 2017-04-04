@@ -5,12 +5,12 @@ EAPI=5
 
 inherit zserik-cmake
 
-DESCRIPTION="Zscheile EIK shell and script interpreter"
+DESCRIPTION="Zscheile EIK shell script interpreter"
 KEYWORDS="amd64 arm x86"
 
 COMMON_DEPEND="$COMMON_DEPEND
 dev-libs/boost
-dev-libs/zeik-handles"
+=dev-libs/zeik-handles-0.0.1"
 
 DEPEND="$DEPEND
 $COMMON_DEPEND
