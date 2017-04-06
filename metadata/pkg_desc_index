@@ -1,6 +1,6 @@
 app-admin/eselect-guile 1.2-r1: Manage multiple Guile versions on one system
 app-admin/eselect-vala 0.1.2: Eselect module to maintain vala compiler symlink
-app-admin/zstxtns-utils 0.0.1: Zscheile utilities to deal with text based name service databases
+app-admin/zstxtns-utils 0.0.1 0.0.2: Zscheile utilities to deal with text based name service databases
 app-misc/zcmdrepo 0.0.3 0.0.4 0.0.5: ZCMDRepo - Zscheile Command Repository Utils
 app-misc/zconfctl 0.0.1: ZConfCtl - Zscheile Configurations Control
 app-misc/zlock 0.0.1 0.0.2: zlock - Zscheile LOCKing manager
