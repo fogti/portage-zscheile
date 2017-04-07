@@ -7,17 +7,15 @@ inherit zserik-virtual
 DESCRIPTION="Zscheile Standard Environment for Clients"
 
 KEYWORDS="arm amd64 x86"
-IUSE="cryptsetup +flash games +geosci +grub +kerberos mp3 +vala +xdm +xfce"
+IUSE="+flash games +geosci +grub +kerberos +xdm +xfce"
 
 # block >=glibc-2.22-r4 because hesiod is broken
 #                       bugfix in glibc-2.24
-RDEPEND="app-admin/sudo
+RDEPEND="
+	app-admin/sudo
 	app-admin/sysklogd
-	app-admin/testdisk
+	app-admin/zstxtns-utils
 
-	app-arch/xarchiver
-
-	app-editors/gedit
 	app-editors/hexedit
 	app-editors/nano
 
@@ -25,10 +23,7 @@ RDEPEND="app-admin/sudo
 	app-office/libreoffice
 
 	app-portage/eix
-	app-portage/genlop
 	app-portage/gentoolkit
-
-	app-shells/dash
 
 	app-text/ding
 	app-text/dos2unix
@@ -36,36 +31,32 @@ RDEPEND="app-admin/sudo
 	app-text/fbreader
 	app-text/tree
 
-	dev-util/checkbashisms
 	dev-util/meld
 	dev-util/strace
 	dev-util/zsgenheader
 
-	dev-java/icedtea
-	dev-util/geany
 	dev-vcs/git
-
+	gnome-base/gvfs[mtp,nfs]
 	mail-client/thunderbird
 
 	media-fonts/font-misc-misc
 	media-gfx/gimp
 	media-gfx/gqview
 
-	media-plugins/gst-plugins-ffmpeg
 	media-plugins/gst-plugins-jpeg
-	media-plugins/gst-plugins-meta[X,mp3?,mpeg,ogg,theora]
+	media-plugins/gst-plugins-meta[X,mp3,mpeg,ogg,theora]
 	media-plugins/gst-plugins-openh264
 	media-plugins/gst-plugins-xvid
 	media-plugins/gst-plugins-a52dec
 	media-plugins/gst-plugins-faad
 	media-plugins/gst-plugins-flac
 	media-plugins/gst-plugins-lame
+	media-plugins/gst-plugins-libav
 	media-plugins/gst-plugins-mad
 	media-plugins/gst-plugins-pango
 	media-plugins/gst-plugins-xvideo
 
 	media-sound/lmms
-	media-sound/mpg123
 	media-video/mplayer
 
 	net-analyzer/fping
@@ -77,7 +68,6 @@ RDEPEND="app-admin/sudo
 	net-dns/bind-tools
 	net-fs/nfs-utils
 	net-fs/openafs
-	net-ftp/gftp[gtk]
 	net-misc/ntp
 	net-misc/x11-ssh-askpass
 
@@ -87,8 +77,12 @@ RDEPEND="app-admin/sudo
 
 	sys-block/gparted
 	sys-cluster/glusterfs
+
+	sys-fs/cryptsetup
 	sys-fs/dosfstools
+	sys-fs/jmtpfs
 	sys-fs/xfsprogs
+
 	sys-kernel/gentoo-sources
 	sys-libs/gpm
 	sys-power/pm-utils
@@ -106,6 +100,7 @@ RDEPEND="app-admin/sudo
 	x11-apps/xmodmap
 	x11-apps/xrandr
 	x11-base/xorg-server
+	x11-plugins/enigmail
 	x11-terms/rxvt-unicode
 	x11-terms/xterm
 	x11-themes/gnome-icon-theme
@@ -115,17 +110,8 @@ RDEPEND="app-admin/sudo
 	virtual/zenv-media[alsa,flash?]
 
 	|| (
-		<sys-libs/glibc-2.22-r4
-		>sys-libs/glibc-2.23-r2
-	)
-
-	|| (
 		net-analyzer/netcat
 		net-analyzer/netcat6
-	)
-
-	cryptsetup? (
-		sys-fs/cryptsetup
 	)
 
 	games? (
@@ -146,9 +132,6 @@ RDEPEND="app-admin/sudo
 	kerberos? (
 		sys-auth/pambase[pam_krb5]
 		virtual/krb5
-	)
-	vala? (
-		app-admin/eselect-vala
 	)
 
 	xdm? (

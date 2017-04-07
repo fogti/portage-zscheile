@@ -53,5 +53,5 @@ virtual/zenv-media 0.7.1 0.7.2 0.7.3: Erik Zscheile: media environment
 virtual/zenv-shotcut 0.1: Erik Zscheile: Environment for Shotcut
 virtual/zimpl-flash 0.3 0.4 0.5 0.6: Erik Zscheile: flash implementations
 virtual/zimpl-pulseaudio 0.1: Erik Zscheile: pulseaudio implementations
-virtual/zstdenv-client 0.2.3.6 0.2.3.7 0.2.3.8 0.2.4 0.2.4.1 0.2.4.2: Zscheile Standard Environment for Clients
+virtual/zstdenv-client 0.2.4 0.2.4.1 0.2.4.2 0.2.4.3: Zscheile Standard Environment for Clients
 zeik-handles/spawn 0.2: Zscheile EIK handles typemodule spawn
