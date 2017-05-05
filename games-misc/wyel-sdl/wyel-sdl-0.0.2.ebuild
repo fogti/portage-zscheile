@@ -17,4 +17,4 @@ ${CMDEPEND}
 
 RDEPEND="${RDEPEND}
 ${CMDEPEND}
-media-fonts/liberation-fonts"
+virtual/ttf-fonts"
