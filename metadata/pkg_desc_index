@@ -42,7 +42,7 @@ dev-util/zsgtrp 0.0.2 0.0.4 0.0.5: Zscheile GTR Parser - C++ class getter genera
 games-board/aisleriot 3.16.2 3.18.2: A collection of solitaire card games for GNOME
 games-misc/wyel 0.0.1: Zscheile WYEL Game
 games-misc/wyel-sdl 0.0.2 0.0.3 0.0.4 0.0.5 0.0.6: Zscheile WYEL Game - Advanced SDL version
-media-sound/zsmusicd 0.0.1: Zscheile Music Daemon
+media-sound/zsmusicd 0.0.1 0.0.2: Zscheile Music Daemon
 net-analyzer/zs-wait4host 0.2 0.3 0.3.2: Wait for a host to come up/go done
 net-dns/resolvconfctl 0.0.1: resolvconfctl - another /etc/resolv.conf manager
 net-misc/zadist 0.0.7.1 0.0.8 0.1.1 0.1.2: ZADist - Zscheile Automatic Distributor Client
