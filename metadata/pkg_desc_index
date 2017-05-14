@@ -12,7 +12,7 @@ app-misc/zsrecursil 0.0.3: ZS Recursil - directory recursion tool
 app-misc/zsropm 0.1 0.1.1 0.1.2 0.1.3 0.1.4 0.1.5: Zscheile Rollout Package Manager
 app-misc/zsropm-utils 0.1: Utilities for the Zscheile Rollout Package Manager
 dev-db/zdbc 0.2.3 0.2.4 0.2.5: ZDBC - Zscheile DataBase Utils
-dev-db/zsdatab 0.0.5 0.0.6 0.0.7: Zscheile data text table Management
+dev-db/zsdatab 0.0.5 0.0.6 0.0.7 0.0.9: Zscheile data text table Management
 dev-db/zstab 0.0.1 0.0.2 0.0.3: zstab - Zscheile Table Management
 dev-embedded/arduino 1.5.8: An open-source AVR electronics prototyping platform
 dev-lang/zeiksh 0.2.4 0.2.5 0.2.6 0.2.7: Zscheile EIK shell script interpreter
@@ -37,6 +37,7 @@ dev-misc/zsretry 0.0.1 0.0.2: zsretry - Zscheile Retry (wait for successfulness)
 dev-scheme/guile 2.0.9-r1: GNU Ubiquitous Intelligent Language for Extensions
 dev-util/valadoc 9999: A documentation generator for generating API documentation from Vala source code
 dev-util/zs-sedscr-utils 0.0.1 0.0.2: Zscheile SedScripts Utilities
+dev-util/zsdimlc 0.0.1: Zscheile Dimensiion Language Compiler
 dev-util/zsgenheader 0.0.1 0.0.2 0.0.3: ZsGenHeader - generate header from c source file
 dev-util/zsgtrp 0.0.2 0.0.4 0.0.5: Zscheile GTR Parser - C++ class getter generator
 games-board/aisleriot 3.16.2 3.18.2: A collection of solitaire card games for GNOME
@@ -58,5 +59,5 @@ virtual/zenv-media 0.7.1 0.7.2 0.7.3: Erik Zscheile: media environment
 virtual/zenv-shotcut 0.1: Erik Zscheile: Environment for Shotcut
 virtual/zimpl-flash 0.3 0.4 0.5 0.6: Erik Zscheile: flash implementations
 virtual/zimpl-pulseaudio 0.1: Erik Zscheile: pulseaudio implementations
-virtual/zstdenv-client 0.2.4 0.2.4.1 0.2.4.2 0.2.4.3: Zscheile Standard Environment for Clients
+virtual/zstdenv-client 0.2.4 0.2.4.1 0.2.4.2 0.2.4.3 0.2.4.4: Zscheile Standard Environment for Clients
 zeik-handles/spawn 0.2: Zscheile EIK handles typemodule spawn
