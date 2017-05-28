@@ -2,19 +2,17 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=5
-inherit zs-perl
+inherit zserik-cmake
 
 DESCRIPTION="Zscheile simple universal Preprocessor"
 KEYWORDS="amd64 arm x86"
 
-RDEPEND="$RDEPEND
-	dev-perl/List-MoreUtils
-	virtual/perl-Scalar-List-Utils"
+COMMON_DEPEND="$COMMON_DEPEND
+	dev-libs/boost"
 
-src_install() {
-	exeinto /usr/bin
-	echo install zsppr
-	doexe zsppr
+DEPEND="$COMMON_DEPEND
+	$DEPEND
+	>=sys-devel/gcc-6.3.0[cxx]"
 
-	zs-perl_src_install
-}
+RDEPEND="$COMMON_DEPEND
+$RDEPEND"
