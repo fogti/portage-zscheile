@@ -9,9 +9,11 @@ LICENSE="MIT"
 KEYWORDS="arm amd64 x86"
 
 DEPEND="$DEPEND
->=sys-devel/gcc-6.3.0[cxx]"
+>=sys-devel/gcc-6.3.0[cxx]
+sys-libs/zlib"
 
 RDEPEND="$RDEPEND
 app-shells/bash
 sys-apps/coreutils
+sys-libs/zlib
 virtual/zcmake-libfindmacros"
