@@ -10,8 +10,11 @@ inherit zserik-base
 
 KEYWORDS="amd64 arm x86"
 DESCRIPTION="Zscheile Shell Library Core"
-DEPEND="sys-apps/sed
+DEPEND="
+dev-misc/zsppr
 sys-devel/make"
+RDEPEND="
+sys-process/procps"
 
 EXPORT_FUNCTIONS src_configure
 

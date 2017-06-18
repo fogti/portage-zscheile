@@ -28,7 +28,7 @@ dev-misc/zcmake-libfindmacros 0.0.1: LibFindMacros.cmake
 dev-misc/zcmake-libsdl2 0.0.1: FindLibSDL2 cmake files
 dev-misc/zs-common 0.7 0.8: ZSerik Common - useful scripts
 dev-misc/zs-shlib-config 0.0.1 0.0.3 0.0.4: Zscheile Shell Library - config
-dev-misc/zs-shlib-core 0.0.3 0.0.4 0.0.5: Zscheile Shell Library Core
+dev-misc/zs-shlib-core 0.0.6: Zscheile Shell Library Core
 dev-misc/zs-shlib-events 0.0.3 0.0.4 0.0.4.2: Zscheile Shell Library - events
 dev-misc/zs-shlib-extra 0.0.1 0.0.2 0.0.3: Zscheile Shell additional libraries
 dev-misc/zs-shlib-optimize 0.0.1 0.0.2: Zscheile Shell Library - optimize
