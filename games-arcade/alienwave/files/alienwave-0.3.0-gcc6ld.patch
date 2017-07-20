@@ -1,0 +1,12 @@
+diff -up Makefile.old Makefile
+--- Makefile.old
++++ Makefile
+@@ -2,7 +2,7 @@
+ 
+ OBJS = main.o blit.o aliens.o xzarna.o fire.o shield.o levels.o util.o
+ # CFLAGS = -c -O2 -Wall -DDEBUG_LEV
+-LIB = -lncurses
++LIB = -lncurses -ltinfo
+ 
+ # Uncomment this if you want random waves
+ # CFLAGS += -DRANDOM_LEVELS
