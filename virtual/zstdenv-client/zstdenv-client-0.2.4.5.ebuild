@@ -1,4 +1,4 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 EAPI=5
 
@@ -7,17 +7,13 @@ inherit zserik-virtual
 DESCRIPTION="Zscheile Standard Environment for Clients"
 
 KEYWORDS="arm amd64 x86"
-IUSE="+flash games +geosci +grub +kerberos mp3 +vala +xdm +xfce"
+IUSE="+flash games +geosci +grub +kerberos +pulseaudio +xdm +xfce"
 
-# block >=glibc-2.22-r4 because hesiod is broken
-#                       bugfix in glibc-2.24
-RDEPEND="app-admin/sudo
+RDEPEND="
+	app-admin/sudo
 	app-admin/sysklogd
-	app-admin/testdisk
+	app-admin/zstxtns-utils
 
-	app-arch/xarchiver
-
-	app-editors/gedit
 	app-editors/hexedit
 	app-editors/nano
 
@@ -26,8 +22,6 @@ RDEPEND="app-admin/sudo
 
 	app-portage/eix
 	app-portage/gentoolkit
-
-	app-shells/dash
 
 	app-text/ding
 	app-text/dos2unix
@@ -39,20 +33,15 @@ RDEPEND="app-admin/sudo
 	dev-util/strace
 	dev-util/zsgenheader
 
-	dev-java/icedtea
-	dev-util/geany
 	dev-vcs/git
-
 	gnome-base/gvfs[mtp,nfs]
-
-	mail-client/thunderbird
 
 	media-fonts/font-misc-misc
 	media-gfx/gimp
 	media-gfx/gqview
 
 	media-plugins/gst-plugins-jpeg
-	media-plugins/gst-plugins-meta[X,mp3?,mpeg,ogg,theora]
+	media-plugins/gst-plugins-meta[X,mp3,mpeg,ogg,theora]
 	media-plugins/gst-plugins-openh264
 	media-plugins/gst-plugins-xvid
 	media-plugins/gst-plugins-a52dec
@@ -64,9 +53,8 @@ RDEPEND="app-admin/sudo
 	media-plugins/gst-plugins-pango
 	media-plugins/gst-plugins-xvideo
 
-	media-sound/lmms
-	media-sound/mpg123
-	media-video/mplayer
+	media-sound/lmms[pulseaudio?]
+	media-video/mplayer[pulseaudio?]
 
 	net-analyzer/fping
 	net-analyzer/nmap[zenmap]
@@ -77,7 +65,6 @@ RDEPEND="app-admin/sudo
 	net-dns/bind-tools
 	net-fs/nfs-utils
 	net-fs/openafs
-	net-ftp/gftp[gtk]
 	net-misc/ntp
 	net-misc/x11-ssh-askpass
 
@@ -99,8 +86,6 @@ RDEPEND="app-admin/sudo
 	sys-process/lsof
 
 	sci-visualization/gnuplot
-
-	www-client/firefox
 	www-client/links
 
 	x11-apps/xedit
@@ -117,16 +102,22 @@ RDEPEND="app-admin/sudo
 	x11-themes/tango-icon-theme
 
 	virtual/cron
-	virtual/zenv-media[alsa,flash?]
+	>=virtual/zenv-media-0.7.4
+	virtual/zenv-media[alsa,flash?,gstreamer,pulseaudio?]
 
 	|| (
-		<sys-libs/glibc-2.22-r4
-		>sys-libs/glibc-2.23-r2
+		mail-client/thunderbird[pulseaudio?]
+		mail-client/thunderbird-bin[pulseaudio?]
 	)
 
 	|| (
 		net-analyzer/netcat
 		net-analyzer/netcat6
+	)
+
+	|| (
+		www-client/firefox[pulseaudio?]
+		www-client/firefox-bin[pulseaudio?]
 	)
 
 	games? (
@@ -149,10 +140,6 @@ RDEPEND="app-admin/sudo
 		virtual/krb5
 	)
 
-	vala? (
-		app-admin/eselect-vala
-	)
-
 	xdm? (
 		x11-misc/slim
 	)
@@ -162,4 +149,4 @@ RDEPEND="app-admin/sudo
 		xfce-extra/xfce4-cpugraph-plugin
 		xfce-extra/xfce4-notes-plugin
 	)
-	"
+"
