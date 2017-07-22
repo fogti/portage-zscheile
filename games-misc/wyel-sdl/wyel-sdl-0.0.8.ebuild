@@ -8,7 +8,7 @@ inherit zserik-cmake
 DESCRIPTION="Zscheile WYEL Game - Advanced SDL version"
 KEYWORDS="amd64 x86 ~arm"
 
-CMDEPEND="media-libs/libsdl2[X,video]
+CMDEPEND="media-libs/libsdl2[threads,video]
 media-libs/sdl2-ttf"
 
 DEPEND="${DEPEND}
