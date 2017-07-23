@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install postinst prepare
+DEPEND=!sys-apps/module-init-tools !sys-apps/modutils lzma? ( >=app-arch/xz-utils-5.0.4-r1 ) openrc? ( !<sys-apps/openrc-0.12 ) zlib? ( >=sys-libs/zlib-1.2.6 ) dev-libs/libxslt doc? ( dev-util/gtk-doc ) lzma? ( virtual/pkgconfig ) zlib? ( virtual/pkgconfig ) >=app-portage/elt-patches-20170317
+DESCRIPTION=library and tools for managing linux kernel modules
+EAPI=5
+HOMEPAGE=http://git.kernel.org/?p=utils/kernel/kmod/kmod.git
+IUSE=debug doc lzma +openrc static-libs +tools zlib
+KEYWORDS=amd64 x86
+LICENSE=LGPL-2
+RDEPEND=!sys-apps/module-init-tools !sys-apps/modutils lzma? ( >=app-arch/xz-utils-5.0.4-r1 ) openrc? ( !<sys-apps/openrc-0.12 ) zlib? ( >=sys-libs/zlib-1.2.6 )
+RESTRICT=test
+SLOT=0
+SRC_URI=mirror://kernel/linux/utils/kernel/kmod/kmod-16.tar.xz
+_eclasses_=bash-completion-r1	8e447753aaf658afa609fbf961d80ab7	epatch	8233751dc5105a6ae8fcd86ce2bb0247	estack	43ddf5aaffa7a8d0482df54d25a66a1f	eutils	9c113d6a64826c40154cad7be15d95ea	libtool	e32ea84bf82cf8987965b574672dba93	ltprune	2770eed66a9b8ef944714cd0e968182e	multilib	0236be304ee52e7f179ed2f337075515	toolchain-funcs	8fec6b1eb195836560e70b66d98fb163
+_md5_=2a1974878fdfd51b4eaa12e1057673dd

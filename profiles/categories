@@ -16,7 +16,9 @@ net-analyzer
 net-dns
 net-misc
 net-nds
+sys-apps
 sys-cluster
+sys-fs
 sys-process
 virtual
 zeik-handles
