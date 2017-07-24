@@ -107,6 +107,9 @@ src_prepare() {
 	# Exclude MD from block device ownership event locking, bug #517986
 	epatch "${FILESDIR}"/${PN}-exclude-MD.patch
 
+	# Fix mtd_probe compile fail caused by missing typedefs
+	epatch "${FILESDIR}"/${PN}-fix-mtd-probe.patch
+
 	epatch_user
 
 	if [[ ! -e configure ]]; then
@@ -115,7 +118,7 @@ src_prepare() {
 		else
 			echo 'EXTRA_DIST =' > docs/gtk-doc.make
 		fi
-		eautoreconf
+		eautoreconf || die "autoreconf failed"
 	else
 		elibtoolize
 	fi
@@ -171,24 +174,28 @@ multilib_src_configure() {
 			--disable-rule-generator
 		)
 	fi
-	ECONF_SOURCE="${S}" econf "${econf_args[@]}"
+	ECONF_SOURCE="${S}" econf "${econf_args[@]}" || die "econf failed"
 }
 
 multilib_src_compile() {
 	if multilib_is_native_abi; then
-		emake
+		emake || die
 	else
-		emake -C src/libudev
-		use gudev && emake -C src/gudev
+		emake -C src/libudev || die "libudev failed"
+		if use gudev; then
+			emake -C src/gudev || die "gudev failed"
+		fi
 	fi
 }
 
 multilib_src_install() {
 	if multilib_is_native_abi; then
-		emake DESTDIR="${D}" install
+		emake DESTDIR="${D}" install || die "install failed"
 	else
-		emake -C src/libudev DESTDIR="${D}" install
-		use gudev && emake -C src/gudev DESTDIR="${D}" install
+		emake -C src/libudev DESTDIR="${D}" install || die "libudev install failed"
+		if use gudev; then
+			emake -C src/gudev DESTDIR="${D}" install || die "gudev install failed"
+		fi
 	fi
 }
 
