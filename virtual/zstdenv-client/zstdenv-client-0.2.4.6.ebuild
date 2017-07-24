@@ -7,7 +7,7 @@ inherit zserik-virtual
 DESCRIPTION="Zscheile Standard Environment for Clients"
 
 KEYWORDS="arm amd64 x86"
-IUSE="games +geosci +grub +kerberos +pulseaudio +xdm +xfce"
+IUSE="games +geosci +grub +kerberos +kernel +pulseaudio +xdm +xfce"
 
 RDEPEND="
 	app-admin/sudo
@@ -76,7 +76,6 @@ RDEPEND="
 
 	net-dns/bind-tools
 	net-fs/nfs-utils
-	net-fs/openafs
 	net-misc/ntp
 	net-misc/x11-ssh-askpass
 
@@ -152,6 +151,10 @@ RDEPEND="
 	kerberos? (
 		sys-auth/pambase[pam_krb5]
 		virtual/krb5
+	)
+
+	kernel? (
+		net-fs/openafs
 	)
 
 	xdm? (

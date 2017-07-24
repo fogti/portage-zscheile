@@ -104,7 +104,7 @@ src_install() {
 	insinto /lib/modprobe.d
 	doins "${T}"/usb-load-ehci-first.conf #260139
 
-	use openrc && doinitd "${FILESDIR}"/kmod-static-nodes-r1
+	use openrc && doinitd "${FILESDIR}"/kmod-static-nodes
 }
 
 pkg_postinst() {
