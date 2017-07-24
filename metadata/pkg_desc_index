@@ -57,9 +57,10 @@ net-misc/zisnet 0.0.1 0.0.2: Zscheile Information System - with simple blockchai
 net-misc/zsnetlaunch 0.0.1.2: Zscheile Network Launcher
 net-misc/zsroute-utils 0.0.1: Zscheile Routing Utilities
 net-nds/zsnis 0.1.4 0.1.5.2 0.1.6: ZSNIS - Zscheile Secure Network Information Service
+sys-apps/baselayout 2.2: Filesystem baselayout and init scripts
 sys-apps/hwids 20170328: Hardware (PCI, USB, OUI, IAB) IDs databases
 sys-apps/kmod 16: library and tools for managing linux kernel modules
-sys-apps/openrc 0.12.2: OpenRC manages the services, startup and shutdown of a host
+sys-apps/openrc 0.12.2 0.13.11: OpenRC manages the services, startup and shutdown of a host
 sys-cluster/glusterfs 3.6.5 3.7.4: GlusterFS is a powerful network/cluster filesystem
 sys-fs/eudev 1.9-r2: Linux dynamic and persistent device naming support (aka userspace devfs)
 sys-process/zsdoitduring 0.0.1: Zscheile Do-It-During Process Spawning Helper
