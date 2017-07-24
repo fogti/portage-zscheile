@@ -65,9 +65,9 @@ sys-fs/eudev 1.9-r2: Linux dynamic and persistent device naming support (aka use
 sys-process/zsdoitduring 0.0.1: Zscheile Do-It-During Process Spawning Helper
 virtual/zcmake-libfindmacros 0.1 0.2: Zscheile CMake virtual: LibFindMacros
 virtual/zenv-latex 0.0.1: Zscheile LaTeX Environment
-virtual/zenv-media 0.7.1 0.7.2 0.7.3 0.7.4: Erik Zscheile: media environment
-virtual/zenv-shotcut 0.1: Erik Zscheile: Environment for Shotcut
+virtual/zenv-media 0.7.1 0.7.2 0.7.3 0.7.4 0.7.5: Erik Zscheile: media environment
+virtual/zenv-shotcut 0.1 0.2: Erik Zscheile: Environment for Shotcut
 virtual/zimpl-flash 0.3 0.4 0.5 0.6: Erik Zscheile: flash implementations
-virtual/zimpl-pulseaudio 0.1 0.2: Erik Zscheile: pulseaudio implementations
-virtual/zstdenv-client 0.2.4.1 0.2.4.2 0.2.4.3 0.2.4.4 0.2.4.5: Zscheile Standard Environment for Clients
+virtual/zimpl-pulseaudio 0.1 0.3: Erik Zscheile: pulseaudio implementations
+virtual/zstdenv-client 0.2.4.1 0.2.4.2 0.2.4.3 0.2.4.4 0.2.4.5 0.2.4.6: Zscheile Standard Environment for Clients
 zeik-handles/spawn 0.2: Zscheile EIK handles typemodule spawn

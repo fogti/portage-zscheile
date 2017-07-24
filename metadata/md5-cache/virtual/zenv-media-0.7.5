@@ -1,0 +1,9 @@
+DEFINED_PHASES=-
+DESCRIPTION=Erik Zscheile: media environment
+EAPI=5
+IUSE=+alsa ffmpeg +flash gstreamer jack pulseaudio
+KEYWORDS=amd64 x86
+RDEPEND=alsa? ( media-libs/alsa-lib media-sound/alsa-utils ) ffmpeg? ( virtual/ffmpeg ) flash? ( www-plugins/adobe-flash[nsplugin] ) pulseaudio? ( !media-sound/apulse media-sound/paprefs media-sound/pavucontrol media-sound/pavumeter ) gstreamer? ( media-libs/gstreamer media-plugins/gst-plugins-meta[alsa?,jack?,pulseaudio?] ) jack? ( media-sound/jack-audio-connection-kit[alsa?] )
+SLOT=0
+_eclasses_=zserik-virtual	2f0a52cafc77287ca8fabf2c1a498e04
+_md5_=bb20dd7d105c817dc52bcff8353d081e
