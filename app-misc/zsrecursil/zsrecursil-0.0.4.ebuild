@@ -8,8 +8,7 @@ inherit zserik-cmake
 DESCRIPTION="ZS Recursil - directory recursion tool"
 KEYWORDS="amd64 x86 arm"
 
-COMMON_DEPEND="$COMMON_DEPEND
-dev-libs/boost"
+COMMON_DEPEND=">=dev-libs/boost-1.62.0"
 
 DEPEND="$DEPEND
 $COMMON_DEPEND
