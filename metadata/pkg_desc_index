@@ -9,7 +9,7 @@ app-misc/zout-ng 0.0.1 0.0.2: Zscheile (Action) Output Formatting Tool - Next Ge
 app-misc/zsgcfgfpath 0.0.2 0.0.3: get config file path - gentoo cfg-filename determine application
 app-misc/zsoutils 0.0.4 0.0.5: ZS Outils - output utilitys - multi call binary
 app-misc/zsrecursil 0.0.3 0.0.4 0.0.6 0.0.7 0.0.8: ZS Recursil - directory recursion tool
-app-misc/zsropm 0.1.6.2 0.1.7 0.1.8.1 0.1.9.3 0.2: Zscheile Rollout Package Manager
+app-misc/zsropm 0.1.6.2 0.1.7 0.1.8.1 0.1.9.3 0.2 0.2.0.1: Zscheile Rollout Package Manager
 app-misc/zsropm-utils 0.1 0.2: Utilities for the Zscheile Rollout Package Manager
 dev-db/zdbc 0.2.3 0.2.4 0.2.5: ZDBC - Zscheile DataBase Utils
 dev-db/zsdatab 0.1.5 0.1.6 0.2.0 0.2.1 0.2.3: Zscheile data text table Management
