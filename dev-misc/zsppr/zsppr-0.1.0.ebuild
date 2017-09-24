@@ -12,7 +12,7 @@ COMMON_DEPEND="$COMMON_DEPEND
 
 DEPEND="$COMMON_DEPEND
 	$DEPEND
-	>=sys-devel/gcc-6.3.0[cxx]"
+	>=sys-devel/gcc-5.4.0[cxx]"
 
 RDEPEND="$COMMON_DEPEND
 $RDEPEND"
