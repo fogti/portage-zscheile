@@ -15,7 +15,7 @@ RDEPEND="sys-apps/coreutils
 	virtual/daemontools"
 
 src_install() {
-	default
+	cmake-utils_src_install
 
 	echo " - install documentation"
 	dodoc README doc/files/CONF doc/files/zprd.conf
