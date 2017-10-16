@@ -9,14 +9,13 @@ DESCRIPTION="ZPRD - Zscheile Peer Routing Daemon"
 KEYWORDS="arm amd64 x86"
 LICENSE="GPL-3"
 
-RDEPEND="app-admin/sudo
-	sys-apps/coreutils
+RDEPEND="sys-apps/coreutils
 	sys-apps/grep
 	sys-apps/iproute2
 	virtual/daemontools"
 
 src_install() {
-	default
+	cmake-utils_src_install
 
 	echo " - install documentation"
 	dodoc README doc/files/CONF doc/files/zprd.conf
