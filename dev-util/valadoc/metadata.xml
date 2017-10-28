@@ -2,16 +2,13 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 
 <pkgmetadata>
-	<herd>gnome</herd>
-	
-	<maintainer>
+	<maintainer type="person">
 		<email>ulltor@gmail.com</email>
 		<name>Gavrilov Maksim</name>
 	</maintainer>
-	
+
 	<longdescription lang="en">
 		Valadoc is a documentation generator for generating API
 		documentation from Vala source code based on libvala.
-	</longdescription> 
- 	
+	</longdescription>
 </pkgmetadata>

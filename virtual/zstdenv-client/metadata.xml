@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>erik.zscheile.ytrizja@gmail.com</email>
+		<name>Erik Zscheile</name>
+	</maintainer>
+	<use>
+		<flag name="flash">enable support for Adobe Flash</flag>
+		<flag name="games">install some games</flag>
+		<flag name="geosci">install additional applications for geo-science</flag>
+		<flag name="grub">pull in the GRUB bootloader</flag>
+		<flag name="kernel">install packages which depend upon a kernel (needed for bootstrap)</flag>
+		<flag name="xdm">install a X display manager</flag>
+		<flag name="xfce">pull in XFCE4</flag>
+	</use>
+</pkgmetadata>

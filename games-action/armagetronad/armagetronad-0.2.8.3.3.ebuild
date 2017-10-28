@@ -1,8 +1,8 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=5
-inherit eutils gnome2-utils games
+inherit eutils gnome2-utils
 
 DESCRIPTION="Fast-paced 3D lightcycle game based on Tron"
 HOMEPAGE="http://armagetronad.org/"
@@ -35,7 +35,7 @@ src_prepare() {
 
 src_configure() {
 	# --enable-games just messes up paths
-	egamesconf \
+	econf \
 		--docdir=/usr/share/doc/${PF} \
 		$(use_enable dedicated) \
 		$(use_enable sound music) \
@@ -53,17 +53,13 @@ src_install() {
 	rm -rf "${ED%/}${GAMES_DATADIR}"/armagetronad/desktop
 	doicon -s 48 desktop/icons/large/armagetronad.png
 	make_desktop_entry ${PN}
-
-	prepgamesdirs
 }
 
 pkg_preinst() {
-	games_pkg_preinst
 	gnome2_icon_savelist
 }
 
 pkg_postinst() {
-	games_pkg_postinst
 	gnome2_icon_cache_update
 }
 

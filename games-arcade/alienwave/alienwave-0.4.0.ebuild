@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=5
-inherit eutils games
+inherit eutils
 
 DESCRIPTION="An ncurses-based Xenon clone"
 HOMEPAGE="http://www.alessandropira.org/alienwave/aw.html"
@@ -24,7 +24,6 @@ src_prepare() {
 }
 
 src_install() {
-	dogamesbin alienwave
+	dobin alienwave
 	dodoc TO_DO README STORY
-	prepgamesdirs
 }

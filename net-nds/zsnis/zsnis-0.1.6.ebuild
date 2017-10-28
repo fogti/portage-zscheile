@@ -1,17 +1,16 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=1
+EAPI=4
 
 inherit zserik-minimal
 
 DESCRIPTION="ZSNIS - Zscheile Secure Network Information Service"
-KEYWORDS="arm amd64 x86"
+KEYWORDS="~arm amd64 x86"
 IUSE="server"
 
 RDEPEND="net-analyzer/cryptcat
 server? (
-	sys-apps/coreutils
 	sys-process/procps
 	virtual/daemontools
 )"

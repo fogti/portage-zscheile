@@ -1,4 +1,4 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=4
@@ -6,11 +6,9 @@ EAPI=4
 inherit eutils zserik-minimal
 
 DESCRIPTION="Zscheile Network Launcher"
-KEYWORDS="arm amd64 x86"
+KEYWORDS="~arm amd64 x86"
 
 RDEPEND="$RDEPEND
-	app-shells/bash
-	sys-apps/coreutils
 	sys-apps/grep
 	sys-apps/moreutils
 	sys-apps/openrc

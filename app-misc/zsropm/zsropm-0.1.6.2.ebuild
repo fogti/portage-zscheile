@@ -26,5 +26,4 @@ src_install() {
 	dodir /usr/zsropm
 	dodir /var/lib/zsropm
 	cmake-utils_src_install
-	dodoc LICENSE
 }

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>erik.zscheile.ytrizja@gmail.com</email>
+		<name>Erik Zscheile</name>
+	</maintainer>
+	<use>
+		<flag name="flash">enable support for Adobe Flash</flag>
+	</use>
+</pkgmetadata>

@@ -6,7 +6,7 @@ EAPI=5
 PYTHON_COMPAT=( python2_7 )
 AUTOTOOLS_AUTORECONF=1
 
-inherit autotools-utils elisp-common eutils multilib python-single-r1 systemd versionator
+inherit elisp-common eutils multilib python-single-r1 systemd versionator
 
 DESCRIPTION="GlusterFS is a powerful network/cluster filesystem"
 HOMEPAGE="http://www.gluster.org/"
@@ -26,7 +26,7 @@ RESTRICT="test"
 # sys-apps/util-linux is required for libuuid
 RDEPEND="bd-xlator? ( sys-fs/lvm2 )
 	emacs? ( virtual/emacs )
-	fuse? ( >=sys-fs/fuse-2.7.0 )
+	fuse? ( >=sys-fs/fuse-2.7.0:= )
 	georeplication? ( ${PYTHON_DEPS} )
 	infiniband? ( sys-fabric/libibverbs:* sys-fabric/librdmacm:* )
 	qemu-block? ( dev-libs/glib:2 )

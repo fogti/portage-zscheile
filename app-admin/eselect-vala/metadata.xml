@@ -2,15 +2,12 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 
 <pkgmetadata>
-	<herd>gnome</herd>
-	
-	<maintainer>
+	<maintainer type="person">
 		<email>ulltor@gmail.com</email>
 		<name>Gavrilov Maksim</name>
 	</maintainer>
-	
+
 	<longdescription lang="en">
 		eselect-vala is an eselect module to maintain vala compiler symlink.
-	</longdescription> 
- 	
+	</longdescription>
 </pkgmetadata>

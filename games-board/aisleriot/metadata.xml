@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>gnome</herd>
+	<maintainer type="project">
+		<email>gnome@gentoo.org</email>
+		<name>Gentoo GNOME Desktop Project</name>
+	</maintainer>
+	<maintainer type="person">
+		<email>erik.zscheile.ytrizja@gmail.com</email>
+		<name>Erik Zscheile</name>
+	</maintainer>
 </pkgmetadata>

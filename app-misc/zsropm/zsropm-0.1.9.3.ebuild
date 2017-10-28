@@ -5,7 +5,7 @@ EAPI=5
 inherit zserik-cmake eutils
 
 DESCRIPTION="Zscheile Rollout Package Manager"
-KEYWORDS="arm amd64 x86"
+KEYWORDS="~arm amd64 x86"
 LICENSE="GPL-2+"
 
 RDEPEND="$RDEPEND
@@ -28,5 +28,4 @@ src_install() {
 	dodir /usr/zsropm
 	dodir /var/lib/zsropm
 	cmake-utils_src_install
-	dodoc LICENSE
 }

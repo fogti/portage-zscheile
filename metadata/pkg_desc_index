@@ -14,9 +14,6 @@ app-misc/zsropm-utils 0.1 0.2: Utilities for the Zscheile Rollout Package Manage
 dev-db/zdbc 0.2.3 0.2.4 0.2.5: ZDBC - Zscheile DataBase Utils
 dev-db/zsdatab 0.1.5 0.1.6 0.2.0 0.2.1 0.2.3: Zscheile data text table Management
 dev-db/zstab 0.0.1 0.0.2 0.0.3: zstab - Zscheile Table Management
-dev-embedded/arduino 1.5.8 1.6.8 1.6.9: An open-source AVR electronics prototyping platform
-dev-embedded/arduino-ide 1.6.8 1.6.9: An open-source AVR electronics prototyping platform
-dev-embedded/arduino-libs 1.6.8 1.6.9: An open-source AVR electronics prototyping platform
 dev-lang/zeiksh 0.2.4 0.2.5 0.2.6 0.2.7: Zscheile EIK shell script interpreter
 dev-lang/zpavinl 0.1.1: Zscheile ZPAVINL to C compiler
 dev-lang/zserik-sfvsl 0.2 0.3: ZSerik Simple Formula Variable Substitution Language - simple replace variables
@@ -30,7 +27,7 @@ dev-misc/zs-common 0.7 0.8: ZSerik Common - useful scripts
 dev-misc/zs-shlib-config 0.0.1 0.0.3 0.0.4: Zscheile Shell Library - config
 dev-misc/zs-shlib-core 0.0.6: Zscheile Shell Library Core
 dev-misc/zs-shlib-events 0.0.3 0.0.4 0.0.4.2: Zscheile Shell Library - events
-dev-misc/zs-shlib-extra 0.0.1 0.0.2 0.0.3: Zscheile Shell additional libraries
+dev-misc/zs-shlib-extra 0.0.3: Zscheile Shell additional libraries
 dev-misc/zs-shlib-optimize 0.0.1 0.0.2: Zscheile Shell Library - optimize
 dev-misc/zsconf 0.0.1: Zscheile Configuration Parser
 dev-misc/zsppr 0.0.6 0.0.7 0.0.8 0.0.9 0.1.0: Zscheile simple universal Preprocessor
@@ -51,25 +48,17 @@ games-misc/wyel-sdl 0.0.5 0.0.6 0.0.7 0.0.8 0.0.8.1: Zscheile WYEL Game - Advanc
 media-sound/zsmusicd 0.0.1 0.0.2: Zscheile Music Daemon
 net-analyzer/zs-wait4host 0.2 0.3 0.3.2: Wait for a host to come up/go done
 net-dns/resolvconfctl 0.0.1: resolvconfctl - another /etc/resolv.conf manager
-net-misc/netifrc 0.2.2: Gentoo Network Interface Management Scripts
 net-misc/zadist 0.0.7.1 0.0.8 0.1.1 0.1.2: ZADist - Zscheile Automatic Distributor Client
 net-misc/zisnet 0.0.1 0.0.2: Zscheile Information System - with simple blockchain implementation
 net-misc/zprd 0.0.7 0.0.8 0.0.9 9999: ZPRD - Zscheile Peer Routing Daemon
 net-misc/zsnetlaunch 0.0.1.2: Zscheile Network Launcher
 net-misc/zsroute-utils 0.0.1: Zscheile Routing Utilities
 net-nds/zsnis 0.1.4 0.1.5.2 0.1.6: ZSNIS - Zscheile Secure Network Information Service
-sys-apps/baselayout 2.2: Filesystem baselayout and init scripts
-sys-apps/hwids 20170328: Hardware (PCI, USB, OUI, IAB) IDs databases
-sys-apps/kmod 16: library and tools for managing linux kernel modules
-sys-apps/openrc 0.12.2 0.13.11: OpenRC manages the services, startup and shutdown of a host
-sys-apps/sysvinit 2.88-r7: /sbin/init - parent of all processes
 sys-cluster/glusterfs 3.6.5 3.7.4: GlusterFS is a powerful network/cluster filesystem
-sys-fs/eudev 1.9-r2: Linux dynamic and persistent device naming support (aka userspace devfs)
-sys-process/procps 3.3.10-r1: standard informational utilities and process-handling tools
 sys-process/zsdoitduring 0.0.1: Zscheile Do-It-During Process Spawning Helper
 virtual/zcmake-libfindmacros 0.1 0.2: Zscheile CMake virtual: LibFindMacros
 virtual/zenv-latex 0.0.1: Zscheile LaTeX Environment
-virtual/zenv-media 0.7.1 0.7.2 0.7.3 0.7.4 0.7.5: Erik Zscheile: media environment
-virtual/zenv-shotcut 0.1 0.2: Erik Zscheile: Environment for Shotcut
+virtual/zenv-media 0.7.5: Erik Zscheile: media environment
+virtual/zenv-shotcut 0.2: Erik Zscheile: Environment for Shotcut
 virtual/zstdenv-client 0.2.4.1 0.2.4.2 0.2.4.3 0.2.4.4 0.2.4.5 0.2.4.6: Zscheile Standard Environment for Clients
 zeik-handles/spawn 0.2: Zscheile EIK handles typemodule spawn

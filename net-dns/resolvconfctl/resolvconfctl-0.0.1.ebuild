@@ -1,6 +1,5 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
 
 EAPI=5
 
@@ -9,8 +8,7 @@ inherit zserik-base
 DESCRIPTION="resolvconfctl - another /etc/resolv.conf manager"
 KEYWORDS="arm amd64 x86"
 DEPEND="!net-dns/resolvconf-gentoo
-!net-dns/openresolv
-app-shells/bash"
+!net-dns/openresolv"
 
 RDEPEND="$DEPEND"
 

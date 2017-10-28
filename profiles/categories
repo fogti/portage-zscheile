@@ -1,7 +1,6 @@
 app-admin
 app-misc
 dev-db
-dev-embedded
 dev-lang
 dev-libs
 dev-misc
@@ -16,9 +15,7 @@ net-analyzer
 net-dns
 net-misc
 net-nds
-sys-apps
 sys-cluster
-sys-fs
 sys-process
 virtual
 zeik-handles

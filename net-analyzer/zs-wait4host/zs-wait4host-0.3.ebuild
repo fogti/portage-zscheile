@@ -1,4 +1,4 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=4
@@ -6,14 +6,11 @@ EAPI=4
 inherit zserik-base
 
 DESCRIPTION="Wait for a host to come up/go done"
-KEYWORDS="arm amd64 x86"
-COMMON_DEPEND="sys-apps/coreutils
-sys-devel/gettext"
-DEPEND="$COMMON_DEPEND
+KEYWORDS="~arm amd64 x86"
+DEPEND="sys-devel/gettext
 sys-devel/make"
-RDEPEND="$COMMON_DEPEND
-app-shells/bash
-net-analyzer/fping"
+RDEPEND="net-analyzer/fping
+sys-devel/gettext"
 
 pkg_postinst() {
 	einfo "To run this program as a normal user:"

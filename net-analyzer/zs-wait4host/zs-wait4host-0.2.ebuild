@@ -1,4 +1,4 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=4
@@ -6,10 +6,8 @@ EAPI=4
 inherit zserik-minimal
 
 DESCRIPTION="Wait for a host to come up/go done"
-KEYWORDS="arm amd64 x86"
-RDEPEND="app-shells/bash
-net-analyzer/fping
-sys-apps/coreutils"
+KEYWORDS="~arm amd64 x86"
+RDEPEND="net-analyzer/fping"
 
 src_install() {
 	echo install zs-wait4host

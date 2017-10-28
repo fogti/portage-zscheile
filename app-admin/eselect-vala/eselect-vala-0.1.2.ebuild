@@ -1,11 +1,10 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
 
 EAPI=4
 
 DESCRIPTION="Eselect module to maintain vala compiler symlink"
-HOMEPAGE="http://code.google.com/p/eselect-vala/"
+HOMEPAGE="https://code.google.com/p/eselect-vala/"
 
 SRC_URI="http://${PN}.googlecode.com/files/${P}.tar.gz"
 

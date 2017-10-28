@@ -1,4 +1,4 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=5
@@ -7,7 +7,7 @@ inherit flag-o-matic
 WANT_AUTOMAKE=1.12
 
 DESCRIPTION="GNU Ubiquitous Intelligent Language for Extensions"
-HOMEPAGE="http://www.gnu.org/software/guile/"
+HOMEPAGE="https://www.gnu.org/software/guile/"
 SRC_URI="mirror://gnu/guile/${P}.tar.gz"
 
 LICENSE="LGPL-3"
@@ -18,7 +18,7 @@ IUSE="debug debug-malloc +deprecated +networking nls +regex"
 RDEPEND="
 	app-admin/eselect-guile
 	>=dev-libs/boehm-gc-7.0[threads]
-	dev-libs/gmp
+	dev-libs/gmp:=
 	dev-libs/libffi
 	>=dev-libs/libunistring-0.9.3
 	sys-devel/gettext

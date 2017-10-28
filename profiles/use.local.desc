@@ -2,15 +2,14 @@
 # your descriptions to your package's metadata.xml ONLY.
 # * generated automatically using egencache *
 
-dev-scheme/guile:debug-freelist - Include garbage collector freelist debugging code
+dev-misc/zs-common:color - enables terminal color output support
 dev-scheme/guile:debug-malloc - Include malloc debugging code
 dev-scheme/guile:deprecated - Enable deprecated features
-dev-scheme/guile:discouraged - (implied by deprecated) enable merely discouraged features
 dev-scheme/guile:networking - Include networking interfaces
 dev-scheme/guile:regex - Include regular expression interfaces
+net-nds/zsnis:server - installs the zsnis server
 sys-cluster/glusterfs:bd-xlator - Enable the blockdevice translator (requires sys-fs/lvm2)
 sys-cluster/glusterfs:crypt-xlator - Enable the encryption translator
-sys-cluster/glusterfs:extras - Install extra helper scripts
 sys-cluster/glusterfs:fuse - Add FUSE mount helper
 sys-cluster/glusterfs:georeplication - Enable support for georeplication (requires dev-lang/python)
 sys-cluster/glusterfs:glupy - Enable support for translators written in Python
@@ -19,3 +18,11 @@ sys-cluster/glusterfs:qemu-block - Transparently create files as QCow2/QED image
 sys-cluster/glusterfs:rsyslog - Install configuration snippet for app-admin/rsyslog
 sys-cluster/glusterfs:systemtap - Enable support for dev-util/systemtap
 sys-cluster/glusterfs:tiering - Enable support for data classification/tiering (requires dev-db/sqlite SLOT 3)
+virtual/zenv-media:flash - enable support for Adobe Flash
+virtual/zstdenv-client:flash - enable support for Adobe Flash
+virtual/zstdenv-client:games - install some games
+virtual/zstdenv-client:geosci - install additional applications for geo-science
+virtual/zstdenv-client:grub - pull in the GRUB bootloader
+virtual/zstdenv-client:kernel - install packages which depend upon a kernel (needed for bootstrap)
+virtual/zstdenv-client:xdm - install a X display manager
+virtual/zstdenv-client:xfce - pull in XFCE4

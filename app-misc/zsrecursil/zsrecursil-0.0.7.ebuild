@@ -9,8 +9,8 @@ DESCRIPTION="ZS Recursil - directory recursion tool"
 KEYWORDS="~amd64 ~x86 ~arm"
 
 # we need boost + c++11 libraries
-COMMON_DEPEND=">=dev-libs/boost-1.61.0
->=sys-devel/gcc-4.8.5[cxx]"
+COMMON_DEPEND=">=dev-libs/boost-1.61.0:=
+>=sys-devel/gcc-4.8.5:=[cxx]"
 
 DEPEND="$DEPEND
 $COMMON_DEPEND"
