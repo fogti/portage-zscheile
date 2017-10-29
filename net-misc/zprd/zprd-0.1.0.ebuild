@@ -17,19 +17,9 @@ src_install() {
 	cmake-utils_src_install
 
 	echo 'install documentation'
-	dodoc README.md doc/files/CONF doc/files/zprd.conf
+	dodoc README.md docs/files/CONF docs/files/zprd.conf
 
 	echo 'install service files'
 	dodir /etc/zprd
-	cp -R -t "${D}/etc" "${S}/doc/srv/service/zprd/" || die 'install service files failed'
-}
-
-pkg_postinst() {
-	if ! has_version 'net-misc/zprd'; then
-		einfo 'To activate the server:'
-		einfo ' 1. setup /etc/zprd.conf'
-		einfo ' 2. ln -s -t /service /etc/zprd'
-		einfo ' 3. rc-update add svscan'
-		einfo ' 4. /etc/init.d/svscan restart'
-	fi
+	cp -R -t "${D}/etc" "${S}/docs/service/zprd/" || die 'install service files failed'
 }

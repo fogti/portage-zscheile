@@ -9,8 +9,7 @@ DESCRIPTION="ZPRD - Zscheile Peer Routing Daemon"
 KEYWORDS="arm amd64 x86"
 LICENSE="GPL-3"
 
-RDEPEND="sys-apps/coreutils
-	sys-apps/grep
+RDEPEND="sys-apps/grep
 	sys-apps/iproute2
 	virtual/daemontools"
 

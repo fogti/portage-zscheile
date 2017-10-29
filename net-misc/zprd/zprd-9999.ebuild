@@ -12,8 +12,7 @@ LICENSE="GPL-3"
 SRC_URI=""
 EGIT_REPO_URI="https://github.com/zserik/zprd.git"
 
-RDEPEND="sys-apps/coreutils
-	sys-apps/grep
+RDEPEND="sys-apps/grep
 	sys-apps/iproute2
 	virtual/daemontools"
 
