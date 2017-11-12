@@ -14,6 +14,7 @@ app-misc/zsropm-utils 0.1 0.2: Utilities for the Zscheile Rollout Package Manage
 dev-db/zdbc 0.2.3 0.2.4 0.2.5: ZDBC - Zscheile DataBase Utils
 dev-db/zsdatab 0.1.5 0.1.6 0.2.0 0.2.1 0.2.3: Zscheile data text table Management
 dev-db/zstab 0.0.1 0.0.2 0.0.3: zstab - Zscheile Table Management
+dev-db/zstreedb 0.0.1: Zscheile tree text database Management Util
 dev-lang/zeiksh 0.2.4 0.2.5 0.2.6 0.2.7: Zscheile EIK shell script interpreter
 dev-lang/zpavinl 0.1.1: Zscheile ZPAVINL to C compiler
 dev-lang/zserik-sfvsl 0.2 0.3: ZSerik Simple Formula Variable Substitution Language - simple replace variables
