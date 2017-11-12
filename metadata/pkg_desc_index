@@ -14,7 +14,7 @@ app-misc/zsropm-utils 0.1 0.2: Utilities for the Zscheile Rollout Package Manage
 dev-db/zdbc 0.2.3 0.2.4 0.2.5: ZDBC - Zscheile DataBase Utils
 dev-db/zsdatab 0.1.5 0.1.6 0.2.0 0.2.1 0.2.3: Zscheile data text table Management
 dev-db/zstab 0.0.1 0.0.2 0.0.3: zstab - Zscheile Table Management
-dev-db/zstreedb 0.0.1: Zscheile tree text database Management Util
+dev-db/zstreedb 0.0.1 0.0.2: Zscheile tree text database Management Util
 dev-lang/zeiksh 0.2.4 0.2.5 0.2.6 0.2.7: Zscheile EIK shell script interpreter
 dev-lang/zpavinl 0.1.1: Zscheile ZPAVINL to C compiler
 dev-lang/zserik-sfvsl 0.2 0.3: ZSerik Simple Formula Variable Substitution Language - simple replace variables
@@ -49,6 +49,7 @@ games-misc/wyel-sdl 0.0.5 0.0.6 0.0.7 0.0.8 0.0.8.1: Zscheile WYEL Game - Advanc
 media-sound/zsmusicd 0.0.1 0.0.2: Zscheile Music Daemon
 net-analyzer/zs-wait4host 0.2 0.3 0.3.2: Wait for a host to come up/go done
 net-dns/resolvconfctl 0.0.1: resolvconfctl - another /etc/resolv.conf manager
+net-misc/wireshark-zprd-plugins 9999: Wireshark plugins to decode the Zscheile Peer Routing Daemon Protocol
 net-misc/zadist 0.0.7.1 0.0.8 0.1.1 0.1.2: ZADist - Zscheile Automatic Distributor Client
 net-misc/zisnet 0.0.1 0.0.2: Zscheile Information System - with simple blockchain implementation
 net-misc/zprd 0.0.8 0.0.9 0.1.0 0.1.1 9999: ZPRD - Zscheile Peer Routing Daemon
