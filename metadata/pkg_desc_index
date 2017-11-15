@@ -19,7 +19,7 @@ dev-lang/zeiksh 0.2.4 0.2.5 0.2.6 0.2.7: Zscheile EIK shell script interpreter
 dev-lang/zpavinl 0.1.1: Zscheile ZPAVINL to C compiler
 dev-lang/zserik-sfvsl 0.2 0.3: ZSerik Simple Formula Variable Substitution Language - simple replace variables
 dev-libs/libaio 0.3.110: Asynchronous input/output library that uses the kernels native interface
-dev-libs/zeik-handles 0.0.1 0.0.2: Zscheile EIK Handles library
+dev-libs/zeik-handles 0.0.1 0.0.2 0.0.3: Zscheile EIK Handles library
 dev-libs/zsadv 0.0.4 0.0.5 0.0.6 0.0.7 0.0.8: Zscheile Advanced C++ Library
 dev-libs/zscore 0.0.3 0.0.5: ZS Core library - C function collection
 dev-misc/zcmake-libfindmacros 0.0.1: LibFindMacros.cmake
