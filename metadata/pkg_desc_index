@@ -62,5 +62,5 @@ virtual/zcmake-libfindmacros 0.1 0.2: Zscheile CMake virtual: LibFindMacros
 virtual/zenv-latex 0.0.1: Zscheile LaTeX Environment
 virtual/zenv-media 0.7.5: Erik Zscheile: media environment
 virtual/zenv-shotcut 0.2: Erik Zscheile: Environment for Shotcut
-virtual/zstdenv-client 0.2.4.1 0.2.4.2 0.2.4.3 0.2.4.4 0.2.4.5 0.2.4.6: Zscheile Standard Environment for Clients
+virtual/zstdenv-client 0.2.4.2 0.2.4.3 0.2.4.4 0.2.4.5 0.2.4.6 0.2.4.7: Zscheile Standard Environment for Clients
 zeik-handles/spawn 0.2: Zscheile EIK handles typemodule spawn
