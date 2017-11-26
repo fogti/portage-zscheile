@@ -4,11 +4,11 @@ DESCRIPTION=A hackable text editor for the 21st Century.
 EAPI=6
 HOMEPAGE=https://atom.io
 IUSE=-debug
-KEYWORDS=amd64
+KEYWORDS=-* amd64
 LICENSE=MIT
 RDEPEND=|| ( >=dev-lang/python-2.7.5-r2:2.7 ) media-fonts/inconsolata !!dev-util/atom-shell !app-editors/atom !app-editors/atom-bin:0 x11-libs/gtk+:2 x11-libs/libnotify dev-libs/nss dev-libs/nspr gnome-base/gconf media-libs/alsa-lib net-print/cups sys-libs/libcap x11-libs/libXtst x11-libs/pango
 RESTRICT=primaryuri
 SLOT=stable
 SRC_URI=amd64? ( https://github.com/atom/atom/releases/download/v1.22.0/atom-amd64.tar.gz -> atom-1.22.0.tar.gz )
 _eclasses_=epatch	8233751dc5105a6ae8fcd86ce2bb0247	estack	43ddf5aaffa7a8d0482df54d25a66a1f	eutils	227b041a120d309fdefbebb3b8c1dfa9	flag-o-matic	a6089a2a4027ae3da4a460dc87b21050	ltprune	2770eed66a9b8ef944714cd0e968182e	multilib	0236be304ee52e7f179ed2f337075515	pax-utils	4f95120230a315c8caaabeb2307b7eee	python-any-r1	be89e882151ba4b847089b860d79729c	python-utils-r1	4f8aa7196c2c9a5630e66c2113ae46c3	toolchain-funcs	185a06792159ca143528e7010368e8af	unpacker	f40f7b4bd5aa88c2a4ba7b0d1e0ded70	xdg-utils	178a84136f416b8ea1a857717eacd21c
-_md5_=02f05773e7685e5671719c1640a60b17
+_md5_=a31eabdf58809acb97fdd777f0d141fb

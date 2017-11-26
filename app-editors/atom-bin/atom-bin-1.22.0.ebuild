@@ -17,7 +17,7 @@ SRC_URI="
 
 RESTRICT="primaryuri"
 
-KEYWORDS="amd64"
+KEYWORDS="-* amd64"
 SLOT="stable"
 LICENSE="MIT"
 
@@ -91,6 +91,8 @@ src_install() {
 	fperms +x /usr/share/${MY_PN}/resources/app/apm/bin/node
 	fperms +x /usr/share/${MY_PN}/resources/app/apm/bin/npm
 	fperms +x /usr/share/${MY_PN}/resources/app/apm/bin/apm
+	fperms +x /usr/share/${MY_PN}/resources/app/apm/bin/python-interceptor.sh
+	fperms +x /usr/share/${MY_PN}/resources/app/apm/node_modules/node-gyp/bin/node-gyp.js
 	fperms +x /usr/share/${MY_PN}/resources/app/apm/node_modules/npm/bin/node-gyp-bin/node-gyp
 	fperms +x /usr/share/${MY_PN}/resources/app.asar.unpacked/node_modules/symbols-view/vendor/ctags-linux
 	fperms -R +x /usr/share/${MY_PN}/resources/app.asar.unpacked/node_modules/github/bin
