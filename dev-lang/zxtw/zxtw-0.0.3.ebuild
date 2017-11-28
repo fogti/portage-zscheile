@@ -3,16 +3,14 @@
 
 EAPI=5
 
-inherit zserik-cmake git-r3
+inherit zserik-cmake
 
 DESCRIPTION="Zscheile XTW interpreter"
-KEYWORDS="~arm ~amd64 ~x86"
+KEYWORDS="arm amd64 x86"
 LICENSE="MIT"
 
-SRC_URI=""
-EGIT_REPO_URI="https://github.com/zserik/zxtw.git"
-HOMEPAGE="${EGIT_REPO_URI}"
-IUSE="${IUSE} test"
+HOMEPAGE="https://github.com/zserik/zxtw.git"
+IUSE="test"
 
 src_compile() {
 	cmake-utils_src_compile
@@ -27,7 +25,6 @@ src_compile() {
 src_test() {
 	_cmake_check_build_dir
 
-	# emulate test.sh behavoir
 	pushd "${BUILD_DIR}/examples" &>/dev/null || die
 	mkdir -p cur
 	emake ZXTW="${BUILD_DIR}/zxtw" || die 'tests failed'
