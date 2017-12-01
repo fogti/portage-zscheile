@@ -8,20 +8,22 @@ inherit zserik-virtual
 DESCRIPTION="Zscheile Standard Environment for Clients"
 
 KEYWORDS="amd64 x86"
-IUSE="+flash games +geosci +grub +kerberos mp3 +xdm +xfce"
+IUSE="games +geosci +grub +kerberos +kernel +pulseaudio +xdm +xfce"
 
-# block >=glibc-2.22-r4 because hesiod is broken
-#                       bugfix in glibc-2.24
 RDEPEND="
 	app-admin/sudo
 	app-admin/sysklogd
+	app-admin/zstxtns-utils
 
-	app-arch/xarchiver
-
+	app-editors/gedit
 	app-editors/hexedit
 	app-editors/nano
 
 	app-misc/mc
+	app-misc/zsropm
+	app-misc/zsropm-utils
+
+	app-office/dia
 	app-office/libreoffice
 
 	app-portage/eix
@@ -33,23 +35,22 @@ RDEPEND="
 	app-text/fbreader
 	app-text/tree
 
+	dev-util/cppcheck
+	dev-util/ddd
 	dev-util/meld
 	dev-util/strace
+	dev-util/zcbuild
 	dev-util/zsgenheader
 
-	dev-java/icedtea
 	dev-vcs/git
-
 	gnome-base/gvfs[mtp,nfs]
-
-	mail-client/thunderbird
 
 	media-fonts/font-misc-misc
 	media-gfx/gimp
 	media-gfx/gqview
 
 	media-plugins/gst-plugins-jpeg
-	media-plugins/gst-plugins-meta[X,mp3?,mpeg,ogg,theora]
+	media-plugins/gst-plugins-meta[X,mp3,mpeg,ogg,theora]
 	media-plugins/gst-plugins-openh264
 	media-plugins/gst-plugins-xvid
 	media-plugins/gst-plugins-a52dec
@@ -61,11 +62,11 @@ RDEPEND="
 	media-plugins/gst-plugins-pango
 	media-plugins/gst-plugins-xvideo
 
-	media-sound/lmms
-	media-sound/mpg123
-	media-video/mplayer
+	media-sound/lmms[pulseaudio?]
+	media-video/mplayer[pulseaudio?]
 
 	net-analyzer/fping
+	net-analyzer/net-snmp
 	net-analyzer/nmap[zenmap]
 	net-analyzer/tcpdump
 	net-analyzer/traceroute
@@ -73,8 +74,6 @@ RDEPEND="
 
 	net-dns/bind-tools
 	net-fs/nfs-utils
-	net-fs/openafs
-	net-misc/ntp
 	net-misc/x11-ssh-askpass
 
 	sys-apps/mlocate
@@ -95,8 +94,6 @@ RDEPEND="
 	sys-process/lsof
 
 	sci-visualization/gnuplot
-
-	www-client/firefox
 	www-client/links
 
 	x11-apps/xedit
@@ -113,11 +110,13 @@ RDEPEND="
 	x11-themes/tango-icon-theme
 
 	virtual/cron
-	virtual/zenv-media[alsa,flash?]
+	virtual/wine
+	>=virtual/zenv-media-0.7.4
+	virtual/zenv-media[alsa,gstreamer,pulseaudio?]
 
 	|| (
-		<sys-libs/glibc-2.22-r4
-		>sys-libs/glibc-2.24
+		mail-client/thunderbird[pulseaudio?]
+		mail-client/thunderbird-bin[pulseaudio?]
 	)
 
 	|| (
@@ -125,9 +124,21 @@ RDEPEND="
 		net-analyzer/netcat6
 	)
 
+	|| (
+		net-misc/chrony
+		net-misc/ntp
+	)
+
+	|| (
+		www-client/firefox[pulseaudio?]
+		www-client/firefox-bin[pulseaudio?]
+	)
+
 	games? (
+		games-action/armagetronad
 		games-arcade/alienwave
 		games-board/aisleriot
+		games-misc/wyel-sdl
 	)
 
 	geosci? (
@@ -145,6 +156,10 @@ RDEPEND="
 		virtual/krb5
 	)
 
+	kernel? (
+		net-fs/openafs
+	)
+
 	xdm? (
 		x11-misc/slim
 	)
@@ -153,5 +168,7 @@ RDEPEND="
 		xfce-base/xfce4-meta
 		xfce-extra/xfce4-cpugraph-plugin
 		xfce-extra/xfce4-notes-plugin
+		xfce-extra/xfce4-screenshooter
+		xfce-extra/xfce4-whiskermenu-plugin
 	)
-	"
+"
