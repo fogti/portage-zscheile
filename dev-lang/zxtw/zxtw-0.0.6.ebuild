@@ -16,7 +16,6 @@ src_compile() {
 	cmake-utils_src_compile
 
 	if use test; then
-		echo 'copy examples'
 		mkdir -p "${BUILD_DIR}/examples"
 		cp -R -t "${BUILD_DIR}/examples" "${S}/examples/"* || die
 	fi
@@ -33,7 +32,5 @@ src_test() {
 
 src_install() {
 	cmake-utils_src_install
-
-	echo 'install documentation'
 	dodoc README.md
 }
