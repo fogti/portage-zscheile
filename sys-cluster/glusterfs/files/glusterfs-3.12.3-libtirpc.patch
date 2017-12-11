@@ -1,4 +1,4 @@
-From 97a56d8b54a22511a20bdb8d425c0f22c7d3d33d Mon Sep 17 00:00:00 2001
+From 5691b5ffeac2482481a214a61559f74293deeb41 Mon Sep 17 00:00:00 2001
 From: James Le Cuirot <chewi@gentoo.org>
 Date: Tue, 5 Dec 2017 23:34:35 +0000
 Subject: [PATCH] build: Allow libtirpc to be explicitly requested
@@ -6,11 +6,15 @@ Subject: [PATCH] build: Allow libtirpc to be explicitly requested
 Some distributions like Gentoo no longer include the RPC stuff in
 their glibc packages.
 
+Change-Id: Ic7e34d82196aebdbca3d5b3b0ec3dd8b655e3355
 Signed-off-by: James Le Cuirot <chewi@gentoo.org>
 ---
- configure.ac              | 12 ++++++++++++
- libglusterfs/src/compat.h |  4 ++++
- 2 files changed, 16 insertions(+)
+ configure.ac                           | 12 ++++++++++++
+ libglusterfs/src/compat.h              |  4 ++++
+ rpc/rpc-lib/src/rpc-transport.c        |  4 ++++
+ xlators/nfs/server/src/mount3.c        |  4 ++--
+ xlators/nfs/server/src/mount3udp_svc.c |  2 +-
+ 5 files changed, 23 insertions(+), 3 deletions(-)
 
 diff --git a/configure.ac b/configure.ac
 index ce689225c..2384375ff 100644
@@ -64,6 +68,57 @@ index f4da4b2a0..9959982a0 100644
  #if defined(__GNUC__) && !defined(RELAX_POISONING)
  /* Use run API, see run.h */
  #include <stdlib.h> /* system(), mkostemp() */
+diff --git a/rpc/rpc-lib/src/rpc-transport.c b/rpc/rpc-lib/src/rpc-transport.c
+index fc26f462c..8334d7bef 100644
+--- a/rpc/rpc-lib/src/rpc-transport.c
++++ b/rpc/rpc-lib/src/rpc-transport.c
+@@ -656,7 +656,11 @@ rpc_transport_inet_options_build (dict_t **options, const char *hostname,
+         dict_t          *dict = NULL;
+         char            *host = NULL;
+         int             ret = -1;
++#ifdef HAVE_LIBTIRPC
++        char            *addr_family = "inet6";
++#else
+         char            *addr_family = "inet";
++#endif
+ 
+         GF_ASSERT (options);
+         GF_ASSERT (hostname);
+diff --git a/xlators/nfs/server/src/mount3.c b/xlators/nfs/server/src/mount3.c
+index 64f109484..96734ff64 100644
+--- a/xlators/nfs/server/src/mount3.c
++++ b/xlators/nfs/server/src/mount3.c
+@@ -1744,7 +1744,7 @@ mnt3_check_client_net_udp (struct svc_req *req, char *volname, xlator_t *nfsx)
+         if ((!req) || (!volname) || (!nfsx))
+                 goto err;
+ 
+-#if !defined(_TIRPC_SVC_H)
++#if !defined(HAVE_LIBTIRPC)
+         sin = svc_getcaller (req->rq_xprt);
+ #else
+         sin = (struct sockaddr_in *)svc_getcaller (req->rq_xprt);
+@@ -2846,7 +2846,7 @@ __mnt3udp_get_export_subdir_inode (struct svc_req *req, char *subdir,
+         if (exp->hostspec) {
+                 struct sockaddr_in *sin = NULL;
+ 
+-#if !defined(_TIRPC_SVC_H)
++#if !defined(HAVE_LIBTIRPC)
+                 sin = svc_getcaller (req->rq_xprt);
+ #else
+                 sin = (struct sockaddr_in *)svc_getcaller (req->rq_xprt);
+diff --git a/xlators/nfs/server/src/mount3udp_svc.c b/xlators/nfs/server/src/mount3udp_svc.c
+index 8256a5970..ce58b4d7c 100644
+--- a/xlators/nfs/server/src/mount3udp_svc.c
++++ b/xlators/nfs/server/src/mount3udp_svc.c
+@@ -133,7 +133,7 @@ mountudp_program_3(struct svc_req *rqstp, register SVCXPRT *transp)
+         mountres3               *res = NULL;
+         struct sockaddr_in      *sin = NULL;
+ 
+-#if !defined(_TIRPC_SVC_H)
++#if !defined(HAVE_LIBTIRPC)
+         sin = svc_getcaller (transp);
+ #else
+         sin = (struct sockaddr_in *)svc_getcaller (transp);
 -- 
 2.15.0
 
