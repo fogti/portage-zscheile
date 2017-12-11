@@ -6,6 +6,7 @@ inherit zserik-cmake
 
 DESCRIPTION="Zscheile data text table Management"
 LICENSE="MIT"
+SLOT="0/0.2.8"
 KEYWORDS="arm amd64 x86"
 
 DEPEND="$DEPEND
@@ -14,6 +15,5 @@ sys-libs/zlib"
 
 RDEPEND="$RDEPEND
 app-shells/bash
-sys-apps/coreutils
 sys-libs/zlib
 virtual/zcmake-libfindmacros"
