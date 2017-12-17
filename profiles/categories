@@ -14,6 +14,7 @@ games-misc
 media-sound
 net-analyzer
 net-dns
+net-libs
 net-misc
 net-nds
 sys-cluster
