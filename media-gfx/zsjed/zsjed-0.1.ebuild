@@ -5,7 +5,7 @@ EAPI=5
 
 inherit zserik-minimal
 
-DESCRIPTION="Zscheile JPEG data split stenography tool - splits a file and embeds it into many jpeg files"
+DESCRIPTION="Zscheile JPEG data split steganography tool - splits a file and embeds it into many jpeg files"
 KEYWORDS="arm amd64 x86"
 RDEPEND="app-shells/bash
 sys-apps/findutils"
