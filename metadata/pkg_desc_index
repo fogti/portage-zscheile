@@ -48,7 +48,7 @@ games-arcade/alienwave 0.3.0 0.4.0: An ncurses-based Xenon clone
 games-board/aisleriot 3.16.2 3.18.2: A collection of solitaire card games for GNOME
 games-misc/wyel 0.0.1: Zscheile WYEL Game
 games-misc/wyel-sdl 0.0.5 0.0.6 0.0.7 0.0.8 0.0.8.1: Zscheile WYEL Game - Advanced SDL version
-media-gfx/zsjed 0.1: Zscheile JPEG data split stenography tool - splits a file and embeds it into many jpeg files
+media-gfx/zsjed 0.1 0.2: Zscheile JPEG data split steganography tool - splits a file and embeds it into many jpeg files
 media-sound/zsaus 0.1: Zscheile Remote Audio Suite using ALSA
 media-sound/zsmusicd 0.0.1 0.0.2: Zscheile Music Daemon
 net-analyzer/zs-wait4host 0.2 0.3 0.3.2: Wait for a host to come up/go done
