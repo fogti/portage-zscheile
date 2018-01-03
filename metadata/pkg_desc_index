@@ -13,7 +13,7 @@ app-misc/zsrecursil 0.0.3 0.0.4 0.0.6 0.0.7 0.0.8: ZS Recursil - directory recur
 app-misc/zsropm 0.1.7 0.1.8.1 0.1.9.3 0.2 0.2.0.1 0.2.0.2: Zscheile Rollout Package Manager
 app-misc/zsropm-utils 0.1 0.2: Utilities for the Zscheile Rollout Package Manager
 dev-db/zdbc 0.2.3 0.2.4 0.2.5: ZDBC - Zscheile DataBase Utils
-dev-db/zsdatab 0.1.6 0.2.4 0.2.5 0.2.6: Zscheile data text table Management
+dev-db/zsdatab 0.1.6 0.2.4 0.2.5 0.2.6 0.2.7: Zscheile data text table Management
 dev-db/zstab 0.0.1 0.0.2 0.0.3: zstab - Zscheile Table Management
 dev-db/zstreedb 0.0.2 0.0.3: Zscheile tree text database Management Util
 dev-lang/zeiksh 0.2.4 0.2.5 0.2.6 0.2.7: Zscheile EIK shell script interpreter
@@ -48,7 +48,7 @@ games-arcade/alienwave 0.3.0 0.4.0: An ncurses-based Xenon clone
 games-board/aisleriot 3.16.2 3.18.2: A collection of solitaire card games for GNOME
 games-misc/wyel 0.0.1: Zscheile WYEL Game
 games-misc/wyel-sdl 0.0.5 0.0.6 0.0.7 0.0.8 0.0.8.1: Zscheile WYEL Game - Advanced SDL version
-media-gfx/zsjed 0.1 0.2: Zscheile JPEG data split steganography tool - splits a file and embeds it into many jpeg files
+media-gfx/zsjed 0.1 0.2 0.3: Zscheile data split steganography tool - splits a file and embeds it into many files
 media-sound/zsaus 0.1: Zscheile Remote Audio Suite using ALSA
 media-sound/zsmusicd 0.0.1 0.0.2: Zscheile Music Daemon
 net-analyzer/zs-wait4host 0.2 0.3 0.3.2: Wait for a host to come up/go done
