@@ -9,12 +9,27 @@ DESCRIPTION="ZPRD - Zscheile Peer Routing Daemon"
 KEYWORDS="~arm ~amd64 ~x86"
 LICENSE="GPL-3"
 
+IUSE="tbb"
 SRC_URI=""
 EGIT_REPO_URI="https://github.com/zserik/zprd.git"
 
+CMNDEPEND="tbb? ( dev-cpp/tbb )"
+
+DEPEND="${DEPEND}
+	${CMNDEPEND}"
+
 RDEPEND="sys-apps/grep
 	sys-apps/iproute2
-	virtual/daemontools"
+	virtual/daemontools
+	${CMNDEPEND}"
+
+src_configure() {
+	local mycmakeargs=(
+		$(cmake-utils_use_use tbb TBB)
+	)
+
+	cmake-utils_src_configure
+}
 
 src_install() {
 	cmake-utils_src_install
