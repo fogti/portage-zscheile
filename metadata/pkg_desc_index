@@ -22,7 +22,7 @@ dev-lang/zserik-sfvsl 0.2 0.3: ZSerik Simple Formula Variable Substitution Langu
 dev-lang/zxtw 0.0.4 0.0.5 0.0.5_p1 0.0.6 0.0.7 9999: Zscheile XTW interpreter
 dev-libs/libaio 0.3.110: Asynchronous input/output library that uses the kernels native interface
 dev-libs/zeik-handles 0.0.1 0.0.2 0.0.3: Zscheile EIK Handles library
-dev-libs/zsadv 0.0.4 0.0.5 0.0.6 0.0.7 0.0.8: Zscheile Advanced C++ Library
+dev-libs/zsadv 0.0.4 0.0.5 0.0.6 0.0.7 0.0.8 0.0.9: Zscheile Advanced C++ Library
 dev-libs/zscore 0.0.3 0.0.5: ZS Core library - C function collection
 dev-misc/zcmake-libfindmacros 0.0.1: LibFindMacros.cmake
 dev-misc/zcmake-libsdl2 0.0.1: FindLibSDL2 cmake files
