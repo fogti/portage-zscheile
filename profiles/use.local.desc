@@ -2,6 +2,10 @@
 # your descriptions to your package's metadata.xml ONLY.
 # * generated automatically using egencache *
 
+dev-db/rocksdb:lz4 - Add support for lz4 compression
+dev-db/rocksdb:minimal - Build RocksDBLite, a small and minimal version of RocksDB instead of the regular library
+dev-db/rocksdb:snappy - Add support for snappy compression
+dev-db/rocksdb:zstd - Add support for zstd compression
 dev-misc/zs-common:color - enables terminal color output support
 dev-scheme/guile:debug-malloc - Include malloc debugging code
 dev-scheme/guile:deprecated - Enable deprecated features
