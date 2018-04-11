@@ -20,7 +20,11 @@ RDEPEND="bzip2? ( app-arch/bzip2[${MULTILIB_USEDEP}] )
 	snappy? ( app-arch/snappy[${MULTILIB_USEDEP}] )
 	zlib? ( sys-libs/zlib[${MULTILIB_USEDEP}] )
 	zstd? ( app-arch/zstd[${MULTILIB_USEDEP}] )"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	!static-libs? (
+		dev-lang/perl:*
+		sys-apps/sed
+	)"
 
 DOCS=( AUTHORS CONTRIBUTING.md DEFAULT_OPTIONS_HISTORY.md DUMP_FORMAT.md HISTORY.md LANGUAGE-BINDINGS.md README.md ROCKSDB_LITE.md USERS.md )
 
@@ -58,5 +62,8 @@ multilib_src_install() {
 	cmake-utils_src_install
 	if ! use static-libs; then
 		rm "${ED}usr/$(get_libdir)/librocksdb.a" || die
+		for i in '' '-gentoo'; do
+			sh "${FILESDIR}/filter_static_lib.sh" "${ED}usr/$(get_libdir)/cmake/rocksdb/RocksDBTargets${i}.cmake" || die
+		done
 	fi
 }
