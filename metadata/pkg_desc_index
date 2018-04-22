@@ -61,6 +61,7 @@ net-misc/zisnet 0.0.1 0.0.2: Zscheile Information System - with simple blockchai
 net-misc/zprd 0.0.8 0.0.9 0.1.0 0.1.1 0.2 0.2.1 0.2.2 9999: ZPRD - Zscheile Peer Routing Daemon
 net-misc/zsnetlaunch 0.0.1.2: Zscheile Network Launcher
 net-misc/zsroute-utils 0.0.1: Zscheile Routing Utilities
+net-misc/zsx5n 9999: 5. Zscheile Network Service
 net-nds/zsnis 0.1.4 0.1.5.2 0.1.6: ZSNIS - Zscheile Secure Network Information Service
 sys-cluster/glusterfs 3.6.5 3.12.3: GlusterFS is a powerful network/cluster filesystem
 sys-process/zsdoitduring 0.0.1: Zscheile Do-It-During Process Spawning Helper
