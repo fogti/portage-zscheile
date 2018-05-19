@@ -3,6 +3,6 @@
 
 EAPI=5
 inherit zs-zcmake
-DESCRIPTION="FindLibSDL2 cmake files"
+DESCRIPTION="FindSqlite3 cmake files"
 KEYWORDS="arm amd64 x86"
-RDEPEND="media-libs/libsdl2"
+RDEPEND="dev-db/sqlite:3"
