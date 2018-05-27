@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=5
-inherit zserik-cmake eutils
+inherit zs-zsropm eutils
 
 DESCRIPTION="Zscheile Rollout Package Manager"
 KEYWORDS="arm amd64 x86"
@@ -22,11 +22,3 @@ sys-apps/findutils
 sys-apps/moreutils
 sys-apps/portage
 sys-apps/sandbox"
-
-src_install() {
-	dodir /etc/zsropm
-	dodir /usr/zsropm
-	dodir /var/lib/zsropm
-	cmake-utils_src_install
-	for i in doc/*; do dodoc "$i"; done
-}

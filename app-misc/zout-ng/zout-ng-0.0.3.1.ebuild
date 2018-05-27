@@ -7,3 +7,4 @@ inherit zserik-cmake
 
 DESCRIPTION="Zscheile (Action) Output Formatting Tool - Next Generation"
 KEYWORDS="amd64 arm x86"
+LICENSE="GPL-2+"
