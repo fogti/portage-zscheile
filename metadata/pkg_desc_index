@@ -42,8 +42,8 @@ dev-scheme/guile 2.0.9-r1: GNU Ubiquitous Intelligent Language for Extensions
 dev-util/valadoc 9999: A documentation generator for generating API documentation from Vala source code
 dev-util/zcbuild 0.1 0.2: Zscheile CMake build script
 dev-util/zs-sedscr-utils 0.0.1 0.0.2: Zscheile SedScripts Utilities
-dev-util/zsdimlc 0.0.1: Zscheile Dimensiion Language Compiler
-dev-util/zsgenheader 0.0.1 0.0.2 0.0.3: ZsGenHeader - generate header from c source file
+dev-util/zsdimlc 0.0.1: Zscheile Dimension Language Compiler
+dev-util/zsgenheader 0.0.2 0.0.3 0.0.4: ZsGenHeader - generate header from c source file
 dev-util/zsgtrp 0.0.2 0.0.4 0.0.5: Zscheile GTR Parser - C++ class getter generator
 games-action/armagetronad 0.2.8.3.3 0.2.8.3.3-r1: Fast-paced 3D lightcycle game based on Tron
 games-arcade/alienwave 0.3.0 0.4.0: An ncurses-based Xenon clone
