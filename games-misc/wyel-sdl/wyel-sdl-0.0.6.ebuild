@@ -13,8 +13,7 @@ media-libs/sdl2-ttf"
 
 DEPEND="${DEPEND}
 ${CMDEPEND}
-dev-misc/zcmake-libsdl2
->=sys-devel/gcc-4.8.5[cxx]"
+dev-misc/zcmake-libsdl2"
 
 RDEPEND="${RDEPEND}
 ${CMDEPEND}

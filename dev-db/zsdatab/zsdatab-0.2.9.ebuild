@@ -9,8 +9,7 @@ LICENSE="MIT"
 SLOT="0/0.2.10"
 KEYWORDS="arm amd64 x86"
 
-CMDEPEND=">=sys-devel/gcc-6.3.0:=[cxx]
-sys-libs/zlib"
+CMDEPEND="sys-libs/zlib"
 
 DEPEND="$DEPEND
 $CMDEPEND"

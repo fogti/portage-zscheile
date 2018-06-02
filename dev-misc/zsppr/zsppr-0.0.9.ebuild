@@ -8,11 +8,10 @@ DESCRIPTION="Zscheile simple universal Preprocessor"
 KEYWORDS="~amd64 ~arm ~x86"
 
 COMMON_DEPEND="$COMMON_DEPEND
-	dev-libs/boost"
+dev-libs/boost"
 
 DEPEND="$COMMON_DEPEND
-	$DEPEND
-	>=sys-devel/gcc-6.3.0:=[cxx]"
+$DEPEND"
 
 RDEPEND="$COMMON_DEPEND
 $RDEPEND"

@@ -9,8 +9,7 @@ DESCRIPTION="Zscheile WYEL Game"
 KEYWORDS="amd64 arm x86"
 
 DEPEND="${DEPEND}
-sys-libs/ncurses:=
->=sys-devel/gcc-4.8.5[cxx]"
+sys-libs/ncurses:="
 
 RDEPEND="${RDEPEND}
 sys-libs/ncurses:="

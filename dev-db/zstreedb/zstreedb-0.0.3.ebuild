@@ -8,8 +8,7 @@ DESCRIPTION="Zscheile tree text database Management Util"
 LICENSE="OPENLDAP"
 KEYWORDS="arm amd64 x86"
 
-CMDEPEND=">=sys-devel/gcc-4.8.5:=[cxx]
-dev-db/lmdb:="
+CMDEPEND="dev-db/lmdb:="
 
 DEPEND="$DEPEND
 $CMDEPEND"

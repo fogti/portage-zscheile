@@ -11,8 +11,7 @@ KEYWORDS="amd64 x86 arm"
 COMMON_DEPEND=">=dev-libs/boost-1.62.0"
 
 DEPEND="$DEPEND
-$COMMON_DEPEND
->=sys-devel/gcc-4.8.5[cxx]"
+$COMMON_DEPEND"
 
 RDEPEND="$RDEPEND
 $COMMON_DEPEND"
