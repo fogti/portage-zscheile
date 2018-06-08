@@ -14,6 +14,10 @@ EGIT_REPO_URI="https://github.com/zserik/zxtw.git"
 HOMEPAGE="${EGIT_REPO_URI}"
 IUSE="${IUSE} test"
 
+CMDEPEND="dev-libs/libzsparsell:=[zsig]"
+DEPEND="$DEPEND $CMDEPEND"
+RDEPEND="$RDEPEND $CMDEPEND"
+
 src_compile() {
 	cmake-utils_src_compile
 
