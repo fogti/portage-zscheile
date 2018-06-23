@@ -17,7 +17,7 @@ else
 	MY_P="${PN}-${MY_PV}"
 
 	SRC_URI="https://github.com/mheily/${PN}/archive/v${MY_PV}.tar.gz -> ${MY_P}.tar.gz"
-	KEYWORDS="amd64 x86"
+	KEYWORDS="~arm amd64 x86"
 fi
 
 LICENSE="BSD"
