@@ -3,17 +3,23 @@
 
 EAPI=5
 
-inherit zserik-cmake git-r3
+inherit zserik-cmake zs-abi32 git-r3
 
 DESCRIPTION="ZPRD - Zscheile Peer Routing Daemon"
 KEYWORDS="~arm ~amd64 ~x86"
 LICENSE="GPL-3"
 
-IUSE="tbb"
+IUSE="tbb multilib"
 SRC_URI=""
 EGIT_REPO_URI="https://github.com/zserik/zprd.git"
 
-CMNDEPEND="tbb? ( dev-cpp/tbb )"
+CMNDEPEND="
+	tbb? (
+		dev-cpp/tbb
+		multilib? (
+			dev-cpp/tbb[$(zs_abi32_use)]
+		)
+	)"
 
 DEPEND="${DEPEND}
 	${CMNDEPEND}"
@@ -26,6 +32,8 @@ RDEPEND="sys-apps/grep
 src_configure() {
 	local mycmakeargs=(
 		$(cmake-utils_use_use tbb TBB)
+		-DUSE_ABI_32=$((zs_abi32_ready && use multilib) \
+		  && echo ON || echo OFF)
 	)
 
 	cmake-utils_src_configure
