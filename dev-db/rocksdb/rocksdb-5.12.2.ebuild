@@ -10,7 +10,7 @@ HOMEPAGE="http://rocksdb.org/"
 SRC_URI="https://github.com/facebook/rocksdb/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="|| ( GPL-2 Apache-2.0 ) BSD"
-SLOT="0"
+SLOT="0/5"
 KEYWORDS="~amd64 ~x86"
 IUSE="static-libs minimal bzip2 gflags lz4 snappy zlib zstd kernel_linux"
 
