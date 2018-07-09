@@ -12,7 +12,7 @@ SRC_URI="https://github.com/facebook/rocksdb/archive/v${PV}.tar.gz -> ${P}.tar.g
 LICENSE="|| ( GPL-2 Apache-2.0 ) BSD"
 SLOT="0/5"
 KEYWORDS="~amd64 ~arm ~x86"
-IUSE="static-libs minimal bzip2 debug gflags lz4 snappy tbb zlib zstd kernel_linux"
+IUSE="static-libs minimal bzip2 debug gflags lz4 snappy tbb tools zlib zstd kernel_linux"
 
 RDEPEND="bzip2? ( app-arch/bzip2[${MULTILIB_USEDEP}] )
 	gflags? ( dev-cpp/gflags[${MULTILIB_USEDEP}] )
@@ -51,7 +51,7 @@ multilib_src_configure() {
 		-DWITH_SNAPPY=$(usex snappy)
 		-DWITH_TBB=$(usex tbb)
 		-DWITH_TESTS=OFF
-		-DWITH_TOOLS=OFF
+		-DWITH_TOOLS=$(usex tools)
 		-DWITH_TSAN=OFF
 		-DWITH_UBSAN=OFF
 		-DWITH_ZLIB=$(usex zlib)
@@ -64,7 +64,12 @@ multilib_src_compile() {
 	local targets=''
 	if ! use debug; then
 		use static-libs && targets+='rocksdb '
-		targets+='rocksdb-shared'
+		targets+='rocksdb-shared '
+	else
+		targets='all '
+	fi
+	if use tools; then
+		targets+='ldb sst_dump'
 	fi
 	cmake-utils_src_compile $targets
 }
@@ -88,5 +93,10 @@ multilib_src_install() {
 		for i in '' '-gentoo'; do
 			sh "${FILESDIR}/filter_static_lib.sh" "${ED}usr/$(get_libdir)/cmake/rocksdb/RocksDBTargets${i}.cmake" || die
 		done
+	fi
+	if use tools; then
+		pushd "${BUILD_DIR}" > /dev/null || die
+		dobin tools/ldb tools/sst_dump
+		popd > /dev/null || die
 	fi
 }
