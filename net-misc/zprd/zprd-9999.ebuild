@@ -13,13 +13,11 @@ IUSE="tbb multilib"
 SRC_URI=""
 EGIT_REPO_URI="https://github.com/zserik/zprd.git"
 
-CMNDEPEND="
-	tbb? (
-		dev-cpp/tbb
-		multilib? (
-			dev-cpp/tbb[$(zs_abi32_use)]
-		)
-	)"
+CMDEPEND="tbb? ( dev-cpp/tbb"
+if has_multilib_profile; then
+	CMDEPEND+="[$(zs_abi32_use)]"
+fi
+CMDEPEND+=")"
 
 DEPEND="${DEPEND}
 	${CMNDEPEND}"
