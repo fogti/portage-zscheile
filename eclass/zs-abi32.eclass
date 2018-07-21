@@ -10,6 +10,11 @@ zs_abi32_use() {
   esac
 }
 
+zs_abi32_use_wrapped() {
+  local x="$(zs_abi32_use)"
+  [ -n "$x" ] && echo "[$x]"
+}
+
 zs_abi32_ready() {
   case "$ARCH" in
     (amd64) return 0 ;;

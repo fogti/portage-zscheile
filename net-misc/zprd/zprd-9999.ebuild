@@ -13,8 +13,12 @@ IUSE="tbb multilib"
 SRC_URI=""
 EGIT_REPO_URI="https://github.com/zserik/zprd.git"
 
-CMDEPEND="tbb? ( dev-cpp/tbb )"
-has_multilib_profile && CMDEPEND+=" tbb? ( dev-cpp/tbb[$(zs_abi32_use)] )"
+CMDEPEND="tbb? (
+		dev-cpp/tbb
+		multilib? (
+			dev-cpp/tbb$(zs_abi32_use_wrapped)
+		)
+	)"
 
 DEPEND="${DEPEND}
 	${CMNDEPEND}"
@@ -27,7 +31,7 @@ RDEPEND="sys-apps/grep
 src_configure() {
 	local mycmakeargs=(
 		$(cmake-utils_use_use tbb TBB)
-		-DUSE_ABI_32=$((zs_abi32_ready && has_multilib_profile) \
+		-DUSE_ABI_32=$((zs_abi32_ready && use multilib) \
 		  && echo ON || echo OFF)
 	)
 
