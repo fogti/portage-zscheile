@@ -21,12 +21,12 @@ CMDEPEND="tbb? (
 	)"
 
 DEPEND="${DEPEND}
-	${CMNDEPEND}"
+	${CMDEPEND}"
 
 RDEPEND="sys-apps/grep
 	sys-apps/iproute2
 	virtual/daemontools
-	${CMNDEPEND}"
+	${CMDEPEND}"
 
 src_configure() {
 	local mycmakeargs=(
