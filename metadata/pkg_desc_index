@@ -26,6 +26,7 @@ dev-lang/zserik-sfvsl 0.2 0.3: ZSerik Simple Formula Variable Substitution Langu
 dev-lang/zxtw 0.0.4 0.0.5 0.0.5_p1 0.0.6 0.0.7 9999: Zscheile XTW interpreter
 dev-libs/libaio 0.3.110: Asynchronous input/output library that uses the kernels native interface
 dev-libs/libkqueue 2.1.0 2.2.0 9999: Portable implementation of the kqueue() and kevent() system calls
+dev-libs/libowlevelzs 9999: Zscheile Lowlevel library
 dev-libs/libzsdbps 9999: Zscheile Node ID serialization library
 dev-libs/libzsnidcode 0.0.0 9999: Zscheile Node ID serialization library
 dev-libs/libzsparsell 9999: Zscheile Lowlevel Parsing library
