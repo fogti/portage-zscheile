@@ -13,7 +13,9 @@ IUSE=""
 SRC_URI=""
 EGIT_REPO_URI="https://github.com/zserik/zsconfuz.git"
 
-CMNDEPEND="virtual/zsys-kqueue"
+CMNDEPEND="
+	dev-libs/libowlevelzs
+	virtual/zsys-kqueue"
 
 DEPEND="${DEPEND}
 	${CMNDEPEND}"

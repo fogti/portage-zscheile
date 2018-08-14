@@ -12,11 +12,8 @@ SRC_URI=""
 EGIT_REPO_URI="https://github.com/zserik/libzsparsell.git"
 HOMEPAGE="${EGIT_REPO_URI}"
 
-IUSE="+zsig"
+DEPEND="${DEPEND}
+	dev-libs/libowlevelzs"
 
-src_configure() {
-	local mycmakeargs=(
-		-DWITH_ZSIG="$(usex zsig)"
-	)
-	cmake-utils_src_configure
-}
+RDEPEND="${RDEPEND}
+	dev-libs/libowlevelzs"
