@@ -1,5 +1,6 @@
 app-admin/eselect-guile 1.2-r1: Manage multiple Guile versions on one system
 app-admin/eselect-vala 0.1.2: Eselect module to maintain vala compiler symlink
+app-admin/testdisk 7.1_pre20180322-r2: Checks and undeletes partitions + PhotoRec, signature based recovery tool
 app-admin/zstxtns-utils 0.0.1 0.0.2 0.0.3: Zscheile utilities to deal with text based name service databases
 app-doc/phrack 01 02 03 04 05 06 07 08 09 69: A Hacker magazine by the community, for the community
 app-editors/atom-bin 1.22.0 1.23.0_beta0: A hackable text editor for the 21st Century.
@@ -26,7 +27,7 @@ dev-lang/zserik-sfvsl 0.2 0.3: ZSerik Simple Formula Variable Substitution Langu
 dev-lang/zxtw 0.0.4 0.0.5 0.0.5_p1 0.0.6 0.0.7 9999: Zscheile XTW interpreter
 dev-libs/libaio 0.3.110: Asynchronous input/output library that uses the kernels native interface
 dev-libs/libkqueue 2.1.0 2.2.0 9999: Portable implementation of the kqueue() and kevent() system calls
-dev-libs/libowlevelzs 9999: Zscheile Lowlevel library
+dev-libs/libowlevelzs 0.0.1 9999: Zscheile Lowlevel library
 dev-libs/libzsdbps 9999: Zscheile Node ID serialization library
 dev-libs/libzsnidcode 0.0.0 9999: Zscheile Node ID serialization library
 dev-libs/libzsparsell 9999: Zscheile Lowlevel Parsing library

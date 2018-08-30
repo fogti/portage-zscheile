@@ -2,6 +2,9 @@
 # your descriptions to your package's metadata.xml ONLY.
 # * generated automatically using egencache *
 
+app-admin/testdisk:ewf - Include ewf library
+app-admin/testdisk:ntfs - Include the ability to read NTFS filesystems
+app-admin/testdisk:reiserfs - Include reiserfs reading ability
 dev-db/rocksdb:lz4 - Add support for lz4 compression
 dev-db/rocksdb:minimal - Build RocksDBLite, a small and minimal version of RocksDB instead of the regular library
 dev-db/rocksdb:snappy - Add support for snappy compression
