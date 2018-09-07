@@ -1,42 +1,33 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=5
 
-inherit zserik-cmake zs-abi32 git-r3
+inherit zserik-cmake git-r3
 
 DESCRIPTION="ZPRD - Zscheile Peer Routing Daemon"
 KEYWORDS="~arm ~amd64 ~x86"
 LICENSE="GPL-3"
 
-IUSE="tbb multilib"
+IUSE="+daemontools +tbb +pingd"
+REQUIRED_USE="pingd? ( daemontools )"
+
 SRC_URI=""
 EGIT_REPO_URI="https://github.com/zserik/zprd.git"
 
-CMDEPEND="tbb? (
-		dev-cpp/tbb
-		multilib? (
-			dev-cpp/tbb$(zs_abi32_use_wrapped)
-		)
-	)"
+CMDEPEND="dev-libs/libowlevelzs
+	tbb? ( dev-cpp/tbb )"
 
 DEPEND="${DEPEND}
 	${CMDEPEND}"
 
-RDEPEND="sys-apps/grep
-	sys-apps/iproute2
-	virtual/daemontools
-	${CMDEPEND}"
-
-src_configure() {
-	local mycmakeargs=(
-		$(cmake-utils_use_use tbb TBB)
-		-DUSE_ABI_32=$((zs_abi32_ready && use multilib) \
-		  && echo ON || echo OFF)
+RDEPEND="sys-apps/iproute2
+	daemontools? (
+		sys-apps/grep
+		virtual/daemontools
+		pingd? ( net-misc/iputils )
 	)
-
-	cmake-utils_src_configure
-}
+	${CMDEPEND}"
 
 src_install() {
 	cmake-utils_src_install
@@ -44,7 +35,14 @@ src_install() {
 	echo 'install documentation'
 	dodoc README.md docs/files/CONF docs/files/zprd.conf
 
-	echo 'install service files'
-	dodir /etc/zprd
-	cp -R -t "${D}/etc" "${S}/docs/service/zprd/" || die 'install service files failed'
+	if use daemontools; then
+		echo 'install service files'
+		local services=zprd
+		use pingd && services+=" zprpd"
+		for i in $services; do
+			echo " - $i"
+			dodir "/etc/${i}"
+			cp -R -t "${D}/etc" "${S}/docs/service/${i}/" || die 'install service files failed'
+		done
+	fi
 }
