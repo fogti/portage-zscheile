@@ -9,7 +9,7 @@ DESCRIPTION="ZPRD - Zscheile Peer Routing Daemon"
 KEYWORDS="~arm ~amd64 ~x86"
 LICENSE="GPL-3"
 
-IUSE="+daemontools +tbb +pingd"
+IUSE="+daemontools ipv6 +tbb +pingd"
 REQUIRED_USE="pingd? ( daemontools )"
 
 SRC_URI=""
@@ -28,6 +28,15 @@ RDEPEND="sys-apps/iproute2
 		pingd? ( net-misc/iputils )
 	)
 	${CMDEPEND}"
+
+src_configure() {
+	local mycmakeargs=(
+		$(cmake-utils_use_use tbb TBB)
+		$(cmake-utils_use_use ipv6 IPV6)
+	)
+
+	cmake-utils_src_configure
+}
 
 src_install() {
 	cmake-utils_src_install
