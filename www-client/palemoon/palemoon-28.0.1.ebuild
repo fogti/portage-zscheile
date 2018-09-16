@@ -18,9 +18,10 @@ IUSE="
 	cpu_flags_x86_sse2
 	threads
 	debug
-	-system-bzip2
+	-system-libevent
+	-system-libvpx
+	-system-libwebp
 	-system-sqlite
-	-system-zlib
 	+shared-js
 	+jemalloc
 	-valgrind
@@ -52,10 +53,12 @@ RDEPEND="
 	optimize? ( sys-libs/glibc )
 	valgrind? ( dev-util/valgrind )
 
-	system-bzip2?  ( app-arch/bzip2 )
-	system-sqlite? ( >=dev-db/sqlite-3.21.0[secure-delete] )
-	system-zlib?   ( sys-libs/zlib )
-	shared-js?     ( virtual/libffi )
+	!official-branding? ( app-arch/bzip2 sys-libs/zlib )
+	system-libevent?    ( dev-libs/libevent )
+	system-libvpx?      ( >=media-libs/libvpx-1.4.0 )
+	system-libwebp?     ( media-libs/libwebp )
+	system-sqlite?      ( >=dev-db/sqlite-3.21.0[secure-delete] )
+	shared-js?          ( virtual/libffi )
 
 	dbus? (
 		>=sys-apps/dbus-0.60
@@ -76,7 +79,7 @@ RDEPEND="
 "
 
 REQUIRED_USE="
-	official-branding? ( !system-bzip2 !system-sqlite !system-zlib )
+	official-branding? ( !system-libevent !system-libvpx !system-libwebp !system-sqlite )
 	optimize? ( !debug )
 	jemalloc? ( !valgrind )
 	^^ ( gtk2 gtk3 )
@@ -104,10 +107,18 @@ src_configure() {
 	if use official-branding; then
 		official-branding_warning
 		mozconfig_enable official-branding
+	else
+		mozconfig_with system-bz2
+		mozconfig_with system-zlib
+
+		local i j
+		for i in event vpx webp; do
+			j="system-lib$i"
+			use "$j" && mozconfig_with "$j"
+		done
+		unset i j
 	fi
 
-	use system-bzip2  && mozconfig_with system-bz2
-	use system-zlib   && mozconfig_with system-zlib
 	use system-sqlite && mozconfig_enable system-sqlite
 
 	if use optimize; then
