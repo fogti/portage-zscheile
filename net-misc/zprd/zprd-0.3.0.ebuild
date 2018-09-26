@@ -6,16 +6,15 @@ EAPI=5
 inherit zserik-cmake
 
 DESCRIPTION="ZPRD - Zscheile Peer Routing Daemon"
-KEYWORDS="~arm ~amd64 ~x86"
+KEYWORDS="arm amd64 x86"
 LICENSE="GPL-3"
 HOMEPAGE="https://github.com/zserik/zprd.git"
 
-IUSE="+daemontools +debug ipv6 +tbb +pingd"
+IUSE="+daemontools +debug +ipv6 +pingd"
 REQUIRED_USE="pingd? ( daemontools )"
 RESTRICT="debug? ( strip )"
 
-CMDEPEND="dev-libs/libowlevelzs
-	tbb? ( dev-cpp/tbb )"
+CMDEPEND="dev-libs/libowlevelzs"
 
 DEPEND="${DEPEND}
 	${CMDEPEND}"
@@ -31,7 +30,6 @@ RDEPEND="sys-apps/iproute2
 src_configure() {
 	local mycmakeargs=(
 		$(cmake-utils_use_use debug DEBUG)
-		$(cmake-utils_use_use tbb TBB)
 		$(cmake-utils_use_use ipv6 IPV6)
 	)
 
@@ -47,7 +45,7 @@ src_install() {
 	if use daemontools; then
 		echo 'install service files'
 		local services=zprd
-		use pingd && services+=" zprpd"
+		use pingd && services+=' zprpd'
 		for i in $services; do
 			echo " - $i"
 			dodir "/etc/${i}"
