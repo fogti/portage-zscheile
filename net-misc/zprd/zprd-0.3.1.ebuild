@@ -3,18 +3,15 @@
 
 EAPI=5
 
-inherit zserik-cmake git-r3
+inherit zserik-cmake
 
 DESCRIPTION="ZPRD - Zscheile Peer Routing Daemon"
-KEYWORDS="~arm ~amd64 ~x86"
+KEYWORDS="arm amd64 x86"
 LICENSE="GPL-3"
+HOMEPAGE="https://github.com/zserik/zprd.git"
 
 IUSE="+daemontools +debug +ipv6 +pingd"
 REQUIRED_USE="pingd? ( daemontools )"
-
-SRC_URI=""
-EGIT_REPO_URI="https://github.com/zserik/zprd.git"
-
 RESTRICT="debug? ( strip )"
 
 CMDEPEND="dev-libs/libowlevelzs"
