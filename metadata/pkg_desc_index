@@ -30,7 +30,7 @@ dev-libs/libkqueue 2.1.0 2.2.0 9999: Portable implementation of the kqueue() and
 dev-libs/libowlevelzs 0.0.1 9999: Zscheile Lowlevel library
 dev-libs/libzsdbps 9999: Zscheile Node ID serialization library
 dev-libs/libzsnidcode 0.0.0 9999: Zscheile Node ID serialization library
-dev-libs/libzsparsell 9999: Zscheile Lowlevel Parsing library
+dev-libs/libzsparsell 0.0.1 9999: Zscheile Lowlevel Parsing library
 dev-libs/zeik-handles 0.0.1 0.0.2 0.0.3: Zscheile EIK Handles library
 dev-libs/zsadv 0.0.4 0.0.5 0.0.6 0.0.7 0.0.8 0.0.9: Zscheile Advanced C++ Library
 dev-libs/zscore 0.0.3 0.0.5: ZS Core library - C function collection
