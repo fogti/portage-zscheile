@@ -3,14 +3,9 @@
 
 EAPI=5
 
-inherit zserik-cmake git-r3
+inherit zserik-git-cmake
 
 DESCRIPTION="5. Zscheile Network Service"
-KEYWORDS="~arm ~amd64 ~x86"
-LICENSE="MIT"
-
-SRC_URI=""
-EGIT_REPO_URI="https://github.com/zserik/zsx5n.git"
 RDEPEND="sys-apps/xinetd"
 
 src_install() {

@@ -3,18 +3,14 @@
 
 EAPI=5
 
-inherit zserik-cmake git-r3
+inherit zserik-git-cmake
 
 DESCRIPTION="Zscheile XTW interpreter"
-KEYWORDS="~arm ~amd64 ~x86"
-LICENSE="MIT"
-
-SRC_URI=""
-EGIT_REPO_URI="https://github.com/zserik/zxtw.git"
-HOMEPAGE="${EGIT_REPO_URI}"
 IUSE="${IUSE} test"
 
-CMDEPEND="dev-libs/libzsparsell:=[zsig]"
+CMDEPEND="
+	dev-libs/libowlevelzs:=
+	dev-libs/libzsparsell:="
 DEPEND="$DEPEND $CMDEPEND"
 RDEPEND="$RDEPEND $CMDEPEND"
 

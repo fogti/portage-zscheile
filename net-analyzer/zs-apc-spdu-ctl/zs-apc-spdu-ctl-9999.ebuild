@@ -1,11 +1,13 @@
 # Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=6
+EAPI=5
 inherit zserik-git-cmake
 
-DESCRIPTION="Zscheile Lowlevel Parsing library"
+DESCRIPTION="Zscheile APC switched PDU control"
+
+CMDEPEND="net-analyzer/net-snmp"
 DEPEND="${DEPEND}
-	dev-libs/libowlevelzs"
-RDEPEND="${RDEPEND}
-	dev-libs/libowlevelzs"
+	${CMDEPEND}"
+RDEPEND="net-analyzer/fping
+	${CMDEPEND}"

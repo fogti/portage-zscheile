@@ -1,16 +1,11 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=5
-
-inherit zserik-cmake multilib git-r3
+inherit zserik-git-cmake multilib
 
 DESCRIPTION="Wireshark plugins to decode the Zscheile Peer Routing Daemon Protocol"
-KEYWORDS="~arm ~amd64 ~x86"
 LICENSE="GPL-2"
-
-SRC_URI=""
-EGIT_REPO_URI="https://github.com/zserik/wireshark-zprd-plugins.git"
 
 RDEPEND=">net-analyzer/wireshark-2.5.0:="
 DEPEND="$DEPEND
