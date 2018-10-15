@@ -28,6 +28,7 @@ RDEPEND="
 	)
 
 	l10n_de? (
+		dev-tex/translator
 		dev-texlive/texlive-langgerman
 	)
 
