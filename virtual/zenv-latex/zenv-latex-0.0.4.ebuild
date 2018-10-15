@@ -8,13 +8,15 @@ inherit zserik-virtual
 DESCRIPTION="Zscheile LaTeX Environment"
 
 KEYWORDS="arm amd64 x86"
-IUSE="emacs l10n_de"
+IUSE="emacs l10n_de l10n_en"
 
 RDEPEND="
 	dev-tex/biber
+	dev-tex/glossaries
 	dev-texlive/texlive-latexextra
 	dev-texlive/texlive-fontsextra
 	dev-texlive/texlive-mathscience
+	dev-texlive/texlive-xetex
 	virtual/latex-base
 
 	emacs? (
@@ -27,5 +29,9 @@ RDEPEND="
 
 	l10n_de? (
 		dev-texlive/texlive-langgerman
+	)
+
+	l10n_en? (
+		dev-texlive/texlive-langenglish
 	)
 "

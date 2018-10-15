@@ -6,7 +6,8 @@ inherit zserik-git-cmake
 
 DESCRIPTION="Zscheile APC switched PDU control"
 
-CMDEPEND="net-analyzer/net-snmp"
+CMDEPEND="dev-libs/libowlevelzs:=
+	net-analyzer/net-snmp"
 DEPEND="${DEPEND}
 	${CMDEPEND}"
 RDEPEND="net-analyzer/fping
