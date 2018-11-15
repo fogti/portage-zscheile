@@ -14,9 +14,10 @@ app-misc/zsoutils 0.0.4 0.0.5: ZS Outils - output utilitys - multi call binary
 app-misc/zsrecursil 0.0.4 0.0.6 0.0.7 0.0.8 0.0.9: ZS Recursil - directory recursion tool
 app-misc/zsropm 0.2.0.3 0.2.1 0.2.1.1 0.2.1.2 0.2.1.3 9999: Zscheile Rollout Package Manager
 app-misc/zsropm-utils 0.1 0.2: Utilities for the Zscheile Rollout Package Manager
-dev-db/rocksdb 5.10.2 5.10.4 5.11.3 5.12.2 5.12.4 5.13.3 5.14.2: A Persistent Key-Value Store for Flash and RAM Storage
+dev-db/rocksdb 5.11.3 5.12.2 5.12.4 5.13.3 5.14.2 5.17.2: A Persistent Key-Value Store for Flash and RAM Storage
 dev-db/zdbc 0.2.3 0.2.4 0.2.5: ZDBC - Zscheile DataBase Utils
 dev-db/zsdatab 0.1.6 0.2.6 0.2.7 0.2.8 0.2.9: Zscheile data text table Management
+dev-db/zsdbtin 9999: Zscheile Database 7 tin
 dev-db/zstab 0.0.1 0.0.2 0.0.3: zstab - Zscheile Table Management
 dev-db/zstreedb 0.0.2 0.0.3: Zscheile tree text database Management Util
 dev-db/zstreedb2 0.0.2 0.0.3 0.0.4 9999: Zscheile tree text database Management Util 2
@@ -29,7 +30,7 @@ dev-libs/libaio 0.3.110: Asynchronous input/output library that uses the kernels
 dev-libs/libkqueue 2.1.0 2.2.0 9999: Portable implementation of the kqueue() and kevent() system calls
 dev-libs/libowlevelzs 0.0.1 0.0.2 9999: Zscheile Lowlevel library
 dev-libs/libzsdbps 9999: Zscheile database misc serialization library
-dev-libs/libzsnidcode 0.0.0 9999: Zscheile Node ID serialization library
+dev-libs/libzsnidcode 0.0.0 0.0.1 9999: Zscheile Node ID serialization library
 dev-libs/libzsparsell 0.0.1 0.0.2 0.0.3 9999: Zscheile Lowlevel Parsing library
 dev-libs/zeik-handles 0.0.1 0.0.2 0.0.3: Zscheile EIK Handles library
 dev-libs/zsadv 0.0.4 0.0.5 0.0.6 0.0.7 0.0.8 0.0.9: Zscheile Advanced C++ Library

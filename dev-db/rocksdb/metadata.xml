@@ -2,6 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<use>
+		<flag name="bzip2">Add support for bzip2 compression</flag>
 		<flag name="lz4">Add support for lz4 compression</flag>
 		<flag name="snappy">Add support for snappy compression</flag>
 		<flag name="zstd">Add support for zstd compression</flag>
