@@ -8,6 +8,7 @@ DESCRIPTION="Zscheile Database 7 tin"
 LICENSE="MIT"
 
 CMDEPEND=">=dev-db/rocksdb-5.17.2:=
+	dev-db/lmdb:=
 	dev-libs/libowlevelzs:=
 	>=dev-libs/libzsnidcode-0.0.1:="
 
