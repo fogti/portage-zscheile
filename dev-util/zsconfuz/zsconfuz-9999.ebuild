@@ -4,10 +4,11 @@
 EAPI=6
 inherit zserik-git-cmake
 
-DESCRIPTION="ZSconfuz - a parallel experimental configure program"
+DESCRIPTION="ZSconfuz - an experimental parallel configure program"
+LICENSE="ISC"
 
 CMNDEPEND="
-	dev-libs/libowlevelzs
+	>=dev-libs/libowlevelzs-0.0.3
 	virtual/zsys-kqueue"
 
 DEPEND="${DEPEND}
