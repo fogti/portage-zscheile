@@ -11,7 +11,7 @@ SRC_URI="https://github.com/facebook/rocksdb/archive/v${PV}.tar.gz -> ${P}.tar.g
 
 LICENSE="|| ( GPL-2 Apache-2.0 ) BSD"
 SLOT="0/5"
-KEYWORDS="~amd64 ~arm ~x86"
+KEYWORDS="amd64 arm x86"
 IUSE="static-libs minimal bzip2 debug gflags lz4 snappy tbb tools zlib zstd kernel_linux"
 
 RDEPEND="bzip2? ( app-arch/bzip2[${MULTILIB_USEDEP}] )
