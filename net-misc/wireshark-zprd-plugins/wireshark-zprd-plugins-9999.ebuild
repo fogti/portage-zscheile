@@ -7,7 +7,8 @@ inherit zserik-git-cmake multilib
 DESCRIPTION="Wireshark plugins to decode the Zscheile Peer Routing Daemon Protocol"
 LICENSE="GPL-2"
 
-RDEPEND=">net-analyzer/wireshark-2.5.0:="
+RDEPEND=">net-analyzer/wireshark-2.5.0:=
+<net-analyzer/wireshark-3.0.0"
 DEPEND="$DEPEND
 $RDEPEND"
 

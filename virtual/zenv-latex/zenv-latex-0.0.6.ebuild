@@ -13,6 +13,7 @@ IUSE="emacs l10n_de l10n_en"
 RDEPEND="
 	dev-tex/biber
 	dev-tex/glossaries
+	dev-tex/minted
 	dev-texlive/texlive-latexextra
 	dev-texlive/texlive-fontsextra
 	dev-texlive/texlive-mathscience
@@ -21,10 +22,6 @@ RDEPEND="
 
 	emacs? (
 		app-emacs/auctex
-	)
-
-	!emacs? (
-		app-editors/latexila
 	)
 
 	l10n_de? (

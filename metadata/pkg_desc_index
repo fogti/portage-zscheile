@@ -83,7 +83,7 @@ sys-cluster/glusterfs 3.6.5 3.12.3: GlusterFS is a powerful network/cluster file
 sys-process/zsdoitduring 0.0.1: Zscheile Do-It-During Process Spawning Helper
 virtual/zcmake-libfindmacros 0.2: Zscheile CMake virtual: LibFindMacros
 virtual/zenv-arduino 0.1: Erik Zscheile: Environment for Arduino IDE
-virtual/zenv-latex 0.0.5: Zscheile LaTeX Environment
+virtual/zenv-latex 0.0.6: Zscheile LaTeX Environment
 virtual/zenv-media 0.7.5: Erik Zscheile: media environment
 virtual/zenv-radio 0.1: Erik Zscheile: Environment for Amateur Radio
 virtual/zenv-shotcut 0.2: Erik Zscheile: Environment for Shotcut
