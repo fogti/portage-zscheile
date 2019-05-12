@@ -1,7 +1,7 @@
-# Copyright 1999-2018 Gentoo Foundation
+# Copyright 1999-2019 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=4
+EAPI=5
 
 inherit zserik-virtual
 
@@ -22,6 +22,10 @@ RDEPEND="
 
 	emacs? (
 		app-emacs/auctex
+	)
+
+	!emacs? (
+		app-editors/gnome-latex
 	)
 
 	l10n_de? (
