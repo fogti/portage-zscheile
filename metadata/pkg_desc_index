@@ -53,6 +53,7 @@ dev-util/valadoc 9999: A documentation generator for generating API documentatio
 dev-util/zcbuild 0.2 0.3: Zscheile CMake build script
 dev-util/zs-sedscr-utils 0.0.1 0.0.2: Zscheile SedScripts Utilities
 dev-util/zsconfuz 9999: ZSconfuz - an experimental parallel configure program
+dev-util/zsconfuz-alt 9999: ZSconfuz-alt - an experimental parallel configure program
 dev-util/zsdimlc 0.0.1: Zscheile Dimension Language Compiler
 dev-util/zsgenheader 0.0.2 0.0.3 0.0.4: ZsGenHeader - generate header from c source file
 dev-util/zsgtrp 0.0.2 0.0.4 0.0.5: Zscheile GTR Parser - C++ class getter generator

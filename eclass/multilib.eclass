@@ -351,9 +351,10 @@ multilib_env() {
 				;;
 			esac
 		;;
-		mips64*)
+		mips64*|mipsisa64*)
 			export CFLAGS_o32=${CFLAGS_o32--mabi=32}
 			export CHOST_o32=${CTARGET/mips64/mips}
+			export CHOST_o32=${CHOST_o32/mipsisa64/mipsisa32}
 			export CTARGET_o32=${CHOST_o32}
 			export LIBDIR_o32="lib"
 
@@ -383,6 +384,20 @@ multilib_env() {
 
 			: ${MULTILIB_ABIS=ppc64 ppc}
 			: ${DEFAULT_ABI=ppc64}
+		;;
+		riscv64*)
+			export CFLAGS_lp64d=${CFLAGS_lp64d--mabi=lp64d}
+			export CHOST_lp64d=${CTARGET}
+			export CTARGET_lp64d=${CTARGET}
+			export LIBDIR_lp64d="lib64/lp64d"
+
+			export CFLAGS_lp64=${CFLAGS_lp64--mabi=lp64}
+			export CHOST_lp64=${CTARGET}
+			export CTARGET_lp64=${CTARGET}
+			export LIBDIR_lp64="lib64/lp64"
+
+			: ${MULTILIB_ABIS=lp64d lp64}
+			: ${DEFAULT_ABI=lp64d}
 		;;
 		s390x*)
 			export CFLAGS_s390=${CFLAGS_s390--m31} # the 31 is not a typo
@@ -450,6 +465,11 @@ multilib_toolchain_setup() {
 		done
 		export _DEFAULT_ABI_SAVED="true"
 
+		# Set CBUILD only if not cross-compiling.
+		if [[ ${CBUILD} == "${CHOST}" ]]; then
+			export CBUILD=$(get_abi_CHOST $1)
+		fi
+
 		# Set the CHOST native first so that we pick up the native
 		# toolchain and not a cross-compiler by accident #202811.
 		export CHOST=$(get_abi_CHOST ${DEFAULT_ABI})
@@ -459,7 +479,6 @@ multilib_toolchain_setup() {
 		export FC="$(tc-getFC) $(get_abi_CFLAGS)"
 		export LD="$(tc-getLD) $(get_abi_LDFLAGS)"
 		export CHOST=$(get_abi_CHOST $1)
-		export CBUILD=$(get_abi_CHOST $1)
 		export PKG_CONFIG_LIBDIR=${EPREFIX}/usr/$(get_libdir)/pkgconfig
 		export PKG_CONFIG_PATH=${EPREFIX}/usr/share/pkgconfig
 	fi

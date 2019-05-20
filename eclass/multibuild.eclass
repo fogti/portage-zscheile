@@ -1,4 +1,4 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 # @ECLASS: multibuild.eclass
@@ -6,6 +6,7 @@
 # Michał Górny <mgorny@gentoo.org>
 # @AUTHOR:
 # Author: Michał Górny <mgorny@gentoo.org>
+# @SUPPORTED_EAPIS: 4 5 6 7
 # @BLURB: A generic eclass for building multiple variants of packages.
 # @DESCRIPTION:
 # The multibuild eclass aims to provide a generic framework for building
@@ -16,7 +17,7 @@ case "${EAPI:-0}" in
 	0|1|2|3)
 		die "Unsupported EAPI=${EAPI:-0} (too old) for ${ECLASS}"
 		;;
-	4|5|6)
+	4|5|6|7)
 		;;
 	*)
 		die "Unsupported EAPI=${EAPI} (unknown) for ${ECLASS}"
@@ -45,10 +46,6 @@ if [[ ! ${_MULTIBUILD} ]]; then
 # @DESCRIPTION:
 # The current variant which the function was executed for.
 #
-# If nested multibuilds are used, this value can be an array. In that
-# case, the first element will name the deepest multibuild, and the next
-# elements will go outwards.
-#
 # Example value:
 # @CODE
 # python2_6
@@ -61,10 +58,6 @@ if [[ ! ${_MULTIBUILD} ]]; then
 # contains the complete selection tree.
 #
 # It can be used to create variant-unique directories and files.
-#
-# If nested multibuilds are used, this value can be an array. In that
-# case, the first element will name the deepest multibuild, and the next
-# elements will go outwards.
 #
 # Example value:
 # @CODE
@@ -79,10 +72,6 @@ if [[ ! ${_MULTIBUILD} ]]; then
 # multibuild_foreach_variant() sets BUILD_DIR locally
 # to variant-specific build directories based on the initial value
 # of BUILD_DIR.
-#
-# If nested multibuilds are used, this value can be an array. In that
-# case, the first element will name the deepest multibuild, and the next
-# elements will go outwards.
 #
 # Example value:
 # @CODE
@@ -119,9 +108,9 @@ multibuild_foreach_variant() {
 	debug-print "${FUNCNAME}: initial build_dir = ${bdir}"
 
 	for v in "${MULTIBUILD_VARIANTS[@]}"; do
-		local MULTIBUILD_VARIANT=( "${v}" "${MULTIBUILD_VARIANT[@]}" )
-		local MULTIBUILD_ID=( "${prev_id}${v}" "${MULTIBUILD_ID[@]}" )
-		local BUILD_DIR=( "${bdir%%/}-${v}" "${BUILD_DIR[@]}" )
+		local MULTIBUILD_VARIANT=${v}
+		local MULTIBUILD_ID=${prev_id}${v}
+		local BUILD_DIR=${bdir%%/}-${v}
 
 		_multibuild_run() {
 			# find the first non-private command
