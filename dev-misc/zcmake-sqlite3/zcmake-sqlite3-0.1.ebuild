@@ -5,4 +5,5 @@ EAPI=5
 inherit zs-zcmake
 DESCRIPTION="FindSqlite3 cmake files"
 KEYWORDS="arm amd64 x86"
-RDEPEND="dev-db/sqlite:3"
+RDEPEND="dev-db/sqlite:3
+	<dev-util/cmake-3.14.3"
