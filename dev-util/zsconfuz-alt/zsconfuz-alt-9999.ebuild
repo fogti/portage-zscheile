@@ -5,4 +5,7 @@ EAPI=7
 inherit zserik-git-cmake
 DESCRIPTION="ZSconfuz-alt - an experimental parallel configure program"
 LICENSE="ISC"
-RDEPEND="dev-util/ninja"
+DEPEND="${DEPEND}
+	dev-util/zsconfuz-common"
+RDEPEND="dev-util/ninja
+	dev-util/zsconfuz-common"

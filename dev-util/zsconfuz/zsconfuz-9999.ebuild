@@ -9,6 +9,7 @@ LICENSE="ISC"
 
 CMNDEPEND="
 	>=dev-libs/libowlevelzs-0.0.3
+	dev-util/zsconfuz-common
 	virtual/zsys-kqueue"
 
 DEPEND="${DEPEND}

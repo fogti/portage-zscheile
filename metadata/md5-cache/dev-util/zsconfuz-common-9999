@@ -1,12 +1,10 @@
 BDEPEND=>=dev-vcs/git-1.8.2.1[curl] dev-util/ninja >=dev-util/cmake-3.9.6
 DEFINED_PHASES=compile configure install prepare test unpack
-DEPEND=dev-util/zsconfuz-common
-DESCRIPTION=ZSconfuz-alt - an experimental parallel configure program
+DESCRIPTION=ZSconfuz* - an experimental parallel configure program - common utilities
 EAPI=7
-HOMEPAGE=https://github.com/zserik/zsconfuz-alt
+HOMEPAGE=https://github.com/zserik/zsconfuz-common
 KEYWORDS=-* ~arm ~amd64 ~x86
 LICENSE=ISC
-RDEPEND=dev-util/ninja dev-util/zsconfuz-common
 SLOT=0
 _eclasses_=cmake-utils	959a7fda0dce63de9a4e73a22294d6ec	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	flag-o-matic	a09389deba2c0a7108b581e02c7cecbf	git-r3	0d4635eeb5a96cd5315597a47eba25c9	multilib	1d91b03d42ab6308b5f4f6b598ed110e	multiprocessing	cac3169468f893670dac3e7cb940e045	ninja-utils	132cbb376048d079b5a012f5467c4e7f	toolchain-funcs	8c7f9d80beedd16f2e5a7f612c609529	xdg-utils	14d00d009167652b1fa363e55effe213	zserik-git	fd5236bbb6d35a925faf4512551f1b99	zserik-git-cmake	10b00c4a5506a8447ca6aa938e6851de	zserik-minimal	a24151a4d65df85cd1a847a4c13cce94	zserik-virtual	2f0a52cafc77287ca8fabf2c1a498e04
-_md5_=f837a5acbc163e143ad7e0806af8accb
+_md5_=bc922470e31a20db2187746c362e17b2
