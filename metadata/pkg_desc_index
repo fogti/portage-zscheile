@@ -89,7 +89,7 @@ virtual/zenv-latex 0.0.7: Zscheile LaTeX Environment
 virtual/zenv-media 0.7.5: Erik Zscheile: media environment
 virtual/zenv-radio 0.1: Erik Zscheile: Environment for Amateur Radio
 virtual/zenv-shotcut 0.2: Erik Zscheile: Environment for Shotcut
-virtual/zstdenv-client 0.2.4.6 0.2.4.7 0.2.4.8 0.2.4.9 0.2.5.0 0.2.5.1 0.2.5.2: Zscheile Standard Environment for Clients
+virtual/zstdenv-client 0.2.4.6 0.2.4.7 0.2.4.8 0.2.4.9 0.2.5.0 0.2.5.1 0.2.5.2 0.2.5.3: Zscheile Standard Environment for Clients
 virtual/zsys-kqueue 0.1: Erik Zscheile: virtual for kqueue(2) - native vs libkqueue
 www-client/palemoon 28.0.0 28.0.1: Pale Moon Web Browser
 zeik-handles/spawn 0.2: Zscheile EIK handles typemodule spawn
