@@ -83,6 +83,7 @@ net-misc/zsx5n 9999: 5. Zscheile Network Service
 net-nds/zsnis 0.1.4 0.1.5.2 0.1.6: ZSNIS - Zscheile Secure Network Information Service
 sys-cluster/glusterfs 3.6.5 3.12.3: GlusterFS is a powerful network/cluster filesystem
 sys-process/zsdoitduring 0.0.1: Zscheile Do-It-During Process Spawning Helper
+virtual/bedrocklinux-meta 0.1: Bedrock Linux build-time meta package
 virtual/zcmake-libfindmacros 0.2: Zscheile CMake virtual: LibFindMacros
 virtual/zenv-arduino 0.1: Erik Zscheile: Environment for Arduino IDE
 virtual/zenv-latex 0.0.7: Zscheile LaTeX Environment
