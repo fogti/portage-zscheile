@@ -45,9 +45,7 @@ python_install_all() {
 	fi
 
 	echo "-- install documentation ..."
-	pushd doc &>/dev/null || die
-	doman mat2.1
-	popd &>/dev/null || die
+	doman doc/mat2.1
 
 	echo "-- install python parts ..."
 	distutils-r1_python_install_all
