@@ -1,0 +1,10 @@
+DEFINED_PHASES=configure install prepare
+DEPEND=x11-apps/xinit
+DESCRIPTION=Xinit Zscheile minimal configuration
+EAPI=6
+KEYWORDS=amd64 arm x86
+RDEPEND=x11-apps/xinit
+SLOT=0
+SRC_URI=http://ezscheile.bplaced.net/zsropm/xinit.tar.gz -> zsrop-legacy-xinit-0.tar.gz
+_eclasses_=zsrop-legacy	efd06c41e97a95b08097a82c3d5ac99b
+_md5_=e3567b61e096f35c77595d66acd53bde

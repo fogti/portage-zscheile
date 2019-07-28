@@ -1,0 +1,10 @@
+DEFINED_PHASES=configure install prepare
+DEPEND=net-dialup/mingetty sys-apps/sysvinit zsrop-legacy/xinit
+DESCRIPTION=Automatic login using init and mingetty
+EAPI=6
+KEYWORDS=amd64 arm x86
+RDEPEND=net-dialup/mingetty sys-apps/sysvinit zsrop-legacy/xinit
+SLOT=0
+SRC_URI=http://ezscheile.bplaced.net/zsropm/autologin.tar.gz -> zsrop-legacy-autologin-0.tar.gz
+_eclasses_=zsrop-legacy	efd06c41e97a95b08097a82c3d5ac99b
+_md5_=6023b7a03dfa58207cc2898193b59b48
