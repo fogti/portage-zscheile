@@ -95,5 +95,6 @@ virtual/zsys-kqueue 0.1: Erik Zscheile: virtual for kqueue(2) - native vs libkqu
 www-client/palemoon 28.0.0 28.0.1: Pale Moon Web Browser
 zeik-handles/spawn 0.2: Zscheile EIK handles typemodule spawn
 zsrop-legacy/autologin 0: Automatic login using init and mingetty
+zsrop-legacy/fix_libtool_files 1 99: fix_libtool_files.sh
 zsrop-legacy/xfice 0: X11 session script for a combination of xfdesktop and icewm
 zsrop-legacy/xinit 0: Xinit Zscheile minimal configuration

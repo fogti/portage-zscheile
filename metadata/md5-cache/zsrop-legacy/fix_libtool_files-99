@@ -1,0 +1,7 @@
+DEFINED_PHASES=install unpack
+DESCRIPTION=fix_libtool_files.sh
+EAPI=6
+KEYWORDS=amd64 arm x86
+RDEPEND=sys-devel/gcc:*
+SLOT=0
+_md5_=e5c09e6fc0cbaf349ceb92fbc929524d

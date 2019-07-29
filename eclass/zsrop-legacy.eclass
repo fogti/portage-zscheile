@@ -12,13 +12,16 @@ EXPORT_FUNCTIONS src_prepare src_configure src_install
 
 # dummy functions for hooks
 portage_merge() {
-	if ! has_version "$1"; then
-		die "deps: required package '$*' not found"
-	fi
+	local i
+	for i; do
+		if ! has_version "$i"; then
+			die "deps: required package '$i' not found"
+		fi
+	done
 }
 
 zerror() {
-	die "$*"
+	eerror "$*"
 }
 
 prompt() {
@@ -26,6 +29,7 @@ prompt() {
 }
 
 zlitm() {
+	local i
 	for i in $(seq "$1"); do
 		printf ' '
 	done
