@@ -16,3 +16,8 @@ KEYWORDS="~arm amd64 x86"
 LICENSE="BSD"
 SLOT="0"
 IUSE=""
+
+pkg_postinst() {
+	ewarn "This package may introduce compilation failures in dev-lang/python"
+	ewarn "The python '_select' module may fail to compile"
+}
