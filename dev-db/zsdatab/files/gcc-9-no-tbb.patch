@@ -1,0 +1,18 @@
+diff -upr old/CMakeLists.txt new/CMakeLists.txt
+--- old/CMakeLists.txt	2019-11-14 15:57:14.940083565 +0100
++++ new/CMakeLists.txt	2019-11-14 16:00:35.566273885 +0100
+@@ -14,10 +14,10 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}
+ find_package(ZLIB REQUIRED)
+ find_package(Threads REQUIRED)
+ 
+-include(CheckIncludeFiles)
+-check_include_file_cxx("execution" HAVE_CXXH_EXECUTION)
+-check_include_file_cxx("experimental/execution" HAVE_CXXH_EX_EXECUTION)
+-check_include_file_cxx("experimental/algorithm" HAVE_CXXH_EX_ALGORITHM)
++# This would require TBB, we don't want that dependency
++set(HAVE_CXXH_EXECUTION OFF)
++set(HAVE_CXXH_EX_EXECUTION OFF)
++set(HAVE_CXXH_EX_ALGORITHM OFF)
+ 
+ configure_file(config.h.in "${PROJECT_BINARY_DIR}/config.h")
+ configure_file("cmake/Find${CMAKE_PREFIX}.cmake.in" "${PROJECT_BINARY_DIR}/Find${CMAKE_PREFIX}.cmake" @ONLY)

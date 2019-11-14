@@ -17,3 +17,7 @@ $CMDEPEND"
 RDEPEND="$RDEPEND
 $CMDEPEND
 app-shells/bash"
+
+PATCHES=(
+	"${FILESDIR}/gcc-9-no-tbb.patch"
+)
