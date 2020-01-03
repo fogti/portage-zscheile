@@ -4,7 +4,7 @@
 inherit zserik-cmake
 
 DESCRIPTION="Zscheile EIK handles typemodule ${PN}"
-SRC_URI="mirror://ezscheile/zeik-handles-${P}.tar.gz"
+SRC_URI="mirror://ytrizja/zeik-handles-${P}.tar.gz"
 S="${WORKDIR}/zeik-handles-${P}"
 
 DEPEND+="

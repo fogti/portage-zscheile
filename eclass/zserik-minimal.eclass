@@ -6,7 +6,7 @@ ___ECLASS_ONCE_ZSERIK_MINIMAL="recur -_+^+_- spank"
 
 inherit zserik-virtual
 
-HOMEPAGE="http://ezscheile.bplaced.net/index.php"
-SRC_URI="mirror://ezscheile/${P}.tar.gz"
+HOMEPAGE="http://ytrizja.duckdns.org/index.php"
+SRC_URI="mirror://ytrizja/${P}.tar.gz"
 LICENSE="GPL-3+"
 fi

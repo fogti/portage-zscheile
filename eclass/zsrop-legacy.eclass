@@ -3,7 +3,7 @@
 
 ### Zscheile Rollout Package eclass
 
-SRC_URI="http://ezscheile.bplaced.net/zsropm/${PN}.tar.gz -> zsrop-legacy-${P}.tar.gz"
+SRC_URI="https://ytrizja.duckdns.org/zsropm/${PN}.tar.gz -> zsrop-legacy-${P}.tar.gz"
 S="${WORKDIR}/${PN}"
 KEYWORDS="amd64 arm x86"
 SLOT="0"
