@@ -1,0 +1,7 @@
+# Copyright 1999-2019 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+
+# Erik Kai Alain Zscheile <erik.zscheile.ytrizja@gmail.com> (10 Jan 2020)
+# contains a critical bug which results in runtime failures
+# (missing return value in some cases)
+=dev-db/zstreedb-0.0.3
