@@ -21,7 +21,7 @@ dev-db/zsdbtin 9999: Zscheile Database 7 tin
 dev-db/zstab 0.0.1 0.0.2 0.0.3: zstab - Zscheile Table Management
 dev-db/zstreedb 0.0.2 0.0.4: Zscheile tree text database Management Util
 dev-db/zstreedb2 0.0.2 0.0.3 0.0.4 9999: Zscheile tree text database Management Util 2
-dev-lang/crulz 0.0.1 0.0.2: a rust implementation of the 'crulz' macro language interpreter
+dev-lang/crulz 0.0.1 0.0.2 0.0.3: a rust implementation of the 'crulz' macro language interpreter
 dev-lang/python 2.7.14-r2 3.4.8-r2 3.5.5-r2 3.6.5-r2: An interpreted, interactive, object-oriented programming language
 dev-lang/zeiksh 0.2.4 0.2.5 0.2.6 0.2.7: Zscheile EIK shell script interpreter
 dev-lang/zpavinl 0.1.1: Zscheile ZPAVINL to C compiler
@@ -95,6 +95,7 @@ virtual/zenv-shotcut 0.2: Erik Zscheile: Environment for Shotcut
 virtual/zstdenv-client 0.2.4.6 0.2.4.7 0.2.4.8 0.2.4.9 0.2.5.0 0.2.5.1 0.2.5.2 0.2.5.3: Zscheile Standard Environment for Clients
 virtual/zsys-kqueue 0.1: Erik Zscheile: virtual for kqueue(2) - native vs libkqueue
 www-client/palemoon 28.0.0 28.0.1: Pale Moon Web Browser
+x11-themes/audacious-themes 0.0.4-r1: Collection of XMMS themes for Audacious
 zeik-handles/spawn 0.2: Zscheile EIK handles typemodule spawn
 zsrop-legacy/autologin 0: Automatic login using init and mingetty
 zsrop-legacy/fix_libtool_files 1 99: fix_libtool_files.sh
