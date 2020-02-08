@@ -1,4 +1,4 @@
-# Copyright 1999-2019 Gentoo Foundation
+# Copyright 1999-2020 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=5
@@ -11,9 +11,10 @@ KEYWORDS="arm amd64 x86"
 IUSE="emacs l10n_de l10n_en"
 
 RDEPEND="
+	dev-python/pygments
 	dev-tex/biber
 	dev-tex/glossaries
-	dev-tex/minted
+	dev-tex/latex-beamer
 	dev-texlive/texlive-latexextra
 	dev-texlive/texlive-fontsextra
 	dev-texlive/texlive-mathscience
@@ -24,12 +25,7 @@ RDEPEND="
 		app-emacs/auctex
 	)
 
-	!emacs? (
-		app-editors/gnome-latex
-	)
-
 	l10n_de? (
-		dev-tex/translator
 		dev-texlive/texlive-langgerman
 	)
 
