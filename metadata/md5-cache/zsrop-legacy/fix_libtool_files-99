@@ -1,7 +1,9 @@
 DEFINED_PHASES=install unpack
 DESCRIPTION=fix_libtool_files.sh
 EAPI=6
+HOMEPAGE=https://ytrizja.de/zsropm/
 KEYWORDS=amd64 arm x86
+LICENSE=GPL-2
 RDEPEND=sys-devel/gcc:*
 SLOT=0
-_md5_=e5c09e6fc0cbaf349ceb92fbc929524d
+_md5_=079abbc1155787bfd350cd2c8c5c017b

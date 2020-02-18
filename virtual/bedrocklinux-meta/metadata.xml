@@ -2,7 +2,11 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer type="person">
-		<email>erik.zscheile.ytrizja@gmail.com</email>
+		<email>zseri.devel@ytrizja.de</email>
 		<name>Erik Zscheile</name>
 	</maintainer>
+	<use>
+		<flag name="gpg">Add gpg signature generation/verification support</flag>
+		<flag name="hacking">Install developer/testing/hacking utilities</flag>
+	</use>
 </pkgmetadata>

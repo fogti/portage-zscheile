@@ -6,24 +6,30 @@ app-admin/testdisk:ewf - Include ewf library
 app-admin/testdisk:ntfs - Include the ability to read NTFS filesystems
 app-admin/testdisk:reiserfs - Include reiserfs reading ability
 dev-db/rocksdb:bzip2 - Add support for bzip2 compression
+dev-db/rocksdb:gflags - Add support for gflags
 dev-db/rocksdb:lz4 - Add support for lz4 compression
 dev-db/rocksdb:minimal - Build RocksDBLite, a small and minimal version of RocksDB instead of the regular library
 dev-db/rocksdb:snappy - Add support for snappy compression
+dev-db/rocksdb:tbb - Add support for Intels Thread Building Blocks library
+dev-db/rocksdb:tools - Build RocksDB CLI tools
 dev-db/rocksdb:zstd - Add support for zstd compression
-dev-lang/python:pgo - Enable Profile Guided Optimization (PGO) in Python interpreter
-dev-lang/python:threads - Enable threading support. (DON'T DISABLE THIS UNLESS YOU KNOW WHAT YOU'RE DOING)
-dev-lang/python:wide-unicode - Enable wide Unicode implementation which uses 4-byte Unicode characters. Switching of this USE flag changes ABI of Python and requires reinstallation of many Python modules. (DON'T DISABLE THIS UNLESS YOU KNOW WHAT YOU'RE DOING)
-dev-lang/python:wininst - Install Windows executables required to create an executable installer for MS Windows.
+dev-lang/crulz:compile - enable byte-compiling (incl. reusing compilates) support
 dev-misc/zs-common:color - enables terminal color output support
+dev-misc/zs-common:l10n_de - enables support for german umlauts
+dev-misc/zsppr:zsdatab - Add support for the zsppr "form letter" feature based on zsdatab
 dev-scheme/guile:debug-malloc - Include malloc debugging code
 dev-scheme/guile:deprecated - Enable deprecated features
 dev-scheme/guile:networking - Include networking interfaces
 dev-scheme/guile:regex - Include regular expression interfaces
-media-gfx/geeqie:ffmpegthumbnailer - Enable video thumbnail support with media-video/ffmpegthumbnailer
 media-gfx/geeqie:gpu-accel - Enable GPU acceleration support - experimental
 media-gfx/geeqie:gtk3 - Link against x11-libs/gtk+:3 instead of x11-libs/gtk+:2
 media-gfx/geeqie:map - Enable items map display - experimental
+media-metad/mat2:nautilus - Add support for the nautilus context-menu
+net-misc/zprd:daemontools - Install files for djb's daemontools (only supported svc)
+net-misc/zprd:pingd - Install the ZPRD ping daemon
+net-misc/zprd:tbb - Add experimental optimizations utilizing Intel's Thread Building Blocks
 net-nds/zsnis:server - installs the zsnis server
+sys-apps/moreutils:perl - Install scripts written in Perl
 sys-cluster/glusterfs:bd-xlator - Enable the blockdevice translator (requires sys-fs/lvm2)
 sys-cluster/glusterfs:crypt-xlator - Enable the encryption translator
 sys-cluster/glusterfs:fuse - Add FUSE mount helper
@@ -35,28 +41,16 @@ sys-cluster/glusterfs:qemu-block - Transparently create files as QCow2/QED image
 sys-cluster/glusterfs:rsyslog - Install configuration snippet for app-admin/rsyslog
 sys-cluster/glusterfs:systemtap - Enable support for dev-util/systemtap
 sys-cluster/glusterfs:tiering - Enable support for data classification/tiering (requires dev-db/sqlite SLOT 3)
+virtual/bedrocklinux-meta:gpg - Add gpg signature generation/verification support
+virtual/bedrocklinux-meta:hacking - Install developer/testing/hacking utilities
+virtual/zenv-latex:emacs - Enable Emacs Tex support
+virtual/zenv-latex:l10n_de - Enable german lang pack
+virtual/zenv-latex:l10n_en - Enable english lang pack
 virtual/zenv-media:flash - enable support for Adobe Flash
-virtual/zstdenv-client:flash - enable support for Adobe Flash
+virtual/zenv-radio:ax25 - Enable AX.25 support
 virtual/zstdenv-client:games - install some games
 virtual/zstdenv-client:geosci - install additional applications for geo-science
 virtual/zstdenv-client:grub - pull in the GRUB bootloader
 virtual/zstdenv-client:kernel - install packages which depend upon a kernel (needed for bootstrap)
 virtual/zstdenv-client:xdm - install a X display manager
 virtual/zstdenv-client:xfce - pull in XFCE4
-www-client/palemoon:devtools - Enable Mozilla Developer Tools
-www-client/palemoon:gtk2 - Use x11-libs/gtk+:2
-www-client/palemoon:gtk3 - Use x11-libs/gtk+:3
-www-client/palemoon:jemalloc - Replace memory allocator with jemalloc
-www-client/palemoon:necko-wifi - Enable the necko wifi scanner
-www-client/palemoon:official-branding - Enable official branding
-www-client/palemoon:optimize - Enable compiler optimization
-www-client/palemoon:shared-js - Create a shared JavaScript library
-www-client/palemoon:system-bzip2 - Use the system-wide app-arch/bzip2 instead of bundled.
-www-client/palemoon:system-hunspell - Use the system-wide app-text/hunspell instead of bundled.
-www-client/palemoon:system-libevent - Use the system-wide dev-libs/libevent instead of bundled.
-www-client/palemoon:system-libvpx - Use the system-wide media-libs/libvpx instead of bundled.
-www-client/palemoon:system-libwebp - Use the system-wide media-libs/libwebp instead of bundled.
-www-client/palemoon:system-sqlite - Use the system-wide dev-db/sqlite installation with secure-delete enabled
-www-client/palemoon:system-zlib - Use the system-wide sys-libs/zlib instead of bundled.
-www-client/palemoon:valgrind - Enable Valgrind integration hooks
-www-client/palemoon:webrtc - Enable support for WebRTC

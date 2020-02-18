@@ -1,9 +1,11 @@
 DEFINED_PHASES=configure install prepare
 DESCRIPTION=fix_libtool_files.sh
 EAPI=6
+HOMEPAGE=https://ytrizja.de/zsropm/
 KEYWORDS=amd64 arm x86
+LICENSE=GPL-2
 RDEPEND=sys-devel/gcc:*
 SLOT=0
-SRC_URI=https://ytrizja.duckdns.org/zsropm/fix_libtool_files.tar.gz -> zsrop-legacy-fix_libtool_files-1.tar.gz
-_eclasses_=zsrop-legacy	6230f4ed86eb9be87f231fb05a78bd7e
+SRC_URI=https://ytrizja.de/zsropm/fix_libtool_files.tar.gz -> zsrop-legacy-fix_libtool_files-1.tar.gz
+_eclasses_=zsrop-legacy	9982d1f755fcbd8e7ec1898794a4b389
 _md5_=65158dc1fc141ba6f9208656bb08be2c

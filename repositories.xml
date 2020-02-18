@@ -4,8 +4,8 @@
     <description>Zscheile Overlay</description>
     <homepage>https://github.com/zserik/portage-zscheile</homepage>
     <owner>
-      <email>erik.zscheile.ytrizja@gmail.com</email>
-      <name>Erik Kai Alain Zscheile</name>
+      <email>zseri.devel@ytrizja.de</email>
+      <name>Erik Zscheile</name>
     </owner>
     <source type="git">git://github.com/zserik/portage-zscheile.git</source>
     <source type="git">https://github.com/zserik/portage-zscheile.git</source>

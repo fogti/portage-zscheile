@@ -2,7 +2,12 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer type="person">
-		<email>erik.zscheile.ytrizja@gmail.com</email>
+		<email>zseri.devel@ytrizja.de</email>
 		<name>Erik Zscheile</name>
 	</maintainer>
+	<use>
+		<flag name="daemontools">Install files for djb's daemontools (only supported svc)</flag>
+		<flag name="tbb">Add experimental optimizations utilizing Intel's Thread Building Blocks</flag>
+		<flag name="pingd">Install the ZPRD ping daemon</flag>
+	</use>
 </pkgmetadata>

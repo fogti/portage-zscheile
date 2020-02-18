@@ -2,7 +2,10 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer type="person">
-		<email>erik.zscheile.ytrizja@gmail.com</email>
+		<email>zseri.devel@ytrizja.de</email>
 		<name>Erik Zscheile</name>
 	</maintainer>
+	<use>
+		<flag name="zsdatab">Add support for the zsppr "form letter" feature based on zsdatab</flag>
+	</use>
 </pkgmetadata>

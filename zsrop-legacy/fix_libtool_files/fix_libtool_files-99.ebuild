@@ -5,6 +5,8 @@ EAPI=6
 SLOT=0
 IUSE=""
 DESCRIPTION="fix_libtool_files.sh"
+HOMEPAGE="https://ytrizja.de/zsropm/"
+LICENSE="GPL-2"
 KEYWORDS="amd64 arm x86"
 RDEPEND="sys-devel/gcc:*"
 

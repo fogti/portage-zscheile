@@ -5,7 +5,7 @@ EAPI=5
 inherit zserik-git-cmake
 
 DESCRIPTION="Zscheile tree text database Management Util 2"
-LICENSE="GPLv2"
+LICENSE="GPL-2"
 
 CMDEPEND="dev-db/rocksdb:="
 

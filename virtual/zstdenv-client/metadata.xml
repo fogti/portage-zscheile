@@ -2,11 +2,10 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer type="person">
-		<email>erik.zscheile.ytrizja@gmail.com</email>
+		<email>zseri.devel@ytrizja.de</email>
 		<name>Erik Zscheile</name>
 	</maintainer>
 	<use>
-		<flag name="flash">enable support for Adobe Flash</flag>
 		<flag name="games">install some games</flag>
 		<flag name="geosci">install additional applications for geo-science</flag>
 		<flag name="grub">pull in the GRUB bootloader</flag>

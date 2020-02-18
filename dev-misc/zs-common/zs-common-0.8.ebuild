@@ -7,7 +7,7 @@ inherit zserik-base
 
 DESCRIPTION="ZSerik Common - useful scripts"
 KEYWORDS="amd64 x86"
-IUSE="color linguas_de"
+IUSE="color l10n_de"
 
 RDEPEND=">=app-misc/zsoutils-0.0.4
 sys-apps/coreutils"
@@ -38,7 +38,7 @@ src_install() {
 	echo "install locales/index.sh"
 	doins locales/index.sh
 
-	if use linguas_de; then
+	if use l10n_de; then
 		echo "install locales/de.sh"
 		doins locales/de.sh
 	fi

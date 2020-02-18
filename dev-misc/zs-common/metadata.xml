@@ -2,10 +2,11 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer type="person">
-		<email>erik.zscheile.ytrizja@gmail.com</email>
+		<email>zseri.devel@ytrizja.de</email>
 		<name>Erik Zscheile</name>
 	</maintainer>
 	<use>
 		<flag name="color">enables terminal color output support</flag>
+		<flag name="l10n_de">enables support for german umlauts</flag>
 	</use>
 </pkgmetadata>

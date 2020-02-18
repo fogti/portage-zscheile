@@ -15,6 +15,7 @@ RDEPEND="
 	dev-tex/biber
 	dev-tex/glossaries
 	dev-tex/latex-beamer
+	dev-tex/latexmk
 	dev-texlive/texlive-latexextra
 	dev-texlive/texlive-fontsextra
 	dev-texlive/texlive-mathscience

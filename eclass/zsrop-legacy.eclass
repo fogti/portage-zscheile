@@ -3,7 +3,9 @@
 
 ### Zscheile Rollout Package eclass
 
-SRC_URI="https://ytrizja.duckdns.org/zsropm/${PN}.tar.gz -> zsrop-legacy-${P}.tar.gz"
+SRC_URI="https://ytrizja.de/zsropm/${PN}.tar.gz -> zsrop-legacy-${P}.tar.gz"
+HOMEPAGE="https://ytrizja.de/zsropm/"
+LICENSE="GPL-2"
 S="${WORKDIR}/${PN}"
 KEYWORDS="amd64 arm x86"
 SLOT="0"

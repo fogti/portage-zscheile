@@ -2,7 +2,12 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer type="person">
-		<email>erik.zscheile.ytrizja@gmail.com</email>
+		<email>zseri.devel@ytrizja.de</email>
 		<name>Erik Zscheile</name>
 	</maintainer>
+	<use>
+		<flag name="emacs">Enable Emacs Tex support</flag>
+		<flag name="l10n_de">Enable german lang pack</flag>
+		<flag name="l10n_en">Enable english lang pack</flag>
+	</use>
 </pkgmetadata>
