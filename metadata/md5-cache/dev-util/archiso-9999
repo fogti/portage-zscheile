@@ -1,0 +1,11 @@
+DEFINED_PHASES=unpack
+DEPEND=>=dev-vcs/git-1.8.2.1[curl]
+DESCRIPTION=Arch Linux livecd/liveusb generation scripts
+EAPI=6
+HOMEPAGE=https://wiki.archlinux.org/index.php/archiso
+KEYWORDS=-*
+LICENSE=GPL-2+
+RDEPEND=dev-libs/libisoburn dev-util/arch-install-scripts sys-fs/btrfs-progs sys-fs/dosfstools sys-fs/squashfs-tools www-client/lynx
+SLOT=0
+_eclasses_=git-r3	0d4635eeb5a96cd5315597a47eba25c9
+_md5_=ebd400da6500f1cc85a7b5da4d7a412a
