@@ -6,7 +6,7 @@ EAPI=4
 inherit zserik-minimal
 
 DESCRIPTION="ZSNIS - Zscheile Secure Network Information Service"
-KEYWORDS="~arm amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE="server"
 
 RDEPEND="net-analyzer/cryptcat

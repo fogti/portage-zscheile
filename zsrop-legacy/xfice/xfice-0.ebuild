@@ -4,6 +4,7 @@
 EAPI=6
 inherit zsrop-legacy
 DESCRIPTION="X11 session script for a combination of xfdesktop and icewm"
+KEYWORDS="amd64 x86"
 RDEPEND="
 	x11-wm/icewm
 	xfce-base/xfdesktop

@@ -9,7 +9,7 @@ IUSE="gpg hacking"
 # This ebuild is kw:unstable because fuse:3 is unstable.
 # hacking: dev-lang/go is needed for mvdan/sh (shfmt)
 
-KEYWORDS="-* ~arm ~amd64 ~x86"
+KEYWORDS="-* ~amd64 ~x86"
 RDEPEND="
 	app-arch/gzip
 	gpg? ( app-crypt/gnupg )

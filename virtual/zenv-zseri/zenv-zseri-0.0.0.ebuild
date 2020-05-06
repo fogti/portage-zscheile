@@ -7,7 +7,7 @@ inherit zserik-virtual
 
 DESCRIPTION="Zscheile, Erik's workplace environment"
 
-KEYWORDS="arm amd64 x86"
+KEYWORDS="~arm amd64 x86"
 IUSE=""
 
 RDEPEND="
