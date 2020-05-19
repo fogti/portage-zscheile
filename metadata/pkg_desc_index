@@ -87,6 +87,7 @@ net-nds/zsnis 0.1.4 0.1.5.2 0.1.6: ZSNIS - Zscheile Secure Network Information S
 sys-apps/moreutils 0.63: a collection of tools that nobody thought to write when Unix was young
 sys-apps/pacman 5.2.1: Archlinux's binary package manager
 sys-apps/pacman-mirrorlist 20200411: Repository list for Archlinux's binary package manager
+sys-cluster/ceph 15.2.1-r1: Ceph distributed filesystem
 sys-process/zsdoitduring 0.0.1: Zscheile Do-It-During Process Spawning Helper
 virtual/bedrocklinux-meta 0.1: Bedrock Linux build-time meta package
 virtual/zcmake-libfindmacros 0.2: Zscheile CMake virtual: LibFindMacros
