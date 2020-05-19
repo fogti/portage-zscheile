@@ -36,9 +36,9 @@ supervise_daemon_args="--user ${user} --group ${group}"
 : "${respawn_period:=1800}"
 
 : "${osd_respawn_delay:=15}"
-: "{osd_respawn_max:=10}"
+: "${osd_respawn_max:=10}"
 
-: "{radosgw_respawn_max:=5}"
+: "${radosgw_respawn_max:=5}"
 : "${radosgw_respawn_period:=30}"
 
 depend() {
