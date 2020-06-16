@@ -21,7 +21,7 @@ dev-db/zsdbtin 9999: Zscheile Database 7 tin
 dev-db/zstab 0.0.1 0.0.2 0.0.3: zstab - Zscheile Table Management
 dev-db/zstreedb 0.0.2 0.0.4: Zscheile tree text database Management Util
 dev-db/zstreedb2 0.0.2 0.0.3 0.0.4 9999: Zscheile tree text database Management Util 2
-dev-lang/crulz 0.0.1 0.0.2 0.0.3: a rust implementation of the 'crulz' macro language interpreter
+dev-lang/crulz 0.0.1 0.0.2 0.0.3 0.0.7: a rust implementation of the 'crulz' macro language interpreter
 dev-lang/zeiksh 0.2.4 0.2.5 0.2.6 0.2.7: Zscheile EIK shell script interpreter
 dev-lang/zpavinl 0.1.1: Zscheile ZPAVINL to C compiler
 dev-lang/zserik-sfvsl 0.2 0.3: ZSerik Simple Formula Variable Substitution Language - simple replace variables
