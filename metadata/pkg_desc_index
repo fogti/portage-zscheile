@@ -97,7 +97,7 @@ virtual/zenv-media 0.7.5: Erik Zscheile: media environment
 virtual/zenv-radio 0.1: Erik Zscheile: Environment for Amateur Radio
 virtual/zenv-shotcut 0.2: Erik Zscheile: Environment for Shotcut
 virtual/zenv-zseri 0.0.0: Zscheile, Erik's workplace environment
-virtual/zstdenv-client 0.2.4.9 0.2.5.3 0.2.6.0: Zscheile Standard Environment for Clients
+virtual/zstdenv-client 0.2.4.9 0.2.5.3 0.2.6.0 0.2.6.1: Zscheile Standard Environment for Clients
 virtual/zsys-kqueue 0.1: Erik Zscheile: virtual for kqueue(2) - native vs libkqueue
 x11-themes/audacious-themes 0.0.4-r1: Collection of XMMS themes for Audacious
 zeik-handles/spawn 0.2: Zscheile EIK handles typemodule spawn
