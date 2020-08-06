@@ -52,6 +52,8 @@ sys-cluster/ceph:system-boost - Use system dev-libs/boost instead of the bundled
 sys-cluster/ceph:uring - Build with support for sys-libs/liburing
 sys-cluster/ceph:xfs - Add xfs support
 sys-cluster/ceph:zfs - Add zfs support
+sys-cluster/lizardfs:cgi - Install CGI server and scripts.
+sys-cluster/lizardfs:fuse - Install the mfsmount utility.
 virtual/bedrocklinux-meta:gpg - Add gpg signature generation/verification support
 virtual/bedrocklinux-meta:hacking - Install developer/testing/hacking utilities
 virtual/zenv-latex:emacs - Enable Emacs Tex support

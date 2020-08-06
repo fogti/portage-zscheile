@@ -1,0 +1,12 @@
+BDEPEND=>=app-portage/elt-patches-20170815 || ( >=sys-devel/automake-1.16.1:1.16 >=sys-devel/automake-1.15.1:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DEFINED_PHASES=prepare test
+DEPEND=|| ( dev-lang/yasm dev-lang/nasm )
+DESCRIPTION=Intel Intelligent Storage Acceleration Library, Open Source Version
+EAPI=7
+HOMEPAGE=https://01.org/intel%C2%AE-storage-acceleration-library-open-source-version/ https://github.com/intel/isa-l
+KEYWORDS=~amd64
+LICENSE=BSD-3
+SLOT=0
+SRC_URI=https://github.com/intel/isa-l/archive/v2.17.0.tar.gz -> isa-l-2.17.0.tar.gz
+_eclasses_=autotools	7d999b62b8749fad43fff00620cedf47	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	1d91b03d42ab6308b5f4f6b598ed110e	toolchain-funcs	605c126bed8d87e4378d5ff1645330cb
+_md5_=7f1b15e6143030d70a9ed93949eadbf1

@@ -1,0 +1,26 @@
+spdlog (in-tree version) requires external libfmt
+diff --git a/cmake/Libraries.cmake b/cmake/Libraries.cmake
+index 0284f74..4c25cfe 100644
+--- a/cmake/Libraries.cmake
++++ b/cmake/Libraries.cmake
+@@ -7,6 +7,8 @@ endif()
+ 
+ # Find spdlog
+ 
++find_package(fmt REQUIRED)
++add_definitions(-DSPDLOG_FMT_EXTERNAL=1)
+ find_package(spdlog REQUIRED)
+ 
+ # Find standard libraries
+diff --git a/src/common/CMakeLists.txt b/src/common/CMakeLists.txt
+index be68c9e..953dfd8 100644
+--- a/src/common/CMakeLists.txt
++++ b/src/common/CMakeLists.txt
+@@ -43,6 +43,7 @@ endif()
+ if(JUDY_LIBRARY)
+   shared_target_link_libraries(mfscommon ${JUDY_LIBRARY})
+ endif()
++shared_target_link_libraries(mfscommon fmt::fmt)
+ 
+ create_unittest(mfscommon ${COMMON_TESTS} ../master/goal_config_loader.cc)
+ link_unittest(mfscommon mfscommon)
