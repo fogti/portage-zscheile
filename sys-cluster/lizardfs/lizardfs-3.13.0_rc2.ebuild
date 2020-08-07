@@ -31,7 +31,7 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	dev-libs/boost"
 
-PATCHES=( "${FILESDIR}"/${PV}-{shared-libs,spdlog-libfmt}.patch )
+PATCHES=( "${FILESDIR}"/${PV}-{libs,spdlog-libfmt}.patch )
 
 pkg_setup() {
 	enewgroup lizardfs
