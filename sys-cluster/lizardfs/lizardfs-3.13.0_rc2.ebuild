@@ -10,28 +10,28 @@ S="${WORKDIR}/${MY_P}"
 
 DESCRIPTION="LizardFS is an Open Source Distributed File System licenced under GPLv3."
 HOMEPAGE="https://lizardfs.org"
-SRC_URI="https://github.com/lizardfs/lizardfs/archive/${PV/_/-}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/lizardfs/${PN}/archive/${PV/_/-}.tar.gz -> ${P}.tar.gz"
 
 #EGIT_REPO_URI="https://github.com/lizardfs/lizardfs.git"
 #EGIT_COMMIT="v${PV/_/-}"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="cgi +fuse static-libs uraft"
+IUSE="client-lib +fuse uraft"
 
 RDEPEND="
 	app-text/asciidoc
+	dev-lang/python:=
 	dev-libs/judy
 	dev-libs/libfmt:=
 	dev-libs/spdlog:=
 	!sys-cluster/moosefs
 	amd64? ( dev-libs/isa-l )
-	cgi? ( dev-lang/python:= )
 	fuse? ( >=sys-fs/fuse-2.6:0= )"
 DEPEND="${RDEPEND}
 	dev-libs/boost"
 
-PATCHES=( "${FILESDIR}"/${PV}-{libs,spdlog-libfmt}.patch )
+PATCHES=( "${FILESDIR}"/"${PV}"-{spdlog-libfmt,lib-suffix,force-static-libs}.patch )
 
 pkg_setup() {
 	enewgroup lizardfs
@@ -46,10 +46,11 @@ src_configure() {
 		-DENABLE_DEBIAN_PATHS=YES
 		# the required libpolonaise isn't in-tree
 		-DENABLE_POLONAISE=NO
-		-DENABLE_URAFT=$(usex uraft)
-		-DSET_RC_BUILD_NUMBER=$(ver_cut 5)
+		-DENABLE_CLIENT_LIB=$(usex client-lib)
 		# the following would want to download stuff
 		-DENABLE_NFS_GANESHA=NO
+		-DENABLE_URAFT=$(usex uraft)
+		-DSET_RC_BUILD_NUMBER=$(ver_cut 5)
 	)
 
 	cmake-utils_src_configure

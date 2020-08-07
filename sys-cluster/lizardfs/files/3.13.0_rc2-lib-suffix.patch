@@ -1,0 +1,20 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 0d79d88..eb9da6f 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -40,13 +40,8 @@ option(ENABLE_REQUEST_LOG       "Enable logging request times"
+ option(USE_LEGACY_READ_MESSAGES "Enable sending old type of messages by mount"           OFF)
+ option(ENABLE_NFS_GANESHA       "Enable nfs-ganesha plugin"                              OFF)
+ 
+-get_property(LIB64 GLOBAL PROPERTY FIND_LIBRARY_USE_LIB64_PATHS)
+-if (LIB64)
+-  set(LIBSUFFIX "64")
+-else()
+-  set(LIBSUFFIX "")
+-endif()
+-message(STATUS "LIB64: ${LIB64}")
++set(LIBSUFFIX "${LIB_SUFFIX}")
++message(STATUS "LIBSUFFIX: ${LIBSUFFIX}")
+ 
+ if(ENABLE_DEBIAN_PATHS)
+   if (NOT CMAKE_INSTALL_PREFIX STREQUAL "/")
