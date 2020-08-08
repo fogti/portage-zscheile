@@ -1,3 +1,5 @@
+acct-group/lizardfs 0: A group for the LizardFS - Open Source Distributed File System
+acct-user/lizardfs 0: A user for LizardFS - Open Source Distributed File System
 app-admin/eselect-guile 1.2-r1: Manage multiple Guile versions on one system
 app-admin/eselect-vala 0.1.2: Eselect module to maintain vala compiler symlink
 app-admin/testdisk 7.1_pre20180322-r2: Checks and undeletes partitions + PhotoRec, signature based recovery tool

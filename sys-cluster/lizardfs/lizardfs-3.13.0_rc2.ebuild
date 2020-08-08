@@ -20,6 +20,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="client-lib +fuse uraft"
 
 RDEPEND="
+	acct-user/lizardfs
 	app-text/asciidoc
 	dev-lang/python:=
 	dev-libs/judy
@@ -32,11 +33,6 @@ DEPEND="${RDEPEND}
 	dev-libs/boost"
 
 PATCHES=( "${FILESDIR}"/"${PV}"-{spdlog-libfmt,lib-suffix,force-static-libs}.patch )
-
-pkg_setup() {
-	enewgroup lizardfs
-	enewuser lizardfs -1 -1 -1 lizardfs
-}
 
 src_configure() {
 	local mycmakeargs=(
@@ -54,10 +50,4 @@ src_configure() {
 	)
 
 	cmake-utils_src_configure
-}
-
-src_install() {
-	cmake-utils_src_install
-	diropts -m0750 -o lizardfs -g lizardfs
-	dodir "/var/lib/lizardfs"
 }
