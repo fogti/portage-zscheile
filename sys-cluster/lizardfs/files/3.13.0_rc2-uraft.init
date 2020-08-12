@@ -1,0 +1,65 @@
+#!/sbin/openrc-run
+
+# Note: this init script shouldn't be enabled simulateously to the
+# lizardfs-master init script!
+
+name="LizardFS ${RC_SVCNAME#lizardfs-} daemon"
+DAEMON="${DAEMON:-/usr/sbin/lizardfs-uraft}"
+MASTER="${MASTER:-/usr/sbin/mfsmaster}"
+pidfile="/run/${RC_SVCNAME}.pid"
+URAFT_ID="${RC_SVCNAME#lizardfs-uraft}"
+
+[ -e /etc/conf.d/lizardfs ] && . /etc/conf.d/lizardfs
+[ -e "/etc/conf.d/lizardfs-master${URAFT_ID}" ] && . "/etc/conf.d/lizardfs-master${URAFT_ID}"
+
+CONFIG_FILE="${CONFIG_FILE:-/etc/lizardfs/mfsmaster${URAFT_ID}.cfg}"
+[ -e "${CONFIG_FILE}" ] && MASTER_OPTS="${MASTER_OPTS} -c ${CONFIG_FILE}"
+MASTER_OPTS="${MASTER_OPTS} -o ha-cluster-managed -o initial-personality=shadow"
+
+command_user="${command_user:-lizardfs}"
+command_group="${command_group:-lizardfs}"
+DATA_PATH="${DATA_PATH:-/var/lib/lizardfs}"
+
+depend() {
+	use logger dns netmount
+	need net localmount
+}
+
+get_config_value_or() {
+	# parsing the value of config options from config file
+	local value="$(sed -e 's/[[:blank:]]*#.*$//' -n -e 's/^[[:blank:]]*'$1'[[:blank:]]*=[[:blank:]]*\(.*\)$/\1/p' "${CONFIG_FILE}" 2>/dev/null)"
+	printf '%s' ${value:-$2}
+}
+
+start() {
+	local DATA_PATH="$(get_config_value_or DATA_PATH /var/lib/lizardfs)"
+	local command_user="$(get_config_value_or WORKING_USER lizardfs)"
+	local command_group="$(get_config_value_or WORKING_GROUP lizardfs)"
+
+	checkpath --directory --owner "$command_user:$command_group" --mode 0755 "$DATA_PATH"
+
+	ebegin "Starting lizardfs-master(uraft)${URAFT_ID}"
+	"$MASTER" $MASTER_OPTS
+	eend $? || return $?
+
+	ebegin "Starting lizardfs-uraft${URAFT_ID}"
+	start-stop-daemon --start --exec "${DAEMON}" --pidfile "$pidfile" --make-pidfile \
+		--background --user "$command_user" --group "$command_group" -- $DAEMON_OPTS
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping lizardfs-master(uraft)${URAFT_ID}"
+	"$MASTER" $MASTER_OPTS
+	eend $? || return $?
+
+	ebegin "Stopping lizardfs-uraft${URAFT_ID}"
+	start-stop-daemon --stop --exec "${DAEMON}" --pidfile "$pidfile" --retry='TERM/30/KILL/5'
+	ret=$?
+	eend $ret
+	rm -f "$pidfile"
+	ebegin "Remove possible dangling floating IP"
+	/usr/sbin/lizardfs-uraft-helper drop-ip
+	eend $?
+	return $ret
+}

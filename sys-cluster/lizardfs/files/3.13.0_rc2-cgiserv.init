@@ -1,0 +1,14 @@
+#!/sbin/openrc-run
+
+command=/usr/sbin/lizardfs-cgiserver
+command_args="-H ${CGISERV_HOST} -P ${CGISERV_PORT} -R /usr/share/mfscgi"
+command_user="${command_user:-nobody}"
+command_group="${command_group:-nogroup}"
+start_stop_daemon_args="--background --make-pidfile --retry TERM/30/KILL/5"
+pidfile="${RC_PREFIX%/}/run/${RC_SVCNAME}.pid"
+name="LizardFS cgiserv server daemon"
+
+depend() {
+	use logger dns netmount
+	need net localmount
+}

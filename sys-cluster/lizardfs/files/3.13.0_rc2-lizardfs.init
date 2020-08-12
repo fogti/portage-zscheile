@@ -1,0 +1,47 @@
+#!/sbin/openrc-run
+
+name="LizardFS ${RC_SVCNAME#lizardfs-} daemon"
+extra_started_commands="reload"
+CONFIG_FILE="${CONFIG_FILE:-/etc/lizardfs/mfs${RC_SVCNAME#lizardfs-}.cfg}"
+
+[ -e /etc/conf.d/lizardfs ] && . /etc/conf.d/lizardfs
+
+depend() {
+	use netmount
+	need net localmount
+}
+
+get_config_value_or() {
+	# parsing the value of config options from config file
+	local value="$(sed -e 's/[[:blank:]]*#.*$//' -n -e 's/^[[:blank:]]*'$1'[[:blank:]]*=[[:blank:]]*\(.*\)$/\1/p' "${CONFIG_FILE}" 2>/dev/null)"
+	printf '%s' ${value:-$2}
+}
+
+check_dirs() {
+	local DATA_PATH="$(get_config_value_or DATA_PATH /var/lib/lizardfs)"
+	local command_user="$(get_config_value_or WORKING_USER lizardfs)"
+	local command_group="$(get_config_value_or WORKING_GROUP lizardfs)"
+	checkpath --directory --owner "$command_user:$command_group" --mode 0755 "$DATA_PATH"
+}
+
+daemon_do() {
+	local ACTION="$1" ACTDESC="$2"
+	shift 2
+	ebegin "${ACTDESC} ${RC_SVCNAME}"
+	"/usr/sbin/mfs${RC_SVCNAME#lizardfs-}" "${CONFIG_FILE:+-c $CONFIG_FILE}" "$@"
+	eend $?
+}
+
+start() {
+	check_dirs
+	daemon_do start Starting ${DAEMON_OPTS}
+}
+
+reload() {
+	check_dirs
+	daemon_do reload Reloading
+}
+
+stop() {
+	daemon_do stop Stopping
+}

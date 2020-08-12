@@ -1,5 +1,5 @@
 acct-group/lizardfs 0: A group for the LizardFS - Open Source Distributed File System
-acct-user/lizardfs 0: A user for LizardFS - Open Source Distributed File System
+acct-user/lizardfs 0 1: A user for LizardFS - Open Source Distributed File System
 app-admin/eselect-guile 1.2-r1: Manage multiple Guile versions on one system
 app-admin/eselect-vala 0.1.2: Eselect module to maintain vala compiler symlink
 app-admin/testdisk 7.1_pre20180322-r2: Checks and undeletes partitions + PhotoRec, signature based recovery tool
@@ -91,7 +91,7 @@ sys-apps/moreutils 0.63: a collection of tools that nobody thought to write when
 sys-apps/pacman 5.2.1: Archlinux's binary package manager
 sys-apps/pacman-mirrorlist 20200411: Repository list for Archlinux's binary package manager
 sys-cluster/ceph 15.2.1-r1: Ceph distributed filesystem
-sys-cluster/lizardfs 3.12.0-r2 3.13.0_rc2: LizardFS is an Open Source Distributed File System licenced under GPLv3.
+sys-cluster/lizardfs 3.12.0-r2 3.13.0_rc2 3.13.0_rc2-r1: LizardFS is an Open Source Distributed File System licenced under GPLv3.
 sys-process/zsdoitduring 0.0.1: Zscheile Do-It-During Process Spawning Helper
 virtual/bedrocklinux-meta 0.1: Bedrock Linux build-time meta package
 virtual/zcmake-libfindmacros 0.2: Zscheile CMake virtual: LibFindMacros
