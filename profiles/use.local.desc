@@ -5,6 +5,7 @@
 app-admin/testdisk:ewf - Include ewf library
 app-admin/testdisk:ntfs - Include the ability to read NTFS filesystems
 app-admin/testdisk:reiserfs - Include reiserfs reading ability
+app-misc/ca-certificates:cacert - Include root certificates from CAcert (http://www.cacert.org/) and Software in the Public Interest (http://www.spi-inc.org/)
 dev-db/rocksdb:bzip2 - Add support for bzip2 compression
 dev-db/rocksdb:gflags - Add support for gflags
 dev-db/rocksdb:lz4 - Add support for lz4 compression
@@ -29,6 +30,7 @@ net-misc/zprd:daemontools - Install files for djb's daemontools (only supported 
 net-misc/zprd:pingd - Install the ZPRD ping daemon
 net-misc/zprd:tbb - Add experimental optimizations utilizing Intel's Thread Building Blocks
 net-nds/zsnis:server - installs the zsnis server
+sys-apps/debianutils:installkernel - Install /sbin/installkernel script (for Linux). installkernel is required whenever a kernel will be installed via make install
 sys-apps/moreutils:perl - Install scripts written in Perl
 sys-apps/pacman:doc - Install extended documentation using app-doc/doxygen. (Man pages are included by default.)
 sys-apps/pacman:gpg - Enable GPG signature verification using app-crypt/gpgme
