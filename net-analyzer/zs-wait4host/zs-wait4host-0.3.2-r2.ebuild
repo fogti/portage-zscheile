@@ -12,6 +12,7 @@ DEPEND="net-analyzer/fping"
 RDEPEND="net-analyzer/fping"
 
 src_configure() {
+	sed -i "s#fping localhost#true#g" zs-guess-fping || die
 	local guessed_fping="$(./zs-guess-fping)"
 	if [ -n "${guessed_fping}" ]; then
 		einfo "use fping = '${guessed_fping}'"
@@ -19,15 +20,13 @@ src_configure() {
 		die "unable to guess fping location"
 	fi
 	for i in zs-wait4host zs-wait4host-inf; do
-		echo "patch $i"
-		sed -i "s#\$(zs-guess-fping)#${guessed_fping}#g" "$i"
-		sed -i "s/\[ \"\$FPING\" \]/\[ -x \"\$FPING\" \]/g" "$i"
+		sed -i "s#\$(zs-guess-fping)#${guessed_fping}#g" "$i" || die
+		sed -i "s/\[ \"\$FPING\" \]/\[ -x \"\$FPING\" \]/g" "$i" || die
 	done
 }
 
 src_install() {
 	for i in zs-wait4host zs-wait4host-inf; do
-		echo "install $i"
 		dobin $i
 	done
 }
