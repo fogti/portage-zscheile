@@ -6,7 +6,7 @@ ___ECLASS_ONCE_ZSERIK_MINIMAL="recur -_+^+_- spank"
 
 inherit zserik-virtual
 
-HOMEPAGE="http://ytrizja.duckdns.org/index.php"
+HOMEPAGE="https://ytrizja.de/"
 SRC_URI="mirror://ytrizja/${P}.tar.gz"
 LICENSE="GPL-3+"
 fi

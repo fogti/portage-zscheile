@@ -18,43 +18,15 @@ dev-lang/crulz:compile - enable byte-compiling (incl. reusing compilates) suppor
 dev-misc/zs-common:color - enables terminal color output support
 dev-misc/zs-common:l10n_de - enables support for german umlauts
 dev-misc/zsppr:zsdatab - Add support for the zsppr "form letter" feature based on zsdatab
-dev-scheme/guile:debug-malloc - Include malloc debugging code
-dev-scheme/guile:deprecated - Enable deprecated features
-dev-scheme/guile:networking - Include networking interfaces
-dev-scheme/guile:regex - Include regular expression interfaces
-media-gfx/geeqie:gpu-accel - Enable GPU acceleration support - experimental
-media-gfx/geeqie:gtk3 - Link against x11-libs/gtk+:3 instead of x11-libs/gtk+:2
-media-gfx/geeqie:map - Enable items map display - experimental
 media-metad/mat2:nautilus - Add support for the nautilus context-menu
 net-misc/zprd:daemontools - Install files for djb's daemontools (only supported svc)
 net-misc/zprd:pingd - Install the ZPRD ping daemon
-net-misc/zprd:tbb - Add experimental optimizations utilizing Intel's Thread Building Blocks
 net-nds/zsnis:server - installs the zsnis server
 sys-apps/debianutils:installkernel - Install /sbin/installkernel script (for Linux). installkernel is required whenever a kernel will be installed via make install
 sys-apps/moreutils:perl - Install scripts written in Perl
 sys-apps/pacman:doc - Install extended documentation using app-doc/doxygen. (Man pages are included by default.)
 sys-apps/pacman:gpg - Enable GPG signature verification using app-crypt/gpgme
-sys-cluster/ceph:babeltrace - Add support for LTTng babeltrace
-sys-cluster/ceph:cephfs - Build support for cephfs, a POSIX compatible filesystem built on top of ceph
-sys-cluster/ceph:dpdk - Enable DPDK messaging
-sys-cluster/ceph:fuse - Build fuse client
-sys-cluster/ceph:grafana - Install grafana dashboards
-sys-cluster/ceph:kafka - Rados Gateway's pubsub support for Kafka push endpoint
-sys-cluster/ceph:lttng - Add support for LTTng
-sys-cluster/ceph:mgr - Build the ceph-mgr daemon
-sys-cluster/ceph:nss - Use dev-libs/nss for cryptography
-sys-cluster/ceph:numa - Use sys-process/numactl for numa support in rocksdb
-sys-cluster/ceph:openssl - Use dev-libs/openssl
-sys-cluster/ceph:pmdk - Enable PMDK libraries
-sys-cluster/ceph:rabbitmq - Use rabbitmq-c to build rgw amqp push endpoint
-sys-cluster/ceph:radosgw - Add radosgw support
-sys-cluster/ceph:rbd-rwl - Enable librbd persistent write back cache
-sys-cluster/ceph:spdk - Enable SPDK user-mode storage driver toolkit
-sys-cluster/ceph:system-boost - Use system dev-libs/boost instead of the bundled one
-sys-cluster/ceph:uring - Build with support for sys-libs/liburing
-sys-cluster/ceph:xfs - Add xfs support
-sys-cluster/ceph:zfs - Add zfs support
-sys-cluster/lizardfs:cgi - Install CGI server and scripts.
+sys-cluster/lizardfs:client-lib - Build and install client libraries.
 sys-cluster/lizardfs:fuse - Install the mfsmount utility.
 virtual/bedrocklinux-meta:gpg - Add gpg signature generation/verification support
 virtual/bedrocklinux-meta:hacking - Install developer/testing/hacking utilities
@@ -66,6 +38,5 @@ virtual/zenv-radio:ax25 - Enable AX.25 support
 virtual/zstdenv-client:games - install some games
 virtual/zstdenv-client:geosci - install additional applications for geo-science
 virtual/zstdenv-client:grub - pull in the GRUB bootloader
-virtual/zstdenv-client:kernel - install packages which depend upon a kernel (needed for bootstrap)
 virtual/zstdenv-client:xdm - install a X display manager
 virtual/zstdenv-client:xfce - pull in XFCE4

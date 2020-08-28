@@ -1,15 +1,12 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2020 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=5
+EAPI=6
 
-inherit zserik-base
+inherit zserik-minimal
 
 DESCRIPTION="ZConfCtl - Zscheile Configurations Control"
 KEYWORDS="arm amd64 x86"
-RDEPEND="$RDEPEND
-app-shells/bash
-sys-apps/coreutils"
 
 src_install() {
 	dobin zconfctl

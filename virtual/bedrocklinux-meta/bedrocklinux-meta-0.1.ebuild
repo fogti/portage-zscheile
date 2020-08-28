@@ -1,7 +1,7 @@
-# Copyright 1999-2019 Gentoo Foundation
+# Copyright 1999-2020 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=5
+EAPI=6
 inherit zserik-virtual
 DESCRIPTION="Bedrock Linux build-time meta package"
 IUSE="gpg hacking"

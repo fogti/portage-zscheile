@@ -1,9 +1,9 @@
-# Copyright 1999-2019 Gentoo Foundation
+# Copyright 1999-2020 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=6
+EAPI=7
 
-inherit git-r3 cmake-utils
+inherit git-r3 cmake
 
 DESCRIPTION="Extracts and records individual MP3 file tracks from shoutcast streams"
 HOMEPAGE="http://streamripper.sourceforge.net"
@@ -11,7 +11,7 @@ EGIT_REPO_URI="https://github.com/zserik/streamripper.git"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-* ~amd64 ~arm ~x86 ~amd64-linux ~x86-linux ~x86-macos"
+KEYWORDS="-* ~amd64 ~arm ~x86 ~x86-macos"
 IUSE=""
 
 RDEPEND="media-libs/libmad

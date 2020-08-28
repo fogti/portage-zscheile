@@ -1,7 +1,7 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2020 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=4
+EAPI=6
 
 inherit zserik-minimal
 
@@ -16,17 +16,12 @@ server? (
 )"
 
 src_install() {
-	echo install zsniclient
 	dobin zsniclient
 
 	if use server; then
 		dodir /etc/zsnis
-
-		echo install zsniserver/run
 		exeinto /etc/zsniserver
 		doexe run
-
-		echo install zsniserver/log/run
 		exeinto /etc/zsniserver/log
 		newexe logrun run
 	fi

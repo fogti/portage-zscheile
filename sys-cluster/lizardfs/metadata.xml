@@ -5,12 +5,16 @@
 		<email>rich0@gentoo.org</email>
 		<name>Richard Freeman</name>
 	</maintainer>
-	<longdescription>MooseFS is a fault tolerant, network distributed file system.
+	<maintainer type="person">
+		<email>zseri.devel@ytrizja.de</email>
+		<name>Erik Zscheile</name>
+	</maintainer>
+	<longdescription>LizardFS is a fault tolerant, network distributed file system.
 	It spreads data over several physical servers which are visible to the user as one resource.
-	For standard file operations MooseFS acts as other Unix-alike file systems
+	For standard file operations LizardFS acts as other Unix-alike file systems
 	</longdescription>
 	<use>
-		<flag name="cgi">Install CGI server and scripts.</flag>
+		<flag name="client-lib">Build and install client libraries.</flag>
 		<flag name="fuse">Install the mfsmount utility.</flag>
 	</use>
 </pkgmetadata>

@@ -5,4 +5,9 @@
 		<email>zseri.devel@ytrizja.de</email>
 		<name>Erik Zscheile</name>
 	</maintainer>
+	<longdescription>
+	zsjed is a data split semi-steganography tool.
+	It splits a file and embeds it into many other files,
+	recoverable.
+	</longdescription>
 </pkgmetadata>

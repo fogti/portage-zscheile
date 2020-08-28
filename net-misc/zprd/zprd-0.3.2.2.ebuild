@@ -1,7 +1,7 @@
-# Copyright 1999-2018 Gentoo Foundation
+# Copyright 1999-2020 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=5
+EAPI=7
 
 inherit zserik-cmake
 
@@ -10,7 +10,7 @@ KEYWORDS="arm amd64 x86"
 LICENSE="GPL-3"
 HOMEPAGE="https://github.com/zserik/zprd.git"
 
-IUSE="+daemontools +debug +ipv6 +pingd"
+IUSE="+daemontools debug +ipv6 +pingd"
 REQUIRED_USE="pingd? ( daemontools )"
 RESTRICT="debug? ( strip )"
 

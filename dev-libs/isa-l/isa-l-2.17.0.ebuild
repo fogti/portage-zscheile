@@ -1,4 +1,4 @@
-# Copyright 1999-2020 Gentoo Foundation
+# Copyright 1999-2020 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -10,7 +10,7 @@ DESCRIPTION="Intel Intelligent Storage Acceleration Library, Open Source Version
 HOMEPAGE="https://01.org/intel%C2%AE-storage-acceleration-library-open-source-version/ https://github.com/intel/isa-l"
 SRC_URI="https://github.com/intel/isa-l/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
-LICENSE="BSD-3"
+LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64"
 

@@ -1,9 +1,8 @@
-# Copyright 1999-2019 Gentoo Foundation
+# Copyright 1999-2020 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=5
+EAPI=7
 inherit zserik-cmake
-
 DESCRIPTION="Zscheile simple universal Preprocessor"
 KEYWORDS="amd64 arm x86"
 IUSE="zsdatab"
@@ -31,8 +30,8 @@ src_configure() {
 	fi
 
 	local mycmakeargs=(
-		$(cmake-utils_use_find_package zsdatab "$ZSDATAB_CMN")
+		$(cmake_use_find_package zsdatab "$ZSDATAB_CMN")
 	)
 
-	cmake-utils_src_configure
+	cmake_src_configure
 }

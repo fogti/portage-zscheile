@@ -1,7 +1,7 @@
 # Copyright 1999-2020 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI="7"
+EAPI=7
 
 inherit autotools
 
@@ -22,7 +22,7 @@ LICENSE="GPL-2"
 SLOT="0/10"
 
 IUSE="curl debug doc +gpg libressl test"
-DEPEND="
+CMDEPEND="
 	app-crypt/archlinux-keyring
 	app-arch/libarchive:=[lzma]
 	gpg? ( >=app-crypt/gpgme-1.13.0:= )
@@ -31,13 +31,14 @@ DEPEND="
 	libressl? ( dev-libs/libressl:0= )
 	virtual/libiconv
 	virtual/libintl
+"
+DEPEND="${CMDEPEND}
 	test? (
 		sys-apps/fakeroot
 		sys-apps/fakechroot
 	)
 "
-RDEPEND="
-	${DEPEND}
+RDEPEND="${CMDEPEND}
 	sys-apps/pacman-mirrorlist
 "
 BDEPEND="

@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit eutils autotools cmake-utils flag-o-matic user
+inherit autotools cmake flag-o-matic
 
 MY_P="lizardfs-${PV/_/-}"
 S="${WORKDIR}/${MY_P}"
@@ -51,11 +51,11 @@ src_configure() {
 		-DSET_RC_BUILD_NUMBER=$(ver_cut 5)
 	)
 
-	cmake-utils_src_configure
+	cmake_src_configure
 }
 
 src_install() {
-	cmake-utils_src_install
+	cmake_src_install
 
 	local FILESPFX="${FILESDIR}/${PV}-"
 

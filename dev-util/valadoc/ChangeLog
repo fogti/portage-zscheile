@@ -1,9 +1,0 @@
-# ChangeLog for dev-util/valadoc
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: $
-
-*valadoc-9999 (12 Jul 2011)
-
-  12 Jul 2011; <ulltor@gentoo.org> +valadoc-9999.ebuild, +metadata.xml:
-  Added valadoc
-

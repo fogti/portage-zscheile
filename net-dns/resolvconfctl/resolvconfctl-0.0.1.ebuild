@@ -1,9 +1,9 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2020 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=5
+EAPI=6
 
-inherit zserik-base
+inherit zserik-minimal
 
 DESCRIPTION="resolvconfctl - another /etc/resolv.conf manager"
 KEYWORDS="arm amd64 x86"

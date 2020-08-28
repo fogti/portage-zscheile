@@ -1,7 +1,43 @@
-# Copyright 1999-2019 Gentoo Foundation
+# Copyright 1999-2020 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 # Erik Kai Alain Zscheile <erik.zscheile.ytrizja@gmail.com> (10 Jan 2020)
 # contains a critical bug which results in runtime failures
 # (missing return value in some cases)
 =dev-db/zstreedb-0.0.3
+
+# Erik Kai Alain Zscheile <erik.zscheile.ytrizja@gmail.com> (28 Aug 2020)
+# Zscheile Rollout Package Manager has long been deprecated and
+# is removed in favor of zsrop-legacy/... packages; abandoned upstream
+app-misc/zsropm
+
+# Erik Kai Alain Zscheile <erik.zscheile.ytrizja@gmail.com> (28 Aug 2020)
+# old zsdatab versions which have long been deprecated and
+# aren't supported anymore
+<dev-db/zsdatab-0.2.6
+
+# Erik Kai Alain Zscheile <erik.zscheile.ytrizja@gmail.com> (28 Aug 2020)
+# libkqueue is incompatible with the gentoo python ebuilds
+# and caused breakages.
+# Warning: if you emerged python after libkqueue successfully,
+# possible with some manual workarounds, you should re-emerge it soon
+# after unmerging dev-libs/libkqueue to avoid breakage in the future
+dev-libs/libkqueue
+
+# Erik Kai Alain Zscheile <erik.zscheile.ytrizja@gmail.com> (28 Aug 2020)
+# Masked for removal (was experimental, currently unused,
+# abandoned upstream)
+dev-util/zsdimlc
+
+# Erik Kai Alain Zscheile <erik.zscheile.ytrizja@gmail.com> (28 Aug 2020)
+# Zscheile GTR Parser - C++ class getter generator has long been
+# deprecated and is removed now (was flagged as boilerplate)
+dev-util/zsgtrp
+
+# Erik Kai Alain Zscheile <erik.zscheile.ytrizja@gmail.com> (28 Aug 2020)
+# These utilities never worked as expected
+net-misc/zsroute-utils
+
+# Erik Kai Alain Zscheile <erik.zscheile.ytrizja@gmail.com> (28 Aug 2020)
+# Abandoned upstream
+net-misc/zsx5n
