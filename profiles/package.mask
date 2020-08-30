@@ -6,6 +6,11 @@
 # (missing return value in some cases)
 =dev-db/zstreedb-0.0.3
 
+# Erik Kai Alain Zscheile <erik.zscheile.ytrizja@gmail.com> (30 Aug 2020)
+# zsoutils was originally used by rollout.sh (precursor to zsropm)
+# and used by zs-common; basically abandoned since 2017 - masked for removal
+app-misc/zsoutils
+
 # Erik Kai Alain Zscheile <erik.zscheile.ytrizja@gmail.com> (28 Aug 2020)
 # Zscheile Rollout Package Manager has long been deprecated and
 # is removed in favor of zsrop-legacy/... packages; abandoned upstream
@@ -23,6 +28,20 @@ app-misc/zsropm
 # possible with some manual workarounds, you should re-emerge it soon
 # after unmerging dev-libs/libkqueue to avoid breakage in the future
 dev-libs/libkqueue
+
+# Erik Kai Alain Zscheile <erik.zscheile.ytrizja@gmail.com> (30 Aug 2020)
+# zsadv was only used for a small amount of time by some utilities
+# (e.g. zsropm) - masked for removal
+dev-libs/zsadv
+
+# Erik Kai Alain Zscheile <erik.zscheile.ytrizja@gmail.com> (30 Aug 2020)
+# zscore was only used by zsoutils - masked for removal
+dev-libs/zscore
+
+# Erik Kai Alain Zscheile <erik.zscheile.ytrizja@gmail.com> (30 Aug 2020)
+# zs-common is basically abandoned since 2017 and is replaced by
+# dev-misc/zs-shlib-* packages - masked for removal
+dev-misc/zs-common
 
 # Erik Kai Alain Zscheile <erik.zscheile.ytrizja@gmail.com> (28 Aug 2020)
 # Masked for removal (was experimental, currently unused,
