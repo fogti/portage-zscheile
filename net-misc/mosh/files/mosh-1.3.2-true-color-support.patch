@@ -1,0 +1,133 @@
+From ac0492cb5a703ae979b5c923182671d2688b025a Mon Sep 17 00:00:00 2001
+From: "Kang.Jianbin" <kjbmail@gmail.com>
+Date: Fri, 27 Oct 2017 02:47:24 +0800
+Subject: [PATCH] Add true color support.
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+Implement true color support define in:
+https://en.wikipedia.org/wiki/ANSI_escape_code
+
+The sequence is:
+ESC[ … 38;2;;; … m Select RGB foreground color
+ESC[ … 48;2;;; … m Select RGB background color
+---
+ src/terminal/terminalframebuffer.cc | 22 ++++++++++++++++++++--
+ src/terminal/terminalframebuffer.h  | 13 +++++++++++--
+ src/terminal/terminalfunctions.cc   | 19 +++++++++++++++++++
+ 3 files changed, 50 insertions(+), 4 deletions(-)
+
+diff --git a/src/terminal/terminalframebuffer.cc b/src/terminal/terminalframebuffer.cc
+index 222f533b..84b06cb3 100644
+--- a/src/terminal/terminalframebuffer.cc
++++ b/src/terminal/terminalframebuffer.cc
+@@ -505,6 +505,8 @@ void Renditions::set_foreground_color( int num )
+ {
+   if ( (0 <= num) && (num <= 255) ) {
+     foreground_color = 30 + num;
++  } else if ( is_true_color( num ) ) {
++    foreground_color = num;
+   }
+ }
+ 
+@@ -512,6 +514,8 @@ void Renditions::set_background_color( int num )
+ {
+   if ( (0 <= num) && (num <= 255) ) {
+     background_color = 40 + num;
++  } else if ( is_true_color( num ) ) {
++    background_color = num;
+   }
+ }
+ 
+@@ -544,13 +548,27 @@ std::string Renditions::sgr( void ) const
+ 
+   ret.append( "m" );
+ 
+-  if ( foreground_color > 37 ) { /* use 256-color set */
++  if ( is_true_color( foreground_color ) ) {
++    char col[64];
++    snprintf( col, 64, "\033[38;2;%d;%d;%dm",
++              (foreground_color >> 16) & 0xff,
++              (foreground_color >> 8) & 0xff,
++              foreground_color & 0xff);
++    ret.append( col );
++  } else if ( foreground_color > 37 ) { /* use 256-color set */
+     char col[ 64 ];
+     snprintf( col, 64, "\033[38;5;%dm", foreground_color - 30 );
+     ret.append( col );
+   }
+ 
+-  if ( background_color > 47 ) { /* use 256-color set */
++  if ( is_true_color( background_color ) ) {
++    char col[64];
++    snprintf( col, 64, "\033[48;2;%d;%d;%dm",
++              (background_color >> 16) & 0xff,
++              (background_color >> 8) & 0xff,
++              background_color & 0xff);
++    ret.append( col );
++  } else if ( background_color > 47 ) { /* use 256-color set */
+     char col[ 64 ];
+     snprintf( col, 64, "\033[48;5;%dm", background_color - 40 );
+     ret.append( col );
+diff --git a/src/terminal/terminalframebuffer.h b/src/terminal/terminalframebuffer.h
+index f159aea7..ffa39cd8 100644
+--- a/src/terminal/terminalframebuffer.h
++++ b/src/terminal/terminalframebuffer.h
+@@ -56,8 +56,9 @@ namespace Terminal {
+     typedef enum { bold, faint, italic, underlined, blink, inverse, invisible, SIZE } attribute_type;
+ 
+     // all together, a 32 bit word now...
+-    unsigned int foreground_color : 12;
+-    unsigned int background_color : 12;
++    static const unsigned int true_color_mask = 0x80000000;
++    unsigned int foreground_color;
++    unsigned int background_color;
+   private:
+     unsigned int attributes : 8;
+ 
+@@ -68,6 +69,14 @@ namespace Terminal {
+     void set_rendition( color_type num );
+     std::string sgr( void ) const;
+ 
++    static unsigned int make_true_color( unsigned int r, unsigned int g, unsigned int b ) {
++      return true_color_mask | (r << 16) | (g << 8) | b;
++    }
++
++    static bool is_true_color(unsigned int color) {
++      return (color & true_color_mask) != 0;
++    }
++
+     bool operator==( const Renditions &x ) const
+     {
+       return ( attributes == x.attributes )
+diff --git a/src/terminal/terminalfunctions.cc b/src/terminal/terminalfunctions.cc
+index a0210e34..679cc883 100644
+--- a/src/terminal/terminalfunctions.cc
++++ b/src/terminal/terminalfunctions.cc
+@@ -424,6 +424,25 @@ static void CSI_SGR( Framebuffer *fb, Dispatcher *dispatch )
+       i += 2;
+       continue;
+     }
++
++    /* True color support: ESC[ ... [34]8;2;<r>;<g>;<b> ... m */
++    if ( (rendition == 38 || rendition == 48) &&
++         (dispatch->param_count() - i >= 5) &&
++         (dispatch->getparam( i+1, -1 ) == 2)) {
++      unsigned int red = dispatch->getparam(i+2, 0);
++      unsigned int green = dispatch->getparam(i+3, 0);
++      unsigned int blue = dispatch->getparam(i+4, 0);
++      unsigned int color;
++
++      color = Renditions::make_true_color( red, green, blue );
++
++      (rendition == 38) ?
++        fb->ds.set_foreground_color( color ) :
++        fb->ds.set_background_color( color );
++      i += 4;
++      continue;
++    }
++
+     fb->ds.add_rendition( rendition );
+   }
+ }

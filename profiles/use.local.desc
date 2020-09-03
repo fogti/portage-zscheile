@@ -19,6 +19,12 @@ dev-misc/zs-common:color - enables terminal color output support
 dev-misc/zs-common:l10n_de - enables support for german umlauts
 dev-misc/zsppr:zsdatab - Add support for the zsppr "form letter" feature based on zsdatab
 media-metad/mat2:nautilus - Add support for the nautilus context-menu
+net-misc/mosh:client - Build network client
+net-misc/mosh:examples - Include example scripts
+net-misc/mosh:mosh-hardening - Enable compiler and linker options to frustrate memory corruption exploits
+net-misc/mosh:server - Build network server
+net-misc/mosh:ufw - Install net-firewall/ufw rule set
+net-misc/mosh:utempter - Include libutempter support
 net-misc/zprd:daemontools - Install files for djb's daemontools (only supported svc)
 net-misc/zprd:pingd - Install the ZPRD ping daemon
 net-nds/zsnis:server - installs the zsnis server
