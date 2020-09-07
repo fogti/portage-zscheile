@@ -56,7 +56,7 @@ dev-util/zsgenheader 0.0.4: ZsGenHeader - generate header from c source file
 games-board/aisleriot 3.22.5: A collection of solitaire card games for GNOME
 games-misc/wyel 0.0.1: Zscheile WYEL Game
 games-misc/wyel-sdl 0.0.8.1 0.0.8.2 9999: Zscheile WYEL Game - Advanced SDL version
-media-metad/mat2 0.10.1: Metadata anonymisation toolkit
+media-metad/mat2 0.10.1 0.11.0: Metadata anonymisation toolkit
 media-metad/zsjed 0.2 0.3: Zscheile data split semi-steganography tool
 media-sound/streamripper 1.9999: Extracts and records individual MP3 file tracks from shoutcast streams
 media-sound/zsaus 0.1: Zscheile Remote Audio Suite using ALSA
