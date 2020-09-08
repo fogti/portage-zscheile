@@ -73,6 +73,13 @@ dev-util/zsdimlc
 # deprecated and is removed now (was flagged as boilerplate)
 dev-util/zsgtrp
 
+# Erik Zscheile <erik.zscheile.ytrizja@gmail.com> (2020-09-08)
+# Zscheile Peer Routing Daemon is abandoned and deprecated
+# since 2019 and for my own use case I switched to use
+# BIRD + wireguard. This package will stay in the repo
+# until mid 2021.
+net-misc/zprd
+
 # Erik Zscheile <erik.zscheile.ytrizja@gmail.com> (2020-08-28)
 # These utilities never worked as expected
 net-misc/zsroute-utils
