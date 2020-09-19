@@ -15,6 +15,7 @@ if [[ $PV == *9999* ]]; then
 fi
 
 DESCRIPTION="A simple C++17 ThreadPool implementation - zserik's fork"
+IUSE+="static-libs"
 CMDEPEND="
 	virtual/pkgconfig
 	!dev-cpp/ThreadPool
@@ -25,6 +26,7 @@ RDEPEND+="
 $CMDEPEND"
 
 multilib_src_configure() {
+	local emesonargs=( -Ddefault_library="$(use static-libs && echo both || echo shared)" )
 	meson_src_configure
 }
 
