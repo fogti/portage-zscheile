@@ -14,6 +14,7 @@ app-misc/zout-ng 0.0.3.2: Zscheile (Action) Output Formatting Tool - Next Genera
 app-misc/zsgcfgfpath 0.0.4: get config file path - gentoo cfg-filename determine utility
 app-misc/zsoutils 0.0.5: ZS Outils - output utilitys - multi call binary
 app-misc/zsrecursil 0.0.9: ZS Recursil - directory recursion tool
+dev-cpp/ThreadPool-zserik 9999: A simple C++17 ThreadPool implementation - zserik's fork
 dev-db/rocksdb 5.13.3 5.14.2 5.17.2 5.18.3: A Persistent Key-Value Store for Flash and RAM Storage
 dev-db/zsdatab 0.2.8 0.2.9 0.3.0: Zscheile data text table Management
 dev-db/zsdbtin 9999: Zscheile Database 7 tin
@@ -77,6 +78,7 @@ sys-apps/pacman-mirrorlist 99999999: Repository list for Archlinux's binary pack
 sys-cluster/lizardfs 3.13.0_rc2-r1 3.13.0_rc3: LizardFS is an Open Source Distributed File System licenced under GPLv3.
 sys-process/zsdoitduring 0.0.1: Zscheile Do-It-During Process Spawning Helper
 virtual/bedrocklinux-meta 0.1: Bedrock Linux build-time meta package
+virtual/cpp-ThreadPool 0.0: virtual for dev-cpp/ThreadPool... providers
 virtual/zcmake-libfindmacros 0.2: Zscheile CMake virtual: LibFindMacros
 virtual/zenv-arduino 0.1: Erik Zscheile: Environment for Arduino IDE
 virtual/zenv-latex 0.0.8: Zscheile LaTeX Environment
