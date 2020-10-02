@@ -1,45 +1,45 @@
 # Copyright 1999-2020 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-# Erik Zscheile <erik.zscheile.ytrizja@gmail.com> (2020-01-10)
+# Erik Zscheile <zseri.devel@ytrizja.de> (2020-01-10)
 # contains a critical bug which results in runtime failures
 # (missing return value in some cases)
 =dev-db/zstreedb-0.0.3
 
-# Erik Zscheile <erik.zscheile.ytrizja@gmail.com> (2020-08-30)
+# Erik Zscheile <zseri.devel@ytrizja.de> (2020-08-30)
 # zsoutils was originally used by rollout.sh (precursor to zsropm)
 # and used by zs-common; basically abandoned since 2017 - masked for removal
 app-misc/zsoutils
 
-# Erik Zscheile <erik.zscheile.ytrizja@gmail.com> (2020-08-28)
+# Erik Zscheile <zseri.devel@ytrizja.de> (2020-08-28)
 # Zscheile Rollout Package Manager has long been deprecated and
 # is removed in favor of zsrop-legacy/... packages; abandoned upstream
 app-misc/zsropm
 
-# Erik Zscheile <erik.zscheile.ytrizja@gmail.com> (2020-08-28)
+# Erik Zscheile <zseri.devel@ytrizja.de> (2020-08-28)
 # old zsdatab versions which have long been deprecated and
 # aren't supported anymore
 <dev-db/zsdatab-0.2.6
 
-# Erik Zscheile <erik.zscheile.ytrizja@gmail.com> (2020-08-30)
+# Erik Zscheile <zseri.devel@ytrizja.de> (2020-08-30)
 # Blocking known broken rustc versions
 # 1.45.0: https://github.com/rust-lang/rust/issues/74739
 # 1.45.1: https://github.com/rust-lang/rust/issues/74954
 =dev-lang/rust-1.45.0
 =dev-lang/rust-1.45.1
 
-# Erik Zscheile <erik.zscheile.ytrizja@gmail.com> (2020-08-30)
+# Erik Zscheile <zseri.devel@ytrizja.de> (2020-08-30)
 # Blocking known broken rustc versions
 # 1.46.0: https://github.com/rust-lang/rust/issues/54540
 =dev-lang/rust-1.46.0
 
-# Erik Zscheile <erik.zscheile.ytrizja@gmail.com> (2020-09-03)
+# Erik Zscheile <zseri.devel@ytrizja.de> (2020-09-03)
 # Masked for removal (abandoned upstream since mid 2017 and long deprecated)
 dev-lang/zeiksh
 dev-libs/zeik-handles
 zeik-handles/spawn
 
-# Erik Zscheile <erik.zscheile.ytrizja@gmail.com> (2020-08-28)
+# Erik Zscheile <zseri.devel@ytrizja.de> (2020-08-28)
 # libkqueue is incompatible with the gentoo python ebuilds
 # and caused breakages.
 # Warning: if you emerged python after libkqueue successfully,
@@ -47,46 +47,53 @@ zeik-handles/spawn
 # after unmerging dev-libs/libkqueue to avoid breakage in the future
 dev-libs/libkqueue
 
-# Erik Zscheile <erik.zscheile.ytrizja@gmail.com> (2020-08-30)
+# Erik Zscheile <zseri.devel@ytrizja.de> (2020-08-30)
 # zsadv was only used for a small amount of time by some utilities
 # (e.g. zsropm) - masked for removal
 dev-libs/zsadv
 
-# Erik Zscheile <erik.zscheile.ytrizja@gmail.com> (2020-08-30)
+# Erik Zscheile <zseri.devel@ytrizja.de> (2020-08-30)
 # zscore was only used by zsoutils - masked for removal
 dev-libs/zscore
 
-# Erik Zscheile <erik.zscheile.ytrizja@gmail.com> (2020-08-30)
+# Erik Zscheile <zseri.devel@ytrizja.de> (2020-08-30)
 # zs-common is basically abandoned since 2017 and is replaced by
 # dev-misc/zs-shlib-* packages - masked for removal
 dev-misc/zs-common
 
-# Erik Zscheile <erik.zscheile.ytrizja@gmail.com> (2020-09-03)
+# Erik Zscheile <zseri.devel@ytrizja.de> (2020-09-03)
 # Masked for removal (abandoned upstream and deprecated)
 dev-misc/zsconf
 
-# Erik Zscheile <erik.zscheile.ytrizja@gmail.com> (2020-08-28)
+# Erik Zscheile <zseri.devel@ytrizja.de> (2020-08-28)
 # Masked for removal (was experimental, currently unused,
 # abandoned upstream)
 dev-util/zsdimlc
 
-# Erik Zscheile <erik.zscheile.ytrizja@gmail.com> (2020-08-28)
+# Erik Zscheile <zseri.devel@ytrizja.de> (2020-08-28)
 # Zscheile GTR Parser - C++ class getter generator has long been
 # deprecated and is removed now (was flagged as boilerplate)
 dev-util/zsgtrp
 
-# Erik Zscheile <erik.zscheile.ytrizja@gmail.com> (2020-09-08)
+# Erik Zscheile <zseri.devel@ytrizja.de> (2020-10-02)
+# This tool was never used on more than a few machines.
+# I thus declare it as deprecated, installs should be
+# ported to use net-dns/openresolv instead.
+# Masked for removal.
+net-dns/resolvconfctl
+
+# Erik Zscheile <zseri.devel@ytrizja.de> (2020-09-08)
 # Zscheile Peer Routing Daemon is abandoned and deprecated
 # since 2019 and for my own use case I switched to use
 # BIRD + wireguard. This package will stay in the repo
 # until mid 2021.
 net-misc/zprd
 
-# Erik Zscheile <erik.zscheile.ytrizja@gmail.com> (2020-08-28)
+# Erik Zscheile <zseri.devel@ytrizja.de> (2020-08-28)
 # These utilities never worked as expected
 net-misc/zsroute-utils
 
-# Erik Zscheile <erik.zscheile.ytrizja@gmail.com> (2020-09-03)
+# Erik Zscheile <zseri.devel@ytrizja.de> (2020-09-03)
 # Masked for removal (abandoned upstream and deprecated)
 # These utilities were experimental and never reached a
 # certain usefulness and usability.
