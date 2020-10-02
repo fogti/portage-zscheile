@@ -36,6 +36,8 @@ app-misc/zsropm
 # Erik Zscheile <erik.zscheile.ytrizja@gmail.com> (2020-09-03)
 # Masked for removal (abandoned upstream since mid 2017 and long deprecated)
 dev-lang/zeiksh
+dev-libs/zeik-handles
+zeik-handles/spawn
 
 # Erik Zscheile <erik.zscheile.ytrizja@gmail.com> (2020-08-28)
 # libkqueue is incompatible with the gentoo python ebuilds

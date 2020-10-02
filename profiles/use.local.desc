@@ -15,8 +15,6 @@ dev-db/rocksdb:tbb - Add support for Intels Thread Building Blocks library
 dev-db/rocksdb:tools - Build RocksDB CLI tools
 dev-db/rocksdb:zstd - Add support for zstd compression
 dev-lang/crulz:compile - enable byte-compiling (incl. reusing compilates) support
-dev-misc/zs-common:color - enables terminal color output support
-dev-misc/zs-common:l10n_de - enables support for german umlauts
 dev-misc/zsppr:zsdatab - Add support for the zsppr "form letter" feature based on zsdatab
 media-metad/mat2:nautilus - Add support for the nautilus context-menu
 net-misc/mosh:client - Build network client
@@ -27,7 +25,6 @@ net-misc/mosh:ufw - Install net-firewall/ufw rule set
 net-misc/mosh:utempter - Include libutempter support
 net-misc/zprd:daemontools - Install files for djb's daemontools (only supported svc)
 net-misc/zprd:pingd - Install the ZPRD ping daemon
-net-nds/zsnis:server - installs the zsnis server
 sys-apps/debianutils:installkernel - Install /sbin/installkernel script (for Linux). installkernel is required whenever a kernel will be installed via make install
 sys-apps/moreutils:perl - Install scripts written in Perl
 sys-apps/pacman:doc - Install extended documentation using app-doc/doxygen. (Man pages are included by default.)
