@@ -76,7 +76,7 @@ virtual/zenv-latex 0.0.8: Zscheile LaTeX Environment
 virtual/zenv-media 0.7.6: Erik Zscheile: media environment
 virtual/zenv-radio 0.1: Erik Zscheile: Environment for Amateur Radio
 virtual/zenv-shotcut 0.2: Erik Zscheile: Environment for Shotcut
-virtual/zstdenv-client 0.2.6.2 0.2.6.3: Zscheile Standard Environment for Clients
+virtual/zstdenv-client 0.2.6.2 0.2.6.3 0.2.6.4: Zscheile Standard Environment for Clients
 x11-themes/audacious-themes 0.0.4-r1: Collection of XMMS themes for Audacious
 zeik-handles/spawn 0.2: Zscheile EIK handles typemodule spawn
 zsrop-legacy/autologin 0: Automatic login using init and mingetty
