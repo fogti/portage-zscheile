@@ -2,8 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
-# media-libs/mutagen:python3_9 is not available
-PYTHON_COMPAT=( python3_{7,8} )
+PYTHON_COMPAT=( python3_{7,8,9} )
 inherit distutils-r1 xdg-utils
 
 DESCRIPTION="Metadata anonymisation toolkit"
