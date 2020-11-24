@@ -22,6 +22,7 @@ IUSE="client-lib +fuse"
 CMDEPEND="
 	app-text/asciidoc
 	dev-lang/python:=
+	dev-libs/boost:=
 	dev-libs/judy
 	dev-libs/libfmt:=
 	dev-libs/spdlog:=
@@ -36,8 +37,7 @@ RDEPEND="
 	acct-user/lizardfs
 "
 DEPEND+="
-	${CMDEPEND}
-	dev-libs/boost"
+	${CMDEPEND}"
 
 src_configure() {
 	local mycmakeargs=(

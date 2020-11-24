@@ -66,7 +66,7 @@ sys-apps/debianutils 4.9.1: A selection of tools from Debian
 sys-apps/moreutils 0.63: a collection of tools that nobody thought to write when Unix was young
 sys-apps/pacman 5.2.1: Archlinux's binary package manager
 sys-apps/pacman-mirrorlist 99999999: Repository list for Archlinux's binary package manager
-sys-cluster/lizardfs 3.13.0_rc2-r1 3.13.0_rc3: LizardFS is an Open Source Distributed File System licenced under GPLv3.
+sys-cluster/lizardfs 3.13.0_rc3: LizardFS is an Open Source Distributed File System licenced under GPLv3.
 sys-process/zsdoitduring 0.0.1: Zscheile Do-It-During Process Spawning Helper
 virtual/bedrocklinux-meta 0.1: Bedrock Linux build-time meta package
 virtual/cpp-ThreadPool 0.0: virtual for dev-cpp/ThreadPool... providers
