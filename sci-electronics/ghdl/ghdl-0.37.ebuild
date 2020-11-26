@@ -4,13 +4,13 @@
 EAPI=7
 
 ADA_COMPAT=( gnat_2017 gnat_2018 gnat_2019 )
-inherit ada
+inherit ada multilib
 
 DESCRIPTION="VHDL 2008/93/87 simulator"
 HOMEPAGE="http://ghdl.free.fr/"
 SRC_URI="https://github.com/ghdl/ghdl/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
-IUSE=""
+IUSE="synth"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
@@ -19,9 +19,15 @@ REQUIRED_USE="${ADA_REQUIRED_USE}"
 DEPEND="${ADA_DEPS}"
 RDEPEND="${DEPEND}"
 
+src_prepare() {
+	default
+	sed -e 's#$(prefix)/lib$#$(prefix)/'"$(get_libdir)"'#g' -i "${S}/Makefile.in" \
+		|| die 'unable to fix library install path'
+}
+
 src_configure() {
 	ada_export GCC GNATMAKE
-	./configure
+	./configure --prefix="${EPREFIX}"/usr --disable-werror $(use_enable synth)
 }
 
 src_compile() {
