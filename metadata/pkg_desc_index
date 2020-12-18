@@ -22,7 +22,7 @@ dev-db/zstreedb2 0.0.4 9999: Zscheile tree text database Management Util 2
 dev-lang/crulz 0.0.3 0.0.7: a rust implementation of the 'crulz' macro language interpreter
 dev-lang/zserik-sfvsl 0.3: ZSerik Simple Formula Variable Substitution Language - simple replace variables
 dev-lang/zxtw 0.0.7: Zscheile XTW interpreter
-dev-libs/cgicc 3.2.16: A C++ class library for writing CGI applications
+dev-libs/cgicc 3.2.16 3.2.19: A C++ class library for writing CGI applications
 dev-libs/isa-l 2.17.0 2.29.0: Intel Intelligent Storage Acceleration Library, Open Source Version
 dev-libs/libowlevelzs 0.0.1 0.0.2 0.0.3 9999: Zscheile Lowlevel library
 dev-libs/libzsdbps 9999: Zscheile database misc serialization library

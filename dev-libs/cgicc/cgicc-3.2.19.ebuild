@@ -1,7 +1,7 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2020 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=6
+EAPI=7
 
 inherit autotools
 
@@ -14,11 +14,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc examples static-libs"
 
-RDEPEND=""
 DEPEND="doc? ( app-doc/doxygen )"
 
 PATCHES=(
-	"${FILESDIR}/3.2.10-fix-pkgconfig.patch"
 	"${FILESDIR}/3.2.16-fix-doc-building.patch"
 )
 
