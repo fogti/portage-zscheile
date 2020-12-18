@@ -5,7 +5,4 @@ EAPI=6
 inherit zserik-virtual
 DESCRIPTION="Zscheile CMake virtual: LibFindMacros"
 KEYWORDS="arm amd64 x86"
-RDEPEND="|| (
-	dev-misc/zcmake-libfindmacros
-	dev-libs/zsadv
-)"
+RDEPEND="dev-misc/zcmake-libfindmacros"
