@@ -21,6 +21,13 @@ app-misc/zsropm
 # aren't supported anymore
 <dev-db/zsdatab-0.2.6
 
+# Erik Zscheile <zseri.devel@ytrizja.de> (2020-12-18)
+# Masked for removal
+# - abandoned upstream since mid 2016
+# - far too limited compared to sqlite, rocksdb, zsdatab
+# - deprecated since zsdatab v0.2 was published
+dev-db/zstab
+
 # Erik Zscheile <zseri.devel@ytrizja.de> (2020-08-30)
 # Blocking known broken rustc versions
 # 1.45.0: https://github.com/rust-lang/rust/issues/74739
