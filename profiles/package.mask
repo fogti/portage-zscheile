@@ -46,6 +46,11 @@ dev-lang/zeiksh
 dev-libs/zeik-handles
 zeik-handles/spawn
 
+# Erik Zscheile <zseri.devel@ytrizja.de> (2020-12-23)
+# Unmaintained. Current release is from 2017.
+# No reverse dependencies. Removal in mid 2021.
+dev-libs/cgicc
+
 # Erik Zscheile <zseri.devel@ytrizja.de> (2020-08-28)
 # libkqueue is incompatible with the gentoo python ebuilds
 # and caused breakages.
@@ -81,6 +86,10 @@ dev-util/zsdimlc
 # Zscheile GTR Parser - C++ class getter generator has long been
 # deprecated and is removed now (was flagged as boilerplate)
 dev-util/zsgtrp
+
+# Erik Zscheile <zseri.devel@ytrizja.de> (2020-12-23)
+# I basically don't maintain the streamripper fork at all
+=media-sound/streamripper-1.9999
 
 # Erik Zscheile <zseri.devel@ytrizja.de> (2020-10-02)
 # This tool was never used on more than a few machines.
