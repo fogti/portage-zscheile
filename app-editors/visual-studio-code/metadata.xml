@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>samuelbernardo.mail@gmail.com</email>
+		<name>Samuel Bernardo</name>
+		<description>ssnb Gentoo Overlay</description>
+	</maintainer>
+	<maintainer type="person">
+		<email>zseri.devel@ytrizja.de</email>
+		<name>Erik Zscheile</name>
+		<description>zscheile Gentoo Overlay</description>
+	</maintainer>
+</pkgmetadata>
