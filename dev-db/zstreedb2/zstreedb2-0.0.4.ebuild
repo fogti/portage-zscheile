@@ -8,7 +8,7 @@ DESCRIPTION="Zscheile tree text database Management Util 2"
 LICENSE="GPL-2"
 KEYWORDS="arm amd64 x86"
 
-CMDEPEND="dev-db/rocksdb:="
+CMDEPEND="dev-libs/rocksdb:="
 
 DEPEND="$DEPEND
 $CMDEPEND"

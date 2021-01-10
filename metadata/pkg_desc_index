@@ -14,7 +14,6 @@ app-misc/zout-ng 0.0.3.2: Zscheile (Action) Output Formatting Tool - Next Genera
 app-misc/zsgcfgfpath 0.0.4: get config file path - gentoo cfg-filename determine utility
 app-misc/zsrecursil 0.0.9: ZS Recursil - directory recursion tool
 dev-cpp/ThreadPool-zserik 9999: A simple C++17 ThreadPool implementation - zserik's fork
-dev-db/rocksdb 5.13.3 5.14.2 5.17.2 5.18.3: A Persistent Key-Value Store for Flash and RAM Storage
 dev-db/zsdatab 0.2.8 0.2.9 0.3.0: Zscheile data text table Management
 dev-db/zsdbtin 9999: Zscheile Database 7 tin
 dev-db/zstab 0.0.2 0.0.3: zstab - Zscheile Table Management

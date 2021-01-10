@@ -67,6 +67,7 @@ dev-libs/zsadv
 # Erik Zscheile <zseri.devel@ytrizja.de> (2020-08-30)
 # zscore was only used by zsoutils - masked for removal
 dev-libs/zscore
+dev-misc/zscore
 
 # Erik Zscheile <zseri.devel@ytrizja.de> (2020-08-30)
 # zs-common is basically abandoned since 2017 and is replaced by

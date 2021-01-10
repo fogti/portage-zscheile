@@ -6,14 +6,6 @@ app-admin/testdisk:ewf - Include ewf library
 app-admin/testdisk:ntfs - Include the ability to read NTFS filesystems
 app-admin/testdisk:reiserfs - Include reiserfs reading ability
 app-misc/ca-certificates:cacert - Include root certificates from CAcert (http://www.cacert.org/) and Software in the Public Interest (http://www.spi-inc.org/)
-dev-db/rocksdb:bzip2 - Add support for bzip2 compression
-dev-db/rocksdb:gflags - Add support for gflags
-dev-db/rocksdb:lz4 - Add support for lz4 compression
-dev-db/rocksdb:minimal - Build RocksDBLite, a small and minimal version of RocksDB instead of the regular library
-dev-db/rocksdb:snappy - Add support for snappy compression
-dev-db/rocksdb:tbb - Add support for Intels Thread Building Blocks library
-dev-db/rocksdb:tools - Build RocksDB CLI tools
-dev-db/rocksdb:zstd - Add support for zstd compression
 dev-lang/crulz:compile - enable byte-compiling (incl. reusing compilates) support
 dev-misc/zsppr:zsdatab - Add support for the zsppr "form letter" feature based on zsdatab
 media-metad/mat2:nautilus - Add support for the nautilus context-menu
