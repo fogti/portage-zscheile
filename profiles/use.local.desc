@@ -5,7 +5,6 @@
 app-admin/testdisk:ewf - Include ewf library
 app-admin/testdisk:ntfs - Include the ability to read NTFS filesystems
 app-admin/testdisk:reiserfs - Include reiserfs reading ability
-app-misc/ca-certificates:cacert - Include root certificates from CAcert (http://www.cacert.org/) and Software in the Public Interest (http://www.spi-inc.org/)
 dev-lang/crulz:compile - enable byte-compiling (incl. reusing compilates) support
 dev-misc/zsppr:zsdatab - Add support for the zsppr "form letter" feature based on zsdatab
 media-metad/mat2:nautilus - Add support for the nautilus context-menu
@@ -17,7 +16,6 @@ net-misc/mosh:ufw - Install net-firewall/ufw rule set
 net-misc/mosh:utempter - Include libutempter support
 net-misc/zprd:daemontools - Install files for djb's daemontools (only supported svc)
 net-misc/zprd:pingd - Install the ZPRD ping daemon
-sys-apps/debianutils:installkernel - Install /sbin/installkernel script (for Linux). installkernel is required whenever a kernel will be installed via make install
 sys-apps/moreutils:perl - Install scripts written in Perl
 sys-apps/pacman:doc - Install extended documentation using app-doc/doxygen. (Man pages are included by default.)
 sys-apps/pacman:gpg - Enable GPG signature verification using app-crypt/gpgme

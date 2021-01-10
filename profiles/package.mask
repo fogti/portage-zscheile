@@ -117,3 +117,9 @@ net-misc/zsroute-utils
 net-misc/zsnetlaunch
 net-misc/zsx5n
 net-nds/zsnis
+
+# Erik Zscheile <zseri.devel@ytrizja.de> (2021-01-10)
+# Masked for removal (deprecated):
+#   media-video/shotcut is in the main tree, so this package
+#   isn't needed anymore.
+virtual/zenv-shotcut
