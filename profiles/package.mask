@@ -1,6 +1,11 @@
 # Copyright 1999-2020 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
+# Erik Zscheile <zseri.devel@ytrizja.de> (2021-01-11)
+# Masked for removal (abandoned upstream)
+# this is a really weak 'competitor' compared to ansible, chef, co...
+app-misc/zcmdrepo
+
 # Erik Zscheile <zseri.devel@ytrizja.de> (2020-01-10)
 # contains a critical bug which results in runtime failures
 # (missing return value in some cases)
