@@ -26,6 +26,10 @@ app-misc/zsropm
 # aren't supported anymore
 <dev-db/zsdatab-0.2.6
 
+# Erik Zscheile <zseri.devel@ytrizja.de> (2021-01-12)
+# Masked for removal (abandoned upstream)
+dev-db/zsdbtin
+
 # Erik Zscheile <zseri.devel@ytrizja.de> (2020-12-18)
 # Masked for removal
 # - abandoned upstream since mid 2016
