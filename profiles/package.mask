@@ -11,6 +11,12 @@ app-misc/zcmdrepo
 # (missing return value in some cases)
 =dev-db/zstreedb-0.0.3
 
+# Erik Zscheile <zseri.devel@ytrizja.de> (2021-01-18)
+# Masked for removal (abandoned upstream)
+# - frequently breaks when lmdb is upgraded
+#   (on-disk format changes)
+dev-db/zstreedb
+
 # Erik Zscheile <zseri.devel@ytrizja.de> (2020-08-30)
 # zsoutils was originally used by rollout.sh (precursor to zsropm)
 # and used by zs-common; basically abandoned since 2017 - masked for removal
@@ -24,7 +30,7 @@ app-misc/zsropm
 # Erik Zscheile <zseri.devel@ytrizja.de> (2020-08-28)
 # old zsdatab versions which have long been deprecated and
 # aren't supported anymore
-<dev-db/zsdatab-0.2.6
+<dev-db/zsdatab-0.2.8
 
 # Erik Zscheile <zseri.devel@ytrizja.de> (2021-01-12)
 # Masked for removal (abandoned upstream)
