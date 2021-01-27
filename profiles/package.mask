@@ -45,13 +45,6 @@ dev-db/zstab
 
 # Erik Zscheile <zseri.devel@ytrizja.de> (2020-08-30)
 # Blocking known broken rustc versions
-# 1.45.0: https://github.com/rust-lang/rust/issues/74739
-# 1.45.1: https://github.com/rust-lang/rust/issues/74954
-=dev-lang/rust-1.45.0
-=dev-lang/rust-1.45.1
-
-# Erik Zscheile <zseri.devel@ytrizja.de> (2020-08-30)
-# Blocking known broken rustc versions
 # 1.46.0: https://github.com/rust-lang/rust/issues/54540
 =dev-lang/rust-1.46.0
 
@@ -138,3 +131,7 @@ net-nds/zsnis
 #   media-video/shotcut is in the main tree, so this package
 #   isn't needed anymore.
 virtual/zenv-shotcut
+
+# Erik Zscheile <zseri.devel@ytrizja.de> (2021-01-27)
+# Masked for removal (obsolete). See also https://bugs.gentoo.org/657330
+zsrop-legacy/fix_libtool_files
