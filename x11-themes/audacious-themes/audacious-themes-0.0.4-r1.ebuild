@@ -5,7 +5,7 @@ EAPI=6
 
 DESCRIPTION="Collection of XMMS themes for Audacious"
 HOMEPAGE="http://legacy.xmms2.org"
-THEME_URI="mirror://ytrizja"
+THEME_URI="http://ytrizja.de/legacy/audacious-themes"
 SRC_URI="
 	${THEME_URI}/AbsoluteE_Xmms.zip
 	${THEME_URI}/Absolute_Blue-XMMS.zip
@@ -89,17 +89,17 @@ SRC_URI="
 	${THEME_URI}/nixamp2.tar.gz
 	${THEME_URI}/sword.tar.gz
 	${THEME_URI}/xmmearth.tar.gz
+	${THEME_URI}/wale_sub_contact.wsz
+	${THEME_URI}/wale_crobial_hypothesis.wsz
+	${THEME_URI}/wale_media_monks.wsz
+	${THEME_URI}/wale_atmosphere.wsz
+	${THEME_URI}/wale_RLH.wsz
+	${THEME_URI}/wale_poopshingles.wsz
 	http://www.kde-look.org/content/files/7947-plastik.zip
 	http://mrb.tagclan.com/files/Raj._I.O._Amp_in_2000.wsz
 	http://mrb.tagclan.com/files/bluemetal.wsz
 	http://mrb.tagclan.com/files/atlantis_-_meridian.wsz
 	http://mrb.tagclan.com/files/ace.wsz
-	http://waledawg.com/v5/files/wale_sub_contact.wsz
-	http://waledawg.com/v5/files/wale_crobial_hypothesis.wsz
-	http://waledawg.com/v5/files/wale_media_monks.wsz
-	http://waledawg.com/v5/files/wale_atmosphere.wsz
-	http://waledawg.com/v5/files/wale_RLH.wsz
-	http://waledawg.com/v5/files/wale_poopshingles.wsz
 	http://www.gnome-look.org/content/files/14870-Winamp5-XMMS.tar.bz2
 	http://www.winamp.com/skins/download/145489?/Nucleo_AlienMind_v5.wsz"
 
