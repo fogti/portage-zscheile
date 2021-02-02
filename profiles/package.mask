@@ -1,65 +1,65 @@
 # Copyright 1999-2020 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-# Erik Zscheile <zseri.devel@ytrizja.de> (2021-01-11)
+# zseri <zseri.devel@ytrizja.de> (2021-01-11)
 # Masked for removal (abandoned upstream)
 # this is a really weak 'competitor' compared to ansible, chef, co...
 app-misc/zcmdrepo
 
-# Erik Zscheile <zseri.devel@ytrizja.de> (2020-01-10)
+# zseri <zseri.devel@ytrizja.de> (2020-01-10)
 # contains a critical bug which results in runtime failures
 # (missing return value in some cases)
 =dev-db/zstreedb-0.0.3
 
-# Erik Zscheile <zseri.devel@ytrizja.de> (2021-01-18)
+# zseri <zseri.devel@ytrizja.de> (2021-01-18)
 # Masked for removal (abandoned upstream)
 # - frequently breaks when lmdb is upgraded
 #   (on-disk format changes)
 dev-db/zstreedb
 
-# Erik Zscheile <zseri.devel@ytrizja.de> (2020-08-30)
+# zseri <zseri.devel@ytrizja.de> (2020-08-30)
 # zsoutils was originally used by rollout.sh (precursor to zsropm)
 # and used by zs-common; basically abandoned since 2017 - masked for removal
 app-misc/zsoutils
 
-# Erik Zscheile <zseri.devel@ytrizja.de> (2020-08-28)
+# zseri <zseri.devel@ytrizja.de> (2020-08-28)
 # Zscheile Rollout Package Manager has long been deprecated and
 # is removed in favor of zsrop-legacy/... packages; abandoned upstream
 app-misc/zsropm
 
-# Erik Zscheile <zseri.devel@ytrizja.de> (2020-08-28)
+# zseri <zseri.devel@ytrizja.de> (2020-08-28)
 # old zsdatab versions which have long been deprecated and
 # aren't supported anymore
 <dev-db/zsdatab-0.2.8
 
-# Erik Zscheile <zseri.devel@ytrizja.de> (2021-01-12)
+# zseri <zseri.devel@ytrizja.de> (2021-01-12)
 # Masked for removal (abandoned upstream)
 dev-db/zsdbtin
 
-# Erik Zscheile <zseri.devel@ytrizja.de> (2020-12-18)
+# zseri <zseri.devel@ytrizja.de> (2020-12-18)
 # Masked for removal
 # - abandoned upstream since mid 2016
 # - far too limited compared to sqlite, rocksdb, zsdatab
 # - deprecated since zsdatab v0.2 was published
 dev-db/zstab
 
-# Erik Zscheile <zseri.devel@ytrizja.de> (2020-08-30)
+# zseri <zseri.devel@ytrizja.de> (2020-08-30)
 # Blocking known broken rustc versions
 # 1.46.0: https://github.com/rust-lang/rust/issues/54540
 =dev-lang/rust-1.46.0
 
-# Erik Zscheile <zseri.devel@ytrizja.de> (2020-09-03)
+# zseri <zseri.devel@ytrizja.de> (2020-09-03)
 # Masked for removal (abandoned upstream since mid 2017 and long deprecated)
 dev-lang/zeiksh
 dev-libs/zeik-handles
 zeik-handles/spawn
 
-# Erik Zscheile <zseri.devel@ytrizja.de> (2020-12-23)
+# zseri <zseri.devel@ytrizja.de> (2020-12-23)
 # Unmaintained. Current release is from 2017.
 # No reverse dependencies. Removal in mid 2021.
 dev-libs/cgicc
 
-# Erik Zscheile <zseri.devel@ytrizja.de> (2020-08-28)
+# zseri <zseri.devel@ytrizja.de> (2020-08-28)
 # libkqueue is incompatible with the gentoo python ebuilds
 # and caused breakages.
 # Warning: if you emerged python after libkqueue successfully,
@@ -67,58 +67,66 @@ dev-libs/cgicc
 # after unmerging dev-libs/libkqueue to avoid breakage in the future
 dev-libs/libkqueue
 
-# Erik Zscheile <zseri.devel@ytrizja.de> (2020-08-30)
+# zseri <zseri.devel@ytrizja.de> (2020-08-30)
 # zsadv was only used for a small amount of time by some utilities
 # (e.g. zsropm) - masked for removal
 dev-libs/zsadv
 
-# Erik Zscheile <zseri.devel@ytrizja.de> (2020-08-30)
+# zseri <zseri.devel@ytrizja.de> (2020-08-30)
 # zscore was only used by zsoutils - masked for removal
 dev-libs/zscore
 dev-misc/zscore
 
-# Erik Zscheile <zseri.devel@ytrizja.de> (2020-08-30)
+# zseri <zseri.devel@ytrizja.de> (2020-08-30)
 # zs-common is basically abandoned since 2017 and is replaced by
 # dev-misc/zs-shlib-* packages - masked for removal
 dev-misc/zs-common
 
-# Erik Zscheile <zseri.devel@ytrizja.de> (2020-09-03)
+# zseri <zseri.devel@ytrizja.de> (2020-09-03)
 # Masked for removal (abandoned upstream and deprecated)
 dev-misc/zsconf
 
-# Erik Zscheile <zseri.devel@ytrizja.de> (2020-08-28)
+# zseri <zseri.devel@ytrizja.de> (2021-02-02)
+# Masked for removal (abandoned upstream and deprecated)
+dev-misc/zsrc
+
+# zseri <zseri.devel@ytrizja.de> (2020-08-28)
 # Masked for removal (was experimental, currently unused,
 # abandoned upstream)
 dev-util/zsdimlc
 
-# Erik Zscheile <zseri.devel@ytrizja.de> (2020-08-28)
+# zseri <zseri.devel@ytrizja.de> (2020-08-28)
 # Zscheile GTR Parser - C++ class getter generator has long been
 # deprecated and is removed now (was flagged as boilerplate)
 dev-util/zsgtrp
 
-# Erik Zscheile <zseri.devel@ytrizja.de> (2020-12-23)
+# zseri <zseri.devel@ytrizja.de> (2021-02-02)
+# Masked for removal (abandoned upstream and deprecated)
+games-misc/wyel
+
+# zseri <zseri.devel@ytrizja.de> (2020-12-23)
 # I basically don't maintain the streamripper fork at all
 =media-sound/streamripper-1.9999
 
-# Erik Zscheile <zseri.devel@ytrizja.de> (2020-10-02)
+# zseri <zseri.devel@ytrizja.de> (2020-10-02)
 # This tool was never used on more than a few machines.
 # I thus declare it as deprecated, installs should be
 # ported to use net-dns/openresolv instead.
 # Masked for removal.
 net-dns/resolvconfctl
 
-# Erik Zscheile <zseri.devel@ytrizja.de> (2020-09-08)
+# zseri <zseri.devel@ytrizja.de> (2020-09-08)
 # Zscheile Peer Routing Daemon is abandoned and deprecated
 # since 2019 and for my own use case I switched to use
 # BIRD + wireguard. This package will stay in the repo
 # until mid 2021.
 net-misc/zprd
 
-# Erik Zscheile <zseri.devel@ytrizja.de> (2020-08-28)
+# zseri <zseri.devel@ytrizja.de> (2020-08-28)
 # These utilities never worked as expected
 net-misc/zsroute-utils
 
-# Erik Zscheile <zseri.devel@ytrizja.de> (2020-09-03)
+# zseri <zseri.devel@ytrizja.de> (2020-09-03)
 # Masked for removal (abandoned upstream and deprecated)
 # These utilities were experimental and never reached a
 # certain usefulness and usability.
@@ -126,12 +134,12 @@ net-misc/zsnetlaunch
 net-misc/zsx5n
 net-nds/zsnis
 
-# Erik Zscheile <zseri.devel@ytrizja.de> (2021-01-10)
+# zseri <zseri.devel@ytrizja.de> (2021-01-10)
 # Masked for removal (deprecated):
 #   media-video/shotcut is in the main tree, so this package
 #   isn't needed anymore.
 virtual/zenv-shotcut
 
-# Erik Zscheile <zseri.devel@ytrizja.de> (2021-01-27)
+# zseri <zseri.devel@ytrizja.de> (2021-01-27)
 # Masked for removal (obsolete). See also https://bugs.gentoo.org/657330
 zsrop-legacy/fix_libtool_files
