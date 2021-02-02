@@ -36,7 +36,7 @@ dev-misc/zs-shlib-optimize 0.0.2: Zscheile Shell Library - optimize
 dev-misc/zsppr 0.1.0 0.1.1: Zscheile simple universal Preprocessor
 dev-misc/zsrc 0.0.2: zsrc - Zscheile Resource Control framework
 dev-misc/zsretry 0.0.2: zsretry - Zscheile Retry (wait for successfulness) utils
-dev-ml/graphics 5.1.0: Graphics library for OCaml
+dev-ml/graphics 5.1.0 5.1.1: Graphics library for OCaml
 dev-util/arch-install-scripts 23 9999: Scripts to aid in installing Arch Linux
 dev-util/archiso 9999: Arch Linux livecd/liveusb generation scripts
 dev-util/zcbuild 0.3: Zscheile CMake build script
