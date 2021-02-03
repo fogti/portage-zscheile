@@ -6,6 +6,10 @@
 # this is a really weak 'competitor' compared to ansible, chef, co...
 app-misc/zcmdrepo
 
+# zseri <zseri.devel@ytrizja.de> (2021-02-03)
+# Masked for removal (abandoned upstream, enough alternatives)
+app-misc/zlock
+
 # zseri <zseri.devel@ytrizja.de> (2020-01-10)
 # contains a critical bug which results in runtime failures
 # (missing return value in some cases)
