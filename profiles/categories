@@ -1,7 +1,6 @@
 acct-group
 acct-user
 app-admin
-app-crypt
 app-doc
 app-misc
 dev-cpp
@@ -17,7 +16,6 @@ media-sound
 net-analyzer
 net-misc
 sci-electronics
-sys-apps
 sys-cluster
 sys-process
 virtual

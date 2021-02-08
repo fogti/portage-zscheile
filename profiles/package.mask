@@ -10,6 +10,37 @@ app-misc/zcmdrepo
 # Masked for removal (abandoned upstream, enough alternatives)
 app-misc/zlock
 
+# zseri <zseri.devel@ytrizja.de> (2020-08-30)
+# zsoutils was originally used by rollout.sh (precursor to zsropm)
+# and used by zs-common; basically abandoned since 2017 - masked for removal
+app-misc/zsoutils
+
+# zseri <zseri.devel@ytrizja.de> (2020-08-28)
+# Zscheile Rollout Package Manager has long been deprecated and
+# is removed in favor of zsrop-legacy/... packages; abandoned upstream
+app-misc/zsropm
+
+# zseri <zseri.devel@ytrizja.de> (2021-02-08)
+# Masked for removal (unmaintained)
+dev-cpp/ThreadPool-zserik
+virtual/cpp-ThreadPool
+
+# zseri <zseri.devel@ytrizja.de> (2020-12-18)
+# Masked for removal
+# - abandoned upstream since mid 2016
+# - far too limited compared to sqlite, rocksdb, zsdatab
+# - deprecated since zsdatab v0.2 was published
+dev-db/zstab
+
+# zseri <zseri.devel@ytrizja.de> (2020-08-28)
+# old zsdatab versions which have long been deprecated and
+# aren't supported anymore
+<dev-db/zsdatab-0.2.8
+
+# zseri <zseri.devel@ytrizja.de> (2021-01-12)
+# Masked for removal (abandoned upstream)
+dev-db/zsdbtin
+
 # zseri <zseri.devel@ytrizja.de> (2020-01-10)
 # contains a critical bug which results in runtime failures
 # (missing return value in some cases)
@@ -22,35 +53,15 @@ app-misc/zlock
 dev-db/zstreedb
 
 # zseri <zseri.devel@ytrizja.de> (2020-08-30)
-# zsoutils was originally used by rollout.sh (precursor to zsropm)
-# and used by zs-common; basically abandoned since 2017 - masked for removal
-app-misc/zsoutils
-
-# zseri <zseri.devel@ytrizja.de> (2020-08-28)
-# Zscheile Rollout Package Manager has long been deprecated and
-# is removed in favor of zsrop-legacy/... packages; abandoned upstream
-app-misc/zsropm
-
-# zseri <zseri.devel@ytrizja.de> (2020-08-28)
-# old zsdatab versions which have long been deprecated and
-# aren't supported anymore
-<dev-db/zsdatab-0.2.8
-
-# zseri <zseri.devel@ytrizja.de> (2021-01-12)
-# Masked for removal (abandoned upstream)
-dev-db/zsdbtin
-
-# zseri <zseri.devel@ytrizja.de> (2020-12-18)
-# Masked for removal
-# - abandoned upstream since mid 2016
-# - far too limited compared to sqlite, rocksdb, zsdatab
-# - deprecated since zsdatab v0.2 was published
-dev-db/zstab
-
-# zseri <zseri.devel@ytrizja.de> (2020-08-30)
 # Blocking known broken rustc versions
 # 1.46.0: https://github.com/rust-lang/rust/issues/54540
 =dev-lang/rust-1.46.0
+
+# zseri <zseri.devel@ytrizja.de> (2021-02-08)
+# Masked for removal (abandoned upstream)
+dev-lang/zserik-sfvsl
+dev-lang/zxtw
+dev-util/zs-sedscr-utils
 
 # zseri <zseri.devel@ytrizja.de> (2020-09-03)
 # Masked for removal (abandoned upstream since mid 2017 and long deprecated)
@@ -85,6 +96,7 @@ dev-misc/zscore
 # zs-common is basically abandoned since 2017 and is replaced by
 # dev-misc/zs-shlib-* packages - masked for removal
 dev-misc/zs-common
+zserik-base/zserik-common
 
 # zseri <zseri.devel@ytrizja.de> (2020-09-03)
 # Masked for removal (abandoned upstream and deprecated)
@@ -137,12 +149,6 @@ net-misc/zsroute-utils
 net-misc/zsnetlaunch
 net-misc/zsx5n
 net-nds/zsnis
-
-# zseri <zseri.devel@ytrizja.de> (2021-01-10)
-# Masked for removal (deprecated):
-#   media-video/shotcut is in the main tree, so this package
-#   isn't needed anymore.
-virtual/zenv-shotcut
 
 # zseri <zseri.devel@ytrizja.de> (2021-01-27)
 # Masked for removal (obsolete). See also https://bugs.gentoo.org/657330

@@ -1,3 +1,3 @@
+move dev-cpp/zsrecursil app-misc/zsrecursil
 move net-analyzer/zserik-wait-that-host net-analyzer/zs-wait4host
 move virtual/zstdenv virtual/zstdenv-client
-move zserik-base/zserik-common dev-misc/zs-common

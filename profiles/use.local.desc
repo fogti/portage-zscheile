@@ -16,9 +16,6 @@ net-misc/mosh:ufw - Install net-firewall/ufw rule set
 net-misc/mosh:utempter - Include libutempter support
 net-misc/zprd:daemontools - Install files for djb's daemontools (only supported svc)
 net-misc/zprd:pingd - Install the ZPRD ping daemon
-sys-apps/moreutils:perl - Install scripts written in Perl
-sys-apps/pacman:doc - Install extended documentation using app-doc/doxygen. (Man pages are included by default.)
-sys-apps/pacman:gpg - Enable GPG signature verification using app-crypt/gpgme
 sys-cluster/lizardfs:client-lib - Build and install client libraries.
 sys-cluster/lizardfs:fuse - Install the mfsmount utility.
 virtual/bedrocklinux-meta:gpg - Add gpg signature generation/verification support

@@ -1,1 +1,2 @@
 move dev-db/rocksdb dev-libs/rocksdb
+move virtual/zenv-shotcut media-video/shotcut
