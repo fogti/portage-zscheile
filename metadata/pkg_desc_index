@@ -4,7 +4,6 @@ app-admin/testdisk 7.1_pre20180322-r2: Checks and undeletes partitions + PhotoRe
 app-admin/zstxtns-utils 0.0.3: Zscheile utilities to deal with text based name service databases
 app-crypt/archlinux-keyring 20200422: GnuPG keyring of Archlinux developer keys
 app-doc/phrack 01 02 03 04 05 06 07 08 09 69: A Hacker magazine by the community, for the community
-app-editors/visual-studio-code 1.51.0 1.51.1 1.52.1: Multiplatform Visual Studio Code from Microsoft (binary version)
 app-misc/zcmdrepo 0.0.5: ZCMDRepo - Zscheile Command Repository Utils
 app-misc/zconfctl 0.0.1: ZConfCtl - Zscheile Configurations Control
 app-misc/zlock 0.0.2: zlock - Zscheile LOCKing manager
