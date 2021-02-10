@@ -4,7 +4,7 @@
 if [[ "${___ECLASS_ONCE_ZS_PERL}" != "recur -_+^+_- spank" ]] ; then
 ___ECLASS_ONCE_ZS_PERL="recur -_+^+_- spank"
 
-inherit zserik-minimal perl-functions
+inherit zs-minimal perl-functions
 
 DEPEND="dev-lang/perl"
 RDEPEND="$DEPEND"

@@ -12,7 +12,7 @@ app-misc/zsrecursil 0.0.9: ZS Recursil - directory recursion tool
 dev-cpp/ThreadPool-zserik 9999: A simple C++17 ThreadPool implementation - zserik's fork
 dev-db/zsdatab 0.2.8 0.2.9 0.3.0: Zscheile data text table Management
 dev-db/zstreedb 0.0.4: Zscheile tree text database Management Util
-dev-db/zstreedb2 0.0.4 9999: Zscheile tree text database Management Util 2
+dev-db/zstreedb2 0.0.4: Zscheile tree text database Management Util 2
 dev-lang/crulz 0.0.7: a rust implementation of the 'crulz' macro language interpreter
 dev-lang/zserik-sfvsl 0.3: ZSerik Simple Formula Variable Substitution Language - simple replace variables
 dev-lang/zxtw 0.0.7: Zscheile XTW interpreter
@@ -59,7 +59,7 @@ virtual/zenv-arduino 0.1: Erik Zscheile: Environment for Arduino IDE
 virtual/zenv-latex 0.0.8: Zscheile LaTeX Environment
 virtual/zenv-media 0.8: Erik Zscheile: media environment
 virtual/zenv-radio 0.1: Erik Zscheile: Environment for Amateur Radio
-virtual/zstdenv-client 0.2.6.2 0.2.6.3 0.2.6.4: Zscheile Standard Environment for Clients
+virtual/zstdenv-client 0.2.6.3 0.2.6.4: Zscheile Standard Environment for Clients
 x11-themes/audacious-themes 0.0.4-r1: Collection of XMMS themes for Audacious
 zsrop-legacy/autologin 0: Automatic login using init and mingetty
 zsrop-legacy/xfice 0: X11 session script for a combination of xfdesktop and icewm

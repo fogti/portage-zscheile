@@ -1,8 +1,8 @@
-# Copyright 1999-2020 Gentoo Authors
+# Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=6
-inherit zserik-minimal
+EAPI=7
+inherit zs-minimal
 
 DESCRIPTION="ZModulesCtl - Zscheile Modules Control"
 KEYWORDS="arm amd64 x86"

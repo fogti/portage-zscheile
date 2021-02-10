@@ -1,10 +1,10 @@
-# Copyright 1999-2019 Gentoo Foundation
+# Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-if [[ ${___ECLASS_ONCE_ZSERIK_GIT} != "recur -_+^+_- spank" ]] ; then
-___ECLASS_ONCE_ZSERIK_GIT="recur -_+^+_- spank"
+if [[ ${___ECLASS_ONCE_ZS_GIT} != "recur -_+^+_- spank" ]] ; then
+___ECLASS_ONCE_ZS_GIT="recur -_+^+_- spank"
 
-inherit zserik-minimal git-r3
+inherit zs-minimal git-r3
 
 SRC_URI=""
 HOMEPAGE="https://github.com/zserik/${PN}"

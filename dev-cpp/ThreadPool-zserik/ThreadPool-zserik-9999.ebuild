@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit zserik-minimal meson multilib-minimal
+inherit zs-minimal meson multilib-minimal
 
 if [[ $PV == *9999* ]]; then
 	inherit git-r3
