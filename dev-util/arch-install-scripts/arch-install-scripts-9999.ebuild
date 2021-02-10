@@ -1,1 +1,0 @@
-arch-install-scripts-23.ebuild
