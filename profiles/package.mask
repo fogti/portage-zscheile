@@ -106,6 +106,10 @@ dev-misc/zsconf
 # Masked for removal (abandoned upstream and deprecated)
 dev-misc/zsrc
 
+# zseri <zseri.devel@ytrizja.de> (2021-02-10)
+# Masked for removal (abandoned upstream and deprecated)
+dev-misc/zs-shlib-optimize
+
 # zseri <zseri.devel@ytrizja.de> (2020-08-28)
 # Masked for removal (was experimental, currently unused,
 # abandoned upstream)
