@@ -110,6 +110,11 @@ dev-misc/zsrc
 # Masked for removal (abandoned upstream and deprecated)
 dev-misc/zs-shlib-optimize
 
+# zseri <zseri.devel@ytrizja.de> (2021-02-14)
+# Masked for removal (was experimental, abandoned upstream and deprecated)
+dev-util/zsconfuz-alt
+dev-util/zsconfuz-common
+
 # zseri <zseri.devel@ytrizja.de> (2020-08-28)
 # Masked for removal (was experimental, currently unused,
 # abandoned upstream)
