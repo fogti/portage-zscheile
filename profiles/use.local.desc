@@ -5,9 +5,9 @@
 app-admin/testdisk:ewf - Include ewf library
 app-admin/testdisk:ntfs - Include the ability to read NTFS filesystems
 app-admin/testdisk:reiserfs - Include reiserfs reading ability
+app-misc/mat2:nautilus - Add support for the nautilus context-menu
 dev-lang/crulz:compile - enable byte-compiling (incl. reusing compilates) support
 dev-misc/zsppr:zsdatab - Add support for the zsppr "form letter" feature based on zsdatab
-media-metad/mat2:nautilus - Add support for the nautilus context-menu
 net-misc/mosh:client - Build network client
 net-misc/mosh:examples - Include example scripts
 net-misc/mosh:mosh-hardening - Enable compiler and linker options to frustrate memory corruption exploits

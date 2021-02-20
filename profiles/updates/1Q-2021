@@ -1,2 +1,4 @@
 move dev-db/rocksdb dev-libs/rocksdb
+move media-metad/mat2 app-misc/mat2
+move media-metad/zsjed app-misc/zsjed
 move virtual/zenv-shotcut media-video/shotcut
