@@ -8,10 +8,10 @@ DESCRIPTION="Zscheile Lowlevel Parsing library"
 KEYWORDS="arm amd64 x86"
 LICENSE="MIT"
 
-HOMEPAGE="https://github.com/zserik/libzsparsell.git"
+HOMEPAGE="https://github.com/zseri/libzsparsell"
 
 DEPEND="${DEPEND}
-	dev-libs/libowlevelzs"
+	=dev-libs/libowlevelzs-0.0.3"
 
 RDEPEND="${RDEPEND}
-	dev-libs/libowlevelzs"
+	=dev-libs/libowlevelzs-0.0.3"

@@ -87,6 +87,12 @@ dev-libs/libkqueue
 # (e.g. zsropm) - masked for removal
 dev-libs/zsadv
 
+# zseri <zseri.devel@ytrizja.de> (2021-03-06)
+# zsparsell and zsdbps were merged into dev-libs/libowlevelzs
+# Migration may not be trivial, but should be possible.
+dev-libs/libzsdbps
+dev-libs/libzsparsell
+
 # zseri <zseri.devel@ytrizja.de> (2020-08-30)
 # zscore was only used by zsoutils - masked for removal
 dev-libs/zscore

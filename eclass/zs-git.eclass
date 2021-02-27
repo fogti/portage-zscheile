@@ -7,7 +7,7 @@ ___ECLASS_ONCE_ZS_GIT="recur -_+^+_- spank"
 inherit zs-minimal git-r3
 
 SRC_URI=""
-HOMEPAGE="https://github.com/zserik/${PN}"
+HOMEPAGE="https://github.com/zseri/${PN}"
 EGIT_REPO_URI="${HOMEPAGE}.git"
 LICENSE="MIT"
 KEYWORDS="-* ~arm ~amd64 ~x86"

@@ -11,6 +11,6 @@ To add this repository to gentoo, put a file with the following content into
 [zscheile]
 location = /var/db/repos/zscheile
 sync-type = git
-sync-uri = https://github.com/zserik/portage-zscheile.git
+sync-uri = https://github.com/zseri/portage-zscheile.git
 auto-sync = yes
 ```

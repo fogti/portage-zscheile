@@ -20,8 +20,7 @@ dev-lang/zserik-sfvsl 0.3: ZSerik Simple Formula Variable Substitution Language 
 dev-lang/zxtw 0.0.7: Zscheile XTW interpreter
 dev-libs/cgicc 3.2.19: A C++ class library for writing CGI applications
 dev-libs/isa-l 2.29.0: Intel Intelligent Storage Acceleration Library, Open Source Version
-dev-libs/libowlevelzs 0.0.3 9999: Zscheile Lowlevel library
-dev-libs/libzsdbps 9999: Zscheile database misc serialization library
+dev-libs/libowlevelzs 0.0.3 0.1.1 9999: Zscheile Lowlevel library
 dev-libs/libzsnidcode 0.0.1 9999: Zscheile Node ID serialization library
 dev-libs/libzsparsell 0.0.3: Zscheile Lowlevel Parsing library
 dev-misc/zcmake-libfindmacros 0.0.1: LibFindMacros.cmake

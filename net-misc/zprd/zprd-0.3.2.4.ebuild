@@ -6,7 +6,7 @@ inherit zs-minimal cmake
 DESCRIPTION="ZPRD - Zscheile Peer Routing Daemon"
 KEYWORDS="arm amd64 x86"
 LICENSE="GPL-3"
-HOMEPAGE="https://github.com/zserik/zprd.git"
+HOMEPAGE="https://github.com/zseri/zprd.git"
 
 IUSE="+daemontools debug +ipv6 +pingd"
 REQUIRED_USE="pingd? ( daemontools )"

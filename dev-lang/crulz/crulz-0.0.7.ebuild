@@ -70,7 +70,7 @@ winapi-x86_64-pc-windows-gnu-0.4.0
 inherit cargo
 
 DESCRIPTION="a rust implementation of the 'crulz' macro language interpreter"
-HOMEPAGE="https://github.com/zserik/crulz-rs"
+HOMEPAGE="https://github.com/zseri/crulz-rs"
 SRC_URI="$(cargo_crate_uris ${CRATES})"
 RESTRICT="mirror"
 LICENSE="Apache-2.0"
