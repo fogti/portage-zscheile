@@ -9,4 +9,4 @@ KEYWORDS="arm amd64 x86"
 LICENSE="MIT"
 SRC_URI="https://github.com/zseri/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 HOMEPAGE="https://github.com/zseri/${PN}"
-SLOT=0
+SLOT="0/3"

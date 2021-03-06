@@ -4,3 +4,4 @@
 EAPI=7
 inherit zs-git cmake-multilib
 DESCRIPTION="Zscheile Lowlevel library"
+SLOT="0/9999"
