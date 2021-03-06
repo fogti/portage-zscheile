@@ -5,19 +5,14 @@ app-admin/zstxtns-utils 0.0.3: Zscheile utilities to deal with text based name s
 app-doc/phrack 01 02 03 04 05 06 07 08 09 69: A Hacker magazine by the community, for the community
 app-misc/mat2 0.10.1 0.11.0 9999: Metadata anonymisation toolkit
 app-misc/zconfctl 0.0.1: ZConfCtl - Zscheile Configurations Control
-app-misc/zlock 0.0.2: zlock - Zscheile LOCKing manager
 app-misc/zmodulesctl 0.0.4: ZModulesCtl - Zscheile Modules Control
 app-misc/zout-ng 0.0.3.2: Zscheile (Action) Output Formatting Tool - Next Generation
 app-misc/zsgcfgfpath 0.0.4: get config file path - gentoo cfg-filename determine utility
 app-misc/zsjed 0.3: Zscheile data split semi-steganography tool
 app-misc/zsrecursil 0.0.9: ZS Recursil - directory recursion tool
-dev-cpp/ThreadPool-zserik 9999: A simple C++17 ThreadPool implementation - zserik's fork
 dev-db/zsdatab 0.2.8 0.2.9 0.3.0: Zscheile data text table Management
-dev-db/zstreedb 0.0.4: Zscheile tree text database Management Util
 dev-db/zstreedb2 0.0.4: Zscheile tree text database Management Util 2
 dev-lang/crulz 0.0.7: a rust implementation of the 'crulz' macro language interpreter
-dev-lang/zserik-sfvsl 0.3: ZSerik Simple Formula Variable Substitution Language - simple replace variables
-dev-lang/zxtw 0.0.7: Zscheile XTW interpreter
 dev-libs/cgicc 3.2.19: A C++ class library for writing CGI applications
 dev-libs/isa-l 2.29.0: Intel Intelligent Storage Acceleration Library, Open Source Version
 dev-libs/libowlevelzs 0.0.3 0.1.1 9999: Zscheile Lowlevel library
@@ -29,9 +24,7 @@ dev-misc/zs-shlib-config 0.0.4: Zscheile Shell Library - config
 dev-misc/zs-shlib-core 0.0.6: Zscheile Shell Library Core
 dev-misc/zs-shlib-events 0.0.4.2: Zscheile Shell Library - events
 dev-misc/zs-shlib-extra 0.0.3: Zscheile Shell additional libraries
-dev-misc/zs-shlib-optimize 0.0.2: Zscheile Shell Library - optimize
 dev-misc/zsppr 0.1.0 0.1.1: Zscheile simple universal Preprocessor
-dev-misc/zsrc 0.0.2: zsrc - Zscheile Resource Control framework
 dev-misc/zsretry 0.0.2: zsretry - Zscheile Retry (wait for successfulness) utils
 dev-util/zcbuild 0.3: Zscheile CMake build script
 dev-util/zs-sedscr-utils 0.0.2: Zscheile SedScripts Utilities
@@ -39,7 +32,6 @@ dev-util/zsconfuz-alt 9999: ZSconfuz-alt - an experimental parallel configure pr
 dev-util/zsconfuz-common 9999: ZSconfuz* - an experimental parallel configure program - common utilities
 dev-util/zsgenheader 0.0.4: ZsGenHeader - generate header from c source file
 games-board/aisleriot 3.22.5: A collection of solitaire card games for GNOME
-games-misc/wyel 0.0.1: Zscheile WYEL Game
 games-misc/wyel-sdl 0.0.8.1 0.0.8.2 9999: Zscheile WYEL Game - Advanced SDL version
 media-sound/zsaus 0.1: Zscheile Remote Audio Suite using ALSA
 media-sound/zsmusicd 0.0.1 0.0.2: Zscheile Music Daemon
@@ -52,7 +44,6 @@ sci-electronics/ghdl 0.37: VHDL 2008/93/87 simulator
 sys-cluster/lizardfs 3.13.0_rc3: LizardFS is an Open Source Distributed File System licenced under GPLv3.
 sys-process/zsdoitduring 0.0.1: Zscheile Do-It-During Process Spawning Helper
 virtual/bedrocklinux-meta 0.1: Bedrock Linux build-time meta package
-virtual/cpp-ThreadPool 0.0: virtual for dev-cpp/ThreadPool... providers
 virtual/zcmake-libfindmacros 0.2: Zscheile CMake virtual: LibFindMacros
 virtual/zenv-arduino 0.1: Erik Zscheile: Environment for Arduino IDE
 virtual/zenv-latex 0.0.8: Zscheile LaTeX Environment
