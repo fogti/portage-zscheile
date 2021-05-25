@@ -24,7 +24,7 @@ REQUIRED_USE="${ADA_REQUIRED_USE}
 	synth? ( ada_target_gnat_2019 )
 "
 DEPEND="${ADA_DEPS}
-<sys-devel/llvm-12:=
+<sys-devel/llvm-11.1:=
 || (
 	sys-devel/llvm:10
 	sys-devel/llvm:11
