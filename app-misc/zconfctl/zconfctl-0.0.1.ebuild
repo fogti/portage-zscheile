@@ -6,7 +6,7 @@ EAPI=7
 inherit zs-minimal
 
 DESCRIPTION="ZConfCtl - Zscheile Configurations Control"
-KEYWORDS="arm amd64 x86"
+KEYWORDS="amd64 arm x86"
 
 src_install() {
 	dobin zconfctl

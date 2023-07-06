@@ -5,7 +5,7 @@ EAPI=7
 inherit cmake-multilib
 
 DESCRIPTION="Zscheile Lowlevel library"
-KEYWORDS="arm amd64 x86"
+KEYWORDS="amd64 arm x86"
 LICENSE="MIT"
 SRC_URI="https://github.com/fogti/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 HOMEPAGE="https://github.com/fogti/${PN}"

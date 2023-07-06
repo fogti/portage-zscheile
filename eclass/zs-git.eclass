@@ -10,5 +10,5 @@ SRC_URI=""
 HOMEPAGE="https://github.com/fogti/${PN}"
 EGIT_REPO_URI="${HOMEPAGE}.git"
 LICENSE="MIT"
-KEYWORDS="-* ~arm ~amd64 ~x86"
+KEYWORDS="-*"
 fi

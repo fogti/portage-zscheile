@@ -5,7 +5,7 @@ EAPI=7
 inherit zs-minimal
 
 DESCRIPTION="ZModulesCtl - Zscheile Modules Control"
-KEYWORDS="arm amd64 x86"
+KEYWORDS="amd64 arm x86"
 
 src_install() {
 	dodir /etc/zmodules

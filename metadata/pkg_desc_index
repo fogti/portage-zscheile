@@ -1,6 +1,5 @@
 acct-group/lizardfs 0: A group for the LizardFS - Open Source Distributed File System
-acct-user/lizardfs 0 1: A user for LizardFS - Open Source Distributed File System
-app-admin/testdisk 7.1_pre20180322-r2: Checks and undeletes partitions + PhotoRec, signature based recovery tool
+acct-user/lizardfs 1: A user for LizardFS - Open Source Distributed File System
 app-admin/zstxtns-utils 0.0.3: Zscheile utilities to deal with text based name service databases
 app-doc/phrack 01 02 03 04 05 06 07 08 09 69: A Hacker magazine by the community, for the community
 app-misc/mat2 0.10.1 0.11.0 9999: Metadata anonymisation toolkit
@@ -10,7 +9,7 @@ app-misc/zout-ng 0.0.3.2: Zscheile (Action) Output Formatting Tool - Next Genera
 app-misc/zsgcfgfpath 0.0.4: get config file path - gentoo cfg-filename determine utility
 app-misc/zsjed 0.3: Zscheile data split semi-steganography tool
 app-misc/zsrecursil 0.0.9: ZS Recursil - directory recursion tool
-dev-db/zsdatab 0.2.8 0.2.9 0.3.0 0.3.1: Zscheile data text table Management
+dev-db/zsdatab 0.3.0 0.3.1: Zscheile data text table Management
 dev-db/zstreedb2 0.0.4: Zscheile tree text database Management Util 2
 dev-lang/crulz 0.0.7: a rust implementation of the 'crulz' macro language interpreter
 dev-libs/libowlevelzs 0.0.3 0.1.1 9999: Zscheile Lowlevel library

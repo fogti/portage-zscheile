@@ -6,7 +6,7 @@ inherit zs-minimal cmake
 
 DESCRIPTION="Zscheile tree text database Management Util 2"
 LICENSE="GPL-2"
-KEYWORDS="arm amd64 x86"
+KEYWORDS="amd64 ~arm x86"
 
 CMDEPEND="dev-libs/rocksdb:="
 

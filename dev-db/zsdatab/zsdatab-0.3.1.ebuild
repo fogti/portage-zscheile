@@ -1,4 +1,4 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -10,7 +10,7 @@ DESCRIPTION="Zscheile data text table Management"
 LICENSE="LGPL-2.1+"
 SLOT="0/0.3.12"
 KEYWORDS="arm amd64 x86"
-HOMEPAGE="https://github.com/fogti/$PN"
+HOMEPAGE="https://github.com/fogti/zsdatab"
 SRC_URI="https://github.com/fogti/$PN/archive/v$PV.tar.gz -> $P.tar.gz
 https://github.com/fogti/ThreadPool/archive/$THREADPOOL_COMMIT.tar.gz -> fogti-ThreadPool-$THREADPOOL_COMMIT.tar.gz"
 

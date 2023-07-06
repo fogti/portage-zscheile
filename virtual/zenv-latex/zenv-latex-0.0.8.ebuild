@@ -5,7 +5,7 @@ EAPI=7
 inherit zs-virtual
 
 DESCRIPTION="Zscheile LaTeX Environment"
-KEYWORDS="amd64 ~arm x86"
+KEYWORDS="amd64 ~arm ~x86"
 IUSE="emacs l10n_de l10n_en"
 
 RDEPEND="

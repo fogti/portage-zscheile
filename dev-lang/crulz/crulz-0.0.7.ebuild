@@ -77,8 +77,7 @@ LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="amd64 ~arm x86"
 IUSE="compile"
-DEPEND+="
-	>=virtual/rust-1.40.0"
+DEPEND+="virtual/rust"
 
 src_compile() {
 	cargo_src_compile --no-default-features $(usex compile "--features compile" "")

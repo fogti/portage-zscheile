@@ -100,7 +100,6 @@ RDEPEND="
 	x11-themes/tango-icon-theme
 
 	virtual/cron
-	>=virtual/zenv-media-0.7.4[alsa,gstreamer,pulseaudio?]
 
 	|| (
 		mail-client/thunderbird[pulseaudio?]
