@@ -1,0 +1,15 @@
+# Copyright 1999-2023 Gentoo Authors
+# Distributed under the terms of the GNU General Public License v2
+
+# Alain Zscheile <fogti+devel@ytrizja.de> (2020-08-28)
+# old zsdatab versions which have long been deprecated and
+# aren't supported anymore
+<dev-db/zsdatab-0.2.8
+
+# Alain Zscheile <fogti+devel@ytrizja.de> (2020-08-28)
+# libkqueue is incompatible with the gentoo python ebuilds
+# and caused breakages.
+# Warning: if you emerged python after libkqueue successfully,
+# possible with some manual workarounds, you should re-emerge it soon
+# after unmerging dev-libs/libkqueue to avoid breakage in the future
+dev-libs/libkqueue

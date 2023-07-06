@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>rich0@gentoo.org</email>
+		<name>Richard Freeman</name>
+	</maintainer>
+	<maintainer type="person">
+		<email>fogti+devel@ytrizja.de</email>
+		<name>Alain Fogtia Zscheile</name>
+	</maintainer>
+	<longdescription>LizardFS is a fault tolerant, network distributed file system.
+	It spreads data over several physical servers which are visible to the user as one resource.
+	For standard file operations LizardFS acts as other Unix-alike file systems
+	</longdescription>
+	<use>
+		<flag name="client-lib">Build and install client libraries.</flag>
+		<flag name="fuse">Install the mfsmount utility.</flag>
+	</use>
+</pkgmetadata>

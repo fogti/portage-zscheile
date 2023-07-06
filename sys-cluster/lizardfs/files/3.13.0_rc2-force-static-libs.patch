@@ -1,0 +1,248 @@
+From 1071635d083e3300a1cbacce71ef65af463c8c5b Mon Sep 17 00:00:00 2001
+From: Alain Zscheile <fogti+devel@ytrizja.de>
+Date: Fri, 7 Aug 2020 15:37:01 +0200
+Subject: [PATCH] cmake: Force building of static libs
+
+The previous code base was incompatible to the cmake variable
+setting '-DBUILD_SHARED_LIBS=YES', which didn't lead to build
+failures, but produced an broken install, because installed
+binaries were linked against shared libs which weren't installed.
+
+This might not be an ideal solution, but it fixes the problem for now.
+This commit fixes #880 by forcing all internal libraries to be
+  STATIC.
+---
+ cmake/CreateUnitTest.cmake         |  2 +-
+ cmake/SharedLibraries.cmake        |  4 ++--
+ src/admin/CMakeLists.txt           |  2 +-
+ src/chunkserver/CMakeLists.txt     |  2 +-
+ src/devtools/CMakeLists.txt        |  2 +-
+ src/master/CMakeLists.txt          |  2 +-
+ src/metadump/CMakeLists.txt        |  1 -
+ src/metalogger/CMakeLists.txt      |  2 +-
+ src/metarestore/CMakeLists.txt     |  2 +-
+ src/mount/CMakeLists.txt           |  0
+ src/mount/client/CMakeLists.txt    | 18 +++++++-----------
+ src/mount/fuse/CMakeLists.txt      |  0
+ src/mount/polonaise/CMakeLists.txt |  0
+ src/protocol/CMakeLists.txt        |  2 +-
+ src/unittests/CMakeLists.txt       |  2 +-
+ src/unittests/mocks/CMakeLists.txt |  2 +-
+ 16 files changed, 19 insertions(+), 24 deletions(-)
+ mode change 100755 => 100644 src/chunkserver/CMakeLists.txt
+ mode change 100755 => 100644 src/master/CMakeLists.txt
+ mode change 100755 => 100644 src/metadump/CMakeLists.txt
+ mode change 100755 => 100644 src/metalogger/CMakeLists.txt
+ mode change 100755 => 100644 src/metarestore/CMakeLists.txt
+ mode change 100755 => 100644 src/mount/CMakeLists.txt
+ mode change 100755 => 100644 src/mount/fuse/CMakeLists.txt
+ mode change 100755 => 100644 src/mount/polonaise/CMakeLists.txt
+
+diff --git a/cmake/CreateUnitTest.cmake b/cmake/CreateUnitTest.cmake
+index ac9a87e2..8588656d 100644
+--- a/cmake/CreateUnitTest.cmake
++++ b/cmake/CreateUnitTest.cmake
+@@ -23,7 +23,7 @@ function(create_unittest TEST_NAME)
+ 
+   include_directories(${GTEST_INCLUDE_DIRS})
+ 
+-  add_library(${TEST_LIBRARY_NAME} ${ARGV})
++  add_library(${TEST_LIBRARY_NAME} STATIC ${ARGV})
+ 
+   list(FIND UNITTEST_TEST_NAMES ${TEST_NAME} result)
+   if (${result} EQUAL -1)
+diff --git a/cmake/SharedLibraries.cmake b/cmake/SharedLibraries.cmake
+index 631c1a3c..74593f37 100644
+--- a/cmake/SharedLibraries.cmake
++++ b/cmake/SharedLibraries.cmake
+@@ -17,9 +17,9 @@
+ function(shared_add_library NAME ...)
+ 	list(REMOVE_AT ARGV 0)
+ 
+-	add_library(${NAME} ${ARGV})
++	add_library(${NAME} STATIC ${ARGV})
+ 	if(ENABLE_PIC_TARGETS)
+-		add_library(${NAME}_pic ${ARGV})
++		add_library(${NAME}_pic STATIC ${ARGV})
+ 		if("${CMAKE_VERSION}" VERSION_GREATER 2.8.9)
+ 			set_property(TARGET ${NAME}_pic PROPERTY POSITION_INDEPENDENT_CODE ON)
+ 		else()
+diff --git a/src/admin/CMakeLists.txt b/src/admin/CMakeLists.txt
+index ec7b2184..7a361d43 100644
+--- a/src/admin/CMakeLists.txt
++++ b/src/admin/CMakeLists.txt
+@@ -1,6 +1,6 @@
+ collect_sources(LIZARDFS_ADMIN)
+ 
+-add_library(lizardfs-admin-lib ${LIZARDFS_ADMIN_SOURCES})
++add_library(lizardfs-admin-lib STATIC ${LIZARDFS_ADMIN_SOURCES})
+ target_link_libraries(lizardfs-admin-lib mfscommon)
+ create_unittest(lizardfs-admin-lib ${LIZARDFS_ADMIN_TESTS})
+ link_unittest(lizardfs-admin-lib mfscommon)
+diff --git a/src/chunkserver/CMakeLists.txt b/src/chunkserver/CMakeLists.txt
+old mode 100755
+new mode 100644
+index 1096dc2e..5017d9f0
+--- a/src/chunkserver/CMakeLists.txt
++++ b/src/chunkserver/CMakeLists.txt
+@@ -3,7 +3,7 @@ add_definitions(-DLIZARDFS_MAX_FILES=10000)
+ add_definitions(-DAPPNAME=mfschunkserver -DAPP_EXAMPLES_SUBDIR="${CHUNKSERVER_EXAMPLES_SUBDIR}")
+ 
+ collect_sources(CHUNKSERVER)
+-add_library(chunkserver ${CHUNKSERVER_SOURCES})
++add_library(chunkserver STATIC ${CHUNKSERVER_SOURCES})
+ target_link_libraries(chunkserver lzfsprotocol mfscommon ${ADDITIONAL_LIBS})
+ create_unittest(chunkserver ${CHUNKSERVER_TESTS})
+ link_unittest(chunkserver chunkserver mfscommon)
+diff --git a/src/devtools/CMakeLists.txt b/src/devtools/CMakeLists.txt
+index 2d9a8273..ff72126f 100644
+--- a/src/devtools/CMakeLists.txt
++++ b/src/devtools/CMakeLists.txt
+@@ -1,4 +1,4 @@
+ aux_source_directory(${CMAKE_CURRENT_SOURCE_DIR} DEVTOOLS_SOURCES)
+-add_library(devtools ${DEVTOOLS_SOURCES})
++add_library(devtools STATIC ${DEVTOOLS_SOURCES})
+ 
+ add_subdirectory(mycrc32)
+diff --git a/src/master/CMakeLists.txt b/src/master/CMakeLists.txt
+old mode 100755
+new mode 100644
+index 041bd68a..329a2394
+--- a/src/master/CMakeLists.txt
++++ b/src/master/CMakeLists.txt
+@@ -7,7 +7,7 @@ if(NOT DB_FOUND)
+   list(REMOVE_ITEM MASTER_SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/hstring_bdbstorage.cc")
+ endif()
+ 
+-add_library(master ${MASTER_SOURCES})
++add_library(master STATIC ${MASTER_SOURCES})
+ target_link_libraries(master mfscommon ${ADDITIONAL_LIBS})
+ if(JUDY_LIBRARY)
+   target_link_libraries(master ${JUDY_LIBRARY})
+diff --git a/src/metadump/CMakeLists.txt b/src/metadump/CMakeLists.txt
+old mode 100755
+new mode 100644
+index 3ef93f6c..0db19ea7
+--- a/src/metadump/CMakeLists.txt
++++ b/src/metadump/CMakeLists.txt
+@@ -2,5 +2,4 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR})
+ 
+ aux_source_directory(. METADUMP_SOURCES)
+ add_executable(mfsmetadump ${METADUMP_SOURCES})
+-target_link_libraries(mfsmetadump)
+ install(TARGETS mfsmetadump RUNTIME DESTINATION ${SBIN_SUBDIR})
+diff --git a/src/metalogger/CMakeLists.txt b/src/metalogger/CMakeLists.txt
+old mode 100755
+new mode 100644
+index 693dcc76..3d158eec
+--- a/src/metalogger/CMakeLists.txt
++++ b/src/metalogger/CMakeLists.txt
+@@ -4,7 +4,7 @@ add_definitions(-DAPPNAME=mfsmetalogger -DAPP_EXAMPLES_SUBDIR="${METALOGGER_EXAM
+ 
+ collect_sources(METALOGGER)
+ 
+-add_library(metalogger ${METALOGGER_SOURCES} ../master/changelog.cc ../master/masterconn.cc)
++add_library(metalogger STATIC ${METALOGGER_SOURCES} ../master/changelog.cc ../master/masterconn.cc)
+ target_link_libraries(metalogger mfscommon)
+ 
+ create_unittest(metalogger ${METALOGGER_TESTS})
+diff --git a/src/metarestore/CMakeLists.txt b/src/metarestore/CMakeLists.txt
+old mode 100755
+new mode 100644
+index 724034aa..3fbfd2d7
+--- a/src/metarestore/CMakeLists.txt
++++ b/src/metarestore/CMakeLists.txt
+@@ -12,7 +12,7 @@ else()
+   file(GLOB METARESTORE_HSTRING_SOURCES ../master/hstring_memstorage.cc)
+ endif()
+ 
+-add_library(metarestore ${METARESTORE_SOURCES} ${METARESTORE_MASTER_SOURCES} ${METARESTORE_HSTRING_SOURCES}
++add_library(metarestore STATIC ${METARESTORE_SOURCES} ${METARESTORE_MASTER_SOURCES} ${METARESTORE_HSTRING_SOURCES}
+   ../master/acl_storage.cc ../master/chunks.cc ../master/quota_database.cc ../master/chunk_goal_counters.cc
+   ../master/restore.cc ../master/locks.cc ../master/task_manager.cc ../master/snapshot_task.cc
+   ../master/setgoal_task.cc ../master/settrashtime_task.cc)
+diff --git a/src/mount/CMakeLists.txt b/src/mount/CMakeLists.txt
+old mode 100755
+new mode 100644
+diff --git a/src/mount/client/CMakeLists.txt b/src/mount/client/CMakeLists.txt
+index 5d1b251c..d7edc57c 100644
+--- a/src/mount/client/CMakeLists.txt
++++ b/src/mount/client/CMakeLists.txt
+@@ -1,13 +1,11 @@
+ collect_sources(CLIENT)
+ 
+ shared_add_library(lizardfs-client client.cc lizardfs_c_api.cc client_error_code.cc)
+-shared_target_link_libraries(lizardfs-client mount)
++shared_target_link_libraries(lizardfs-client mount ${CMAKE_DL_LIBS})
+ 
+ shared_add_library(lizardfs-client-cpp client.cc client_error_code.cc)
+ shared_target_link_libraries(lizardfs-client-cpp mount)
+ 
+-shared_target_link_libraries(lizardfs-client ${CMAKE_DL_LIBS})
+-
+ add_library(lizardfs-client_shared SHARED client.cc lizardfs_c_api.cc client_error_code.cc)
+ set_target_properties(lizardfs-client_shared PROPERTIES OUTPUT_NAME "lizardfs-client")
+ target_link_libraries(lizardfs-client_shared ${CMAKE_DL_LIBS} mount_pic)
+@@ -15,12 +13,10 @@ target_link_libraries(lizardfs-client_shared ${CMAKE_DL_LIBS} mount_pic)
+ add_library(lizardfsmount_shared SHARED ${MOUNT_SOURCES} lizard_client_c_linkage.cc)
+ target_link_libraries(lizardfsmount_shared mount_pic ${ADDITIONAL_LIBS})
+ 
+-install(TARGETS lizardfs-client DESTINATION ${LIB_SUBDIR})
+-install(TARGETS lizardfs-client_pic DESTINATION ${LIB_SUBDIR})
+-install(TARGETS lizardfs-client-cpp DESTINATION ${LIB_SUBDIR})
+-install(TARGETS lizardfs-client-cpp_pic DESTINATION ${LIB_SUBDIR})
+-install(TARGETS lizardfsmount_shared DESTINATION ${LIB_SUBDIR})
+-install(TARGETS lizardfs-client_shared DESTINATION ${LIB_SUBDIR})
++install(TARGETS
++        lizardfs-client lizardfs-client_pic lizardfs-client_shared
++        lizardfs-client-cpp lizardfs-client-cpp_pic
++        lizardfsmount_shared
++    DESTINATION ${LIB_SUBDIR})
+ 
+-install(FILES lizardfs_c_api.h DESTINATION ${INCL_SUBDIR})
+-install(FILES ../../common/lizardfs_error_codes.h DESTINATION ${INCL_SUBDIR})
++install(FILES lizardfs_c_api.h ../../common/lizardfs_error_codes.h DESTINATION ${INCL_SUBDIR})
+diff --git a/src/mount/fuse/CMakeLists.txt b/src/mount/fuse/CMakeLists.txt
+old mode 100755
+new mode 100644
+diff --git a/src/mount/polonaise/CMakeLists.txt b/src/mount/polonaise/CMakeLists.txt
+old mode 100755
+new mode 100644
+diff --git a/src/protocol/CMakeLists.txt b/src/protocol/CMakeLists.txt
+index e6f1624a..a28d010e 100644
+--- a/src/protocol/CMakeLists.txt
++++ b/src/protocol/CMakeLists.txt
+@@ -18,7 +18,7 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR})
+ 
+ collect_sources(PROTOCOL)
+ 
+-add_library(lzfsprotocol ${PROTOCOL_SOURCES})
++add_library(lzfsprotocol STATIC ${PROTOCOL_SOURCES})
+ 
+ create_unittest(lzfsprotocol ${PROTOCOL_TESTS})
+ link_unittest(lzfsprotocol mfscommon)
+diff --git a/src/unittests/CMakeLists.txt b/src/unittests/CMakeLists.txt
+index 8aa8eb9d..fb24ce9f 100644
+--- a/src/unittests/CMakeLists.txt
++++ b/src/unittests/CMakeLists.txt
+@@ -3,7 +3,7 @@ include_directories(${GTEST_INCLUDE_DIRS})
+ add_subdirectory(mocks)
+ 
+ collect_sources(UNITTESTS)
+-add_library(unittests-helpers ${UNITTESTS_SOURCES})
++add_library(unittests-helpers STATIC ${UNITTESTS_SOURCES})
+ 
+ if(APPLE)
+   set(ENABLE_WHOLE_ARCHIVE "-Wl,-force_load")
+diff --git a/src/unittests/mocks/CMakeLists.txt b/src/unittests/mocks/CMakeLists.txt
+index cf9465de..3e64b784 100644
+--- a/src/unittests/mocks/CMakeLists.txt
++++ b/src/unittests/mocks/CMakeLists.txt
+@@ -1,6 +1,6 @@
+ include_directories(${GTEST_INCLUDE_DIRS})
+ 
+ collect_sources(UNITTESTMOCKS)
+-add_library(unittest-mocks ${UNITTESTMOCKS_SOURCES})
++add_library(unittest-mocks STATIC ${UNITTESTMOCKS_SOURCES})
+ create_unittest(unittest-mocks ${UNITTESTMOCKS_TESTS})
+ link_unittest(unittest-mocks unittest-mocks mfscommon)

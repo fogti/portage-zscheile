@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>fogti+devel@ytrizja.de</email>
+		<name>Alain Fogtia Zscheile</name>
+	</maintainer>
+	<use>
+		<flag name="gpg">Add gpg signature generation/verification support</flag>
+		<flag name="hacking">Install developer/testing/hacking utilities</flag>
+	</use>
+</pkgmetadata>

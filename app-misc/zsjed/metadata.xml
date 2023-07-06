@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>fogti+devel@ytrizja.de</email>
+		<name>Alain Fogtia Zscheile</name>
+	</maintainer>
+	<longdescription>
+	zsjed is a data split semi-steganography tool.
+	It splits a file and embeds it into many other files,
+	recoverable.
+	</longdescription>
+</pkgmetadata>

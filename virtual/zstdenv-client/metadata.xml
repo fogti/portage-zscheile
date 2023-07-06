@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>fogti+devel@ytrizja.de</email>
+		<name>Alain Fogtia Zscheile</name>
+	</maintainer>
+	<use>
+		<flag name="games">install some games</flag>
+		<flag name="geosci">install additional applications for geo-science</flag>
+		<flag name="grub">pull in the GRUB bootloader</flag>
+		<flag name="xdm">install a X display manager</flag>
+		<flag name="xfce">pull in XFCE4</flag>
+	</use>
+</pkgmetadata>

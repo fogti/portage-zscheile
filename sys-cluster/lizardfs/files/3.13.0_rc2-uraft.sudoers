@@ -1,0 +1,2 @@
+# Allow lizardfs user to set floating ip
+lizardfs	ALL = NOPASSWD: /sbin/ip

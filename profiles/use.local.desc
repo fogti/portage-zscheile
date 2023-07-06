@@ -1,0 +1,32 @@
+# This file is deprecated as per GLEP 56 in favor of metadata.xml. Please add
+# your descriptions to your package's metadata.xml ONLY.
+# * generated automatically using egencache *
+
+app-admin/testdisk:ewf - Include ewf library
+app-admin/testdisk:ntfs - Include the ability to read NTFS filesystems
+app-admin/testdisk:reiserfs - Include reiserfs reading ability
+app-misc/mat2:nautilus - Add support for the nautilus context-menu
+dev-lang/crulz:compile - enable byte-compiling (incl. reusing compilates) support
+dev-misc/zsppr:zsdatab - Add support for the zsppr "form letter" feature based on zsdatab
+net-misc/mosh:client - Build network client
+net-misc/mosh:examples - Include example scripts
+net-misc/mosh:mosh-hardening - Enable compiler and linker options to frustrate memory corruption exploits
+net-misc/mosh:server - Build network server
+net-misc/mosh:ufw - Install net-firewall/ufw rule set
+net-misc/mosh:utempter - Include libutempter support
+net-misc/zprd:daemontools - Install files for djb's daemontools (only supported svc)
+net-misc/zprd:pingd - Install the ZPRD ping daemon
+sys-cluster/lizardfs:client-lib - Build and install client libraries.
+sys-cluster/lizardfs:fuse - Install the mfsmount utility.
+virtual/bedrocklinux-meta:gpg - Add gpg signature generation/verification support
+virtual/bedrocklinux-meta:hacking - Install developer/testing/hacking utilities
+virtual/zenv-latex:emacs - Enable Emacs Tex support
+virtual/zenv-latex:l10n_de - Enable german lang pack
+virtual/zenv-latex:l10n_en - Enable english lang pack
+virtual/zenv-media:flash - enable support for Adobe Flash
+virtual/zenv-radio:ax25 - Enable AX.25 support
+virtual/zstdenv-client:games - install some games
+virtual/zstdenv-client:geosci - install additional applications for geo-science
+virtual/zstdenv-client:grub - pull in the GRUB bootloader
+virtual/zstdenv-client:xdm - install a X display manager
+virtual/zstdenv-client:xfce - pull in XFCE4

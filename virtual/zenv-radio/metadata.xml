@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>fogti+devel@ytrizja.de</email>
+		<name>Alain Fogtia Zscheile</name>
+	</maintainer>
+	<use>
+		<flag name="ax25">Enable AX.25 support</flag>
+	</use>
+</pkgmetadata>
