@@ -43,7 +43,6 @@ RDEPEND="
 
 	media-fonts/font-misc-misc
 	media-gfx/geeqie[exif]
-	media-gfx/gqview
 	media-gfx/gimp
 	media-gfx/graphviz
 
