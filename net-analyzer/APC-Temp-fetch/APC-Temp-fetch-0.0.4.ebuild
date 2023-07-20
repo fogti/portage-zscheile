@@ -6,7 +6,7 @@ EAPI=8
 DISTUTILS_USE_PEP517=setuptools
 PYTHON_COMPAT=( python3_{9..12} )
 
-inherit distutils-r1 optfeature pypi
+inherit distutils-r1 optfeature
 
 DESCRIPTION="APC/Schneider UPS current temperature fetchers"
 HOMEPAGE="https://pypi.org/project/APC-Temp-fetch/"
