@@ -2,7 +2,7 @@
 Description=Main NNCP tosser
 
 [Service]
-ExecStart=/usr/bin/nncp-toss -noprogress -cycle 10
+ExecStart=/usr/bin/nncp-caller -noprogress
 Restart=always
 User=nncp
 Group=nncp
