@@ -5,7 +5,9 @@
 		<email>fogti+devel@ytrizja.de</email>
 		<name>Alain Fogtia Zscheile</name>
 	</maintainer>
-	<remote-id type="github">fogti/crulz-rs</remote-id>
+	<upstream>
+		<remote-id type="github">fogti/crulz-rs</remote-id>
+	</upstream>
 	<use>
 		<flag name="compile">enable byte-compiling (incl. reusing compilates) support</flag>
 	</use>

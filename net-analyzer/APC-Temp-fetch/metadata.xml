@@ -5,6 +5,8 @@
 		<email>fogti+devel@ytrizja.de</email>
 		<name>Alain Fogtia Zscheile</name>
 	</maintainer>
-	<remote-id type="github">YZITE/APC_Temp_fetch</remote-id>
-	<remote-id type="pypi">APC-Temp-fetch</remote-id>
+	<upstream>
+		<remote-id type="github">YZITE/APC_Temp_fetch</remote-id>
+		<remote-id type="pypi">APC-Temp-fetch</remote-id>
+	</upstream>
 </pkgmetadata>

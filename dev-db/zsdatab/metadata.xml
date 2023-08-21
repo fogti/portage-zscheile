@@ -5,5 +5,7 @@
 		<email>fogti+devel@ytrizja.de</email>
 		<name>Alain Fogtia Zscheile</name>
 	</maintainer>
-	<remote-id type="github">fogti/zsdatab</remote-id>
+	<upstream>
+		<remote-id type="github">fogti/zsdatab</remote-id>
+	</upstream>
 </pkgmetadata>
