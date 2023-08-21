@@ -11,7 +11,6 @@ app-misc/zsjed 0.3: Zscheile data split semi-steganography tool
 app-misc/zsrecursil 0.0.9: ZS Recursil - directory recursion tool
 dev-db/zsdatab 0.3.0 0.3.1: Zscheile data text table Management
 dev-db/zstreedb2 0.0.4: Zscheile tree text database Management Util 2
-dev-lang/crulz 0.0.7: a rust implementation of the 'crulz' macro language interpreter
 dev-libs/libowlevelzs 0.0.3 0.1.1 9999: Zscheile Lowlevel library
 dev-libs/libzsnidcode 0.0.1 9999: Zscheile Node ID serialization library
 dev-misc/zcmake-libfindmacros 0.0.1: LibFindMacros.cmake
