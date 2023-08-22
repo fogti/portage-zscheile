@@ -3,6 +3,7 @@
 
 EAPI=7
 PYTHON_COMPAT=( python3_{10,12} )
+DISTUTILS_USE_PEP517=setuptools
 DISTUTILS_SINGLE_IMPL=1
 HOMEPAGE="https://0xacab.org/jvoisin/mat2.git"
 
