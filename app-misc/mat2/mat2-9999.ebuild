@@ -47,6 +47,8 @@ BDEPEND+="
 RDEPEND+="${CMDEPEND}
 nautilus? ( dev-python/nautilus-python:* )"
 
+distutils_enable_tests unittest
+
 python_install() {
 	distutils-r1_python_install
 }
