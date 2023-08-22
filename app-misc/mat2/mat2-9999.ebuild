@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
-PYTHON_COMPAT=( python3_{10,12} )
+PYTHON_COMPAT=( python3_{10..12} )
 DISTUTILS_USE_PEP517=setuptools
 DISTUTILS_SINGLE_IMPL=1
 HOMEPAGE="https://0xacab.org/jvoisin/mat2.git"
@@ -40,6 +40,9 @@ DEPEND+="${CMDEPEND}
 $(python_gen_cond_dep '
 dev-python/setuptools[${PYTHON_USEDEP}]
 ')"
+
+BDEPEND+="
+	app-arch/unzip"
 
 RDEPEND+="${CMDEPEND}
 nautilus? ( dev-python/nautilus-python:* )"
