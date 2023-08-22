@@ -58,6 +58,7 @@ python_install_all() {
 	fi
 
 	doman doc/mat2.1
+	rm -rf "${ED}/usr/man"
 
 	distutils-r1_python_install_all
 }
