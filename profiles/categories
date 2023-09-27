@@ -14,6 +14,7 @@ media-sound
 net-analyzer
 net-misc
 sys-cluster
+sys-fs
 sys-process
 virtual
 x11-themes
