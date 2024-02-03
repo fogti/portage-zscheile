@@ -9,4 +9,5 @@
 		<email>fogti+devel@ytrizja.de</email>
 		<name>Alain Fogtia Zscheile</name>
 	</maintainer>
+	<remote-id type="gnome-gitlab">GNOME/aisleriot</remote-id>
 </pkgmetadata>
