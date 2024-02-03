@@ -11,8 +11,8 @@ inherit zs-minimal
 KEYWORDS="amd64 arm x86"
 DESCRIPTION="Zscheile Shell Library Core"
 DEPEND="
-dev-misc/zsppr
-sys-devel/make"
+dev-build/make
+dev-misc/zsppr"
 RDEPEND="
 sys-process/procps"
 

@@ -5,5 +5,5 @@ EAPI=7
 inherit zs-minimal
 DESCRIPTION="Zscheile Shell additional libraries"
 KEYWORDS="amd64 arm x86"
-DEPEND="dev-misc/zsppr
-sys-devel/make"
+DEPEND="dev-build/make
+dev-misc/zsppr"

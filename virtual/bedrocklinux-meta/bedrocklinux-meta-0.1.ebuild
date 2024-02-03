@@ -13,14 +13,14 @@ KEYWORDS="-* ~amd64 ~x86"
 RDEPEND="
 	app-arch/gzip
 	gpg? ( app-crypt/gnupg )
-	dev-util/meson
-	dev-util/ninja
+	dev-build/make
+	dev-build/meson
+	dev-build/ninja
 	dev-vcs/git
 	sys-apps/fakeroot
 	sys-apps/grep
 	sys-apps/sed
-	sys-devel/libtool:*
-	sys-devel/make
+	dev-build/libtool:*
 	virtual/pkgconfig
 
 	hacking? (

@@ -6,9 +6,9 @@ inherit zs-minimal
 DESCRIPTION="Zscheile CMake build script"
 KEYWORDS="amd64 arm x86"
 RDEPEND="app-arch/tar
-dev-util/cmake
-sys-apps/coreutils
-sys-devel/make"
+dev-build/cmake
+dev-build/make
+sys-apps/coreutils"
 
 src_install() {
 	dobin zcbuild.sh

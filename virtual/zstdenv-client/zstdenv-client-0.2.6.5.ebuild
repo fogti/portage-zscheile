@@ -31,14 +31,14 @@ RDEPEND="
 	app-text/odt2txt
 	app-text/tree
 
+	dev-debug/gdb
+	dev-debug/strace
 	dev-python/pip
-
 	dev-util/cppcheck
 	dev-util/meld
-	dev-util/strace
 	dev-util/zcbuild
-
 	dev-vcs/git
+
 	gnome-base/gvfs[mtp,nfs]
 
 	media-fonts/font-misc-misc
@@ -74,7 +74,6 @@ RDEPEND="
 	sys-apps/pciutils
 	sys-apps/usbutils
 	sys-block/gparted
-	sys-devel/gdb
 
 	sys-fs/cryptsetup
 	sys-fs/dosfstools

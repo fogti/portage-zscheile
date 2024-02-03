@@ -7,7 +7,6 @@
 	</maintainer>
 	<use>
 		<flag name="games">install some games</flag>
-		<flag name="geosci">install additional applications for geo-science</flag>
 		<flag name="grub">pull in the GRUB bootloader</flag>
 		<flag name="xdm">install a X display manager</flag>
 		<flag name="xfce">pull in XFCE4</flag>
