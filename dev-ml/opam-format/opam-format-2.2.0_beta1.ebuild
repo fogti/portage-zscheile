@@ -22,9 +22,10 @@ RESTRICT="test" #sandbox not working
 RDEPEND="
 	~dev-ml/opam-core-${PV}:=
 	dev-ml/re:=
+	dev-ml/spdx_licenses:=
 	dev-ml/opam-file-format:=
 	>=dev-ml/dose3-6.0:=
-	dev-ml/mccs:=
+	>=dev-ml/mccs-1.1.17:=
 "
 DEPEND="${RDEPEND}
 	dev-ml/cppo"
