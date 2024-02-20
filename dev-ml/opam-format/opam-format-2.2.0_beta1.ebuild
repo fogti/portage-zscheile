@@ -50,3 +50,12 @@ src_prepare() {
 		tests/reftests/opamroot-versions.test \
 		|| die
 }
+
+src_configure() {
+	econf \
+		--prefix="${EPREFIX}/usr" \
+		--with-mccs \
+		--disable-checks \
+		--docdir="${EPREFIX}/usr/share/doc/${PF}" \
+		--mandir="${EPREFIX}/usr/share/man"
+}
