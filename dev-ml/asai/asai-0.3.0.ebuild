@@ -8,7 +8,6 @@ inherit dune
 DESCRIPTION="A library for constructing and printing compiler diagnostics"
 HOMEPAGE="https://github.com/RedPRL/asai"
 SRC_URI="https://github.com/RedPRL/${PN}/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz"
-S="${WORKDIR}/${P}"
 
 LICENSE="LGPL-3"
 SLOT="0/${PV}"

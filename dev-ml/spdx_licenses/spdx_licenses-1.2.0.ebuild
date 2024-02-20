@@ -8,7 +8,6 @@ inherit dune
 DESCRIPTION="Library providing a strict SPDX License Expression parser"
 HOMEPAGE="https://github.com/kit-ty-kate/${PN}"
 SRC_URI="https://github.com/kit-ty-kate/${PN}/releases/download/v${PV}/${P}.tar.gz"
-S="${WORKDIR}/${P}"
 
 LICENSE="LGPL-3"
 SLOT="0/${PV}"

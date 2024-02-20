@@ -5,9 +5,9 @@ EAPI=8
 
 inherit dune
 
-DESCRIPTION="Reusable Effects-Based Components"
-HOMEPAGE="https://github.com/RedPRL/algaeff"
-SRC_URI="https://github.com/RedPRL/${PN}/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz"
+DESCRIPTION="Backward lists"
+HOMEPAGE="https://github.com/ocaml-multicore/thread-table"
+SRC_URI="https://github.com/ocaml-multicore/${PN}/releases/download/${PV}/${P}.tbz"
 
 LICENSE="LGPL-3"
 SLOT="0/${PV}"
@@ -15,14 +15,10 @@ KEYWORDS="amd64 arm arm64 ~ppc ppc64 ~riscv x86"
 IUSE="+ocamlopt test"
 
 RDEPEND="
-	>=dev-lang/ocaml-4.12:=[ocamlopt=]
+	>=dev-lang/ocaml-4.08:=[ocamlopt=]
 "
 DEPEND="${RDEPEND}
-	test? (
-		>=dev-ml/alcotest-1.5:*
-		>=dev-ml/qcheck-0.18:*
-	)
-"
+	test? ( >=dev-ml/alcotest-1.7.0:* )"
 
 RESTRICT="!test? ( test )"
 

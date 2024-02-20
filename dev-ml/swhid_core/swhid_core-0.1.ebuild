@@ -8,7 +8,6 @@ inherit dune
 DESCRIPTION="Library to work with Software Heritage persistent identifiers (swhids)"
 HOMEPAGE="https://github.com/ocamlpro/${PN}"
 SRC_URI="https://github.com/ocamlpro/${PN}/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz"
-S="${WORKDIR}/${PN}-$(ver_cut 1-3)"
 
 LICENSE="LGPL-3"
 SLOT="0/${PV}"
