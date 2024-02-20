@@ -27,7 +27,6 @@ RDEPEND="
 	dev-ml/spdx_licenses:=
 	~dev-ml/opam-core-${PV}:=
 	dev-ml/opam-file-format:=
-	>=dev-ml/opam-0install-solver-0.4:=
 "
 DEPEND="${RDEPEND}
 	dev-ml/cppo"
