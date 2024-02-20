@@ -26,5 +26,6 @@ RDEPEND="${DEPEND}"
 
 src_prepare() {
 	default
-	mv "${S}/bz2.opam" "${S}/${PN}.opam" || die 
+	rm "${S}/bz2.opam" || die
+	cp "${FILESDIR}/bz2.opam" "${S}/bz2.opam" || die
 }
