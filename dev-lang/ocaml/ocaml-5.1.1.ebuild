@@ -19,7 +19,7 @@ RDEPEND="sys-libs/binutils-libs:="
 BDEPEND="${RDEPEND}
 	virtual/pkgconfig"
 RDEPEND+="
-	!dev-ml/findlib"
+	!<dev-ml/findlib-2"
 PDEPEND="emacs? ( app-emacs/ocaml-mode )
 	xemacs? ( app-xemacs/ocaml )"
 
