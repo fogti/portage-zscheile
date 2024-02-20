@@ -22,7 +22,7 @@ RDEPEND="
 DEPEND="${RDEPEND}"
 BDEPEND="test? ( dev-ml/ounit2 )"
 
-RESTRICT="test? ( test )"
+RESTRICT="!test? ( test )"
 
 QA_FLAGS_IGNORED='.*'
 
