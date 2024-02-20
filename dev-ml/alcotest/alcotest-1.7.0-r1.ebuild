@@ -36,3 +36,11 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	>=dev-ml/dune-3.0:=
 "
+
+src_prepare() {
+	default
+
+	if has_version '>=dev-ml/core_unix-0.16.0'; then
+		eapply "${FILESDIR}/0.16-time_float_unix.patch"
+	fi
+}
