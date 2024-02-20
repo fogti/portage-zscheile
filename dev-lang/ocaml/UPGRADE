@@ -1,2 +1,4 @@
-trying to install the new 5.1.*+ OCaml versions might fail due to package collisions with dev-ml/findlib
+Trying to install the new 5.1.*+ OCaml versions might fail due to package collisions with dev-ml/findlib
 it is thus necessary to unmerge dev-ml/findlib and everything that depends on it before upgrading.
+
+After the upgrade, re-install dev-ml/findlib, and stuff should work correctly again.
