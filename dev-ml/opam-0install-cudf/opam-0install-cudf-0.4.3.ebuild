@@ -6,8 +6,8 @@ EAPI=8
 inherit dune
 
 DESCRIPTION="Opam solver using 0install backend using the CUDF interface"
-HOMEPAGE="https://github.com/ocaml-opam/${PN}"
-SRC_URI="https://github.com/ocaml-opam/${PN}/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
+HOMEPAGE="https://github.com/ocaml-opam/opam-0install-solver"
+SRC_URI="https://github.com/ocaml-opam/opam-0install-solver/releases/download/v${PV}/${P}.tbz"
 
 LICENSE="LGPL-3"
 SLOT="0/${PV}"
@@ -19,7 +19,6 @@ RDEPEND="
 	dev-ml/0install-solver:=
 	dev-ml/cudf:=
 	dev-ml/fmt:=
-	dev-ml/opam-state:=
 "
 DEPEND+="${RDEPEND}"
 
@@ -27,3 +26,15 @@ DEPEND+="${RDEPEND}"
 RESTRICT="test"
 
 QA_FLAGS_IGNORED='.*'
+
+src_compile() {
+    dune-compile "${PN}"
+}
+
+src_test() {
+    dune-test "${PN}"
+}
+
+src_install() {
+    dune-install "${PN}"
+}

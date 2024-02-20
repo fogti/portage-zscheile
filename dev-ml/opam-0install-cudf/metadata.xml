@@ -10,6 +10,6 @@
 		<name>ML</name>
 	</maintainer>
 	<upstream>
-		<remote-id type="github">kit-ty-kate/spdx_licenses</remote-id>
+		<remote-id type="github">ocaml-opam/opam-0install-solver</remote-id>
 	</upstream>
 </pkgmetadata>

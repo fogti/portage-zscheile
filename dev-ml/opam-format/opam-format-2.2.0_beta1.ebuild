@@ -25,6 +25,7 @@ RDEPEND="
 	>=dev-ml/mccs-1.1.17:=
 	dev-ml/re:=
 	dev-ml/spdx_licenses:=
+	dev-ml/opam-0install-cudf:=
 	~dev-ml/opam-core-${PV}:=
 	dev-ml/opam-file-format:=
 "

@@ -22,15 +22,8 @@ RESTRICT="test" # sandbox not working
 
 RDEPEND="
 	>=dev-lang/ocaml-4.02.3:=
-	dev-ml/ocaml-base64:=
 	dev-ml/cmdliner:=
-	>=dev-ml/dose3-6:=
-	dev-ml/jsonm:=
-	dev-ml/re:=
-	>=dev-ml/mccs-1.1.17:=
-	dev-ml/spdx_licenses:=
-	dev-ml/swhid_core:=
-	dev-ml/opam-file-format:=
+	~dev-ml/opam-format-${PV}:=
 "
 DEPEND="${RDEPEND}
 	dev-ml/findlib"
@@ -39,7 +32,6 @@ src_configure() {
 	econf \
 		--prefix="${EPREFIX}/usr" \
 		--with-mccs \
-		--with-vendored-deps \
 		--docdir="${EPREFIX}/usr/share/doc/${PF}" \
 		--mandir="${EPREFIX}/usr/share/man" \
 		$(use_enable static)
