@@ -9,7 +9,7 @@ DESCRIPTION="A scheduler independent blocking mechanism"
 HOMEPAGE="https://github.com/ocaml-multicore/domain-local-await"
 SRC_URI="https://github.com/ocaml-multicore/${PN}/releases/download/${PV}/${P}.tbz"
 
-LICENSE="LGPL-3"
+LICENSE="ISC"
 SLOT="0/${PV}"
 KEYWORDS="amd64 arm arm64 ~ppc ppc64 ~riscv x86"
 IUSE="+ocamlopt"

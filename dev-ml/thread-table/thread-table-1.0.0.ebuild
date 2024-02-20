@@ -9,7 +9,7 @@ DESCRIPTION="A lock-free thread-safe integer keyed hash table"
 HOMEPAGE="https://github.com/ocaml-multicore/thread-table"
 SRC_URI="https://github.com/ocaml-multicore/${PN}/releases/download/${PV}/${P}.tbz"
 
-LICENSE="LGPL-3"
+LICENSE="ISC"
 SLOT="0/${PV}"
 KEYWORDS="amd64 arm arm64 ~ppc ppc64 ~riscv x86"
 IUSE="+ocamlopt test"

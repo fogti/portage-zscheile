@@ -9,7 +9,7 @@ DESCRIPTION="A library for constructing and printing compiler diagnostics"
 HOMEPAGE="https://github.com/RedPRL/asai"
 SRC_URI="https://github.com/RedPRL/${PN}/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz"
 
-LICENSE="LGPL-3"
+LICENSE="Apache-2.0"
 SLOT="0/${PV}"
 KEYWORDS="amd64 arm arm64 ~ppc ppc64 ~riscv x86"
 IUSE="+ocamlopt test"

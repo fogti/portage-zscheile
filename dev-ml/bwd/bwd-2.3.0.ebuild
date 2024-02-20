@@ -10,7 +10,7 @@ HOMEPAGE="https://github.com/RedPRL/ocaml-bwd"
 SRC_URI="https://github.com/RedPRL/ocaml-${PN}/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz"
 S="${WORKDIR}/ocaml-${P}"
 
-LICENSE="LGPL-3"
+LICENSE="Apache-2.0"
 SLOT="0/${PV}"
 KEYWORDS="amd64 arm arm64 ~ppc ppc64 ~riscv x86"
 IUSE="+ocamlopt test"

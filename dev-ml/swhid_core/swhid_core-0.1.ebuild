@@ -9,7 +9,7 @@ DESCRIPTION="Library to work with Software Heritage persistent identifiers (swhi
 HOMEPAGE="https://github.com/ocamlpro/${PN}"
 SRC_URI="https://github.com/ocamlpro/${PN}/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz"
 
-LICENSE="LGPL-3"
+LICENSE="ISC"
 SLOT="0/${PV}"
 KEYWORDS="amd64 arm arm64 ~ppc ppc64 ~riscv x86"
 IUSE="+ocamlopt"

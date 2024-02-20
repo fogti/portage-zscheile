@@ -10,7 +10,7 @@ DESCRIPTION="Library to parse, pretty print, and evaluate CUDF documents"
 HOMEPAGE="http://www.mancoosi.org/cudf/"
 SRC_URI="https://gitlab.com/irill/${PN}/-/archive/v${PV}/${MYP}.tar.bz2"
 
-LICENSE="LGPL-3"
+LICENSE="LGPL-3+" # with OCaml linking exception
 SLOT="0/${PV}"
 KEYWORDS="amd64 arm arm64 ~ppc ppc64 ~riscv x86"
 IUSE="+ocamlopt llvm-libunwind test"

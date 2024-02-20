@@ -9,7 +9,7 @@ DESCRIPTION="Minimal Xml parser and printer for OCaml"
 HOMEPAGE="http://tech.motion-twin.com/xmllight.html"
 SRC_URI="https://github.com/ncannasse/xml-light/releases/download/${PV}/${P}.tbz"
 
-LICENSE="LGPL-2.1"
+LICENSE="LGPL-2.1-with-linking-exception"
 SLOT="0/${PV}"
 KEYWORDS="amd64 arm arm64 ~ppc ppc64 ~riscv x86"
 IUSE="doc +ocamlopt"

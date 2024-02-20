@@ -10,7 +10,7 @@ HOMEPAGE="http://www.mancoosi.org/software/ https://gforge.inria.fr/projects/dos
 SRC_URI="https://gitlab.com/irill/${PN}/-/archive/${PV}/${P}.tar.bz2"
 S="${WORKDIR}/${PN}-$(ver_cut 1-3)"
 
-LICENSE="LGPL-3"
+LICENSE="LGPL-3+" # with OCaml linking exception
 SLOT="0/${PV}"
 KEYWORDS="amd64 arm arm64 ~ppc ppc64 ~riscv x86"
 IUSE="+ocamlopt"

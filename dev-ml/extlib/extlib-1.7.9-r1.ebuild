@@ -11,7 +11,7 @@ SRC_URI="https://github.com/ygrek/ocaml-extlib/archive/${PV}.tar.gz
 	-> ${P}.tar.gz"
 S="${WORKDIR}"/ocaml-${P}
 
-LICENSE="LGPL-2.1"
+LICENSE="LGPL-2.1-with-linking-exception"
 SLOT="0/${PV}"
 KEYWORDS="amd64 arm arm64 ~ppc ppc64 ~riscv x86 ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE="doc +ocamlopt"

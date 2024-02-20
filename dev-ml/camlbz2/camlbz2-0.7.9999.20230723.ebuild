@@ -15,7 +15,7 @@ COMMIT="9c4e7fef63a3fdb49fbcffc84058ecc30e9b23f3"
 SRC_URI="https://gitlab.com/kit-ty-kate/camlbz2/-/archive/${COMMIT}/camlbz2-${COMMIT}.tar.bz2 -> ${P}.tar.bz2"
 S="${WORKDIR}/camlbz2-${COMMIT}"
 
-LICENSE="LGPL-2.1"
+LICENSE="LGPL-2.1+" # with OCaml linking exception
 SLOT="0/${PV}"
 KEYWORDS="amd64 arm arm64 ~ppc ppc64 ~riscv x86"
 

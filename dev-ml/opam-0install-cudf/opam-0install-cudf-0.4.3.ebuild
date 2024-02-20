@@ -9,7 +9,7 @@ DESCRIPTION="Opam solver using 0install backend using the CUDF interface"
 HOMEPAGE="https://github.com/ocaml-opam/opam-0install-solver"
 SRC_URI="https://github.com/ocaml-opam/opam-0install-solver/releases/download/v${PV}/${P}.tbz"
 
-LICENSE="LGPL-3"
+LICENSE="ISC"
 SLOT="0/${PV}"
 KEYWORDS="amd64 arm arm64 ~ppc ppc64 ~riscv x86"
 IUSE="+ocamlopt"

@@ -9,7 +9,7 @@ DESCRIPTION="Library providing a strict SPDX License Expression parser"
 HOMEPAGE="https://github.com/kit-ty-kate/${PN}"
 SRC_URI="https://github.com/kit-ty-kate/${PN}/releases/download/v${PV}/${P}.tar.gz"
 
-LICENSE="LGPL-3"
+LICENSE="MIT"
 SLOT="0/${PV}"
 KEYWORDS="amd64 arm arm64 ~ppc ppc64 ~riscv x86"
 IUSE="+ocamlopt"

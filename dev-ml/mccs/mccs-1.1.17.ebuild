@@ -12,7 +12,7 @@ HOMEPAGE="http://www.i3s.unice.fr/~cpjm/misc/ https://github.com/AltGr/ocaml-mcc
 SRC_URI="https://github.com/AltGr/ocaml-mccs/archive/${MY_PV}.tar.gz -> ${P}.tar.gz"
 S="${WORKDIR}"/ocaml-${PN}-$(ver_rs 2 '-')
 
-LICENSE="BSD"
+LICENSE="|| ( LGPL-2.1 BSD GPL-3 )"
 SLOT="0/${PV}"
 KEYWORDS="amd64 arm arm64 ~ppc ppc64 ~riscv x86"
 IUSE="+ocamlopt test"
