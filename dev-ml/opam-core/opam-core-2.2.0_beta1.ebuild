@@ -12,7 +12,7 @@ HOMEPAGE="https://opam.ocaml.org/ https://github.com/ocaml/opam"
 SRC_URI="https://github.com/ocaml/opam/archive/${PV/_/-}.tar.gz -> opam-${PV/_/-}.tar.gz"
 S="${WORKDIR}/opam-${PV/_/-}"
 OPAM_INSTALLER="${S}/opam-installer"
-IUSE="ocamlopt"
+IUSE="+ocamlopt"
 
 LICENSE="LGPL-2.1"
 SLOT="0/${PV}"
