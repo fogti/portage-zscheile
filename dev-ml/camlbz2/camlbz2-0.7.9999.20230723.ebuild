@@ -10,6 +10,7 @@ DESCRIPTION="OCaml bindings for libbz (AKA, bzip2)"
 HOMEPAGE="https://gitlab.com/irill/camlbz2"
 
 # LOL
+DUNE_PKG_NAME="bz2"
 COMMIT="9c4e7fef63a3fdb49fbcffc84058ecc30e9b23f3"
 SRC_URI="https://gitlab.com/kit-ty-kate/camlbz2/-/archive/${COMMIT}/camlbz2-${COMMIT}.tar.bz2 -> ${P}.tar.bz2"
 S="${WORKDIR}/camlbz2-${COMMIT}"
@@ -27,5 +28,5 @@ RDEPEND="${DEPEND}"
 src_prepare() {
 	default
 	rm "${S}/bz2.opam" || die
-	cp "${FILESDIR}/bz2.opam" "${S}/bz2.opam" || die
+	cp "${FILESDIR}/${DUNE_PKG_NAME}.opam" "${S}/${DUNE_PKG_NAME}.opam" || die
 }
