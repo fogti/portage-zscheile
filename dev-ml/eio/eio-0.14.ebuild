@@ -11,13 +11,16 @@ SRC_URI="https://github.com/ocaml-multicore/${PN}/releases/download/v${PV}/${P}.
 
 LICENSE="ISC"
 SLOT="0/${PV}"
-KEYWORDS="amd64 ~arm arm64 ~ppc ppc64 ~riscv x86"
+KEYWORDS="~amd64 ~arm ~arm64 ~ppc ~ppc64 ~riscv ~x86"
 IUSE="+ocamlopt"
 
 RDEPEND="
 	>=dev-lang/ocaml-4.08:=[ocamlopt?]
 	>=dev-ml/fmt-0.8.9:=
 	>=dev-ml/logs-0.7.0:=
+	dev-ml/iomux:=
+	dev-ml/mtime:=
+	dev-ml/psq:=
 	>=dev-ml/uring-0.7:=
 "
 DEPEND="${RDEPEND}
