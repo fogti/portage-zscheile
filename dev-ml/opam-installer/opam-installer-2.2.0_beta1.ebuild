@@ -34,7 +34,6 @@ src_configure() {
 	econf \
 		--prefix="${EPREFIX}/usr" \
 		--with-mccs \
-		--with-vendored-deps \
 		--docdir="${EPREFIX}/usr/share/doc/${PF}" \
 		--mandir="${EPREFIX}/usr/share/man" \
 		$(use_enable static)

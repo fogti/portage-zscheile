@@ -19,10 +19,13 @@ SLOT="0/${PV}"
 KEYWORDS="amd64 ~arm ~arm64 ~ppc ~ppc64 ~riscv ~x86"
 
 RDEPEND="
-	dev-ml/ocamlgraph:=
-	dev-ml/re:=
-	dev-ml/opam-file-format:=
 	dev-ml/cmdliner:=
+	dev-ml/jsonm:=
+	dev-ml/ocamlgraph:=
+	dev-ml/ocaml-sha:=
+	dev-ml/re:=
+	dev-ml/swhid_core:=
+	dev-ml/opam-file-format:=
 "
 DEPEND="${RDEPEND}
 	dev-ml/cppo"
