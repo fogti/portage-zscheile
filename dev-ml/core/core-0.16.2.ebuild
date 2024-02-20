@@ -45,6 +45,9 @@ RDEPEND="
 	dev-ml/ppx_string:=
 	dev-ml/ppx_ignore_instrumentation:=
 	dev-ml/typerep:${SLOT}
-	dev-ml/variantslib:${SLOT}
-"
+	dev-ml/variantslib:${SLOT}"
 DEPEND="${RDEPEND}"
+
+RDEPEND+="
+	!<dev-ml/core_unix-0.16
+	!<dev-ml/expect_test_helpers_core-0.16"
