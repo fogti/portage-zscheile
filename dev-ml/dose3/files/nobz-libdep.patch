@@ -1,0 +1,39 @@
+Avoid dependency on bz2 and zip in library dependency lists -- Alain Emilia Anna Zscheile, 2024
+---
+diff --git a/src/experimental/pkglab.sh b/src/experimental/pkglab.sh
+index 949c547..871c074 100755
+--- a/src/experimental/pkglab.sh
++++ b/src/experimental/pkglab.sh
+@@ -1,16 +1,16 @@
+ #!/bin/sh
+ init=/tmp/pkglab.$$.ml
+-ocamlfind query -a-format -predicates native unix extlib str pcre bz2 zip ocamlgraph cudf dose3 | sed -e 's/^/#load "/' -e 's/cmxa$/cmxs";;/' > $init
++ocamlfind query -a-format -predicates native unix extlib str pcre ocamlgraph cudf dose3 | sed -e 's/^/#load "/' -e 's/cmxa$/cmxs";;/' > $init
+ cat >> $init <<EOF
+ #load "boilerplate.cmxs";;
+ #use "pkglab.ml";;
+ EOF
+ if [ -f `which ledit` ]
+ then
+-	ledit  ocamlnat `ocamlfind query -i-format -predicates native bz2 zip ocamlgraph dose3 cudf pcre extlib` \
++	ledit  ocamlnat `ocamlfind query -i-format -predicates native ocamlgraph dose3 cudf pcre extlib` \
+ 	-init $init
+ else
+-	ocamlnat `ocamlfind query -i-format -predicates native bz2 zip ocamlgraph dose3 cudf pcre extlib` \
++	ocamlnat `ocamlfind query -i-format -predicates native ocamlgraph dose3 cudf pcre extlib` \
+          -init $init
+ fi	
+ rm $init
+diff --git a/src/extra/dune b/src/extra/dune
+index b9426e8..7058af8 100644
+--- a/src/extra/dune
++++ b/src/extra/dune
+@@ -1,7 +1,7 @@
+ (library
+  (name dose_extra)
+  (public_name dose3-extra)
+- (libraries dose3.common extlib zip bz2)
++ (libraries dose3.common extlib)
+  (flags (:standard)))
+ 
+ (ocamllex format822_lexer)

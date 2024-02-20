@@ -27,11 +27,8 @@ RDEPEND="
 	>=dev-ml/ocamlgraph-2.0.0:=[ocamlopt=]
 	>=dev-ml/re-1.2.2:=[ocamlopt=]
 	dev-ml/parmap:=[ocamlopt=]
-	>=dev-ml/camlzip-1.08:=[ocamlopt=]
-	dev-ml/camlbz2
 	dev-ml/ocaml-expat:=[ocamlopt=]
 	dev-ml/xml-light:=[ocamlopt=]
-	app-arch/rpm
 "
 DEPEND="${RDEPEND}"
 
@@ -40,12 +37,7 @@ RESTRICT="test"
 
 QA_FLAGS_IGNORED='.*'
 
-src_prepare() {
-	default
-	
-	eapply "${FILESDIR}/nobz.patch"
-
-	sed -i \
-	    -e 's|dose3.common extlib zip bz2|dose3.common extlib zip camlbz2|g' \
-		src/extra/dune || die
-}
+PATCHES=(
+	"${FILESDIR}/nobz.patch"
+	"${FILESDIR}/nobz-libdep.patch"
+)
