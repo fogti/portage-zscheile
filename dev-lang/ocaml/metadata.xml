@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>fogti+devel@ytrizja.de</email>
+		<name>Alain Fogtia Zscheile</name>
+	</maintainer>
+	<maintainer type="project">
+		<email>ml@gentoo.org</email>
+		<name>ML</name>
+	</maintainer>
+	<use>
+		<flag name="flambda">Enables the Flambda optimizer: A new intermediate representation (introduced in ocaml 4.03) in the depths of the compiler designed to allow for better inlining.</flag>
+	</use>
+	<upstream>
+		<remote-id type="github">ocaml/ocaml</remote-id>
+	</upstream>
+</pkgmetadata>
