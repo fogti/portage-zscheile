@@ -18,6 +18,8 @@ IUSE="emacs flambda latex +ocamlopt xemacs"
 RDEPEND="sys-libs/binutils-libs:="
 BDEPEND="${RDEPEND}
 	virtual/pkgconfig"
+RDEPEND+="
+	!dev-ml/findlib"
 PDEPEND="emacs? ( app-emacs/ocaml-mode )
 	xemacs? ( app-xemacs/ocaml )"
 
