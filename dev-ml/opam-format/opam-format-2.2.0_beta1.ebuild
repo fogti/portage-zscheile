@@ -20,12 +20,14 @@ IUSE="+ocamlopt test"
 RESTRICT="test" #sandbox not working
 
 RDEPEND="
-	~dev-ml/opam-core-${PV}:=
-	dev-ml/re:=
-	dev-ml/spdx_licenses:=
-	dev-ml/opam-file-format:=
+	dev-ml/ocaml-base64:=
 	>=dev-ml/dose3-6.0:=
 	>=dev-ml/mccs-1.1.17:=
+	dev-ml/re:=
+	dev-ml/spdx_licenses:=
+	~dev-ml/opam-core-${PV}:=
+	dev-ml/opam-file-format:=
+	>=dev-ml/opam-0install-solver-0.4:=
 "
 DEPEND="${RDEPEND}
 	dev-ml/cppo"
