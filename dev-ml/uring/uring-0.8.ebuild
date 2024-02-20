@@ -16,9 +16,9 @@ IUSE="+ocamlopt"
 
 RDEPEND="
 	>=dev-lang/ocaml-4.12:=[ocamlopt?]
-	>=dev-ml/cstruct-6.0.1:=
-	>=dev-ml/fmt-0.8.10:=
-	>=dev-ml/optint-0.1.0:=
+	>=dev-ml/cstruct-6.0.1:=[ocamlopt?]
+	>=dev-ml/fmt-0.8.10:=[ocamlopt?]
+	>=dev-ml/optint-0.1.0:=[ocamlopt?]
 "
 DEPEND="${RDEPEND}
 	>=dev-ml/dune-3.0
