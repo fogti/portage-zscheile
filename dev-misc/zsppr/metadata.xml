@@ -3,7 +3,7 @@
 <pkgmetadata>
 	<maintainer type="person">
 		<email>fogti+devel@ytrizja.de</email>
-		<name>Alain Fogtia Zscheile</name>
+		<name>Alain Emilia Anna Zscheile</name>
 	</maintainer>
 	<use>
 		<flag name="zsdatab">Add support for the zsppr "form letter" feature based on zsdatab</flag>
