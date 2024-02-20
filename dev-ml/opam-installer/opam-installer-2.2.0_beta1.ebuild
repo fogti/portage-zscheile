@@ -10,18 +10,16 @@ inherit dune
 
 DESCRIPTION="Core installer for opam packages"
 HOMEPAGE="https://opam.ocaml.org/ https://github.com/ocaml/opam"
-SRC_URI="https://github.com/ocaml/opam/releases/download/${PV}/opam-full-${PV}.tar.gz"
-SRC_URI+=" https://dev.gentoo.org/~sam/distfiles/dev-ml/opam/opam-2.1.0-dose3-6.patch.xz"
+SRC_URI="https://github.com/ocaml/opam/releases/download/${PV/_/-}/opam-full-${PV/_/-}.tar.gz"
 S="${WORKDIR}/opam-full-${PV/_/-}"
 OPAM_INSTALLER="${S}/_build/install/default/bin/opam-installer"
 
 LICENSE="LGPL-2.1"
 SLOT="0/${PV}"
 KEYWORDS="amd64 ~arm ~arm64 ~ppc ~ppc64 ~riscv ~x86"
-IUSE="+ocamlopt"
+IUSE="+ocamlopt static"
 RESTRICT="test" # sandbox not working
 
-PATCHES=( "${WORKDIR}"/opam-2.1.0-dose3-6.patch )
 
 RDEPEND="
 	>=dev-lang/ocaml-4.02.3:=
@@ -36,6 +34,8 @@ src_configure() {
 	econf \
 		--prefix="${EPREFIX}/usr" \
 		--with-mccs \
+		--with-vendored-deps \
 		--docdir="${EPREFIX}/usr/share/doc/${PF}" \
-		--mandir="${EPREFIX}/usr/share/man"
+		--mandir="${EPREFIX}/usr/share/man" \
+		$(use_enable static)
 }
