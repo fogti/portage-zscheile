@@ -2,10 +2,10 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
+DUNE_PKG_NAME="${PN}"
 
 inherit dune
 
-DUNE_PKG_NAME="${PN}"
 DESCRIPTION="SAT-based package dependency solver"
 HOMEPAGE="https://github.com/0install/0install"
 SRC_URI="https://github.com/0install/0install/releases/download/v${PV}/0install-${PV}.tbz"
