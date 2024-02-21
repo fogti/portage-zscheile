@@ -11,7 +11,7 @@ SRC_URI="https://git.sr.ht/~jonsterling/ocaml-${PN}/archive/${PV}.tar.gz -> ${P}
 S="${WORKDIR}/ocaml-${P}"
 
 LICENSE="GPL-3+"
-SLOT="0"
+SLOT="0/${PV}"
 KEYWORDS="~amd64 ~arm ~arm64 ~ppc ~ppc64 ~riscv ~x86"
 IUSE="+ocamlopt"
 
