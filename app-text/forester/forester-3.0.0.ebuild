@@ -8,6 +8,7 @@ inherit dune
 DESCRIPTION="A tool for tending mathematical forests"
 HOMEPAGE="https://sr.ht/~jonsterling/forester/"
 SRC_URI="https://git.sr.ht/~jonsterling/ocaml-${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
+S="${WORKDIR}/ocaml-${P}"
 
 LICENSE="GPL-3+"
 SLOT="0"
