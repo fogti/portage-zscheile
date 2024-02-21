@@ -9,7 +9,7 @@ DESCRIPTION="A tool for tending mathematical forests"
 HOMEPAGE="https://sr.ht/~jonsterling/forester/"
 SRC_URI="https://git.sr.ht/~jonsterling/ocaml-${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
-LICENSE="GPL-3-or-later"
+LICENSE="GPL-3+"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~arm64 ~ppc ~ppc64 ~riscv ~x86"
 IUSE="+ocamlopt"

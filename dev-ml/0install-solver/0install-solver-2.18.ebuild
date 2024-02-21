@@ -11,7 +11,7 @@ HOMEPAGE="https://github.com/0install/0install"
 SRC_URI="https://github.com/0install/0install/releases/download/v${PV}/0install-${PV}.tbz"
 S="${WORKDIR}/0install-${PV}"
 
-LICENSE="LGPL-2.1-or-later"
+LICENSE="LGPL-2.1+"
 SLOT="0/${PV}"
 KEYWORDS="amd64 arm arm64 ~ppc ppc64 ~riscv x86"
 IUSE="+ocamlopt test"
