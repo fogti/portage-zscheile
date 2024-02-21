@@ -16,11 +16,17 @@ IUSE="+ocamlopt"
 
 RDEPEND="
 	>=dev-lang/ocaml-4.08:=[ocamlopt?]
+	>=dev-ml/bigstringaf-0.9.0:=
+	>=dev-ml/cstruct-6.0.1:=
+	>=dev-ml/domain-local-await-0.1.0:=
 	>=dev-ml/fmt-0.8.9:=
-	>=dev-ml/logs-0.7.0:=
+	dev-ml/hmap:=
 	dev-ml/iomux:=
-	dev-ml/mtime:=
-	dev-ml/psq:=
+	>=dev-ml/logs-0.7.0:=
+	dev-ml/lwt-dllist:=
+	>=dev-ml/mtime-2.0.0:=
+	>=dev-ml/optint-0.1.0:=
+	>=dev-ml/psq-0.2.0:=
 	>=dev-ml/uring-0.7:=
 "
 DEPEND="${RDEPEND}

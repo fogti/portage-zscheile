@@ -5,9 +5,9 @@ EAPI=7
 
 inherit findlib opam
 
-DESCRIPTION="Combinators to devise OCaml Format pretty-printing functions"
-HOMEPAGE="https://erratique.ch/software/fmt https://github.com/dbuenzli/fmt"
-SRC_URI="https://erratique.ch/software/fmt/releases/${P}.tbz"
+DESCRIPTION="Heterogeneous value maps for OCaml"
+HOMEPAGE="https://erratique.ch/software/hmap https://github.com/dbuenzli/hmap"
+SRC_URI="https://erratique.ch/software/${PN}/releases/${P}.tbz"
 
 LICENSE="ISC"
 SLOT="0/${PV}"
@@ -15,18 +15,12 @@ KEYWORDS="amd64 arm arm64 ~ppc ppc64 ~riscv x86"
 IUSE="ocamlopt test"
 RESTRICT="!test? ( test )"
 
-RDEPEND="
-	>=dev-lang/ocaml-4.08:=[ocamlopt?]
-	dev-ml/cmdliner:=[ocamlopt?]
-	dev-ml/result:=[ocamlopt?]
-	dev-ml/stdlib-shims:=[ocamlopt?]
-	dev-ml/uchar:=[ocamlopt?]
-"
+RDEPEND=">=dev-lang/ocaml-4.02:=[ocamlopt=]"
 DEPEND="${RDEPEND}"
 BDEPEND="
-	>=dev-ml/topkg-0.9:*
-	dev-ml/ocamlbuild
 	dev-ml/findlib
+	dev-ml/ocamlbuild
+	dev-ml/topkg:*
 "
 
 src_compile() {
