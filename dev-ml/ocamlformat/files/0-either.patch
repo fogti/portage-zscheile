@@ -1,0 +1,10 @@
+diff --git a/vendor/ocamlformat_support/dune b/vendor/ocamlformat_support/dune
+index 418e561..5467431 100644
+--- a/vendor/ocamlformat_support/dune
++++ b/vendor/ocamlformat_support/dune
+@@ -3,4 +3,4 @@
+  (public_name ocamlformat-lib.format_)
+  (flags
+   (:standard -open Parser_shims))
+- (libraries either parser_shims))
++ (libraries parser_shims))
