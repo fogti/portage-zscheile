@@ -18,6 +18,7 @@ RDEPEND="
 	>=dev-lang/ocaml-4.08:=
 	<dev-lang/ocaml-5.2
 	>=dev-ml/cmdliner-1.1:=
+	dev-ml/ocaml-version:=
 	dev-ml/ocp-indent:=
 	>=dev-ml/re-1.10.3:=
 	dev-ml/uuseg:=
