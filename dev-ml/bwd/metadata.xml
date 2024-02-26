@@ -11,5 +11,9 @@
 	</maintainer>
 	<upstream>
 		<remote-id type="github">RedPRL/ocaml-bwd</remote-id>
+		<maintainer>
+			<name>Kuen-Bang Hou (Favonia)</name>
+			<email>favonia@gmail.com</email>
+		</maintainer>
 	</upstream>
 </pkgmetadata>
