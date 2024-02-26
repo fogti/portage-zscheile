@@ -17,10 +17,11 @@ IUSE=""
 RDEPEND=">=dev-ml/uutf-1.0.0:=
 	dev-lang/ocaml:=
 	dev-ml/uchar:="
-DEPEND="${RDEPEND}
-	dev-ml/topkg
+DEPEND="${RDEPEND}"
+BDEPEND="
+	dev-ml/findlib
 	dev-ml/ocamlbuild
-	dev-ml/findlib"
+	dev-ml/topkg:*"
 
 DOCS=( CHANGES README )
 

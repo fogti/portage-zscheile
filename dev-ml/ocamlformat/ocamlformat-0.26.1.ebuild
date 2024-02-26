@@ -24,11 +24,11 @@ RDEPEND="
 	dev-ml/uuseg:=
 "
 DEPEND="${RDEPEND}"
+BDEPEND="test? ( dev-ml/ounit2:* >=dev-ml/cmdliner-1.2:= )"
+RESTRICT="!test? ( test )"
 
 PATCHES=(
 	"${FILESDIR}/0-either.patch"
 )
 
-BDEPEND="test? ( dev-ml/ounit2 >=dev-ml/cmdliner-1.2:= )"
-RESTRICT="!test? ( test )"
 QA_FLAGS_IGNORED='.*'
