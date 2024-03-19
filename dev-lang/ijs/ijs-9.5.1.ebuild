@@ -10,7 +10,7 @@ DESCRIPTION="terse, high-level programming language 'J', particularly for the ma
 
 LICENSE="GPL-3"
 SLOT="0/${PV}"
-KEYWORDS="amd64 ia64 x86 amd64-linux x86-linux"
+KEYWORDS="amd64 ~ia64 x86 amd64-linux x86-linux"
 
 RDEPEND="sys-libs/ncurses:="
 DEPEND="${RDEPEND}"
@@ -27,6 +27,10 @@ src_prepare() {
 
 	export jplatform=linux
 	export j64x="$(./make2/jplatform64.sh | cut -f2 -d/)"
+	# prune pre-compiled binaries
+	rm -rf {,jlibrary/}tools/{ftp,regex}
+	mkdir -p {,jlibrary/}tools/{ftp,regex}
+	# TODO: fix tools build
 }
 
 src_configure() {
@@ -47,17 +51,13 @@ src_compile() {
 }
 
 src_test() {
-	"./bin/${jplatform}/${j64x}/jconsole" ./test/tsu.ijs || die
+	# TODO: does this really run tests?
+	"./bin/${jplatform}/${j64x}/jconsole" ./test/tsu.ijs  || die
 }
 
 src_install() {
-	local preinstp="./bin/${jplatform}/${j64x}"
-	insinto "/usr/$(get_libdir)/ijs"
-	exeinto "/usr/$(get_libdir)/ijs"
-	for i in jconsole libj.so libtsdll.so; do
-		doexe "${preinstp}/$i"
-	done
-	doins "jlibrary/bin/profile.ijs"
-
-	dosym -r "/usr/$(get_libdir)/ijs/jconsole" "/usr/bin/ijconsole"
+	mkdir -p "${ED}/usr/$(get_libdir)/ijs/bin" || die
+	cp -t "${ED}/usr/$(get_libdir)/ijs/bin" "bin/${jplatform}/${j64x}"/* || die
+	cp -RT jlibrary "${ED}/usr/$(get_libdir)/ijs" || die
+	dosym -r "/usr/$(get_libdir)/ijs/bin/jconsole" "/usr/bin/ijconsole"
 }
