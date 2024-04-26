@@ -5,7 +5,7 @@ EAPI=8
 
 inherit dune multiprocessing
 
-DESCRIPTION="XDG Base Directory Specification"
+DESCRIPTION="Dynamic type"
 HOMEPAGE="https://github.com/ocaml/dune"
 SRC_URI="https://github.com/ocaml/dune/archive/${PV}.tar.gz -> dune-${PV}.tar.gz"
 S="${WORKDIR}/dune-${PV}"
@@ -16,7 +16,10 @@ KEYWORDS="~amd64 ~arm ~arm64 ~ppc ~ppc64 ~riscv ~x86"
 IUSE="+ocamlopt"
 RESTRICT="test"
 
-BDEPEND=">=dev-ml/dune-3.5"
+BDEPEND=">=dev-ml/dune-3.12"
+DEPEND="~dev-ml/ordering-${PV}:=
+	dev-ml/pp:="
+RDEPEND="${DEPEND}"
 
 src_configure() {
 	:

@@ -5,18 +5,26 @@ EAPI=8
 
 inherit dune multiprocessing
 
-DESCRIPTION="XDG Base Directory Specification"
+DESCRIPTION="Communicate with dune using rpc"
 HOMEPAGE="https://github.com/ocaml/dune"
 SRC_URI="https://github.com/ocaml/dune/archive/${PV}.tar.gz -> dune-${PV}.tar.gz"
 S="${WORKDIR}/dune-${PV}"
 
 LICENSE="Apache-2.0"
 SLOT="0/${PV}"
-KEYWORDS="amd64 ~arm arm64 ~ppc ~ppc64 ~riscv ~x86"
+KEYWORDS="~amd64 ~arm ~arm64 ~ppc ~ppc64 ~riscv ~x86"
 IUSE="+ocamlopt"
 RESTRICT="test"
 
-BDEPEND=">=dev-ml/dune-3.5"
+BDEPEND=">=dev-ml/dune-3.12"
+DEPEND="
+	dev-ml/csexp:=
+	dev-ml/dyn:=
+	dev-ml/ordering:=
+	~dev-ml/stdune-${PV}:=
+	>=dev-ml/pp-1.1:=
+	dev-ml/xdg:="
+RDEPEND="${DEPEND}"
 
 src_configure() {
 	:
