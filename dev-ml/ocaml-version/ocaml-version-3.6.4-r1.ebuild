@@ -5,7 +5,7 @@ EAPI=8
 
 inherit dune
 
-DESCRIPTION="A simple tool to indent OCaml programs"
+DESCRIPTION="Manipulate, parse and generate OCaml compiler version strings"
 HOMEPAGE="https://github.com/ocurrent/ocaml-version"
 SRC_URI="https://github.com/ocurrent/${PN}/releases/download/v${PV}/${P}.tbz"
 
@@ -16,5 +16,3 @@ IUSE="+ocamlopt test"
 
 BDEPEND="test? ( dev-ml/alcotest:* )"
 RESTRICT="!test? ( test )"
-
-QA_FLAGS_IGNORED='.*'
