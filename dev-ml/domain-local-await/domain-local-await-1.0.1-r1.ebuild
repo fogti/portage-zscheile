@@ -11,7 +11,7 @@ SRC_URI="https://github.com/ocaml-multicore/${PN}/releases/download/${PV}/${P}.t
 
 LICENSE="ISC"
 SLOT="0/${PV}"
-KEYWORDS="amd64 arm arm64 ~ppc ppc64 ~riscv x86"
+KEYWORDS="amd64 arm arm64 ~ppc ~ppc64 ~riscv x86"
 IUSE="+ocamlopt"
 
 RDEPEND="
@@ -22,5 +22,3 @@ DEPEND="${RDEPEND}"
 
 # too much stuff to package for that...
 RESTRICT="test"
-
-QA_FLAGS_IGNORED='.*'
