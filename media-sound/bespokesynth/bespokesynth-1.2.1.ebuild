@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 EAPI=8
 
-inherit cmake desktop
+inherit cmake desktop xdg
 
 DESCRIPTION="Software modular synth"
 HOMEPAGE="https://www.bespokesynth.com/"
@@ -102,4 +102,12 @@ src_install() {
 	# Adding icon and desktop settings
 	doicon -s 512 "${WORKDIR}/BespokeSynth-${PV}/bespoke_icon.png"
 	domenu "${WORKDIR}/BespokeSynth-${PV}/scripts/installer_linux/BespokeSynth.desktop"
+}
+
+pkg_postinst() {
+	xdg_icon_cache_update
+}
+
+pkg_postrm() {
+	xdg_icon_cache_update
 }
