@@ -69,14 +69,14 @@ src_configure() {
 		"-DBESPOKE_SYSTEM_PYBIND11=TRUE"
 		"-DBESPOKE_SYSTEM_JSONCPP=TRUE"
 		"-DCMAKE_BUILD_TYPE=Release"
-		"-DCMAKE_INSTALL_PREFIX=/usr/share"
+		"-DCMAKE_INSTALL_PREFIX=/usr"
 		"-DCMAKE_SKIP_RPATH=ON"
 	)
 	cmake_src_configure
 }
 
 src_install() {
-	DESTDIR="/usr/share/bespokesynth"
+	DESTDIR="/usr/share/BespokeSynth"
 
 	# Install libraries
 	dolib.so "${WORKDIR}/BespokeSynth-${PV}_build/libs/freeverb/libfreeverb.so"
@@ -94,7 +94,7 @@ src_install() {
 	dobin "${WORKDIR}/BespokeSynth-${PV}_build/Source/BespokeSynth_artefacts/RelWithDebInfo/BespokeSynth"
 
 	# Install auxilary files
-	insinto /usr/share/bespokesynth/bin
+	insinto /usr/share/BespokeSynth/bin
 	doins -r "${WORKDIR}/BespokeSynth-${PV}_build/Source/BespokeSynth_artefacts/RelWithDebInfo/resource"
 
 	dosym -r ${DESTDIR}/bin/BespokeSynth /usr/bin/BespokeSynth
