@@ -94,7 +94,7 @@ src_install() {
 	dobin "${WORKDIR}/BespokeSynth-${PV}_build/Source/BespokeSynth_artefacts/RelWithDebInfo/BespokeSynth"
 
 	# Install auxilary files
-	insinto /usr/share/BespokeSynth/bin
+	insinto /usr/share/BespokeSynth
 	doins -r "${WORKDIR}/BespokeSynth-${PV}_build/Source/BespokeSynth_artefacts/RelWithDebInfo/resource"
 
 	dosym -r ${DESTDIR}/bin/BespokeSynth /usr/bin/BespokeSynth
