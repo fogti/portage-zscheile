@@ -19,7 +19,6 @@ export EGO_PN="go.cypherpunks.ru/nncp/v8"
 BDEPEND="${BDEPEND}
 	app-arch/unzip
 	>=dev-lang/go-1.20
-	dev-util/redo
 "
 RDEPEND="${RDEPEND}
 	acct-user/nncp
@@ -32,15 +31,15 @@ setup_goflags() {
 
 src_compile() {
 	setup_goflags
-	redo all || die
+	bin/build || die
 }
 
 src_install() {
 	setup_goflags
-	PREFIX="${ED}/usr" redo install || die
+	PREFIX="${ED}/usr" ./install || die
 	for i in nncp-caller nncp-daemon nncp-toss; do
 		systemd_newunit "${FILESDIR}/$i.service" "$i.service"
 	done
 	mv -t "${ED}/usr/share" "${ED}/usr/info"
-	mv -T "${ED}/usr/share/doc/${PN}" "${ED}/usr/share/doc/${PN}"
+	mv -T "${ED}/usr/share/doc/${PN}" "${ED}/usr/share/doc/${P}"
 }
