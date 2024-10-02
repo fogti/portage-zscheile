@@ -29,10 +29,9 @@ KEYWORDS="~amd64"
 
 DEPEND="
 	dev-python/pybind11
-	dev-libs/jsoncpp
-	dev-cpp/asio
+	dev-libs/jsoncpp:=
 	>=virtual/jack-2
-	x11-libs/libXrandr
+	x11-libs/libXrandr:=
 "
 
 PATCHES=(
